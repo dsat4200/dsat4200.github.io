@@ -10,6 +10,7 @@ for page in range(2, num_pages+1):
     # HTML template for each page
     html_template = f'''
 
+
 <!DOCTYPE html>
 <html>
 
@@ -41,7 +42,7 @@ for page in range(2, num_pages+1):
         </section>
 
         <div class="comic-page">
-            <button class="next-page-btn"><a href="1_PREV.html"><</a></button>
+            <button class="prev-page-btn"><a href="1_PREV.html"><</a></button>
             <img src="../pg/1_PAGE.png" alt="Page 1" class="page-image">
             <button class="next-page-btn"><a href="1_NEXT
         </div>

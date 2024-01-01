@@ -98,7 +98,7 @@ p:after {
 
 nav ul {
     margin:0;
-    background-color: #FF58D6;
+    background-color: #7b00b4;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -112,7 +112,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     font-size: large;
@@ -166,6 +166,7 @@ main {
 }
 
 .page-image {
+    image-rendering: pixelated;
     width: 80%; /* Set width to 200% to achieve the same effect as scale(2) */
     max-height: 80vh; /* Set the maximum height relative to the viewport height (80% of viewport height in this example) */
     height: auto;
@@ -193,11 +194,19 @@ main {
 }
 
 .prev-page-btn {
+    text-decoration: none;
     left: 2%; /* Position to the left */
 }
 
 .next-page-btn {
+    text-decoration: none;
     right: 2%; /* Position to the right */
+}
+
+.prev-page-btn a,
+.next-page-btn a
+{
+    text-decoration: none;
 }
 
 

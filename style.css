@@ -186,7 +186,7 @@ main {
     cursor: pointer;
     width: 6%; /* Set a fixed width */
     height: 80%; /* Stretch vertically to match the comic page */
-    font-size: 40px; /* Adjust font size as needed */
+    font-size: 80px; /* Adjust font size as needed */
     line-height: 1; /* Remove extra spacing inside the button */
     position: absolute; /* Position the buttons absolutely within the comic-page container */
     top: 50%; /* Position vertically centered */

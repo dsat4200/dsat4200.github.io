@@ -16,7 +16,7 @@ for page in range(2, num_pages+1):
 
 <head>
     <meta charset="UTF-8">
-    <title>Read Joules + Igor</title>
+    <title>Page PAGE | Joules + Igor</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 

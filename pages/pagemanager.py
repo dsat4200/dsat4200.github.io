@@ -1,5 +1,5 @@
 # Number of pages you want to generate
-num_pages = 13
+num_pages = 15
 
 # Loop to generate pages
 for page in range(2, num_pages+1):

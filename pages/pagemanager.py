@@ -1,8 +1,9 @@
+import sys
 # Number of pages you want to generate
-num_pages = 15
+num_pages = int(sys.argv[1])
 
 # Loop to generate pages
-for page in range(2, num_pages+1):
+for page in range(1, num_pages+1):
     # Define the previous and next page numbers
     prev_page = page - 1
     next_page = page + 1
@@ -44,7 +45,7 @@ for page in range(2, num_pages+1):
         <div class="comic-page">
             <button class="prev-page-btn"><a href="1_PREV.html"><</a></button>
             <img src="../pg/1_PAGE.png" alt="Page 1" class="page-image">
-            <button class="next-page-btn"><a href="1_NEXT
+            <button class="next-page-btn"><a href="1_NEXT.html">></a></button>
         </div>
 
 
@@ -57,15 +58,19 @@ for page in range(2, num_pages+1):
 </html>
     
     '''
-
     html_template = html_template.replace("PAGE", f'{page:03d}')
-    html_template = html_template.replace("PREV", f'{prev_page:03d}')
 
-    if(page !=num_pages):
-        html_template = html_template.replace("NEXT", f'{next_page:03d}.html">></a></button>')
+    if(page == 1):
+        html_template = html_template.replace("NEXT", f'{next_page:03d}')
+        html_template = html_template.replace('PREV.html"><</a></button>',f'{page:03d}.html">.</a></button>')
+        
+    elif(page !=num_pages):
+        html_template = html_template.replace("NEXT", f'{next_page:03d}')
+        html_template = html_template.replace("PREV", f'{prev_page:03d}')
 
     else:
-        html_template = html_template.replace("NEXT",f'{page:03d}.html">.</a></button>')
+        html_template = html_template.replace('NEXT.html">></a></button>',f'{page:03d}.html">.</a></button>')
+        html_template = html_template.replace("PREV", f'{prev_page:03d}')
 
 # Save the HTML to a file
     with open(f'1_{page:03d}.html', 'w') as file:

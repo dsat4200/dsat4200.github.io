@@ -11,7 +11,20 @@ var interpolation_speed: float = 7.5
 var desktop = true
 # Target position for smooth interpolation
 var target_position: Vector2
-var smooth_scroll = false
+var smooth_scroll = true
+@onready var screen_width = get_viewport().size.x
+
+const SWIPE_THRESHOLD = 50
+const swipefactor = .075
+@export var pages: Node2D
+# Variables to store touch start position
+var touch_start_position = 0
+
+# Enum for swipe direction
+enum SwipeDirection {
+	LEFT,
+	RIGHT
+}
 
 func move_to_page(target):
 	var move = 1
@@ -23,11 +36,12 @@ func move_to_page(target):
 func _ready():
 	# Initialize the target position to the current position
 	target_position = pages_node.position
-	initialize_pages()
+	move_n_pages(start_page)
 	
 
-func initialize_pages():
-	for n in start_page:
+
+func move_n_pages(inc):
+	for n in inc:
 		move_page(1)
 			
 func _input(event):
@@ -39,13 +53,13 @@ func _input(event):
 			if (!smooth_scroll):
 				move_page(-1)
 			else:
-				pass
+				smooth_scroll_wheel(-1)
 			
 		elif event.is_action_pressed("scroll_down"):
 			if (!smooth_scroll):
 				move_page(1)
 			else:
-				pass
+				smooth_scroll_wheel(1)
 			
 func move_page(delta):
 	if (delta < 0) and (page <1):
@@ -53,7 +67,8 @@ func move_page(delta):
 	if (delta > 0) and (page > page_sprites.get_frame_count("ch1")-3):
 		return
 	elif (delta != 0 ):
-		target_position.x += (image_offset)*-delta
+		if (!smooth_scroll):
+			target_position.x += (image_offset)*-delta
 		page+=delta
 		if (delta > 0):
 			spawn_next_page((delta))
@@ -86,6 +101,7 @@ func spawn_next_page(delta):
 	pages_node.move_child(node,-1)
 	node.position.x= node_pos + (image_offset)
 	node.texture = page_sprites.get_frame_texture("ch1",page+delta)
+	print("called! "+str(node.name))
 
 func get_first_node() -> Sprite2D:
 	return pages_node.get_child(0)
@@ -97,7 +113,54 @@ func get_last_node() -> Sprite2D:
 func _process(delta):
 	page_label.text = "Page: " + str(page) + " StartPage: "+ str(start_page)
 	pages_node.position = pages_node.position.lerp(target_position, interpolation_speed * delta)
-
+	if (smooth_scroll):
+		smooth_scroll_process()
+	elif Input.is_action_just_pressed("click"):
+		touch_start_position = get_global_mouse_position().x
+	elif Input.is_action_pressed("click"):
+		var offset = (touch_start_position-get_global_mouse_position().x)*swipefactor
+		pages_node.position.x-=offset
+		
+	elif Input.is_action_just_released("click"):
+		var swipe_distance = (get_global_mouse_position().x-touch_start_position)
+		if abs(swipe_distance) > SWIPE_THRESHOLD:
+			if swipe_distance > 0:
+				_on_swipe(SwipeDirection.RIGHT)
+			else:
+				_on_swipe(SwipeDirection.LEFT)
+				
+func smooth_scroll_wheel(delta):
+	var scrollamount = image_offset/5
+	target_position.x-= scrollamount*delta
+	move_page(1)
+	move_to_page(find_nearest_page())
+	
+func smooth_scroll_process():
+	if Input.is_action_just_pressed("click"):
+		touch_start_position = get_global_mouse_position().x
+	elif Input.is_action_pressed("click"):
+		var swipeamount = touch_start_position - get_global_mouse_position().x 
+		target_position.x-= swipeamount
+		touch_start_position = get_global_mouse_position().x
+	elif Input.is_action_just_released("click"):
+		move_page(1)
+		move_to_page(find_nearest_page())
+		
+		
+func snap_to_nearest_page():
+	target_position.x = 512
+	for n in page:
+		target_position.x -= (image_offset)
+	
+func find_nearest_page() -> int:
+	return int(((512-target_position.x)/960))
+	
+func _on_swipe(direction: SwipeDirection):
+	match direction:
+		SwipeDirection.LEFT:
+			move_page(1)
+		SwipeDirection.RIGHT:
+			move_page(-1)
 
 			
 
@@ -124,3 +187,5 @@ func _on_control_swipe_right() -> void:
 
 func _on_button_toggled(toggled_on: bool) -> void:
 	smooth_scroll = toggled_on
+	if (toggled_on == false):
+		snap_to_nearest_page()

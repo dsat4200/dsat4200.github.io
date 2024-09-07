@@ -36,7 +36,7 @@ texture = ExtResource("6_xx2q0")
 position = Vector2(960, 0)
 texture = ExtResource("7_cm86n")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("pages")]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
@@ -50,7 +50,6 @@ grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("6_54x13")
-pages = NodePath("../pages")
 
 [node name="leftbutton" type="Button" parent="Control"]
 visible = false
@@ -91,7 +90,6 @@ selecting_enabled = false
 flat = true
 
 [node name="page_label" type="Label" parent="Control"]
-visible = false
 top_level = true
 layout_mode = 0
 offset_left = 493.0
@@ -124,11 +122,10 @@ offset_top = 958.0
 offset_right = 339.0
 offset_bottom = 1016.0
 toggle_mode = true
-text = "Smooth Scrolling: OFF"
+button_pressed = true
+text = "Smooth Scrolling: ON"
 script = ExtResource("7_5jf87")
 
-[connection signal="swipe_left" from="Control" to="." method="_on_control_swipe_left"]
-[connection signal="swipe_right" from="Control" to="." method="_on_control_swipe_right"]
 [connection signal="button_up" from="Control/leftbutton" to="." method="_on_leftbutton_button_up"]
 [connection signal="button_up" from="Control/rightbutton" to="." method="_on_rightbutton_button_up"]
 [connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]

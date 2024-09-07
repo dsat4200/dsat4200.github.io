@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnvc28yr4cjy0"]
+
+[ext_resource type="Script" path="res://mobilescroll.gd" id="1_oit1c"]
+[ext_resource type="SpriteFrames" uid="uid://djnxitmpina7m" path="res://quarterpages/quarterpages.tres" id="2_jom68"]
+[ext_resource type="Texture2D" uid="uid://ba65sl7k5oiwf" path="res://quarterpages/pg0_row-1-column-1.png" id="5_sx313"]
+[ext_resource type="Script" path="res://control.gd" id="6_54x13"]
+[ext_resource type="Texture2D" uid="uid://dkg41b0ndcmnk" path="res://quarterpages/pg0_row-1-column-2.png" id="6_xx2q0"]
+[ext_resource type="Texture2D" uid="uid://c4hkwgjgmibsy" path="res://quarterpages/pg1_row-1-column-1.png" id="7_cm86n"]
+
+[sub_resource type="Theme" id="Theme_4u754"]
+default_font_size = 100
+
+[sub_resource type="Theme" id="Theme_wsqvm"]
+default_font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_6kvfp"]
+font_size = 45
+font_color = Color(0, 0, 0, 1)
+
+[node name="Scroll" type="Node2D"]
+script = ExtResource("1_oit1c")
+page_sprites = ExtResource("2_jom68")
+
+[node name="pages" type="Node2D" parent="."]
+position = Vector2(512, 512)
+
+[node name="pg0" type="Sprite2D" parent="pages"]
+position = Vector2(-960, 0)
+texture = ExtResource("5_sx313")
+
+[node name="pg1" type="Sprite2D" parent="pages"]
+texture = ExtResource("6_xx2q0")
+
+[node name="pg2" type="Sprite2D" parent="pages"]
+position = Vector2(960, 0)
+texture = ExtResource("7_cm86n")
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("pages")]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_54x13")
+pages = NodePath("../pages")
+
+[node name="leftbutton" type="Button" parent="Control"]
+offset_left = 4.0
+offset_top = 817.0
+offset_right = 213.0
+offset_bottom = 1020.0
+theme = SubResource("Theme_4u754")
+text = "<"
+
+[node name="rightbutton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -238.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_4u754")
+text = ">"
+
+[node name="LineEdit" type="LineEdit" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 331.0
+offset_top = 4.0
+offset_right = 707.0
+offset_bottom = 149.0
+theme = SubResource("Theme_wsqvm")
+text = "0"
+selecting_enabled = false
+flat = true
+
+[node name="page_label" type="Label" parent="Control"]
+top_level = true
+offset_left = -85.0
+offset_top = -24.0
+offset_right = 232.0
+offset_bottom = 123.0
+text = "Page:"
+label_settings = SubResource("LabelSettings_6kvfp")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160
+
+[node name="JumpLabel" type="Label" parent="Control"]
+top_level = true
+offset_left = 9.0
+offset_top = 28.0
+offset_right = 326.0
+offset_bottom = 175.0
+text = "Jump to Page:"
+label_settings = SubResource("LabelSettings_6kvfp")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160
+
+[connection signal="swipe_left" from="Control" to="." method="_on_control_swipe_left"]
+[connection signal="swipe_right" from="Control" to="." method="_on_control_swipe_right"]
+[connection signal="button_up" from="Control/leftbutton" to="." method="_on_leftbutton_button_up"]
+[connection signal="button_up" from="Control/rightbutton" to="." method="_on_rightbutton_button_up"]
+[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]

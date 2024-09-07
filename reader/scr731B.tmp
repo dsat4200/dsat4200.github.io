@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3hayj71ec616"]
+
+[ext_resource type="Script" path="res://scroll.gd" id="1_6rogo"]
+[ext_resource type="Texture2D" uid="uid://cb3oubv8i1h5i" path="res://pages/pg0.png" id="2_s4ngs"]
+[ext_resource type="Texture2D" uid="uid://d2fs1hyiijiqa" path="res://pages/pg1.png" id="3_5uedk"]
+[ext_resource type="SpriteFrames" uid="uid://cj80w6ap1ix75" path="res://pages/pages.tres" id="3_xmicp"]
+[ext_resource type="Texture2D" uid="uid://b472i0q3bybvq" path="res://pages/pg2.png" id="4_hg3il"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6kvfp"]
+font_size = 107
+font_color = Color(0, 0, 0, 1)
+
+[node name="Scroll" type="Node2D"]
+script = ExtResource("1_6rogo")
+page_sprites = ExtResource("3_xmicp")
+
+[node name="pages" type="Node2D" parent="."]
+position = Vector2(960, 595)
+
+[node name="pg0" type="Sprite2D" parent="pages"]
+position = Vector2(8, 0)
+texture = ExtResource("2_s4ngs")
+
+[node name="pg1" type="Sprite2D" parent="pages"]
+position = Vector2(1928, 0)
+texture = ExtResource("3_5uedk")
+
+[node name="pg2" type="Sprite2D" parent="pages"]
+position = Vector2(3848, 0)
+texture = ExtResource("4_hg3il")
+
+[node name="page_label" type="Label" parent="."]
+top_level = true
+offset_right = 317.0
+offset_bottom = 106.0
+text = "Page:"
+label_settings = SubResource("LabelSettings_6kvfp")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160

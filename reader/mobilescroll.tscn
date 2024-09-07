@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnvc28yr4cjy0"]
+[gd_scene load_steps=12 format=3 uid="uid://bnvc28yr4cjy0"]
 
 [ext_resource type="Script" path="res://mobilescroll.gd" id="1_oit1c"]
 [ext_resource type="SpriteFrames" uid="uid://djnxitmpina7m" path="res://quarterpages/quarterpages.tres" id="2_v6qwj"]
 [ext_resource type="Texture2D" uid="uid://ba65sl7k5oiwf" path="res://quarterpages/pg0_row-1-column-1.png" id="5_sx313"]
 [ext_resource type="Script" path="res://control.gd" id="6_54x13"]
+[ext_resource type="Texture2D" uid="uid://b6j5sesgamyrs" path="res://quarterpages/pg1_row-1-column-2.png" id="6_hfu0h"]
 [ext_resource type="Texture2D" uid="uid://dkg41b0ndcmnk" path="res://quarterpages/pg0_row-1-column-2.png" id="6_xx2q0"]
 [ext_resource type="Script" path="res://smooth_scroll_button.gd" id="7_5jf87"]
 [ext_resource type="Texture2D" uid="uid://c4hkwgjgmibsy" path="res://quarterpages/pg1_row-1-column-1.png" id="7_cm86n"]
@@ -35,6 +36,10 @@ texture = ExtResource("6_xx2q0")
 [node name="pg2" type="Sprite2D" parent="pages"]
 position = Vector2(960, 0)
 texture = ExtResource("7_cm86n")
+
+[node name="pg3" type="Sprite2D" parent="pages"]
+position = Vector2(1920, 0)
+texture = ExtResource("6_hfu0h")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -92,10 +97,10 @@ flat = true
 [node name="page_label" type="Label" parent="Control"]
 top_level = true
 layout_mode = 0
-offset_left = 493.0
-offset_top = 12.0
-offset_right = 810.0
-offset_bottom = 159.0
+offset_left = 830.0
+offset_top = 911.0
+offset_right = 1147.0
+offset_bottom = 1058.0
 text = "Page:"
 label_settings = SubResource("LabelSettings_6kvfp")
 vertical_alignment = 1

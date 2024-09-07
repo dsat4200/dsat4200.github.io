@@ -4,7 +4,7 @@ extends Node2D
 var image_offset:float = 960
 const DEFAULT_INTERPOLATION = 7.5
 const MOBILE_INTERPOLATION = 30
-const SCROLL_INTERPOLATION = 15
+const SCROLL_INTERPOLATION = 5
 var interpolation_speed: float = 30
 @export var page :int = 0
 @export var start_page : int
@@ -16,6 +16,7 @@ var desktop = true
 var target_position: Vector2
 var smooth_scroll = true
 @onready var screen_width = get_viewport().size.x
+@onready var screen_height = get_viewport().size.y
 
 const SWIPE_THRESHOLD = 50
 const swipefactor = .075
@@ -38,6 +39,8 @@ func move_to_page(target):
 	
 func _ready():
 	# Initialize the target position to the current position
+	if screen_width > screen_height:
+		print("desktop!")
 	target_position = pages_node.position
 	move_n_pages(start_page)
 	
@@ -114,7 +117,7 @@ func get_last_node() -> Sprite2D:
 
 	
 func _process(delta):
-	page_label.text = "Page: " + str(page) + " StartPage: "+ str(start_page)
+	page_label.text = "Page: " + str(page)
 	pages_node.position = pages_node.position.lerp(target_position, interpolation_speed * delta)
 	if (smooth_scroll):
 		smooth_scroll_process()

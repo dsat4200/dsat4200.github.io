@@ -18,6 +18,8 @@ var smooth_scroll = true
 @onready var screen_width = get_viewport().size.x
 @onready var screen_height = get_viewport().size.y
 
+@export var newestPage : int
+
 const SWIPE_THRESHOLD = 50
 const swipefactor = .075
 @export var pages: Node2D
@@ -36,6 +38,7 @@ func move_to_page(target):
 		move = -1
 	for n in (abs(target - page)):
 		move_page(move)
+	print("moved to page! "+str(target))
 	
 func _ready():
 	# Initialize the target position to the current position
@@ -218,3 +221,7 @@ func _on_button_toggled(toggled_on: bool) -> void:
 	if (toggled_on == false):
 		interpolation_speed = DEFAULT_INTERPOLATION
 		snap_to_nearest_page()
+
+
+func _on_update_toggled(toggled_on: bool) -> void:
+	move_to_page(newestPage)

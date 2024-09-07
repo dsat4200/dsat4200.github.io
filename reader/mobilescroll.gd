@@ -33,12 +33,13 @@ enum SwipeDirection {
 }
 
 func move_to_page(target):
+	print("moved to page! "+str(target))
 	var move = 1
 	if (target < page):
 		move = -1
 	for n in (abs(target - page)):
 		move_page(move)
-	print("moved to page! "+str(target))
+	
 	
 func _ready():
 	# Initialize the target position to the current position
@@ -63,13 +64,13 @@ func _input(event):
 			increment = 4
 		if event.is_action_pressed("scroll_up"):
 			if (!smooth_scroll):
-				move_page(-increment)
+				move_page(-1)
 			else:
 				smooth_scroll_wheel(-1)
 			
 		elif event.is_action_pressed("scroll_down"):
 			if (!smooth_scroll):
-				move_page(increment)
+				move_page(1)
 			else:
 				smooth_scroll_wheel(1)
 			
@@ -79,12 +80,11 @@ func move_page(delta):
 	if (delta > 0) and (page > page_sprites.get_frame_count("ch1")-3):
 		return
 	elif (delta != 0 ):
-		if (!smooth_scroll):
-			target_position.x += (image_offset)*-delta
+		target_position.x += (image_offset)*-delta
 		page+=delta
 		if (delta > 0):
 			spawn_next_page((delta))
-		
+	page = get_page()
 
 func print_children_positions():
 	# Iterate through each child node
@@ -158,10 +158,9 @@ func _process(delta):
 				
 func smooth_scroll_wheel(delta):
 	interpolation_speed = SCROLL_INTERPOLATION
-	var scrollamount = image_offset/5
+	var scrollamount = image_offset/1000
 	target_position.x-= scrollamount*delta
-	move_page(4)
-	move_to_page(find_nearest_page())
+	move_page(delta)
 
 
 func smooth_scroll_process():
@@ -172,8 +171,7 @@ func smooth_scroll_process():
 		target_position.x-= swipeamount
 		touch_start_position = get_global_mouse_position().x
 	elif Input.is_action_just_released("click"):
-		move_page(2)
-		move_to_page(find_nearest_page())
+		move_page(1)
 		
 		
 func snap_to_nearest_page():
@@ -181,7 +179,7 @@ func snap_to_nearest_page():
 	for n in page:
 		target_position.x -= (image_offset)
 	
-func find_nearest_page() -> int:
+func get_page() -> int:
 	return int(((512-target_position.x)/960))
 	
 func _on_swipe(direction: SwipeDirection):
@@ -223,5 +221,5 @@ func _on_button_toggled(toggled_on: bool) -> void:
 		snap_to_nearest_page()
 
 
-func _on_update_toggled(toggled_on: bool) -> void:
-	move_to_page(newestPage)
+func _on_newest_page_button_pressed() -> void:
+	move_to_page(newestPage-1)

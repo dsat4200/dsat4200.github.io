@@ -21,8 +21,8 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_oit1c")
-start_page = 60
 page_sprites = ExtResource("2_v6qwj")
+newestPage = 60
 
 [node name="pages" type="Node2D" parent="."]
 position = Vector2(512, 475)
@@ -132,17 +132,16 @@ button_pressed = true
 text = "Smooth Scrolling: ON"
 script = ExtResource("7_5jf87")
 
-[node name="update" type="Button" parent="Control"]
+[node name="NewestPageButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 350.0
-offset_top = 958.0
-offset_right = 679.0
+offset_left = 349.0
+offset_top = 957.0
+offset_right = 545.0
 offset_bottom = 1016.0
-text = "Jump to Newest Update > "
 
 [connection signal="button_up" from="Control/leftbutton" to="." method="_on_leftbutton_button_up"]
 [connection signal="button_up" from="Control/rightbutton" to="." method="_on_rightbutton_button_up"]
 [connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="toggled" from="Control/Button" to="." method="_on_button_toggled"]
 [connection signal="toggled" from="Control/Button" to="Control/Button" method="_on_toggled"]
-[connection signal="toggled" from="Control/update" to="." method="_on_update_toggled"]
+[connection signal="pressed" from="Control/NewestPageButton" to="." method="_on_newest_page_button_pressed"]

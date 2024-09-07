@@ -11,7 +11,7 @@ var interpolation_speed: float = 30
 @onready var page_label = $Control/page_label
 @onready var pages_node = $pages
 @export var page_sprites : SpriteFrames
-var desktop = true
+var desktop = false
 # Target position for smooth interpolation
 var target_position: Vector2
 var smooth_scroll = true
@@ -55,15 +55,18 @@ func _input(event):
 	if event.is_action_pressed("close"):
 		get_tree().quit()
 	if event is InputEventMouseButton:
+		var increment = 1
+		if (desktop): 
+			increment = 4
 		if event.is_action_pressed("scroll_up"):
 			if (!smooth_scroll):
-				move_page(-1)
+				move_page(-increment)
 			else:
 				smooth_scroll_wheel(-1)
 			
 		elif event.is_action_pressed("scroll_down"):
 			if (!smooth_scroll):
-				move_page(1)
+				move_page(increment)
 			else:
 				smooth_scroll_wheel(1)
 			
@@ -78,8 +81,7 @@ func move_page(delta):
 		page+=delta
 		if (delta > 0):
 			spawn_next_page((delta))
-		if (desktop==true):
-			spawn_next_page((delta+1))
+		
 
 func print_children_positions():
 	# Iterate through each child node
@@ -97,18 +99,34 @@ func print_children_positions():
 			
 
 func spawn_next_page(delta):
-	var node = Sprite2D.new()	
-	var name = "pg"+str(page+start_page+delta)
-	if pages_node.has_node(name):
-		return
-	node.set_name(name)
-	var node_pos = get_last_node().position.x
-	pages_node.add_child(node)
-	pages_node.move_child(node,-1)
-	node.position.x= node_pos + (image_offset)
-	node.texture = page_sprites.get_frame_texture("ch1",page+delta)
-	print("called! "+str(node.name))
-
+	#print("delta "+ str(delta))
+	if (delta < 2):
+		var node = Sprite2D.new()	
+		var name = "pg"+str(page+start_page+delta)
+		if pages_node.has_node(name):
+			return
+		node.set_name(name)
+		var node_pos = get_last_node().position.x
+		pages_node.add_child(node)
+		pages_node.move_child(node,-1)
+		node.position.x= node_pos + (image_offset)
+		node.texture = page_sprites.get_frame_texture("ch1",page+delta)
+		print("called! "+str(node.name))
+		
+	else:
+		for n in delta:
+			var node = Sprite2D.new()	
+			var name = "pg"+str(page+start_page+n)
+			if pages_node.has_node(name):
+				return
+			node.set_name(name)
+			var node_pos = get_last_node().position.x
+			pages_node.add_child(node)
+			pages_node.move_child(node,-1)
+			node.position.x= node_pos + (image_offset)
+			node.texture = page_sprites.get_frame_texture("ch1",page+n)
+			print("again! "+str(node.name))
+		
 func get_first_node() -> Sprite2D:
 	return pages_node.get_child(0)
 	
@@ -139,7 +157,7 @@ func smooth_scroll_wheel(delta):
 	interpolation_speed = SCROLL_INTERPOLATION
 	var scrollamount = image_offset/5
 	target_position.x-= scrollamount*delta
-	move_page(1)
+	move_page(4)
 	move_to_page(find_nearest_page())
 
 

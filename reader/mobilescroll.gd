@@ -2,7 +2,10 @@ extends Node2D
 
 # Speed at which the node moves horizontally
 var image_offset:float = 960
-var interpolation_speed: float = 7.5
+const DEFAULT_INTERPOLATION = 7.5
+const MOBILE_INTERPOLATION = 30
+const SCROLL_INTERPOLATION = 15
+var interpolation_speed: float = 30
 @export var page :int = 0
 @export var start_page : int
 @onready var page_label = $Control/page_label
@@ -130,11 +133,13 @@ func _process(delta):
 				_on_swipe(SwipeDirection.LEFT)
 				
 func smooth_scroll_wheel(delta):
+	interpolation_speed = SCROLL_INTERPOLATION
 	var scrollamount = image_offset/5
 	target_position.x-= scrollamount*delta
 	move_page(1)
 	move_to_page(find_nearest_page())
-	
+
+
 func smooth_scroll_process():
 	if Input.is_action_just_pressed("click"):
 		touch_start_position = get_global_mouse_position().x
@@ -143,7 +148,7 @@ func smooth_scroll_process():
 		target_position.x-= swipeamount
 		touch_start_position = get_global_mouse_position().x
 	elif Input.is_action_just_released("click"):
-		move_page(1)
+		move_page(2)
 		move_to_page(find_nearest_page())
 		
 		
@@ -187,5 +192,8 @@ func _on_control_swipe_right() -> void:
 
 func _on_button_toggled(toggled_on: bool) -> void:
 	smooth_scroll = toggled_on
+	if (toggled_on == true):
+		interpolation_speed = MOBILE_INTERPOLATION
 	if (toggled_on == false):
+		interpolation_speed = DEFAULT_INTERPOLATION
 		snap_to_nearest_page()

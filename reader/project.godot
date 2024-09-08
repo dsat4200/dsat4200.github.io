@@ -20,10 +20,11 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_width=1024
-window/size/viewport_height=1024
+window/size/viewport_height=1200
 window/size/initial_position=Vector2i(512, 512)
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
+window/handheld/orientation=1
 
 [input]
 

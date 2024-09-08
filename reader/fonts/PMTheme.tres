@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b2j7cx3tj5n8f"]
+
+[ext_resource type="FontFile" uid="uid://cdi0sq8o34fqp" path="res://fonts/CammiSansBold.ttf" id="1_uw4r3"]
+
+[resource]
+default_font = ExtResource("1_uw4r3")
+default_font_size = 32

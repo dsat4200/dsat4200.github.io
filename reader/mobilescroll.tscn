@@ -2,22 +2,17 @@
 
 [ext_resource type="Script" path="res://mobilescroll.gd" id="1_oit1c"]
 [ext_resource type="SpriteFrames" uid="uid://djnxitmpina7m" path="res://quarterpages/quarterpages.tres" id="2_v6qwj"]
+[ext_resource type="Texture2D" uid="uid://chqlb63dwh1j7" path="res://quarterpages/squrare-modified.png" id="5_7j6wc"]
 [ext_resource type="Texture2D" uid="uid://ba65sl7k5oiwf" path="res://quarterpages/pg0_row-1-column-1.png" id="5_sx313"]
 [ext_resource type="Script" path="res://control.gd" id="6_54x13"]
 [ext_resource type="Texture2D" uid="uid://b6j5sesgamyrs" path="res://quarterpages/pg1_row-1-column-2.png" id="6_hfu0h"]
 [ext_resource type="Texture2D" uid="uid://dkg41b0ndcmnk" path="res://quarterpages/pg0_row-1-column-2.png" id="6_xx2q0"]
 [ext_resource type="Script" path="res://smooth_scroll_button.gd" id="7_5jf87"]
 [ext_resource type="Texture2D" uid="uid://c4hkwgjgmibsy" path="res://quarterpages/pg1_row-1-column-1.png" id="7_cm86n"]
-
-[sub_resource type="Theme" id="Theme_4u754"]
-default_font_size = 100
-
-[sub_resource type="Theme" id="Theme_wsqvm"]
-default_font_size = 100
+[ext_resource type="Theme" uid="uid://b2j7cx3tj5n8f" path="res://fonts/PMTheme.tres" id="8_yuq50"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6kvfp"]
 font_size = 45
-font_color = Color(0, 0, 0, 1)
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_oit1c")
@@ -25,22 +20,74 @@ page_sprites = ExtResource("2_v6qwj")
 newestPage = 60
 
 [node name="pages" type="Node2D" parent="."]
-position = Vector2(512, 475)
+position = Vector2(512, 600)
 
 [node name="pg0" type="Sprite2D" parent="pages"]
+texture_filter = 1
 position = Vector2(-960, 0)
 texture = ExtResource("5_sx313")
 
+[node name="strip_top" type="Sprite2D" parent="pages/pg0"]
+texture_filter = 1
+position = Vector2(2.49147e-05, -538.125)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
+[node name="strip_top2" type="Sprite2D" parent="pages/pg0"]
+texture_filter = 1
+position = Vector2(2.49147e-05, 538)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
 [node name="pg1" type="Sprite2D" parent="pages"]
+texture_filter = 1
 texture = ExtResource("6_xx2q0")
 
+[node name="strip_top" type="Sprite2D" parent="pages/pg1"]
+texture_filter = 1
+position = Vector2(2.49147e-05, -538.125)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
+[node name="strip_top2" type="Sprite2D" parent="pages/pg1"]
+texture_filter = 1
+position = Vector2(2.49147e-05, 538)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
 [node name="pg2" type="Sprite2D" parent="pages"]
+texture_filter = 1
 position = Vector2(960, 0)
 texture = ExtResource("7_cm86n")
 
+[node name="strip_top" type="Sprite2D" parent="pages/pg2"]
+texture_filter = 1
+position = Vector2(2.49147e-05, -538.125)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
+[node name="strip_top2" type="Sprite2D" parent="pages/pg2"]
+texture_filter = 1
+position = Vector2(2.49147e-05, 538)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
 [node name="pg3" type="Sprite2D" parent="pages"]
+texture_filter = 1
 position = Vector2(1920, 0)
 texture = ExtResource("6_hfu0h")
+
+[node name="strip_top" type="Sprite2D" parent="pages/pg3"]
+texture_filter = 1
+position = Vector2(2.49147e-05, -538.125)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
+
+[node name="strip_top2" type="Sprite2D" parent="pages/pg3"]
+texture_filter = 1
+position = Vector2(2.49147e-05, 538)
+scale = Vector2(10, 9.6875)
+texture = ExtResource("5_7j6wc")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -55,6 +102,7 @@ grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("8_yuq50")
 script = ExtResource("6_54x13")
 
 [node name="leftbutton" type="Button" parent="Control"]
@@ -64,7 +112,7 @@ offset_left = 4.0
 offset_top = 817.0
 offset_right = 213.0
 offset_bottom = 1020.0
-theme = SubResource("Theme_4u754")
+theme = ExtResource("8_yuq50")
 text = "<"
 
 [node name="rightbutton" type="Button" parent="Control"]
@@ -79,7 +127,7 @@ offset_left = -164.0
 offset_top = -238.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = SubResource("Theme_4u754")
+theme = ExtResource("8_yuq50")
 text = ">"
 
 [node name="LineEdit" type="LineEdit" parent="Control"]
@@ -90,61 +138,79 @@ offset_left = 331.0
 offset_top = 4.0
 offset_right = 707.0
 offset_bottom = 149.0
-theme = SubResource("Theme_wsqvm")
+theme = ExtResource("8_yuq50")
 text = "0"
 selecting_enabled = false
 flat = true
 
-[node name="page_label" type="Label" parent="Control"]
-top_level = true
+[node name="BottomButtons" type="ColorRect" parent="Control"]
 layout_mode = 0
-offset_left = 830.0
-offset_top = 911.0
-offset_right = 1147.0
-offset_bottom = 1058.0
-text = "Page:"
-label_settings = SubResource("LabelSettings_6kvfp")
-vertical_alignment = 1
-justification_flags = 160
+offset_left = 8.0
+offset_top = 1108.0
+offset_right = 669.0
+offset_bottom = 1170.0
+theme = ExtResource("8_yuq50")
+color = Color(0.13, 0.13, 0.13, 0)
 
-[node name="JumpLabel" type="Label" parent="Control"]
-visible = false
+[node name="Button" type="Button" parent="Control/BottomButtons"]
 top_level = true
 layout_mode = 0
+offset_left = 10.0
+offset_top = 1099.0
+offset_right = 376.0
+offset_bottom = 1179.0
+theme = ExtResource("8_yuq50")
+toggle_mode = true
+text = "Smooth Scroll: OFF"
+script = ExtResource("7_5jf87")
+
+[node name="NewestPageButton" type="Button" parent="Control/BottomButtons"]
+top_level = true
+layout_mode = 0
+offset_left = 378.0
+offset_top = 1100.0
+offset_right = 665.0
+offset_bottom = 1177.0
+theme = ExtResource("8_yuq50")
+text = "Skip to Newest "
+
+[node name="TopLabel" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 30.0
+offset_right = 451.0
+offset_bottom = 92.0
+theme = ExtResource("8_yuq50")
+color = Color(0.13, 0.13, 0.13, 0)
+
+[node name="Title" type="Label" parent="Control/TopLabel"]
+top_level = true
 offset_left = 9.0
-offset_top = 28.0
-offset_right = 326.0
-offset_bottom = 175.0
-text = "Jump to Page:"
+offset_top = 23.0
+offset_right = 260.0
+offset_bottom = 94.0
+theme = ExtResource("8_yuq50")
+text = "Phoebe and Mouse:  Ch. 1"
 label_settings = SubResource("LabelSettings_6kvfp")
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 160
 
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 958.0
-offset_right = 339.0
-offset_bottom = 1016.0
-theme_override_font_sizes/font_size = 30
-toggle_mode = true
-button_pressed = true
-text = "Smooth Scrolling: ON"
-script = ExtResource("7_5jf87")
-
-[node name="NewestPageButton" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 349.0
-offset_top = 957.0
-offset_right = 791.0
-offset_bottom = 1016.0
-theme_override_font_sizes/font_size = 30
-text = "Skip to Newest "
+[node name="page_label" type="Label" parent="Control/TopLabel"]
+top_level = true
+offset_left = 655.0
+offset_top = -17.0
+offset_right = 972.0
+offset_bottom = 130.0
+theme = ExtResource("8_yuq50")
+text = "Page:"
+label_settings = SubResource("LabelSettings_6kvfp")
+vertical_alignment = 1
+justification_flags = 160
 
 [connection signal="button_up" from="Control/leftbutton" to="." method="_on_leftbutton_button_up"]
 [connection signal="button_up" from="Control/rightbutton" to="." method="_on_rightbutton_button_up"]
 [connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
-[connection signal="toggled" from="Control/Button" to="." method="_on_button_toggled"]
-[connection signal="toggled" from="Control/Button" to="Control/Button" method="_on_toggled"]
-[connection signal="pressed" from="Control/NewestPageButton" to="." method="_on_newest_page_button_pressed"]
+[connection signal="toggled" from="Control/BottomButtons/Button" to="." method="_on_button_toggled"]
+[connection signal="toggled" from="Control/BottomButtons/Button" to="Control/BottomButtons/Button" method="_on_toggled"]
+[connection signal="pressed" from="Control/BottomButtons/NewestPageButton" to="." method="_on_newest_page_button_pressed"]

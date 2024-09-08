@@ -150,8 +150,9 @@ func smooth_scroll_process():
 		target_position.x-= swipeamount
 		touch_start_position = get_global_mouse_position().x
 	elif Input.is_action_just_released("click"):
-		interpolation_speed=MOBILE_INTERPOLATION/4
-		target_position.x-=swipeamount*4
+		interpolation_speed=MOBILE_INTERPOLATION/8
+		target_position.x-=swipeamount*8
+	
 func snap_to_nearest_page():
 	target_position.x = 512
 	for n in page:

@@ -118,7 +118,7 @@ func get_last_node() -> Sprite2D:
 func _process(delta):
 	get_page()
 	page_label.text = "Page: " + str(page)
-	pages_node.position = pages_node.position.lerp(target_position, interpolation_speed * delta)
+	pages_node.position.x = (pages_node.position.slerp(target_position, interpolation_speed * delta)).x
 	if (smooth_scroll):
 		smooth_scroll_process()
 	elif Input.is_action_just_pressed("click"):
@@ -140,17 +140,18 @@ func smooth_scroll_wheel(delta):
 	target_position.x-= scrollamount*delta
 
 
-
+var swipeamount
 func smooth_scroll_process():
 	if Input.is_action_just_pressed("click"):
 		touch_start_position = get_global_mouse_position().x
 		interpolation_speed = MOBILE_INTERPOLATION
 	elif Input.is_action_pressed("click"):
-		var swipeamount = touch_start_position - get_global_mouse_position().x 
+		swipeamount = touch_start_position - get_global_mouse_position().x 
 		target_position.x-= swipeamount
 		touch_start_position = get_global_mouse_position().x
 	elif Input.is_action_just_released("click"):
-		pass
+		interpolation_speed=MOBILE_INTERPOLATION/4
+		target_position.x-=swipeamount*4
 func snap_to_nearest_page():
 	target_position.x = 512
 	for n in page:

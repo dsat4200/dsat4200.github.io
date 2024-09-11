@@ -33,13 +33,12 @@ enum SwipeDirection {
 }
 
 func move_to_page(target):
+	interpolation_speed = MOBILE_INTERPOLATION
 	var x_cord = (-target*960)+512
 	spawn_next_page(target-page)
-	#page = int(((512-target_position.x)/960))
 	target_position.x = x_cord
-	print("moving from page " + str(page) + " to page! "+str(target))
-	print(str(target - page))
-	
+	print("moving from page " + str(page) + " to page! "+str(target) + " at position "+ str(target_position.x))
+	#print(str(target - page))
 	
 func _ready():
 	# Initialize the target position to the current position
@@ -181,7 +180,9 @@ func _on_swipe(direction: SwipeDirection):
 			
 
 func _on_rightbutton_button_up() -> void:
-	move_page(1)
+	#move_page(1)
+	print_children_positions()
+	print(target_position.x)
 
 
 func _on_leftbutton_button_up() -> void:

@@ -17,7 +17,7 @@ font_size = 45
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_oit1c")
 page_sprites = ExtResource("2_v6qwj")
-newestPage = 60
+newestPage = 65
 
 [node name="pages" type="Node2D" parent="."]
 position = Vector2(512, 600)
@@ -123,8 +123,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -164.0
-offset_top = -238.0
+offset_left = -207.0
+offset_top = -84.0
+offset_right = -43.0
+offset_bottom = 154.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("8_yuq50")
@@ -185,6 +187,7 @@ color = Color(0.13, 0.13, 0.13, 0)
 
 [node name="Title" type="Label" parent="Control/TopLabel"]
 top_level = true
+layout_mode = 0
 offset_left = 9.0
 offset_top = 23.0
 offset_right = 260.0
@@ -198,6 +201,7 @@ justification_flags = 160
 
 [node name="page_label" type="Label" parent="Control/TopLabel"]
 top_level = true
+layout_mode = 0
 offset_left = 655.0
 offset_top = -17.0
 offset_right = 972.0

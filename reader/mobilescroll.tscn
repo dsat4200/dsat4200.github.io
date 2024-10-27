@@ -17,7 +17,7 @@ font_size = 45
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_oit1c")
 page_sprites = ExtResource("2_v6qwj")
-newestPage = 65
+newestPage = 69
 
 [node name="pages" type="Node2D" parent="."]
 position = Vector2(512, 600)
@@ -212,9 +212,10 @@ label_settings = SubResource("LabelSettings_6kvfp")
 vertical_alignment = 1
 justification_flags = 160
 
-[connection signal="button_up" from="Control/leftbutton" to="." method="_on_leftbutton_button_up"]
-[connection signal="button_up" from="Control/rightbutton" to="." method="_on_rightbutton_button_up"]
-[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="next_page" from="Control" to="." method="_on_control_next_page"]
+[connection signal="prev_page" from="Control" to="." method="_on_control_prev_page"]
+[connection signal="button_up" from="Control/leftbutton" to="Control" method="_on_leftbutton_button_up"]
+[connection signal="button_up" from="Control/rightbutton" to="Control" method="_on_rightbutton_button_up"]
 [connection signal="toggled" from="Control/BottomButtons/Button" to="." method="_on_button_toggled"]
 [connection signal="toggled" from="Control/BottomButtons/Button" to="Control/BottomButtons/Button" method="_on_toggled"]
 [connection signal="pressed" from="Control/BottomButtons/NewestPageButton" to="." method="_on_newest_page_button_pressed"]

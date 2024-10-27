@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=71 format=3 uid="uid://djnxitmpina7m"]
+[gd_resource type="SpriteFrames" load_steps=81 format=3 uid="uid://djnxitmpina7m"]
 
 [ext_resource type="Texture2D" uid="uid://ba65sl7k5oiwf" path="res://quarterpages/pg0_row-1-column-1.png" id="1_g21xn"]
 [ext_resource type="Texture2D" uid="uid://dkg41b0ndcmnk" path="res://quarterpages/pg0_row-1-column-2.png" id="2_msm3f"]
@@ -70,6 +70,40 @@
 [ext_resource type="Texture2D" uid="uid://4o8xs8pw8s0s" path="res://quarterpages/pg17__2.png" id="68_1sodj"]
 [ext_resource type="Texture2D" uid="uid://ctg7ydtsdjyk8" path="res://quarterpages/pg17__3.png" id="69_ubqsy"]
 [ext_resource type="Texture2D" uid="uid://bbyjj5sgx2gbf" path="res://quarterpages/pg17__4.png" id="70_thge5"]
+[ext_resource type="Texture2D" uid="uid://8xuqvjtbnxoh" path="res://quarterpages/set18.png" id="71_yv6m3"]
+[ext_resource type="Texture2D" uid="uid://d1gge07kjjtr2" path="res://quarterpages/set19.png" id="72_8bhds"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q20ke"]
+atlas = ExtResource("71_yv6m3")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o31i"]
+atlas = ExtResource("71_yv6m3")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4qhv"]
+atlas = ExtResource("71_yv6m3")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6jgf"]
+atlas = ExtResource("71_yv6m3")
+region = Rect2(2880, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y880b"]
+atlas = ExtResource("72_8bhds")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e5ri"]
+atlas = ExtResource("72_8bhds")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wk17"]
+atlas = ExtResource("72_8bhds")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr03m"]
+atlas = ExtResource("72_8bhds")
+region = Rect2(2880, 0, 960, 960)
 
 [resource]
 animations = [{
@@ -283,6 +317,30 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("70_thge5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q20ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o31i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4qhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6jgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y880b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e5ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wk17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr03m")
 }],
 "loop": true,
 "name": &"ch1",

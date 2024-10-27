@@ -119,6 +119,8 @@ func _process(delta):
 	get_page()
 	page_label.text = "Page: " + str(page)
 	pages_node.position.x = (pages_node.position.slerp(target_position, interpolation_speed * delta)).x
+	
+	
 	if (smooth_scroll):
 		smooth_scroll_process()
 	elif Input.is_action_just_pressed("click"):
@@ -177,18 +179,6 @@ func _on_swipe(direction: SwipeDirection):
 		SwipeDirection.RIGHT:
 			move_page(-1)
 
-			
-
-func _on_rightbutton_button_up() -> void:
-	#move_page(1)
-	print_children_positions()
-	print(target_position.x)
-
-
-func _on_leftbutton_button_up() -> void:
-	move_page(-1)
-
-
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	move_to_page(int($Control/LineEdit.text))
@@ -213,3 +203,11 @@ func _on_button_toggled(toggled_on: bool) -> void:
 
 func _on_newest_page_button_pressed() -> void:
 	move_to_page(newestPage)
+
+
+func _on_control_next_page() -> void:
+	move_page(1)
+
+
+func _on_control_prev_page() -> void:
+	move_page(-1)

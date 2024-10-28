@@ -10,12 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Reader"
+config/name="Phoebe and Mouse"
 run/main_scene="res://mobilescroll.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0.489622, 0.489622, 0.489622, 1)
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [display]
 

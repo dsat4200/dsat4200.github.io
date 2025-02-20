@@ -3,14 +3,14 @@
 body {
     font-family: 'Monsterrat', sans-serif;
     margin: 0;
-    background-color: #faf3e0;
-    color: #333;
+    background-color: #272629;
+    color: #ffffff;
     text-align: center;
 }
 
 
 header {
-    background-color: #d5c4a1;
+    background-color: #5f576e;
     padding: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -18,16 +18,18 @@ header {
     font-optical-sizing: auto;
     font-weight: light;
     font-style: normal;
+    border-bottom-right-radius: 14pt;
+    border-bottom-left-radius: 14pt;
 }
 
 header h1 {
-    margin-bottom: 0;
+    margin-bottom: 10;
     letter-spacing: 4px;
 }
 
 header h2{
     padding-top: 0;
-    padding-bottom:10px;
+    padding-bottom:20px;
     font-weight: normal;
     font-size: 10pt;
     font-style: italic;
@@ -41,7 +43,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
 
 .main {
@@ -49,7 +51,19 @@ nav ul li a {
     text-align: center;
 }
 
+body main{
+    font-family: "Montserrat", serif;
+    padding:0px;
+    margin:0px;
+}
 
+body main h1{
+    font-family: "Montserrat", serif;
+    font-weight:100;
+    font-size:28pt;
+    letter-spacing: 4px;
+
+}
 footer {
     background-color: #d5c4a1;
     text-align: center;
@@ -59,8 +73,9 @@ footer {
 .project-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
     padding: 20px;
+    padding-top:0px;
 }
 
 .project-item {
@@ -92,6 +107,7 @@ footer {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10%;
 }
 
 .overlay {
@@ -111,9 +127,8 @@ footer {
 
 .project-info {
     color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: center;
+    margin: 15%;
     text-align: center;
+    font-size:90%;
 }

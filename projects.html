@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>Projects</title>
+
 </head>
 <body>
     <header>
-        <h1>Projects</h1>
+        <h1>JESSIE TORRES ACOSTA</h1>
+        <h2>3D Artist and Game Developer</h2>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,15 +26,31 @@
         </nav>
     </header>
     <main>
+        <h1>Projects</h1>
         <section class="project-grid">
+            <div class="project-item">
+                <a href="projects/shipwreck.html">
+                    <div class="thumbnail">
+                        <img src="thumbs/ship_enemies.png" alt="Project Thumbnail">
+                        <div class="overlay">
+                            <div class="project-info">
+                                <h4>2022</h4>
+                                <h3>Shipwreck enemies</h3>
+                                <p>Models for the ASU Video Gamedev Club.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <div class="project-item">
                 <a href="#project-1">
                     <div class="thumbnail">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/047/569/857/smaller_square/jose-torres-acosta-puff.jpg?1647914368" alt="Project Thumbnail">
+                        <img src="thumbs/ship_enemies.png" alt="Project Thumbnail">
                         <div class="overlay">
                             <div class="project-info">
-                                <h3>Project Title 1</h3>
-                                <p>Short description of the project.</p>
+                                <h4>2022</h4>
+                                <h3>Shipwreck enemies</h3>
+                                <p>Models for the ASU Video Gamedev Club.</p>
                             </div>
                         </div>
                     </div>
@@ -41,3 +64,14 @@
     </footer>
 </body>
 </html>
+<style>
+  .thumbnail {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .thumbnail:hover {
+    filter: brightness(0.9);
+    transform: scale(1.05);
+  }
+</style>
+<!-- ... existing

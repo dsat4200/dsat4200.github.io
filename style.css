@@ -58,10 +58,17 @@ header h2{
     font-style: italic;
 }
 
+nav ul{
+padding:0;
+margin:0;
+padding-bottom: 10pt;
+list-style: none;
+}
+
 nav ul li {
     font-weight: light;
     display: inline;
-    margin-right: 20px;
+    margin: 6pt;
 }
 
 nav ul li a {

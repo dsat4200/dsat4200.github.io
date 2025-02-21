@@ -6,11 +6,30 @@ body {
     background-color: #272629;
     color: #ffffff;
     text-align: center;
+    scrollbar-width: none;
+    position:relative;
 }
 
 
+body::before {
+    content: "";
+    position: fixed;  /* Change to fixed */
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 16%; 
+    background: linear-gradient(to bottom, transparent, #0000007d);
+    pointer-events: none; 
+    z-index: 1;  /* You might want to adjust this depending on other elements */
+}
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 header {
-    background-color: #5f576e;
     padding: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -18,13 +37,16 @@ header {
     font-optical-sizing: auto;
     font-weight: light;
     font-style: normal;
-    border-bottom-right-radius: 14pt;
-    border-bottom-left-radius: 14pt;
+    background: linear-gradient(to bottom, #7d65a9, #5f576ea0); /* Add gradient */
+    /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
+    /* border-bottom-left-radius: 14pt; */
+    border-radius: 0 0 14pt 14pt;
 }
 
 header h1 {
     margin-bottom: 10;
     letter-spacing: 4px;
+    text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 header h2{
@@ -32,6 +54,7 @@ header h2{
     padding-bottom:20px;
     font-weight: normal;
     font-size:90%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-style: italic;
 }
 
@@ -44,6 +67,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .main {
@@ -65,15 +89,15 @@ body main h1{
 
 }
 footer {
-    background-color: #d5c4a1;
     text-align: center;
+    height:100px;
     padding: 10px;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 6px;
+    grid-gap: 10pt;
     padding: 20px;
     padding-top:0px;
 }
@@ -82,16 +106,16 @@ footer {
     position: relative;
     /* width: calc(33.333% - 10px); */
     overflow: hidden;
+    outline: 4px solid #0000004f;
+    border-radius: 10%;
 }
 
-.project-item h1{
-
-}
 
 .project-detail{
     font-family: "Montserrat", serif;
     padding:0px;
     margin:0px;
+    
 }
 
 .project-detail h1{
@@ -120,10 +144,12 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.3s;
+    /* Radial Gradient */
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.853) 100%);
 }
+
 
 .project-item:hover .overlay {
     opacity: 1;
@@ -136,4 +162,74 @@ footer {
     margin-top:25%;
     text-align: center;
     font-size:auto;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Add to your existing style.css */
+
+.about-content {
+    display: flex;           /* Use flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px;              /* Add some space between image and text */
+    padding: 20px;           /* Add padding around the content */
+    text-align: left;          /* Align text to the left */
+    margin-bottom: 20px;
+}
+
+
+.profile-picture {
+    flex: 1;                /* Image takes up 1 part of the space */
+}
+
+.profile-picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    flex: 2;                /* Description takes up 2 parts of the space */
+}
+
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px;                /* Space between icons */
+    justify-content: center; /* Center the grid horizontally */
+    padding-bottom: 20px;
+    text-align: center;
+
+
+}
+
+.icon-grid a {
+    display: flex;            /* Allows centering content vertically */
+    align-items: center;      /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    text-decoration: none;   /* Remove underlines from links */
+    color: #ffffff;          /* Icon color */
+    font-size: 2em;          /* Make icons larger */
+}
+
+.icon-grid a:last-child {  /* Style the resume link specifically */
+    justify-content: flex-start; /* Align resume text to the left */
+}
+
+
+.icon-grid i {
+    margin-right: 5px; /* Add space between resume icon and text */
+
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 512px) { /* For smaller screens */
+    .about-content {
+        flex-direction: column;  /* Stack image and description vertically */
+        align-items: center; /* Center the image */
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+    }
 }

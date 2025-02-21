@@ -31,7 +31,7 @@ header h2{
     padding-top: 0;
     padding-bottom:20px;
     font-weight: normal;
-    font-size: 10pt;
+    font-size:90%;
     font-style: italic;
 }
 
@@ -60,7 +60,7 @@ body main{
 body main h1{
     font-family: "Montserrat", serif;
     font-weight:100;
-    font-size:28pt;
+    font-size:auto;
     letter-spacing: 4px;
 
 }
@@ -71,17 +71,21 @@ footer {
 }
 
 .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 6px;
     padding: 20px;
     padding-top:0px;
 }
 
 .project-item {
     position: relative;
-    width: calc(33.333% - 10px);
+    /* width: calc(33.333% - 10px); */
     overflow: hidden;
+}
+
+.project-item h1{
+
 }
 
 .project-detail{
@@ -92,13 +96,13 @@ footer {
 
 .project-detail h1{
     font-weight:100;
-    font-size:20pt;
+    font-size:auto;
     letter-spacing: 4px;
 
 }
 
 .project-detail h2{
-    font-size: 16pt;
+    font-size: auto;
     font-weight:100;
     font-style: italic;
 }
@@ -129,6 +133,7 @@ footer {
     color: #fff;
     position: center;
     margin: 15%;
+    margin-top:25%;
     text-align: center;
-    font-size:90%;
+    font-size:auto;
 }

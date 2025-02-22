@@ -96,6 +96,16 @@ body main h1{
 
 }
 footer {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: light;
+    font-style: normal;
+    background: linear-gradient(to top, #8163b9, #44277aa0); /* Add gradient */
+    /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
+    /* border-bottom-left-radius: 14pt; */
+    border-radius: 0 0 14pt 14pt;
     text-align: center;
     height:100px;
     padding: 10px;

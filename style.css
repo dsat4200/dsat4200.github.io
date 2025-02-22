@@ -11,14 +11,14 @@ body {
 
 body::before {
     content: "";
-    position: absolute; /* Changed to absolute positioning */
+    position: fixed; /* Changed to fixed positioning */
     bottom: 0;
     left: 0;
     width: 100%;
     height: 16%; /* Adjust as needed */
     background: linear-gradient(to bottom, transparent, #0000007d);
     pointer-events: none;
-    z-index: -1; /* Make sure this is below the footer */
+    z-index: 99; /* Make sure this is above everything except the footer*/
 }
 
 
@@ -39,6 +39,9 @@ header {
     /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
     /* border-bottom-left-radius: 14pt; */
     border-radius: 0 0 14pt 14pt;
+    z-index:10; /* Added Z-Index*/
+    position: relative;/*added position*/
+
 }
 
 header h1 {
@@ -49,18 +52,22 @@ header h1 {
 
 header h2{
     padding-top: 0;
-    padding-bottom:20px;
+    padding-bottom:8pt;
     font-weight: normal;
-    font-size:90%;
+    font-size:14pt;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-style: italic;
 }
 
 nav ul{
+font-size: 16pt;
 padding:0;
 margin:0;
 padding-bottom: 10pt;
 list-style: none;
+z-index:10; /* Added Z-Index*/
+position: relative;/*added position*/
+
 }
 
 nav ul li {
@@ -78,6 +85,8 @@ nav ul li a {
 .main {
     padding: 20px;
     text-align: center;
+     z-index:10; /* Added Z-Index*/
+    position: relative;/*added position*/
 }
 
 body main{
@@ -104,10 +113,20 @@ footer {
     /* border-bottom-left-radius: 14pt; */
     border-radius: 14pt 14pt 0 0;
     text-align: center;
-    height:140px;
+    height:220px;
     /* ... your existing footer styles ... */
-    z-index: 0; /* Ensure the footer is above the gradient */
+    z-index: 100; /* Ensure the footer is above the gradient */
     position: relative; /* Added to allow absolute positioning of :before */
+}
+
+footer h1{
+    padding-top:14pt;
+    font-family: "Montserrat", serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 400;
+    font-size:20pt;
+    letter-spacing: 4px;
+
 }
 
 .project-grid {
@@ -116,6 +135,8 @@ footer {
     grid-gap: 10pt;
     padding: 20px;
     padding-top:0px;
+     z-index:10; /* Added Z-Index*/
+    position: relative;/*added position*/
 }
 
 .project-item {
@@ -124,6 +145,8 @@ footer {
     overflow: hidden;
     outline: 4px solid #0000004f;
     border-radius: 10%;
+     z-index:10; /* Added Z-Index*/
+
 }
 
 
@@ -131,6 +154,8 @@ footer {
     font-family: "Montserrat", serif;
     padding:0px;
     margin:0px;
+     z-index:10; /* Added Z-Index*/
+    position: relative;/*added position*/
     
 }
 
@@ -168,9 +193,10 @@ footer {
         rgba(0, 0, 0, 0) 0%,           /* Transparent at the very center */
         rgba(0, 0, 0, 0.1) 20%,       /* Slightly opaque */
         rgba(0, 0, 0, 0.4) 70%,       /* More opaque */
-        rgba(0, 0, 0, 0.7) 90%,       /* Even more opaque */
-        rgba(0, 0, 0, 1) 100%      /* Most opaque at the edge */
+        rgba(0, 0, 0, 0.6) 90%,       /* Even more opaque */
+        rgba(0, 0, 0, .9) 100%      /* Most opaque at the edge */
     );
+     z-index:10; /* Added Z-Index*/
 }
 
 
@@ -187,32 +213,50 @@ footer {
     text-align: center;
     font-size:auto;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+     z-index:10; /* Added Z-Index*/
 }
 
 /* Add to your existing style.css */
 
+/* ... (Your existing CSS) ... */
 .about-content {
-    display: flex;           /* Use flexbox for layout */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px;              /* Add some space between image and text */
-    padding: 20px;           /* Add padding around the content */
-    text-align: left;          /* Align text to the left */
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    padding: 20px;
+    padding-top: 0;
+    text-align: left;
     margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+    justify-content: center; /* Distribute space evenly */
 }
-
 
 .profile-picture {
-    flex: 1;                /* Image takes up 1 part of the space */
-}
-
-.profile-picture img {
-    max-width: 100%;
-    height: auto;
+    align-self: flex-start;
+    flex: 0 0 auto; /* Prevents shrinking and growing */
+    width: auto;    /* Ensures natural image width */
+    margin: 0;     /* Remove all margins */
 }
 
 .description {
-    flex: 2;                /* Description takes up 2 parts of the space */
+    flex: 0 0 auto;
+    max-width: 50%; 
+    width: auto;
+    margin: 0;     /* Remove all margins */
 }
+
+
+.profile-picture img {
+    
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+
+/* ... (Your remaining CSS) ... */
+
 
 .description p{
     margin-top:0;
@@ -222,10 +266,14 @@ footer {
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust 60px for icon size */
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
-    padding-bottom: 20px;
-    text-align: center;
+    align-items: center;
+    z-index:10; /* Added Z-Index*/
+    position: relative;/*added position*/
+    padding:0;
+    padding-left: 14%;
+    padding-right: 14%;
 }
 
 .icon-grid a {
@@ -238,10 +286,12 @@ footer {
 
 .icon-grid img {
     filter:hue-rotate(45deg);
+    max-height: 100px;
     max-width: 100%; /* Ensures images don't overflow their containers */
     border-radius: 16%;
     height: auto;     /* Maintain aspect ratio */
     display: block;   /* Removes extra space below images */
+
 }
 
 

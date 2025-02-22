@@ -1,5 +1,3 @@
-
-
 body {
     font-family: 'Monsterrat', sans-serif;
     margin: 0;
@@ -13,14 +11,14 @@ body {
 
 body::before {
     content: "";
-    position: fixed;  /* Change to fixed */
-    bottom: 0; 
+    position: absolute; /* Changed to absolute positioning */
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 16%; 
+    height: 16%; /* Adjust as needed */
     background: linear-gradient(to bottom, transparent, #0000007d);
-    pointer-events: none; 
-    z-index: 1;  /* You might want to adjust this depending on other elements */
+    pointer-events: none;
+    z-index: -1; /* Make sure this is below the footer */
 }
 
 
@@ -37,7 +35,7 @@ header {
     font-optical-sizing: auto;
     font-weight: light;
     font-style: normal;
-    background: linear-gradient(to bottom, #8163b9, #44277aa0); /* Add gradient */
+    background: linear-gradient(to bottom, rgb(148, 95, 255), #44277aa0); /* Add gradient */
     /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
     /* border-bottom-left-radius: 14pt; */
     border-radius: 0 0 14pt 14pt;
@@ -96,19 +94,20 @@ body main h1{
 
 }
 footer {
-    padding: 10px;
     text-align: center;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: light;
     font-style: normal;
-    background: linear-gradient(to top, #8163b9, #44277aa0); /* Add gradient */
+    background: linear-gradient(to top, rgb(148, 95, 255), #44277aa0); /* Add gradient */
     /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
     /* border-bottom-left-radius: 14pt; */
-    border-radius: 0 0 14pt 14pt;
+    border-radius: 14pt 14pt 0 0;
     text-align: center;
-    height:100px;
-    padding: 10px;
+    height:140px;
+    /* ... your existing footer styles ... */
+    z-index: 0; /* Ensure the footer is above the gradient */
+    position: relative; /* Added to allow absolute positioning of :before */
 }
 
 .project-grid {
@@ -215,36 +214,36 @@ footer {
     flex: 2;                /* Description takes up 2 parts of the space */
 }
 
+.description p{
+    margin-top:0;
+}
+
 
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 10px;                /* Space between icons */
-    justify-content: center; /* Center the grid horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust 60px for icon size */
+    gap: 10px;
+    justify-content: center;
     padding-bottom: 20px;
     text-align: center;
-
-
 }
 
 .icon-grid a {
-    display: flex;            /* Allows centering content vertically */
-    align-items: center;      /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    text-decoration: none;   /* Remove underlines from links */
-    color: #ffffff;          /* Icon color */
-    font-size: 2em;          /* Make icons larger */
+    display: block;
+    width: 100%;
+    height: auto; /* Let the image height adjust automatically */
+    text-decoration: none;
+    color: transparent;
 }
 
-.icon-grid a:last-child {  /* Style the resume link specifically */
-    justify-content: flex-start; /* Align resume text to the left */
+.icon-grid img {
+    filter:hue-rotate(45deg);
+    max-width: 100%; /* Ensures images don't overflow their containers */
+    border-radius: 16%;
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Removes extra space below images */
 }
 
-
-.icon-grid i {
-    margin-right: 5px; /* Add space between resume icon and text */
-
-}
 
 
 /* Media Queries for Responsiveness */

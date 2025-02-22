@@ -265,34 +265,38 @@ footer h1{
 
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust 60px for icon size */
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    z-index:10; /* Added Z-Index*/
-    position: relative;/*added position*/
-    padding:0;
-    padding-left: 14%;
-    padding-right: 14%;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* This line is perfect! */
+    justify-content: center; /* Centers horizontally */
+    /* align-items: center;  Remove this line - it's not needed for horizontal arrangement */
+    z-index: 10;
+    position: relative;
+    padding: 8%;
+    padding-bottom: 0;
+    padding-top:0;
+    /* width: fit-content; Remove this line. This is the culprit. */
+    margin: 0 auto; /* Centers the grid horizontally on the page*/
 }
 
 .icon-grid a {
-    display: block;
-    width: 100%;
-    height: auto; /* Let the image height adjust automatically */
+    display: block; /* Keep this. It's good for making the whole link clickable */
+    width: 100%;    /* Keep this to fill the grid cell */
+    height: auto;
     text-decoration: none;
     color: transparent;
 }
 
 .icon-grid img {
-    filter:hue-rotate(45deg);
-    max-height: 100px;
-    max-width: 100%; /* Ensures images don't overflow their containers */
+outline: 4px solid #0000004f;
+    border-radius: 10%;
+    filter: hue-rotate(45deg);
+    max-height: 90px;
+    max-width: 100%;
     border-radius: 16%;
-    height: auto;     /* Maintain aspect ratio */
-    display: block;   /* Removes extra space below images */
-
+    height: auto;
+    display: inline-block; /* Keep this for proper image layout */
 }
+
+
 
 
 

@@ -82,6 +82,13 @@ nav ul li a {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+nav ul li a:hover {
+    color: rgb(148, 95, 255); /* Change the color to purple */
+    text-decoration: none; /*This line ensures no underline appears*/
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
 .main {
     padding: 20px;
     text-align: center;
@@ -97,35 +104,9 @@ body main{
 
 body main h1{
     font-family: "Montserrat", serif;
-    font-weight:100;
+    font-weight:200;
     font-size:auto;
-    letter-spacing: 4px;
-
-}
-footer {
-    text-align: center;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: light;
-    font-style: normal;
-    background: linear-gradient(to top, rgb(148, 95, 255), #44277aa0); /* Add gradient */
-    /* border-bottom-right-radius: 14pt;  Apply radius after gradient */
-    /* border-bottom-left-radius: 14pt; */
-    border-radius: 14pt 14pt 0 0;
-    text-align: center;
-    height:220px;
-    /* ... your existing footer styles ... */
-    z-index: 100; /* Ensure the footer is above the gradient */
-    position: relative; /* Added to allow absolute positioning of :before */
-}
-
-footer h1{
-    padding-top:14pt;
-    font-family: "Montserrat", serif;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    font-weight: 400;
-    font-size:20pt;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 
 }
 
@@ -233,10 +214,17 @@ footer h1{
 }
 
 .profile-picture {
+    padding-top:2.5%;
     align-self: flex-start;
     flex: 0 0 auto; /* Prevents shrinking and growing */
     width: auto;    /* Ensures natural image width */
     margin: 0;     /* Remove all margins */
+}
+.profile-picture img {
+    outline: 4px solid #ffffff93;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10%;
 }
 
 .description {
@@ -245,48 +233,82 @@ footer h1{
     width: auto;
     margin: 0;     /* Remove all margins */
 }
-
-
-.profile-picture img {
-    
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10%;
-}
-
-
-/* ... (Your remaining CSS) ... */
-
-
 .description p{
     margin-top:0;
 }
 
-
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* This line is perfect! */
-    justify-content: center; /* Centers horizontally */
-    /* align-items: center;  Remove this line - it's not needed for horizontal arrangement */
-    z-index: 10;
-    position: relative;
-    padding: 8%;
-    padding-bottom: 0;
-    padding-top:0;
-    /* width: fit-content; Remove this line. This is the culprit. */
-    margin: 0 auto; /* Centers the grid horizontally on the page*/
+.description h2{
+    font-family: "Montserrat", serif;
+    font-weight:400;
+    font-size:14pt;
+    padding:0;
+    letter-spacing: 4px;
+    margin-top:8pt;
+    margin-bottom: 8pt;
 }
 
-.icon-grid a {
-    display: block; /* Keep this. It's good for making the whole link clickable */
-    width: 100%;    /* Keep this to fill the grid cell */
+
+
+
+footer {
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: light;
+    font-style: normal;
+    background: linear-gradient(to top, rgb(148, 95, 255), #44277aa0);
+    border-radius: 14pt 14pt 0 0;
+    text-align: center;
+    height: 220px;
+    z-index: 100;
+    position: relative;
+}
+
+footer h1 {
+    padding-top: 14pt;
+    font-family: "Montserrat", serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 400;
+    font-size: 20pt;
+    letter-spacing: 6px;
+}
+
+/* Style the footer's navigation */
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;           /* Make items arrange horizontally */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;    /* Center vertically*/
+    gap: 20px;             /* Space between icons (adjust as needed) */
+    padding: 20px;         /* Add some padding around the nav */
+    padding-bottom: 0;     /* Remove excess padding */
+    padding-top: 0;        /* Remove excess padding */
+    
+}
+
+footer nav ul li {
+    display: inline-block;  /* Makes li responsive to width/height */
+    margin: 0;
     height: auto;
+}
+
+/* Style the icons */
+footer nav ul li a {
+    display: block;   /* Make the whole link area clickable */
     text-decoration: none;
     color: transparent;
+    width:100%;
+    height:auto;
+    z-index:100;
+    position: relative;
 }
 
-.icon-grid img {
-outline: 4px solid #0000004f;
+
+
+footer nav ul li img {
+    outline: 4px solid #0000004f;
     border-radius: 10%;
     filter: hue-rotate(45deg);
     max-height: 90px;
@@ -294,6 +316,10 @@ outline: 4px solid #0000004f;
     border-radius: 16%;
     height: auto;
     display: inline-block; /* Keep this for proper image layout */
+    transition: transform 0.3s ease;
+}
+footer nav ul li img:hover{
+    transform: scale(1.1);
 }
 
 
@@ -309,5 +335,8 @@ outline: 4px solid #0000004f;
 
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+    }
+    footer nav ul {
+        flex-wrap: wrap; /* Wrap icons on smaller screens */
     }
 }

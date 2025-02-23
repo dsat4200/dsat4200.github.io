@@ -21,7 +21,7 @@
                 <li><a href="index.html">3D Work</a></li>
                 <li><a href="concepts.html">2D Work</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="scrollToContact()">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -298,7 +298,7 @@
             <!-- ... existing code ... -->
         </section>
     </main>
-    <footer>
+    <footer id="contact-section">
         <h1>Contact</h1>
         <nav>
             <ul>
@@ -310,6 +310,14 @@
             </ul>
         </nav>
     </footer>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact-section');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
 </body>
 </html>
 <style>

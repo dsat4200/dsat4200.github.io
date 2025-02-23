@@ -124,7 +124,7 @@ body main h1{
     position: relative;
     /* width: calc(33.333% - 10px); */
     overflow: hidden;
-    outline: 4px solid #0000004f;
+    outline: 4px solid #6734c459;
     border-radius: 10%;
      z-index:10; /* Added Z-Index*/
 
@@ -221,7 +221,7 @@ body main h1{
     margin: 0;     /* Remove all margins */
 }
 .profile-picture img {
-    outline: 4px solid #ffffff93;
+    outline: 4px solid #6734c459;
     height: 400px;
     object-fit: cover;
     border-radius: 10%;
@@ -294,6 +294,18 @@ footer nav ul li {
     height: auto;
 }
 
+footer nav ul li img {
+    outline: 4px solid #0000004f;
+    border-radius: 10%;
+    filter: hue-rotate(45deg);
+    border-radius: 16%;
+    height: auto;
+    display: inline-block; /* Keep this for proper image layout */
+    transition: transform 0.3s ease;
+    max-width: 80px; /* Adjust this value as needed */
+    max-height: 80px; /* Adjust this value as needed */
+}
+
 /* Style the icons */
 footer nav ul li a {
     display: block;   /* Make the whole link area clickable */
@@ -306,18 +318,20 @@ footer nav ul li a {
 }
 
 
-
-footer nav ul li img {
-    outline: 4px solid #0000004f;
-    border-radius: 10%;
-    filter: hue-rotate(45deg);
-    max-height: 90px;
-    max-width: 100%;
-    border-radius: 16%;
-    height: auto;
-    display: inline-block; /* Keep this for proper image layout */
-    transition: transform 0.3s ease;
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;           /* Make items arrange horizontally */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;    /* Center vertically*/
+    gap: 10px;             /* Space between icons (adjust as needed) */
+    padding: 20px;         /* Add some padding around the nav */
+    padding-bottom: 0;     /* Remove excess padding */
+    padding-top: 0;        /* Remove excess padding */
+    
 }
+
 footer nav ul li img:hover{
     transform: scale(1.1);
 }
@@ -337,6 +351,13 @@ footer nav ul li img:hover{
         grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
     }
     footer nav ul {
+        align-items: start;
+        height:200px;
         flex-wrap: wrap; /* Wrap icons on smaller screens */
+        gap: 5px;       /* Reduce gap between icons on smaller screens */
     }
+    footer nav ul li img {
+        max-height: 60px; /* Reduce icon size for smaller screens */
+    }
+
 }

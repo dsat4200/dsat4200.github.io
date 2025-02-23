@@ -49,9 +49,12 @@ def generate_project_pages(html_file, template_file, output_dir):
                         for image_filename in os.listdir(project_dir):
                             if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
                                 additional_image += f'<img src="{image_filename}" alt="{title} image">\n'
-                            if image_filename.lower().endswith(('.mp4')):
-                                additional_image+= f'<video height="400" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
-                                print("found a video! "+image_filename)
+                            elif image_filename.lower().endswith(('.mp4')):
+                                additional_image+= f'<video height="460" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
+                            elif "youtube" in image_filename.lower():
+                                youtube_link = generate_youtube_link(image_filename)
+                                if youtube_link:
+                                     additional_image += f'<iframe width="600" height="460" src="{youtube_link}" frameborder="0" allowfullscreen></iframe>\n'
 
                         #Find the closing </main> tag and insert additional images before it.
                         with open(filename, 'r') as f:
@@ -73,6 +76,15 @@ def generate_project_pages(html_file, template_file, output_dir):
                         print(f"An error occurred processing {project_dir}: {e}")
 
                     print(f"Created {filename}")
+
+def generate_youtube_link(youtube_string):
+    match = re.search(r"youtube\.([a-zA-Z0-9_-]+)", youtube_string)  # Allow for any length ID
+    if match:
+        video_id = match.group(1)
+        return f"https://youtu.be/{video_id}"
+    else:
+        return None
+
 
 if __name__ == "__main__":
     input_html_file = 'index.html'

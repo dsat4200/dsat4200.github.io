@@ -119,6 +119,16 @@ nav ul li a:hover {
     object-fit: contain; /* or object-fit: cover, see explanation below */
 }
 
+#additional-image iframe {
+    outline: 4px solid rgb(148, 95, 255);
+    border-radius: 14pt;
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
+    margin-bottom: 20px;
+    object-fit: contain; /* or object-fit: cover, see explanation below */
+}
+
 
 
 

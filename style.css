@@ -120,6 +120,8 @@ nav ul li a:hover {
 }
 
 #additional-image iframe {
+    max-width: 95%;
+    max-height:460px;
     outline: 4px solid rgb(148, 95, 255);
     border-radius: 14pt;
     display: inline-block;
@@ -438,14 +440,13 @@ footer nav ul li img:hover{
     }
 
     nav ul {
-        font-size: 14pt;
+        font-size: 13pt;
         flex-direction:row;
         align-items: center;
     }
 
     nav ul li {
-        padding: 0 8px;
-
+        padding: 0 6px;
         display: inline-block;
         margin: 0;
     }
@@ -474,6 +475,6 @@ footer nav ul li img:hover{
     }
     
     footer nav ul li img {
-        max-height: 60px;
+        max-height: 54px;
     }
 }

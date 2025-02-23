@@ -81,7 +81,7 @@ def generate_youtube_link(youtube_string):
     match = re.search(r"youtube\.([a-zA-Z0-9_-]+)", youtube_string)  # Allow for any length ID
     if match:
         video_id = match.group(1)
-        return f"https://youtu.be/{video_id}"
+        return f"https://www.youtube.com/embed/{video_id}"
     else:
         return None
 

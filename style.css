@@ -93,6 +93,15 @@ nav ul li a:hover {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+div .additional-images img{
+    max-width: 90%;
+    height: auto;
+    outline: 4px solid rgb(148, 95, 255);
+    border-radius: 8%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
 .main {
     padding: 20px;

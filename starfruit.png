@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Nichijou Title Card</title>
+    <title>Strawberry Popcorn</title>
 
 </head>
 <body>
@@ -26,14 +26,16 @@
         </nav>
     </header>
     <main>
-        <h1>Nichijou Title Card</h1>
-        <h2>2021 </h2>
-        <p>Created as part of the "Nichijou Re-Animated" project.</p>
-        <img class = "hero" src="https://cdna.artstation.com/p/assets/videos/images/047/570/108/smaller_square/jose-torres-acosta-maxresdefault.jpg?1647915326" alt="Project Thumbnail">
-        <div id="additional-images">  <!-- Added a div for additional images -->
-            
-        </div>
-    <div id='additional-images'></div></main>
+        <h1>Strawberry Popcorn</h1>
+        <h2>2025 </h2>
+        <p>In-progress assets for an upcoming Mega Man style platformer!</p>
+        <img class = "hero" src="../..\thumbs/strawberry.png" alt="Project Thumbnail">
+        <img src="blueberry.png" alt="Strawberry Popcorn image">
+<img src="forms.png" alt="Strawberry Popcorn image">
+<img src="jump.png" alt="Strawberry Popcorn image">
+<img src="starfruit.png" alt="Strawberry Popcorn image">
+
+    </main>
     <footer id="contact-section">
         <h1>Contact</h1>
         <nav>

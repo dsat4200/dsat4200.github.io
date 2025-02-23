@@ -92,8 +92,13 @@ nav ul li a:hover {
 .main {
     padding: 20px;
     text-align: center;
-     z-index:10; /* Added Z-Index*/
+    z-index:10; /* Added Z-Index*/
     position: relative;/*added position*/
+    margin: 0;     /* Remove all margins */
+}
+
+body main p{
+    font-size: 16pt;
 }
 
 body main{
@@ -102,12 +107,23 @@ body main{
     margin:0px;
 }
 
+.hero{
+    max-width: 90%;
+    height: auto; /* Changed from height: 480px to height: auto */
+    outline: 4px solid rgb(148, 95, 255);
+    border-radius: 8%;
+    display: block; /* Add this to potentially help with centering and responsiveness */
+    margin: 0 auto; /* Add this to center the image horizontally */
+    margin-bottom: 20px;
+}
+
 body main h1{
     font-family: "Montserrat", serif;
     font-weight:200;
     font-size:auto;
     letter-spacing: 6px;
-    margin-bottom: 10px;
+    margin: 18px 10px 10px 10px;
+
 }
 
 .project-grid {
@@ -115,7 +131,7 @@ body main h1{
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-gap: 10pt;
     padding: 20px;
-    padding-top:10px;
+    padding-top:20px;
      z-index:10; /* Added Z-Index*/
     position: relative;/*added position*/
 }
@@ -212,6 +228,7 @@ body main h1{
     position: relative;
     justify-content: center; /* Distribute space evenly */
 }
+
 
 .profile-picture {
     padding-top:2.5%;
@@ -349,6 +366,9 @@ footer nav ul li img:hover{
         align-items: center; /* Center the image vertically */
         text-align: center; /* Center the image horizontally */
     }
+    .project-grid{
+        padding:20px;
+    }
 
     .profile-picture {
         width: 100%; /* Make the image take full width */
@@ -379,17 +399,18 @@ footer nav ul li img:hover{
 
     body h1 {
         margin: 0px;
-        padding-top:12px;
-        padding-bottom:12px;
+        margin-top:12px;
+        padding-bottom:0;
     }
     
 
     footer{
-        height: 280px;
+        height: 260px;
     }
 
     footer nav ul li{
         padding: 0 2px;
+        padding-top:10px;
 
     }
 

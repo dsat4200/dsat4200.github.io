@@ -218,8 +218,8 @@ body main h1{
 }
 
 .project-info p{
-    font-size: 12pt;
-    font-weight:600;
+    font-size: auto;
+    font-weight:540;
 }
 
 /* Add to your existing style.css */

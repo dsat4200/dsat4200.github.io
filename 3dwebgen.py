@@ -49,6 +49,9 @@ def generate_project_pages(html_file, template_file, output_dir):
                         for image_filename in os.listdir(project_dir):
                             if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
                                 additional_image += f'<img src="{image_filename}" alt="{title} image">\n'
+                            if image_filename.lower().endswith(('.mp4')):
+                                additional_image+= f'<video height="400" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
+                                print("found a video! "+image_filename)
 
                         #Find the closing </main> tag and insert additional images before it.
                         with open(filename, 'r') as f:

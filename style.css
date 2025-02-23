@@ -259,7 +259,7 @@ footer {
     background: linear-gradient(to top, rgb(148, 95, 255), #44277aa0);
     border-radius: 14pt 14pt 0 0;
     text-align: center;
-    height: 220px;
+    height: 200px;
     z-index: 100;
     position: relative;
 }

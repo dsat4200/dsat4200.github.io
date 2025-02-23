@@ -206,8 +206,8 @@ body main h1{
     gap: 4%;
     padding: 20px;
     padding-top: 0;
+    padding-bottom: 0;
     text-align: left;
-    margin-bottom: 20px;
     z-index: 10;
     position: relative;
     justify-content: center; /* Distribute space evenly */
@@ -341,23 +341,33 @@ footer nav ul li img:hover{
 
 
 /* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 512px) { /* For smaller screens */
     .about-content {
         flex-direction: column;  /* Stack image and description vertically */
-        align-items: center; /* Center the image */
+        align-items: center; /* Center the image vertically */
+        text-align: center; /* Center the image horizontally */
     }
-
+    .profile-picture {
+        width: 100%; /* Make the image take full width */
+        display: block; /* Important: Makes the image a block element to help centering */
+        margin-left: auto; /* Centers the image in a container*/
+        margin-right: auto; /* Centers the image in a container*/
+    }
+    .description {  
+        width: 90%; /* Make the description take almost full width */
+        max-width: 100%; /* Remove max-width restriction */
+    }
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
     }
     footer nav ul {
         align-items: start;
-        height:200px;
+        height: 200px;
         flex-wrap: wrap; /* Wrap icons on smaller screens */
         gap: 5px;       /* Reduce gap between icons on smaller screens */
     }
     footer nav ul li img {
         max-height: 60px; /* Reduce icon size for smaller screens */
     }
-
 }

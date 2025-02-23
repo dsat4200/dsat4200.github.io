@@ -93,16 +93,19 @@ nav ul li a:hover {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-#additional-image img {  /* Or change to .additional-image img if using a class */
-    max-width: auto; /* Adjust percentage as needed for wrapping */
-    height: 400px;
+#additional-image img {
+    max-width: 95%; /* Adjust percentage as needed for wrapping */
+    max-height: 460px; /* Adjust the max-height as needed (e.g., 400px, 60vh, etc.) */
+    height: auto; /* Maintain aspect ratio */
     outline: 4px solid rgb(148, 95, 255);
     border-radius: 14pt;
-    display: inline-block; /* Changed to inline-block */
-    margin: 0 5px; /* Added margin for spacing between images */
-    vertical-align: top; /* Optional: aligns images vertically */
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
     margin-bottom: 20px;
+    object-fit: contain; /* or object-fit: cover, see explanation below */
 }
+
 
 
 
@@ -233,10 +236,13 @@ body main h1{
     font-size:14pt;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     z-index:10;
+    padding:0;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .project-info p{
-    font-size: auto;
+    font-size: 100%;
     font-weight:540;
 }
 

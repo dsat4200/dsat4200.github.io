@@ -21,6 +21,13 @@ body::before {
     z-index: 99;
 }
 
+body main h2{
+    font-size: 14pt;
+    font-weight: 100;
+    margin:8pt;
+    margin-bottom: 0;
+    font-style: italic;
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -96,6 +103,8 @@ nav ul li a:hover {
 }
 
 body main p{
+    margin:12pt;
+    margin-top:6pt;
     font-size: 16pt;
 }
 

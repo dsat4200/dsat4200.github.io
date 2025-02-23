@@ -19,7 +19,7 @@ def generate_project_pages(html_file, template_file, output_dir):
         if a_tag:
             img_tag = item.find('img')
             if img_tag:
-                img_src = img_tag['src']
+ 
                 alt_text = img_tag['alt']
 
                 h4_tag = item.find('h4')
@@ -36,12 +36,9 @@ def generate_project_pages(html_file, template_file, output_dir):
                     os.makedirs(project_dir, exist_ok=True)
                     filename = os.path.join(project_dir, "project.html")
 
-                    # Adjust image path if it's a local image
-                    if not re.match(r'https?:\/\/', img_src):
-                        img_src = os.path.join('../..', img_src)
 
                     # Render the basic template first
-                    html_content = template.render(title=title, year=year, img_src=img_src, alt_text=alt_text, description=description, additional_image="")
+                    html_content = template.render(title=title, year=year, alt_text=alt_text, description=description, additional_image="")
 
                     with open(filename, 'w', encoding='utf-8') as outfile:
                         outfile.write(html_content)

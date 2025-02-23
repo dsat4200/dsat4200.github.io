@@ -135,15 +135,7 @@ body main{
     margin: 0 auto;
     margin-bottom: 20px;
 }
-.phero{
-    max-width: 90%;
-    height: auto;
-    outline: 4px solid rgb(148, 95, 255);
-    border-radius: 14pt;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
+
 
 body main h1{
     font-family: "Montserrat", serif;

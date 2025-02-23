@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>title</title>
+    <title>{{ title }}</title>
 
 </head>
 <body>
@@ -18,32 +18,17 @@
         <h2>Artist and Game Developer</h2>
         <nav>
             <ul>
-                <li><a href="../index.html">3D Work</a></li>
-                <li><a href="../concepts.html">2D Work</a></li>
-                <li><a href="../about.html">About</a></li>
+                <li><a href="index.html">3D Work</a></li>
+                <li><a href="concepts.html">2D Work</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#" onclick="scrollToContact()">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>title</h1>
-        <section class="project-grid">
-            <div class="project-item">
-                <a href="../projects/shipwrek.html">
-                    <div class="thumbnail">
-                        <img src="thumbs/2d/starfruit.png" alt="Project Thumbnail">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <h4>2025</h4>
-                                <h3>Starfruit Champagne</h3>
-                                <p>In-progress character for the Strawberry Popcorn Project.</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- ... rest of your project items ... -->
-        </section>
+        <h1>{{ title }}</h1>
+        <img src="{{ img_src }}" alt="{{ alt_text }}">
+        <p>{{ description }}</p>
     </main>
     <footer id="contact-section">
         <h1>Contact</h1>

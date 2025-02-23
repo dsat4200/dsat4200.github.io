@@ -93,15 +93,18 @@ nav ul li a:hover {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-div .additional-images img{
-    max-width: 90%;
-    height: auto;
+#additional-image img {  /* Or change to .additional-image img if using a class */
+    max-width: auto; /* Adjust percentage as needed for wrapping */
+    height: 400px;
     outline: 4px solid rgb(148, 95, 255);
-    border-radius: 8%;
-    display: block;
-    margin: 0 auto;
+    border-radius: 14pt;
+    display: inline-block; /* Changed to inline-block */
+    margin: 0 5px; /* Added margin for spacing between images */
+    vertical-align: top; /* Optional: aligns images vertically */
     margin-bottom: 20px;
 }
+
+
 
 .main {
     padding: 20px;
@@ -127,7 +130,16 @@ body main{
     max-width: 90%;
     height: auto;
     outline: 4px solid rgb(148, 95, 255);
-    border-radius: 8%;
+    border-radius: 14pt;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.phero{
+    max-width: 90%;
+    height: auto;
+    outline: 4px solid rgb(148, 95, 255);
+    border-radius: 14pt;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;

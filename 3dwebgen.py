@@ -41,17 +41,17 @@ def generate_project_pages(html_file, template_file, output_dir):
                         img_src = os.path.join('../..', img_src)
 
                     # Render the basic template first
-                    html_content = template.render(title=title, year=year, img_src=img_src, alt_text=alt_text, description=description, additional_images="")
+                    html_content = template.render(title=title, year=year, img_src=img_src, alt_text=alt_text, description=description, additional_image="")
 
                     with open(filename, 'w', encoding='utf-8') as outfile:
                         outfile.write(html_content)
 
                     # Find and add additional images AFTER writing the main HTML
-                    additional_images = ""
+                    additional_image = ""
                     try:
                         for image_filename in os.listdir(project_dir):
                             if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
-                                additional_images += f'<img src="{image_filename}" alt="{title} image">\n'
+                                additional_image += f'<img src="{image_filename}" alt="{title} image">\n'
 
                         #Find the closing </main> tag and insert additional images before it.
                         with open(filename, 'r') as f:
@@ -60,7 +60,7 @@ def generate_project_pages(html_file, template_file, output_dir):
                         #Use a more robust method to find the closing </main> tag in case it's not the last tag in the main body.
                         closing_main_index = html_content.rfind("</main>")
                         if closing_main_index != -1:
-                            new_html_content = html_content[:closing_main_index] + f"<div id='additional-images'>{additional_images}</div>" + html_content[closing_main_index:]
+                            new_html_content = html_content[:closing_main_index] + f"<div id='additional-image'>{additional_image}</div>" + html_content[closing_main_index:]
 
                             with open(filename, 'w') as outfile:
                                 outfile.write(new_html_content)

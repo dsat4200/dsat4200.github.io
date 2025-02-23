@@ -29,10 +29,14 @@
         <h1>{{ title }}</h1>
         <h2>{{ year }} </h2>
         <p>{{ description }}</p>
-        <img class = "hero" src="{{ img_src }}" alt="{{ alt_text }}">
-        <div id="additional-images">  <!-- Added a div for additional images -->
-            {{ additional_images }}
-        </div>
+        <img class="phero" src="{{ img_src }}" alt="{{ alt_text }}">
+        
+            {% for image in additional_image.split('\n') %}
+                {% if image|trim %}  <!-- Use trim filter instead of strip -->
+                    <img src="{{ image.split('"')[1] }}" alt="{{ title }} image">
+                {% endif %}
+            {% endfor %}
+        
     </main>
     <footer id="contact-section">
         <h1>Contact</h1>

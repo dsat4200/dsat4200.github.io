@@ -107,7 +107,7 @@ body main h1{
     font-weight:200;
     font-size:auto;
     letter-spacing: 6px;
-
+    margin-bottom: 10px;
 }
 
 .project-grid {
@@ -115,7 +115,7 @@ body main h1{
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-gap: 10pt;
     padding: 20px;
-    padding-top:0px;
+    padding-top:10px;
      z-index:10; /* Added Z-Index*/
     position: relative;/*added position*/
 }
@@ -222,7 +222,7 @@ body main h1{
 }
 .profile-picture img {
     outline: 4px solid #6734c459;
-    height: 400px;
+    height: 480px;
     object-fit: cover;
     border-radius: 10%;
 }
@@ -231,6 +231,7 @@ body main h1{
     flex: 0 0 auto;
     max-width: 50%; 
     width: auto;
+    font-size: 14pt;
     margin: 0;     /* Remove all margins */
 }
 .description p{
@@ -239,10 +240,10 @@ body main h1{
 
 .description h2{
     font-family: "Montserrat", serif;
-    font-weight:400;
-    font-size:14pt;
+    font-weight:460;
+    font-size:18pt;
     padding:0;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-top:8pt;
     margin-bottom: 8pt;
 }
@@ -348,6 +349,7 @@ footer nav ul li img:hover{
         align-items: center; /* Center the image vertically */
         text-align: center; /* Center the image horizontally */
     }
+
     .profile-picture {
         width: 100%; /* Make the image take full width */
         display: block; /* Important: Makes the image a block element to help centering */
@@ -361,12 +363,42 @@ footer nav ul li img:hover{
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
     }
+
+    nav ul {
+        font-size: 14pt;
+        flex-direction:row; /* Stack items vertically */
+        align-items: center;   /* Center vertically */
+    }
+
+    nav ul li {
+        padding: 0 8px;
+
+        display: inline-block;       /* Make each list item a block */
+        margin: 0;      /* Adjust spacing */
+    }
+
+    body h1 {
+        margin: 0px;
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    
+
+    footer{
+        height: 280px;
+    }
+
+    footer nav ul li{
+        padding: 0 2px;
+
+    }
+
     footer nav ul {
         align-items: start;
-        height: 200px;
-        flex-wrap: wrap; /* Wrap icons on smaller screens */
-        gap: 5px;       /* Reduce gap between icons on smaller screens */
+        height: 80px;
+        flex-wrap: wrap; 
     }
+    
     footer nav ul li img {
         max-height: 60px; /* Reduce icon size for smaller screens */
     }

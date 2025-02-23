@@ -471,6 +471,7 @@ footer nav ul li img:hover{
     footer nav ul {
         align-items: start;
         height: 80px;
+        padding:0;
         flex-wrap: wrap;
     }
     

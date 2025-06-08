@@ -332,9 +332,8 @@ label_settings = SubResource("LabelSettings_u8b5t")
 curve = SubResource("Curve2D_aw5q7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(11153, 2979.36)
+position = Vector2(21, 134)
 rotation = 1.34307
-progress = 17537.8
 rotates = false
 loop = false
 script = ExtResource("2_j7hwt")
@@ -345,7 +344,6 @@ point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubRe
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
 [node name="farst" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(254, 595)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)

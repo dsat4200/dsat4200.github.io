@@ -25,19 +25,38 @@ var _point_distances: PackedFloat64Array = []
 var current_target_speed: float = 1.0
 var smooth_current_speed: float = 1.0
 
+# --- NEW VARIABLES ---
+var last_passed_point_index: int = -1
+var audio_stream_player: AudioStreamPlayer
+
 func _ready():
 	_initialize_node_references()
 	_update_point_data_array()
 	_apply_current_zoom()
 
+	# Create an AudioStreamPlayer node to play the sounds
+	audio_stream_player = AudioStreamPlayer.new()
+	add_child(audio_stream_player)
+
+
 func _process(delta):
 	var path_node = get_parent() as Path2D
 	if path_node and path_node.curve:
 		var current_point_index = get_closest_point_index(path_node.curve, self.progress / path_length)
-		var current_point_data: PathPointData = _get_point_data_for_index(current_point_index)
 		
-		if current_point_data:
-			current_target_speed = current_point_data.speed
+		# --- SOUND EFFECT LOGIC ---
+		if current_point_index != last_passed_point_index:
+			last_passed_point_index = current_point_index
+			var current_point_data = _get_point_data_for_index(current_point_index)
+			if current_point_data and current_point_data.sound_effect:
+				audio_stream_player.stream = current_point_data.sound_effect
+				audio_stream_player.play()
+		# --- END SOUND EFFECT LOGIC ---
+		
+		var current_point_data_for_speed: PathPointData = _get_point_data_for_index(current_point_index)
+		
+		if current_point_data_for_speed:
+			current_target_speed = current_point_data_for_speed.speed
 		else:
 			current_target_speed = 1.0
 
@@ -53,8 +72,6 @@ func _process(delta):
 
 	if !is_swiping and abs(current_velocity) > min_swipe_velocity_threshold:
 		current_velocity *= deceleration_rate
-		# This part is now correct because `current_velocity` is a "pure" velocity.
-		# The path's speed now correctly modifies the progress change frame by frame.
 		var delta_progress_from_momentum = current_velocity * smooth_current_speed
 		self.progress = clamp(self.progress + delta_progress_from_momentum, 0, path_length)
 		

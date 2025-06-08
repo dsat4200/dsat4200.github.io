@@ -25,18 +25,26 @@ var _point_distances: PackedFloat64Array = []
 var current_target_speed: float = 1.0
 var smooth_current_speed: float = 1.0
 
-# --- NEW VARIABLES ---
+
 var last_passed_point_index: int = -1
 var audio_stream_player: AudioStreamPlayer
+# This array will store all unique nodes that need to be managed.
+var managed_node_paths: Array[NodePath] = []
 
 func _ready():
 	_initialize_node_references()
-	_update_point_data_array()
+	_update_point_data_array() # This now also populates our managed nodes list
 	_apply_current_zoom()
 
-	# Create an AudioStreamPlayer node to play the sounds
+	# Create an AudioStreamPlayer for sound effects
 	audio_stream_player = AudioStreamPlayer.new()
 	add_child(audio_stream_player)
+	
+	# --- NEW: Perform initial visibility update ---
+	# Ensures the correct nodes are visible/hidden at the starting position.
+	if parent_path_2d and parent_path_2d.curve:
+		var start_point_index = get_closest_point_index(parent_path_2d.curve, 0)
+		_update_node_visibility(start_point_index)
 
 
 func _process(delta):
@@ -47,14 +55,16 @@ func _process(delta):
 		# --- SOUND EFFECT LOGIC ---
 		if current_point_index != last_passed_point_index:
 			last_passed_point_index = current_point_index
-			var current_point_data = _get_point_data_for_index(current_point_index)
-			if current_point_data and current_point_data.sound_effect:
-				audio_stream_player.stream = current_point_data.sound_effect
+			var point_data = _get_point_data_for_index(current_point_index)
+			if point_data and point_data.sound_effect:
+				audio_stream_player.stream = point_data.sound_effect
 				audio_stream_player.play()
-		# --- END SOUND EFFECT LOGIC ---
+
+		# --- NEW: NODE VISIBILITY LOGIC ---
+		_update_node_visibility(current_point_index)
 		
+		# --- (Existing speed logic is unchanged) ---
 		var current_point_data_for_speed: PathPointData = _get_point_data_for_index(current_point_index)
-		
 		if current_point_data_for_speed:
 			current_target_speed = current_point_data_for_speed.speed
 		else:
@@ -120,6 +130,9 @@ func _input(event):
 			last_touch_pos = event.position
 			
 			_apply_current_zoom()
+						# --- NEW: Update visibility instantly on drag ---
+			var current_point_index = get_closest_point_index(path_node_runtime.curve, self.progress / path_length)
+			_update_node_visibility(current_point_index)
 
 # ... (The rest of your script is unchanged as it is correct) ...
 
@@ -159,6 +172,8 @@ func _update_point_data_array():
 				new_point_data.speed = 1.0
 				new_point_data.zoom = 1.0
 				point_data[i] = new_point_data
+	_update_managed_nodes_list()
+
 
 func _update_path_distances():
 	if not parent_path_2d or not parent_path_2d.curve:
@@ -224,21 +239,55 @@ func _get_point_data_for_index(index: int) -> PathPointData:
 	return null
 
 func get_closest_point_index(curve: Curve2D, progress_ratio: float) -> int:
-	if curve == null or curve.get_point_count() == 0:
+	if curve == null or curve.get_point_count() == 0 or _point_distances.is_empty():
 		return -1
 
+	# Calculate the target distance along the baked path
 	var target_progress_dist = progress_ratio * curve.get_baked_length()
-	var closest_index = 0
-	var cumulative_lengths = [0.0]
-	for i in range(1, curve.get_point_count()):
-		var p1 = curve.get_point_position(i - 1)
-		var p2 = curve.get_point_position(i)
-		var segment_length = p1.distance_to(p2)
-		cumulative_lengths.append(cumulative_lengths[i-1] + segment_length)
 
-	for i in range(cumulative_lengths.size() - 1, -1, -1):
-		if target_progress_dist >= cumulative_lengths[i]:
-			closest_index = i
-			break
+	# Iterate backwards through the pre-calculated, accurate distances of each point.
+	# This finds the last point index that the current progress has passed.
+	for i in range(_point_distances.size() - 1, -1, -1):
+		if target_progress_dist >= _point_distances[i]:
+			return i
+	
+	# If progress is before the first point, return the first index.
+	return 0
+# --- FIX ENDS HERE ---
 
-	return closest_index
+# Populates a list of all unique nodes targeted by the points.
+func _update_managed_nodes_list():
+	managed_node_paths.clear()
+	if point_data.is_empty():
+		return
+
+	for data in point_data:
+		if data and data.target_node and not data.target_node.is_empty():
+			if not managed_node_paths.has(data.target_node):
+				managed_node_paths.append(data.target_node)
+
+# This function handles the core logic of showing/hiding nodes.
+func _update_node_visibility(current_point_index: int):
+	var current_point_data = _get_point_data_for_index(current_point_index)
+	
+	# If there's no data for the current point, we can't determine what to show.
+	if not current_point_data:
+		return
+
+	var active_node_path = current_point_data.target_node
+	var should_show_active_node = current_point_data.show_target_node
+
+	# Iterate through all nodes that are managed by this script.
+	for path in managed_node_paths:
+		var node = get_node_or_null(path)
+		
+		# Ensure the node is valid and is a type that can be hidden (CanvasItem for 2D).
+		if is_instance_valid(node) and node is CanvasItem:
+			# If this node is the one targeted by the current path point,
+			# set its visibility according to the 'show_target_node' flag.
+			if path == active_node_path:
+				node.visible = should_show_active_node
+			# Otherwise, ensure it's hidden. This prevents nodes from previous
+			# points from staying visible when they shouldn't be.
+			else:
+				node.visible = false

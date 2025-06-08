@@ -1,17 +1,16 @@
-[gd_scene load_steps=56 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=55 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scroll.gd" id="2_j7hwt"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://control.gd" id="2_u8b5t"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://path_point_data.gd" id="3_hh0ki"]
 [ext_resource type="AudioStream" uid="uid://d3701f40vnul8" path="res://sfx/S_3hhs_space.wav" id="5_46keh"]
-[ext_resource type="AudioStream" uid="uid://bkbf8dr5wrewc" path="res://sfx/s1012_done.wav" id="6_1s4ev"]
 [ext_resource type="AudioStream" uid="uid://xxj1mttxu25b" path="res://sfx/S_5mst_gun1.wav" id="6_46keh"]
 [ext_resource type="AudioStream" uid="uid://dxur54toe7iks" path="res://sfx/S_hit_wav_L.wav" id="6_wkg44"]
 [ext_resource type="AudioStream" uid="uid://dcvpdpg3s1f6d" path="res://sfx/S_fireHit.wav" id="8_kuyqm"]
 [ext_resource type="AudioStream" uid="uid://b881j0yyiktkk" path="res://sfx/S_foot_bootsH_wood.wav" id="9_rhbh6"]
 [ext_resource type="AudioStream" uid="uid://ccu4vjxal7y11" path="res://sfx/S_2jsp_swing2.wav" id="10_nn8d0"]
-[ext_resource type="AudioStream" uid="uid://dxwfxqgbt0tjy" path="res://sfx/S_foot_barefoot_grass.wav" id="11_1s4ev"]
+[ext_resource type="AudioStream" uid="uid://dfpoja3n048dp" path="res://sfx/s702_cansel.wav" id="11_nn8d0"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://arrow.png" id="12_1s4ev"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u8b5t"]
@@ -21,7 +20,7 @@ font_color = Color(0, 0.686275, 0, 1)
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, 21, 134, 0, -490.223, 0, 490.223, 123, 1035, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, -168.334, 39.9436, 168.334, -39.9436, 1339, 2856, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3567, 551, 12.9335, -503.24, -12.9335, 503.24, 3779, 1719, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 11867, 2980, 1105.87, 8.63991, -1105.87, -8.63991, 12397, 3048, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 657.471, -65.2983, -657.471, 65.2983, 3015, 5970, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -168.394, 159.968, 168.394, -159.968, 2917, 12691, -680.339, 21.8791, 680.339, -21.8791, 3003, 6453, 0, 0, 0, 0, 8714, 5864, -178.471, -39.8233, 178.471, 39.8233, 9010, 5841, -112.786, -321.648, 112.786, 321.648, 9629, 6715, -23.5656, -342.302, 23.5656, 342.302, 9865, 7897, 0, 0, 0, 0, 9867, 9994, -397.402, -38.3686, 397.402, 38.3686, 10840, 10123, 0, 0, 0, 0, 12806, 10384)
+"points": PackedVector2Array(-208.054, -629.263, 208.054, 629.263, 21, 134, 0, -490.223, 0, 490.223, 244, 1691, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, -168.334, 39.9436, 168.334, -39.9436, 1339, 2856, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3567, 551, 12.9335, -503.24, -12.9335, 503.24, 3779, 1719, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 11867, 2980, 1105.87, 8.63991, -1105.87, -8.63991, 12397, 3048, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 657.471, -65.2983, -657.471, 65.2983, 3015, 5970, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2397, 13212, -168.394, 159.968, 168.394, -159.968, 2917, 12691, 99.7233, -0.511497, -99.7233, 0.511497, 10392, 5970, 0, 0, 0, 0, 9354.99, 5715.22, 130.645, -90.3301, -130.645, 90.3301, 8771, 5612, 0, 0, 0, 0, 9009, 6306, -348.607, -746.141, 348.607, 746.141, 9935, 7745, 0, 0, 0, 0, 9867, 9994, -397.402, -38.3686, 397.402, 38.3686, 10840, 10123, 0, 0, 0, 0, 12806, 10384)
 }
 point_count = 40
 
@@ -29,14 +28,14 @@ point_count = 40
 script = ExtResource("3_hh0ki")
 speed = 0.8
 zoom = 1.0
-target_node = NodePath("../../farst")
-show_target_node = true
+target_node = NodePath("")
+show_target_node = false
 
 [sub_resource type="Resource" id="Resource_55ryp"]
 script = ExtResource("3_hh0ki")
 speed = 1.0
 zoom = 1.0
-target_node = NodePath("../../farst")
+target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_u8b5t"]
@@ -217,7 +216,6 @@ show_target_node = false
 script = ExtResource("3_hh0ki")
 speed = 1.195
 zoom = 1.0
-sound_effect = ExtResource("11_1s4ev")
 target_node = NodePath("")
 show_target_node = false
 
@@ -244,8 +242,8 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_0q0pi"]
 script = ExtResource("3_hh0ki")
-speed = 0.425
-zoom = 1.83
+speed = 0.68
+zoom = 1.495
 target_node = NodePath("")
 show_target_node = false
 
@@ -265,15 +263,22 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_a8h3a"]
 script = ExtResource("3_hh0ki")
-speed = 0.67
-zoom = 0.905
-sound_effect = ExtResource("6_1s4ev")
-target_node = NodePath("../../pointer")
+speed = 0.81
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_loygj"]
+script = ExtResource("3_hh0ki")
+speed = 0.345
+zoom = 1.0
+sound_effect = ExtResource("11_nn8d0")
+target_node = NodePath("../../Arrow")
 show_target_node = true
 
 [sub_resource type="Resource" id="Resource_anh4n"]
 script = ExtResource("3_hh0ki")
-speed = 0.335
+speed = 1.0
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
@@ -282,36 +287,29 @@ show_target_node = false
 script = ExtResource("3_hh0ki")
 speed = 1.0
 zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
+target_node = null
+show_target_node = null
 
 [sub_resource type="Resource" id="Resource_sg5qd"]
 script = ExtResource("3_hh0ki")
 speed = 1.0
 zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
+target_node = null
+show_target_node = null
 
 [sub_resource type="Resource" id="Resource_o1mgq"]
 script = ExtResource("3_hh0ki")
 speed = 1.0
 zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
+target_node = null
+show_target_node = null
 
 [sub_resource type="Resource" id="Resource_u1bkk"]
 script = ExtResource("3_hh0ki")
 speed = 1.0
 zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_loygj"]
-script = ExtResource("3_hh0ki")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
+target_node = null
+show_target_node = null
 
 [node name="Node2D" type="Node2D"]
 
@@ -332,41 +330,21 @@ label_settings = SubResource("LabelSettings_u8b5t")
 curve = SubResource("Curve2D_aw5q7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(21, 134)
+position = Vector2(7779.6, 2943.17)
 rotation = 1.34307
+progress = 14173.1
 rotates = false
 loop = false
 script = ExtResource("2_j7hwt")
 speed_multiplier = -0.95
 base_zoom = 0.72
-point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubResource("Resource_55ryp"), SubResource("Resource_u8b5t"), SubResource("Resource_dpjjm"), SubResource("Resource_46keh"), SubResource("Resource_wkg44"), SubResource("Resource_g2313"), SubResource("Resource_kuyqm"), SubResource("Resource_rhbh6"), SubResource("Resource_nn8d0"), SubResource("Resource_1s4ev"), SubResource("Resource_lsxgm"), SubResource("Resource_kbfpd"), SubResource("Resource_vvxgv"), SubResource("Resource_lqmm3"), SubResource("Resource_r8ycp"), SubResource("Resource_wp71l"), SubResource("Resource_g0lv4"), SubResource("Resource_yr7ns"), SubResource("Resource_ygqma"), SubResource("Resource_idtkp"), SubResource("Resource_dhg6m"), SubResource("Resource_oqpcb"), SubResource("Resource_bcb0y"), SubResource("Resource_oad8r"), SubResource("Resource_ec8q6"), SubResource("Resource_rc6rm"), SubResource("Resource_5vt0f"), SubResource("Resource_41hqh"), SubResource("Resource_gahgq"), SubResource("Resource_0q0pi"), SubResource("Resource_xg8ip"), SubResource("Resource_4nbfv"), SubResource("Resource_a8h3a"), SubResource("Resource_anh4n"), SubResource("Resource_43rhn"), SubResource("Resource_sg5qd"), SubResource("Resource_o1mgq"), SubResource("Resource_u1bkk"), SubResource("Resource_loygj")])
+point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubResource("Resource_55ryp"), SubResource("Resource_u8b5t"), SubResource("Resource_dpjjm"), SubResource("Resource_46keh"), SubResource("Resource_wkg44"), SubResource("Resource_g2313"), SubResource("Resource_kuyqm"), SubResource("Resource_rhbh6"), SubResource("Resource_nn8d0"), SubResource("Resource_1s4ev"), SubResource("Resource_lsxgm"), SubResource("Resource_kbfpd"), SubResource("Resource_vvxgv"), SubResource("Resource_lqmm3"), SubResource("Resource_r8ycp"), SubResource("Resource_wp71l"), SubResource("Resource_g0lv4"), SubResource("Resource_yr7ns"), SubResource("Resource_ygqma"), SubResource("Resource_idtkp"), SubResource("Resource_dhg6m"), SubResource("Resource_oqpcb"), SubResource("Resource_bcb0y"), SubResource("Resource_oad8r"), SubResource("Resource_ec8q6"), SubResource("Resource_rc6rm"), SubResource("Resource_5vt0f"), SubResource("Resource_41hqh"), SubResource("Resource_gahgq"), SubResource("Resource_0q0pi"), SubResource("Resource_xg8ip"), SubResource("Resource_4nbfv"), SubResource("Resource_a8h3a"), SubResource("Resource_loygj"), SubResource("Resource_anh4n"), SubResource("Resource_43rhn"), SubResource("Resource_sg5qd"), SubResource("Resource_o1mgq"), SubResource("Resource_u1bkk")])
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
-[node name="farst" type="Sprite2D" parent="."]
-position = Vector2(254, 595)
-rotation = -1.55735
-scale = Vector2(0.493949, 0.405715)
-texture = ExtResource("12_1s4ev")
-
-[node name="Label" type="Label" parent="farst"]
-offset_left = 582.098
-offset_top = -1007.86
-offset_right = 1550.1
-offset_bottom = -671.86
-rotation = 1.56353
-scale = Vector2(1.23704, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
-theme_override_constants/outline_size = 11
-theme_override_font_sizes/font_size = 80
-text = "scroll in this 
-direction
-to read!"
-horizontal_alignment = 2
-
-[node name="pointer" type="Sprite2D" parent="."]
-position = Vector2(8649, 5614)
-rotation = 0.292206
-scale = Vector2(0.58634, 0.552137)
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8798, 5456)
+rotation = 0.927688
+scale = Vector2(0.672104, 0.493076)
 texture = ExtResource("12_1s4ev")

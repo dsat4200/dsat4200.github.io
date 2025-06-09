@@ -10,7 +10,7 @@
 [sub_resource type="Resource" id="Resource_1t0yx"]
 script = ExtResource("5_g2313")
 speed = 1.0
-zoom = 1.0
+zoom = 0.63
 target_node = NodePath("")
 show_target_node = false
 
@@ -148,6 +148,9 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
+
+[node name="Container" parent="PointData/PathPointMarker_78753181" index="0"]
+visible = false
 
 [node name="Position" parent="PointData/PathPointMarker_78753181/Container" index="0"]
 text = "Pos: (2172, 2990)"
@@ -891,9 +894,9 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(2172, 2990)
+position = Vector2(3065, 2059)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.75, 0.75)
+zoom = Vector2(0.4725, 0.4725)
 
 [editable path="PointData/PathPointMarker_78753181"]

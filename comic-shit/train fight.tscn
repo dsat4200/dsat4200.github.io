@@ -733,7 +733,7 @@ offset_right = 12679.3
 offset_bottom = 10233.8
 grow_horizontal = 1
 grow_vertical = 1
-pivot_offset = Vector2(33.1396, 32.3799)
+pivot_offset = Vector2(33.1499, 32.3999)
 point_data = SubResource("Resource_wkg44")
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -784,9 +784,9 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(160, 1184)
+position = Vector2(0, 2026)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.9, 0.9)
+zoom = Vector2(0.9315, 0.9315)
 
 [editable path="PointData/PathPointMarker_78753181"]

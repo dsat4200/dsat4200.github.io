@@ -6,9 +6,9 @@ var selected:PathPointMarker
 
 const PathPointMarker_Scene = preload("res://PathPointMarker.tscn")
 func _ready():
-
 	# Connect to the selection_changed signal if in editor
 	if Engine.is_editor_hint():
+		show()
 		# This ensures EditorInterface is available
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
 	else:

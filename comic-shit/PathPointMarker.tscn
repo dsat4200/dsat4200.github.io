@@ -49,7 +49,7 @@ offset_right = 261.0
 offset_bottom = 85.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 51
-text = "Pos: (283, 287)"
+text = "Pos: (0, 0)"
 
 [node name="Speed" type="Label" parent="Container"]
 layout_mode = 1
@@ -65,4 +65,4 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 34
 theme_override_font_sizes/font_size = 120
-text = "Speed: 0.00"
+text = "Speed: 1.00"

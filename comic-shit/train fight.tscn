@@ -860,7 +860,6 @@ speed_multiplier = -0.95
 scroll_speed = -120.0
 TOUCHPAD_VELOCITY = 14.0
 data_source_control_path = NodePath("../../PointData")
-base_zoom = 0.75
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
@@ -897,6 +896,6 @@ texture = ExtResource("12_1s4ev")
 position = Vector2(3065, 2059)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.4725, 0.4725)
+zoom = Vector2(0.63, 0.63)
 
 [editable path="PointData/PathPointMarker_78753181"]

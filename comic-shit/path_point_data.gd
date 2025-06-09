@@ -1,3 +1,5 @@
+@tool # This is crucial for editor visibility
+
 class_name PathPointData extends Resource
 
 @export var speed: float = 1.0

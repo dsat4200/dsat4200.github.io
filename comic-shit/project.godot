@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="comic shit"
-run/main_scene="uid://di20tjxdrmq4n"
+run/main_scene="uid://pm3e4okacfn2"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1080
 window/size/viewport_height=1080
-window/size/mode=2
 window/size/initial_screen=1
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"

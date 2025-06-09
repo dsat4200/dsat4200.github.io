@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://control.gd" id="1_j226l"]
+[ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scroll.gd" id="2_raoko"]
+
+[sub_resource type="Curve2D" id="Curve2D_346ji"]
+bake_interval = 0.01
+
+[node name="Beastars" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j226l")
+preview_cam = NodePath("../PreviewCam")
+path_follow = NodePath("../Path2D/PathFollow2D")
+path_node_path = NodePath("../Path2D")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(0, -106)
+curve = SubResource("Curve2D_346ji")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(10714, 10180)
+rotation = 1.34307
+rotates = false
+loop = false
+script = ExtResource("2_raoko")
+speed_multiplier = -0.95
+scroll_speed = -120.0
+TOUCHPAD_VELOCITY = 14.0
+data_source_control_path = NodePath("../../PointData")
+base_zoom = 0.9
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+
+[node name="PreviewCam" type="Camera2D" parent="."]
+position = Vector2(3721, 916)
+rotation = -1.55735
+scale = Vector2(0.493949, 0.405715)
+zoom = Vector2(0.567, 0.567)

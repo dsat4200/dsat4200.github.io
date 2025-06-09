@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=10 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scroll.gd" id="2_j7hwt"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://control.gd" id="2_u8b5t"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://PathPointMarker.tscn" id="3_46keh"]
-[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://PathPointMarker.gd" id="5_46keh"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://path_point_data.gd" id="5_g2313"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://arrow.png" id="12_1s4ev"]
 
@@ -158,14 +157,8 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="Container" parent="PointData/PathPointMarker_78753181" index="0"]
-visible = false
-
 [node name="Position" parent="PointData/PathPointMarker_78753181/Container" index="0"]
 text = "Pos: (2172, 2990)"
-
-[node name="Speed" parent="PointData/PathPointMarker_78753181/Container" index="1"]
-text = "Speed: 1.00"
 
 [node name="PathPointMarker_78753348" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
@@ -727,25 +720,21 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_1176536443" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_1176536443" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12609.5
-offset_top = 10165.6
-offset_right = 12672.3
-offset_bottom = 10227.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(33.14, 32.36)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("5_46keh")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12613.0
+offset_top = 10169.0
+offset_right = 12679.3
+offset_bottom = 10233.8
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(33.1396, 32.3799)
 point_data = SubResource("Resource_wkg44")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(0, -106)
@@ -795,9 +784,9 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(3721, 916)
+position = Vector2(160, 1184)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.567, 0.567)
+zoom = Vector2(0.9, 0.9)
 
 [editable path="PointData/PathPointMarker_78753181"]

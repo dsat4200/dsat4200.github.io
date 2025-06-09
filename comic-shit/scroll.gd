@@ -111,6 +111,7 @@ func _input(event):
 		current_velocity = progress_change # Store raw velocity for coasting
 		is_swiping = false # Ensure touch swipe flags are reset
 		handled = true
+		
 	# --- MOUSE SCROLL INPUT ---
 	elif event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:

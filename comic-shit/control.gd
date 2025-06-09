@@ -6,15 +6,11 @@ var selected:PathPointMarker
 
 const PathPointMarker_Scene = preload("res://PathPointMarker.tscn")
 func _ready():
-	if OS.has_feature("web") or OS.has_feature("wasm32"):
-		hide()
-		visible = false
 	# Connect to the selection_changed signal if in editor
 	if Engine.is_editor_hint():
 		# This ensures EditorInterface is available
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
-	else:
-		hide()
+
 
 ## Assign the Path2D node you want to visualize.
 @export var path_node_path: NodePath:

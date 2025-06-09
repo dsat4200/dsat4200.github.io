@@ -104,23 +104,21 @@ func _input(event):
 
 	var handled = false
 	var progress_change = 0.0
-
+	
+	if event is InputEventPanGesture:
+		# Invert delta.y for "natural" trackpad scrolling
+		progress_change = -event.delta.y * speed_multiplier * TOUCHPAD_VELOCITY
+		current_velocity = progress_change # Store raw velocity for coasting
+		is_swiping = false # Ensure touch swipe flags are reset
+		handled = true
 	# --- MOUSE SCROLL INPUT ---
-	if event is InputEventMouseButton and event.is_pressed():
+	elif event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			progress_change = scroll_speed
 			handled = true
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			progress_change = -scroll_speed
 			handled = true
-
-	# --- TRACKPAD PAN GESTURE ---
-	elif event is InputEventPanGesture:
-		# Invert delta.y for "natural" trackpad scrolling
-		progress_change = -event.delta.y * speed_multiplier * TOUCHPAD_VELOCITY
-		current_velocity = progress_change # Store raw velocity for coasting
-		is_swiping = false # Ensure touch swipe flags are reset
-		handled = true
 
 	# --- TOUCHSCREEN DRAG/SWIPE ---
 	elif event is InputEventScreenTouch:

@@ -1,6 +1,7 @@
 @tool
 extends Control
 var selected:PathPointMarker
+@export var preview_cam:Camera2D
 
 const PathPointMarker_Scene = preload("res://PathPointMarker.tscn")
 func _ready():
@@ -144,3 +145,6 @@ func _on_editor_selection_changed():
 			selected.disappear()
 		selected = editor_selection[0]
 		selected.appear()
+		preview_cam.position = selected.position
+		preview_cam.zoom.x = selected.point_data.zoom
+		preview_cam.zoom.y = selected.point_data.zoom

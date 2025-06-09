@@ -59,7 +59,7 @@ show_target_node = false
 [sub_resource type="Resource" id="Resource_lsxgm"]
 script = ExtResource("5_g2313")
 speed = 1.0
-zoom = 1.0
+zoom = 0.39
 target_node = NodePath("")
 show_target_node = false
 
@@ -370,13 +370,14 @@ point_count = 50
 position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
-[node name="PointData" type="Control" parent="."]
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 8.0
 offset_right = 48.0
 offset_bottom = 40.0
 script = ExtResource("2_u8b5t")
+preview_cam = NodePath("../PreviewCam")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_5836468322" parent="PointData" instance=ExtResource("3_46keh")]
@@ -617,8 +618,10 @@ point_data = SubResource("Resource_gahgq")
 layout_mode = 0
 offset_left = 1203.0
 offset_top = 6134.0
-offset_right = 1356.0
-offset_bottom = 6280.0
+offset_right = 1333.0
+offset_bottom = 6259.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_0q0pi")
 
@@ -875,3 +878,9 @@ position = Vector2(8649, 5614)
 rotation = 0.292206
 scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
+
+[node name="PreviewCam" type="Camera2D" parent="."]
+position = Vector2(3065, 2059)
+rotation = -1.55735
+scale = Vector2(0.493949, 0.405715)
+zoom = Vector2(0.39, 0.39)

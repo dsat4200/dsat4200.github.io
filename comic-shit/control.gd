@@ -2,6 +2,7 @@
 extends Control
 var selected:PathPointMarker
 @export var preview_cam:Camera2D
+@export var path_follow:PathFollow2D
 
 const PathPointMarker_Scene = preload("res://PathPointMarker.tscn")
 func _ready():
@@ -10,7 +11,8 @@ func _ready():
 	if Engine.is_editor_hint():
 		# This ensures EditorInterface is available
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
-
+	else:
+		hide()
 
 ## Assign the Path2D node you want to visualize.
 @export var path_node_path: NodePath:
@@ -146,5 +148,21 @@ func _on_editor_selection_changed():
 		selected = editor_selection[0]
 		selected.appear()
 		preview_cam.position = selected.position
-		preview_cam.zoom.x = selected.point_data.zoom
-		preview_cam.zoom.y = selected.point_data.zoom
+		preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
+		preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
+	elif (editor_selection.size() == 0):
+		selected.disappear()
+		selected = null
+		
+		
+func _process(_delta):
+	# This function only runs in the editor because of the @tool annotation.
+	# First, check if a marker is actually selected and is valid.
+	if not is_instance_valid(selected):
+		return
+	# Continuously update the camera's zoom to match the selected point's data.
+	# This ensures that when you drag the zoom value in the Inspector,
+	# the camera updates in real-time.
+	if preview_cam and preview_cam.zoom.x != selected.point_data.zoom:
+		preview_cam.zoom = Vector2(selected.point_data.zoom * path_follow.base_zoom, selected.point_data.zoom * path_follow.base_zoom)
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=9 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scroll.gd" id="2_j7hwt"]
@@ -7,350 +7,7 @@
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://path_point_data.gd" id="5_g2313"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://arrow.png" id="12_1s4ev"]
 
-[sub_resource type="Resource" id="Resource_46keh"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_wkg44"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_g2313"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_kuyqm"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_rhbh6"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_nn8d0"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_1s4ev"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_lsxgm"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 0.39
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_kbfpd"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_vvxgv"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_lqmm3"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_r8ycp"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_wp71l"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_g0lv4"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_yr7ns"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_ygqma"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_idtkp"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_dhg6m"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_oqpcb"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_bcb0y"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_oad8r"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_ec8q6"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_rc6rm"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_5vt0f"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_41hqh"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_gahgq"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_0q0pi"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_xg8ip"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_4nbfv"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_a8h3a"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_loygj"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_anh4n"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_43rhn"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_sg5qd"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_o1mgq"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_u1bkk"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_urtf6"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_64csp"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_no4b1"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_jh7lc"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_11yg6"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_uyepq"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_ek378"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_wkw6x"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_y5wf8"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_n8687"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_welo7"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_t2owd"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_nfn11"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_d3sjn"]
+[sub_resource type="Resource" id="Resource_1t0yx"]
 script = ExtResource("5_g2313")
 speed = 1.0
 zoom = 1.0
@@ -370,467 +27,821 @@ point_count = 50
 position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
-[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam")]
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow")]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 8.0
-offset_right = 48.0
+offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_u8b5t")
 preview_cam = NodePath("../PreviewCam")
+path_follow = NodePath("../Path2D/PathFollow2D")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_5836468322" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78752064" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 21.0
 offset_top = 134.0
 offset_right = 174.0
 offset_bottom = 280.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_46keh")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836468598" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78752298" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 123.0
 offset_top = 1035.0
 offset_right = 276.0
 offset_bottom = 1181.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_wkg44")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836468813" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78752477" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 293.0
 offset_top = 2945.0
 offset_right = 446.0
 offset_bottom = 3091.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_g2313")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469019" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78752648" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 619.0
 offset_top = 2826.0
 offset_right = 772.0
 offset_bottom = 2972.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_kuyqm")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469224" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78752825" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 980.823
 offset_top = 2835.13
 offset_right = 1133.82
 offset_bottom = 2981.13
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.4985, 73)
-point_data = SubResource("Resource_rhbh6")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469424" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78753006" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1371.0
 offset_top = 2805.0
 offset_right = 1524.0
 offset_bottom = 2951.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_nn8d0")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469601" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78753181" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2172.0
 offset_top = 2990.0
 offset_right = 2325.0
 offset_bottom = 3136.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_1s4ev")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469780" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="Position" parent="PointData/PathPointMarker_78753181/Container" index="0"]
+text = "Pos: (2172, 2990)"
+
+[node name="Speed" parent="PointData/PathPointMarker_78753181/Container" index="1"]
+text = "Speed: 1.00"
+
+[node name="PathPointMarker_78753348" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3065.0
 offset_top = 2059.0
 offset_right = 3218.0
 offset_bottom = 2205.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_lsxgm")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836469954" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78753513" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3567.0
 offset_top = 551.0
 offset_right = 3720.0
 offset_bottom = 697.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_kbfpd")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470128" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78753672" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4339.0
 offset_top = 3077.0
 offset_right = 4492.0
 offset_bottom = 3223.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_vvxgv")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470301" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78753839" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 5624.0
 offset_top = 2647.0
 offset_right = 5777.0
 offset_bottom = 2793.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_lqmm3")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470473" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754001" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 6636.0
 offset_top = 2765.0
 offset_right = 6789.0
 offset_bottom = 2911.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_r8ycp")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470647" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754161" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 8279.0
 offset_top = 2944.0
 offset_right = 8432.0
 offset_bottom = 3090.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_wp71l")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470816" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754328" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 11972.0
 offset_top = 3012.0
 offset_right = 12125.0
 offset_bottom = 3158.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_g0lv4")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836470983" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754489" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12521.0
 offset_top = 3060.0
 offset_right = 12674.0
 offset_bottom = 3206.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_yr7ns")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836471154" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754656" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14521.0
 offset_top = 3309.0
 offset_right = 14674.0
 offset_bottom = 3455.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_ygqma")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836471329" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754823" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14549.0
 offset_top = 4599.0
 offset_right = 14702.0
 offset_bottom = 4745.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_idtkp")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836471502" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78754994" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14892.0
 offset_top = 5595.0
 offset_right = 15045.0
 offset_bottom = 5741.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_dhg6m")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836471677" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755158" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14014.0
 offset_top = 5741.0
 offset_right = 14167.0
 offset_bottom = 5887.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_oqpcb")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836471846" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755335" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 11406.0
 offset_top = 5869.0
 offset_right = 11559.0
 offset_bottom = 6015.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_bcb0y")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472017" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755510" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 10826.0
 offset_top = 5896.0
 offset_right = 10979.0
 offset_bottom = 6042.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_oad8r")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472186" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755671" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4700.0
 offset_top = 5818.0
 offset_right = 4853.0
 offset_bottom = 5964.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_ec8q6")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472362" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755830" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4145.49
 offset_top = 5880.07
 offset_right = 4298.49
 offset_bottom = 6026.07
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_rc6rm")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472532" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78755996" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3342.0
 offset_top = 5940.0
 offset_right = 3495.0
 offset_bottom = 6086.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_5vt0f")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472705" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756155" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2101.42
 offset_top = 6085.14
 offset_right = 2254.42
 offset_bottom = 6231.14
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_41hqh")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836472877" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756319" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1873.2
 offset_top = 6085.14
 offset_right = 2026.2
 offset_bottom = 6231.14
-pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_gahgq")
-
-[node name="PathPointMarker_5836473043" parent="PointData" instance=ExtResource("3_46keh")]
-layout_mode = 0
-offset_left = 1203.0
-offset_top = 6134.0
-offset_right = 1333.0
-offset_bottom = 6259.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_0q0pi")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836473220" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756466" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1203.0
+offset_top = 6134.0
+offset_right = 1356.0
+offset_bottom = 6280.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(76.5, 73)
+point_data = SubResource("Resource_1t0yx")
+
+[node name="PathPointMarker_78756615" parent="PointData" instance=ExtResource("3_46keh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 465.0
 offset_top = 5964.0
 offset_right = 618.0
 offset_bottom = 6110.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_xg8ip")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836473387" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756763" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 453.291
 offset_top = 6769.18
 offset_right = 606.291
 offset_bottom = 6915.18
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_4nbfv")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836473559" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756911" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 431.0
 offset_top = 7140.0
 offset_right = 584.0
 offset_bottom = 7286.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_a8h3a")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836473731" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757064" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 366.0
 offset_top = 12263.0
 offset_right = 519.0
 offset_bottom = 12409.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_loygj")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836473916" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757209" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 376.0
 offset_top = 12561.0
 offset_right = 529.0
 offset_bottom = 12707.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_anh4n")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474088" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757357" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2126.0
 offset_top = 12105.0
 offset_right = 2279.0
 offset_bottom = 12251.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_43rhn")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474256" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757500" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1831.0
 offset_top = 13170.0
 offset_right = 1984.0
 offset_bottom = 13316.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_sg5qd")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474428" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757635" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2452.0
 offset_top = 13247.0
 offset_right = 2605.0
 offset_bottom = 13393.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_o1mgq")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474594" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757773" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3428.0
 offset_top = 10430.0
 offset_right = 3581.0
 offset_bottom = 10576.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_u1bkk")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474773" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757917" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3632.48
 offset_top = 9170.09
 offset_right = 3785.48
 offset_bottom = 9316.09
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_urtf6")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836474950" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758071" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3641.0
 offset_top = 8785.0
 offset_right = 3794.0
 offset_bottom = 8931.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_64csp")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475123" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758221" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3731.1
 offset_top = 8309.48
 offset_right = 3884.1
 offset_bottom = 8455.48
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_no4b1")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475296" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758354" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3784.88
 offset_top = 7735.74
 offset_right = 3937.88
 offset_bottom = 7881.74
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_jh7lc")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475450" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758493" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3910.39
 offset_top = 7170.96
 offset_right = 4063.39
 offset_bottom = 7316.96
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_11yg6")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475595" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758629" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3937.28
 offset_top = 6776.51
 offset_right = 4090.28
 offset_bottom = 6922.51
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_uyepq")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475746" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758777" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4483.0
 offset_top = 6312.0
 offset_right = 4636.0
 offset_bottom = 6458.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_ek378")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836475895" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758932" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 8714.0
 offset_top = 5864.0
 offset_right = 8867.0
 offset_bottom = 6010.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_wkw6x")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476044" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759069" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 9629.0
 offset_top = 6715.0
 offset_right = 9782.0
 offset_bottom = 6861.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_y5wf8")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476193" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759200" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 9867.0
 offset_top = 9994.0
 offset_right = 10020.0
 offset_bottom = 10140.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_n8687")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476342" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759334" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 10840.0
 offset_top = 10123.0
 offset_right = 10993.0
 offset_bottom = 10269.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_welo7")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476488" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759467" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 11625.6
 offset_top = 10246.6
 offset_right = 11778.6
 offset_bottom = 10392.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_t2owd")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476637" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759598" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12090.0
 offset_top = 10323.7
 offset_right = 12243.0
 offset_bottom = 10469.7
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_nfn11")
+point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_5836476784" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78759729" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12806.0
 offset_top = 10384.0
 offset_right = 12959.0
 offset_bottom = 10530.0
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_d3sjn")
+point_data = SubResource("Resource_1t0yx")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(0, -6)
@@ -846,7 +857,7 @@ speed_multiplier = -0.95
 scroll_speed = -120.0
 TOUCHPAD_VELOCITY = 14.0
 data_source_control_path = NodePath("../../PointData")
-base_zoom = 0.72
+base_zoom = 0.75
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
@@ -880,7 +891,9 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(3065, 2059)
+position = Vector2(2172, 2990)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.39, 0.39)
+zoom = Vector2(0.75, 0.75)
+
+[editable path="PointData/PathPointMarker_78753181"]

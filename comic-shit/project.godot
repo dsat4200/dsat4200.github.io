@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=704
-window/size/viewport_height=1250
+window/size/viewport_width=720
+window/size/viewport_height=720
 window/size/initial_screen=1
 
 [input_devices]

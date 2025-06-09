@@ -1,5 +1,6 @@
 @tool
 extends PathFollow2D
+class_name PathReader
 
 # --- MOVEMENT & INPUT ---
 @export var speed_multiplier: float = 100.0

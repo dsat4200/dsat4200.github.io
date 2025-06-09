@@ -339,6 +339,8 @@ loop = false
 script = ExtResource("2_j7hwt")
 speed_multiplier = -0.95
 base_zoom = 0.72
+scroll_speed = -120.0
+TOUCHPAD_VELOCITY = 14.0
 point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubResource("Resource_55ryp"), SubResource("Resource_u8b5t"), SubResource("Resource_dpjjm"), SubResource("Resource_46keh"), SubResource("Resource_wkg44"), SubResource("Resource_g2313"), SubResource("Resource_kuyqm"), SubResource("Resource_rhbh6"), SubResource("Resource_nn8d0"), SubResource("Resource_1s4ev"), SubResource("Resource_lsxgm"), SubResource("Resource_kbfpd"), SubResource("Resource_vvxgv"), SubResource("Resource_lqmm3"), SubResource("Resource_r8ycp"), SubResource("Resource_wp71l"), SubResource("Resource_g0lv4"), SubResource("Resource_yr7ns"), SubResource("Resource_ygqma"), SubResource("Resource_idtkp"), SubResource("Resource_dhg6m"), SubResource("Resource_oqpcb"), SubResource("Resource_bcb0y"), SubResource("Resource_oad8r"), SubResource("Resource_ec8q6"), SubResource("Resource_rc6rm"), SubResource("Resource_5vt0f"), SubResource("Resource_41hqh"), SubResource("Resource_gahgq"), SubResource("Resource_0q0pi"), SubResource("Resource_xg8ip"), SubResource("Resource_4nbfv"), SubResource("Resource_a8h3a"), SubResource("Resource_anh4n"), SubResource("Resource_43rhn"), SubResource("Resource_sg5qd"), SubResource("Resource_o1mgq"), SubResource("Resource_u1bkk"), SubResource("Resource_loygj")])
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]

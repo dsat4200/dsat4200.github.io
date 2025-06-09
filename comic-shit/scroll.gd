@@ -1,10 +1,12 @@
 @tool
 extends PathFollow2D
 
-@export var speed_multiplier: float = 100.0
+@export var speed_multiplier: float = 100.0 # Used for touch drag and trackpad pan sensitivity
 @export var deceleration_rate: float = 0.95
 @export var base_zoom: float = 1.0
 @export var min_swipe_velocity_threshold: float = 5.0
+@export var scroll_speed: float = 50.0 # Controls mouse wheel sensitivity
+@export var TOUCHPAD_VELOCITY:float = 1.0
 
 @export var point_data: Array[PathPointData]:
 	set(value):
@@ -40,7 +42,6 @@ func _ready():
 	audio_stream_player = AudioStreamPlayer.new()
 	add_child(audio_stream_player)
 	
-	# --- NEW: Perform initial visibility update ---
 	# Ensures the correct nodes are visible/hidden at the starting position.
 	if parent_path_2d and parent_path_2d.curve:
 		var start_point_index = get_closest_point_index(parent_path_2d.curve, 0)
@@ -60,10 +61,10 @@ func _process(delta):
 				audio_stream_player.stream = point_data.sound_effect
 				audio_stream_player.play()
 
-		# --- NEW: NODE VISIBILITY LOGIC ---
+		# --- NODE VISIBILITY LOGIC ---
 		_update_node_visibility(current_point_index)
 		
-		# --- (Existing speed logic is unchanged) ---
+		# --- Speed logic ---
 		var current_point_data_for_speed: PathPointData = _get_point_data_for_index(current_point_index)
 		if current_point_data_for_speed:
 			current_target_speed = current_point_data_for_speed.speed
@@ -80,6 +81,7 @@ func _process(delta):
 		_apply_current_zoom()
 		return
 
+	# Apply coasting momentum if not actively swiping/panning
 	if !is_swiping and abs(current_velocity) > min_swipe_velocity_threshold:
 		current_velocity *= deceleration_rate
 		var delta_progress_from_momentum = current_velocity * smooth_current_speed
@@ -94,7 +96,58 @@ func _input(event):
 	if Engine.is_editor_hint():
 		return
 
-	if event is InputEventScreenTouch:
+	# --- MOUSE SCROLL INPUT ---
+	if event is InputEventMouseButton and event.is_pressed():
+		var scroll_direction = 0.0
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			scroll_direction = 1.0
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			scroll_direction = -1.0
+
+		if scroll_direction != 0.0:
+			current_velocity = 0.0
+			var path_node_runtime = get_parent() as Path2D
+			if !path_node_runtime or !path_node_runtime.curve: return
+			var progress_change_from_scroll = scroll_direction * scroll_speed * smooth_current_speed
+			self.progress = clamp(self.progress + progress_change_from_scroll, 0, path_length)
+			_apply_current_zoom()
+			var current_point_index = get_closest_point_index(path_node_runtime.curve, self.progress / path_length)
+			_update_node_visibility(current_point_index)
+			get_viewport().set_input_as_handled()
+			return
+
+	# --- START: NEW TRACKPAD PAN GESTURE LOGIC ---
+	elif event is InputEventPanGesture:
+		# Ensure any touch-based swipe flags are reset.
+		is_swiping = false
+
+		var path_node_runtime = get_parent() as Path2D
+		if !path_node_runtime or !path_node_runtime.curve: return
+
+		# Invert delta.y for "natural" trackpad scrolling (swipe up moves content up)
+		var vertical_pan_amount = -event.delta.y
+
+		# Reuse speed_multiplier for sensitivity. A pan is like a drag.
+		var raw_velocity = vertical_pan_amount * speed_multiplier * TOUCHPAD_VELOCITY
+
+		# Apply immediate change based on the local path speed.
+		var progress_change_from_pan = raw_velocity * smooth_current_speed 
+		self.progress = clamp(self.progress + progress_change_from_pan, 0, path_length)
+
+		# Store the raw velocity for coasting, just like with screen drag.
+		current_velocity = raw_velocity
+
+		# Update visuals immediately.
+		_apply_current_zoom()
+		var current_point_index = get_closest_point_index(path_node_runtime.curve, self.progress / path_length)
+		_update_node_visibility(current_point_index)
+
+		get_viewport().set_input_as_handled()
+		return
+	# --- END: NEW TRACKPAD PAN GESTURE LOGIC ---
+
+	# --- TOUCHSCREEN DRAG/SWIPE LOGIC ---
+	elif event is InputEventScreenTouch:
 		if event.pressed:
 			is_swiping = true
 			last_touch_pos = event.position
@@ -110,31 +163,18 @@ func _input(event):
 			var delta_pos = event.position - last_touch_pos
 			var vertical_swipe_amount = delta_pos.y
 			
-			# --- FIX STARTS HERE ---
-
-			# 1. Calculate a "raw" velocity from the swipe, independent of the path's current speed.
-			#    This represents the pure intensity of the user's gesture.
 			var raw_velocity = vertical_swipe_amount * speed_multiplier
-			
-			# 2. For the immediate progress change while dragging, apply the local path speed.
 			var progress_change_from_swipe = raw_velocity * smooth_current_speed
 			self.progress = clamp(self.progress + progress_change_from_swipe, 0, path_length)
-			
-			# 3. CRITICAL: For coasting, store the raw, unmodified velocity.
-			#    This ensures that the coasting speed is not tied to the speed of the
-			#    path segment where the user released their finger.
 			current_velocity = raw_velocity
-			
-			# --- FIX ENDS HERE ---
 			
 			last_touch_pos = event.position
 			
 			_apply_current_zoom()
-						# --- NEW: Update visibility instantly on drag ---
 			var current_point_index = get_closest_point_index(path_node_runtime.curve, self.progress / path_length)
 			_update_node_visibility(current_point_index)
 
-# ... (The rest of your script is unchanged as it is correct) ...
+# ... (The rest of your script is unchanged and remains correct) ...
 
 func _initialize_node_references():
 	if get_parent() is Path2D:
@@ -242,20 +282,14 @@ func get_closest_point_index(curve: Curve2D, progress_ratio: float) -> int:
 	if curve == null or curve.get_point_count() == 0 or _point_distances.is_empty():
 		return -1
 
-	# Calculate the target distance along the baked path
 	var target_progress_dist = progress_ratio * curve.get_baked_length()
 
-	# Iterate backwards through the pre-calculated, accurate distances of each point.
-	# This finds the last point index that the current progress has passed.
 	for i in range(_point_distances.size() - 1, -1, -1):
 		if target_progress_dist >= _point_distances[i]:
 			return i
 	
-	# If progress is before the first point, return the first index.
 	return 0
-# --- FIX ENDS HERE ---
 
-# Populates a list of all unique nodes targeted by the points.
 func _update_managed_nodes_list():
 	managed_node_paths.clear()
 	if point_data.is_empty():
@@ -266,28 +300,20 @@ func _update_managed_nodes_list():
 			if not managed_node_paths.has(data.target_node):
 				managed_node_paths.append(data.target_node)
 
-# This function handles the core logic of showing/hiding nodes.
 func _update_node_visibility(current_point_index: int):
 	var current_point_data = _get_point_data_for_index(current_point_index)
 	
-	# If there's no data for the current point, we can't determine what to show.
 	if not current_point_data:
 		return
 
 	var active_node_path = current_point_data.target_node
 	var should_show_active_node = current_point_data.show_target_node
 
-	# Iterate through all nodes that are managed by this script.
 	for path in managed_node_paths:
 		var node = get_node_or_null(path)
 		
-		# Ensure the node is valid and is a type that can be hidden (CanvasItem for 2D).
 		if is_instance_valid(node) and node is CanvasItem:
-			# If this node is the one targeted by the current path point,
-			# set its visibility according to the 'show_target_node' flag.
 			if path == active_node_path:
 				node.visible = should_show_active_node
-			# Otherwise, ensure it's hidden. This prevents nodes from previous
-			# points from staying visible when they shouldn't be.
 			else:
 				node.visible = false

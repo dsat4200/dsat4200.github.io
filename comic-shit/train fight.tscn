@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=67 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scroll.gd" id="2_j7hwt"]
@@ -14,6 +14,12 @@
 [ext_resource type="AudioStream" uid="uid://dxwfxqgbt0tjy" path="res://sfx/S_foot_barefoot_grass.wav" id="11_1s4ev"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://arrow.png" id="12_1s4ev"]
 
+[sub_resource type="Curve2D" id="Curve2D_lsxgm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1222, -367, 0, 0, 0, 0, -484.866, -242.969, 0, 0, 0, 0, 93.4238, -155.553, 0, 0, 0, 0, 1142.41, -47.9639, 0, 0, 0, 0, 1976.23, 52.9006, 0, 0, 0, 0, 3556, 221, 0, 0, 0, 0, 4867.68, 409.288, 0, 0, 0, 0, 6826, 690, -1146.5, -225.205, 1146.5, 225.205, 10264, 401)
+}
+point_count = 9
+
 [sub_resource type="LabelSettings" id="LabelSettings_u8b5t"]
 font_size = 246
 font_color = Color(0, 0.686275, 0, 1)
@@ -21,9 +27,9 @@ font_color = Color(0, 0.686275, 0, 1)
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, 21, 134, 0, -490.223, 0, 490.223, 123, 1035, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, -168.334, 39.9436, 168.334, -39.9436, 1339, 2856, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3567, 551, 12.9335, -503.24, -12.9335, 503.24, 3779, 1719, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, -208.862, -15.19, 208.862, 15.19, 11972, 3012, 911.852, -74.2146, -911.852, 74.2146, 12521, 3060, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 657.471, -65.2983, -657.471, 65.2983, 3015, 5970, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, 0, 0, 0, 0, 8714, 5864, -178.471, -39.8233, 178.471, 39.8233, 9010, 5841, -112.786, -321.648, 112.786, 321.648, 9629, 6715, -23.5656, -342.302, 23.5656, 342.302, 9865, 7897, 0, 0, 0, 0, 9867, 9994, -397.402, -38.3686, 397.402, 38.3686, 10840, 10123, 0, 0, 0, 0, 12806, 10384)
+"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, 21, 134, 0, -490.223, 0, 490.223, 123, 1035, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3567, 551, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, -208.862, -15.19, 208.862, 15.19, 11972, 3012, 911.852, -74.2146, -911.852, 74.2146, 12521, 3060, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3342, 5940, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 0, 0, 0, 0, 453.291, 6769.18, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3632.48, 9170.09, 0, 0, 0, 0, 3641, 8785, 0, 0, 0, 0, 3731.1, 8309.48, 0, 0, 0, 0, 3784.88, 7735.74, 0, 0, 0, 0, 3910.39, 7170.96, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, 0, 0, 0, 0, 8714, 5864, -112.786, -321.648, 112.786, 321.648, 9629, 6715, 0, 0, 0, 0, 9867, 9994, -397.402, -38.3686, 397.402, 38.3686, 10840, 10123, 0, 0, 0, 0, 11625.6, 10246.6, 0, 0, 0, 0, 12090, 10323.7, 0, 0, 0, 0, 12806, 10384)
 }
-point_count = 40
+point_count = 50
 
 [sub_resource type="Resource" id="Resource_hh0ki"]
 script = ExtResource("3_hh0ki")
@@ -313,22 +319,99 @@ zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
+[sub_resource type="Resource" id="Resource_kjsc5"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_h66p6"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_5f3h1"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_o175a"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_lk7ht"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_kh581"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_5tfl7"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_vgqwo"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_mktsg"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_rs0iv"]
+script = ExtResource("3_hh0ki")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
 [node name="Node2D" type="Node2D"]
 
 [node name="LargeImageContainer" type="Node2D" parent="."]
 position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
+[node name="testpath" type="Path2D" parent="."]
+position = Vector2(1402, -6)
+curve = SubResource("Curve2D_lsxgm")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = 8.0
+offset_right = 48.0
 offset_bottom = 40.0
 script = ExtResource("2_u8b5t")
-path_node_path = NodePath("../Path2D")
+path_node_path = NodePath("../testpath")
 label_settings = SubResource("LabelSettings_u8b5t")
+refresh_button = null
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(0, -6)
 curve = SubResource("Curve2D_aw5q7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -341,7 +424,7 @@ speed_multiplier = -0.95
 base_zoom = 0.72
 scroll_speed = -120.0
 TOUCHPAD_VELOCITY = 14.0
-point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubResource("Resource_55ryp"), SubResource("Resource_u8b5t"), SubResource("Resource_dpjjm"), SubResource("Resource_46keh"), SubResource("Resource_wkg44"), SubResource("Resource_g2313"), SubResource("Resource_kuyqm"), SubResource("Resource_rhbh6"), SubResource("Resource_nn8d0"), SubResource("Resource_1s4ev"), SubResource("Resource_lsxgm"), SubResource("Resource_kbfpd"), SubResource("Resource_vvxgv"), SubResource("Resource_lqmm3"), SubResource("Resource_r8ycp"), SubResource("Resource_wp71l"), SubResource("Resource_g0lv4"), SubResource("Resource_yr7ns"), SubResource("Resource_ygqma"), SubResource("Resource_idtkp"), SubResource("Resource_dhg6m"), SubResource("Resource_oqpcb"), SubResource("Resource_bcb0y"), SubResource("Resource_oad8r"), SubResource("Resource_ec8q6"), SubResource("Resource_rc6rm"), SubResource("Resource_5vt0f"), SubResource("Resource_41hqh"), SubResource("Resource_gahgq"), SubResource("Resource_0q0pi"), SubResource("Resource_xg8ip"), SubResource("Resource_4nbfv"), SubResource("Resource_a8h3a"), SubResource("Resource_anh4n"), SubResource("Resource_43rhn"), SubResource("Resource_sg5qd"), SubResource("Resource_o1mgq"), SubResource("Resource_u1bkk"), SubResource("Resource_loygj")])
+point_data = Array[ExtResource("3_hh0ki")]([SubResource("Resource_hh0ki"), SubResource("Resource_55ryp"), SubResource("Resource_u8b5t"), SubResource("Resource_dpjjm"), SubResource("Resource_46keh"), SubResource("Resource_wkg44"), SubResource("Resource_g2313"), SubResource("Resource_kuyqm"), SubResource("Resource_rhbh6"), SubResource("Resource_nn8d0"), SubResource("Resource_1s4ev"), SubResource("Resource_lsxgm"), SubResource("Resource_kbfpd"), SubResource("Resource_vvxgv"), SubResource("Resource_lqmm3"), SubResource("Resource_r8ycp"), SubResource("Resource_wp71l"), SubResource("Resource_g0lv4"), SubResource("Resource_yr7ns"), SubResource("Resource_ygqma"), SubResource("Resource_idtkp"), SubResource("Resource_dhg6m"), SubResource("Resource_oqpcb"), SubResource("Resource_bcb0y"), SubResource("Resource_oad8r"), SubResource("Resource_ec8q6"), SubResource("Resource_rc6rm"), SubResource("Resource_5vt0f"), SubResource("Resource_41hqh"), SubResource("Resource_gahgq"), SubResource("Resource_0q0pi"), SubResource("Resource_xg8ip"), SubResource("Resource_4nbfv"), SubResource("Resource_a8h3a"), SubResource("Resource_anh4n"), SubResource("Resource_43rhn"), SubResource("Resource_sg5qd"), SubResource("Resource_o1mgq"), SubResource("Resource_u1bkk"), SubResource("Resource_loygj"), SubResource("Resource_kjsc5"), SubResource("Resource_h66p6"), SubResource("Resource_5f3h1"), SubResource("Resource_o175a"), SubResource("Resource_lk7ht"), SubResource("Resource_kh581"), SubResource("Resource_5tfl7"), SubResource("Resource_vgqwo"), SubResource("Resource_mktsg"), SubResource("Resource_rs0iv")])
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 

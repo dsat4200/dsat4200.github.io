@@ -4,31 +4,40 @@ extends Control
 ## Assign the Path2D node you want to visualize.
 @export var path_node_path: NodePath:
 	set(value):
-		# When the path is changed in the editor, disconnect from the old one (if any)
+		# When the path is changed, disconnect from the old one (if any)
 		if is_instance_valid(_path_node) and _path_node.curve:
 			if _path_node.curve.is_connected("changed", _update_labels):
-				_path_node.curve.changed.disconnect(_update_labels)
+				_path_node.curve.disconnect("changed", _update_labels)
 
 		path_node_path = value
 		_path_node = get_node_or_null(path_node_path)
 
-		# Connect to the new path's curve signal
-		if is_instance_valid(_path_node) and _path_node.curve:
+		# Connect to the new path's curve 'changed' signal
+		if is_instance_valid(_path_node) and is_instance_valid(_path_node.curve):
 			_path_node.curve.changed.connect(_update_labels)
 		
 		# Trigger a manual update to draw the initial state
 		_update_labels()
 
-
 ## Optional: Customize the appearance of the index numbers.
 @export var label_settings: LabelSettings
 
-var _path_node: Path2D = null
+# A button to manually refresh the nodes in the editor.
+@export var refresh_button: bool:
+	set(value):
+		if value:
+			print("Refreshing labels...")
+			_update_labels()
 
-func _ready():
-	# Initial setup when the scene is loaded
+var _path_node: Path2D
+
+# Preload the custom node script for reliability in tool mode
+const PathPointLabel_Class = preload("res://PathPointLabel.gd") # Ensure this path is correct!
+
+func _enter_tree():
+	# Initial setup when the node enters the scene tree
 	_path_node = get_node_or_null(path_node_path)
-	if is_instance_valid(_path_node) and _path_node.curve:
+	if is_instance_valid(_path_node) and is_instance_valid(_path_node.curve):
 		# Connect the signal if not already connected by the setter
 		if not _path_node.curve.is_connected("changed", _update_labels):
 			_path_node.curve.changed.connect(_update_labels)
@@ -36,45 +45,78 @@ func _ready():
 
 func _exit_tree():
 	# Clean up the connection when the node is removed from the scene
-	if is_instance_valid(_path_node) and _path_node.curve:
+	if is_instance_valid(_path_node) and is_instance_valid(_path_node.curve):
 		if _path_node.curve.is_connected("changed", _update_labels):
-			_path_node.curve.changed.disconnect(_update_labels)
-
-func _clear_labels():
-	"""Removes all previously generated index labels."""
-	for child in get_children():
-		child.queue_free()
+			_path_node.curve.disconnect("changed", _update_labels)
 
 func _update_labels():
 	"""
-	Clears and recreates all index labels. This is now called automatically
-	by the curve's 'changed' signal.
+	Synchronizes the number of labels with the number of curve points,
+	then updates each label's position and text. This method is more robust
+	than mapping by index.
 	"""
-	_clear_labels()
-	
-	# Ensure we are in the editor and a valid path node is assigned
-	if not Engine.is_editor_hint() or not is_instance_valid(_path_node):
+	if not is_instance_valid(_path_node):
+		# If path node is invalid, clear any existing labels
+		for child in get_children():
+			if child is PathPointLabel_Class:
+				child.queue_free()
 		return
 
 	var curve = _path_node.curve
-	if not curve:
+	
+	# Get all existing labels that are children of this node
+	var child_labels: Array[PathPointLabel_Class] = []
+	for child in get_children():
+		if child is PathPointLabel_Class:
+			child_labels.append(child)
+
+	# If the curve is invalid or has no points, remove all labels
+	if not is_instance_valid(curve):
+		for label in child_labels:
+			label.queue_free()
 		return
 	
 	var point_count = curve.get_point_count()
-	
-	# Generate a new label for each point in the curve
-	for i in range(point_count):
-		var point_position = curve.get_point_position(i)
+
+	# --- 1. SYNCHRONIZE LABEL COUNT WITH POINT COUNT ---
+
+	# Add new labels if there are more points than labels
+	while child_labels.size() < point_count:
+		var new_label = PathPointLabel_Class.new()
+		# Use a high-resolution timestamp for a unique name
+		new_label.name = "PathPointLabel_%s" % Time.get_ticks_usec()
 		
-		var label = Label.new()
-		label.text = str(i)
+		add_child(new_label)
+		# This is crucial for saving the dynamically created node with the scene
+		new_label.owner = get_tree().edited_scene_root
+		child_labels.append(new_label)
+
+	# Remove surplus labels if there are fewer points than labels
+	while child_labels.size() > point_count:
+		var label_to_remove = child_labels.pop_back()
+		remove_child(label_to_remove)
+		# Freeing should be deferred to avoid errors in the editor
+		label_to_remove.call_deferred("free")
+
+	# --- 2. UPDATE ALL LABELS ---
+	
+	# Now that counts match, update each label's properties
+	for i in range(point_count):
+		var label: PathPointLabel_Class = child_labels[i]
+		var point_position: Vector2 = curve.get_point_position(i)
+
+		# The `PathPointLabel.gd` script should be responsible for initializing
+		# its own data resource. You can add a check here if needed:
+		# if not is_instance_valid(label.point_data):
+		#     label.point_data = PathPointData.new()
+
+		# Update label's position and text
+		label.position = point_position
+		label.text = "(%d, %d)" % [int(point_position.x), int(point_position.y)]
 		
 		# Apply custom font/color/size settings if they exist
 		if label_settings:
 			label.label_settings = label_settings
-		
-		# Set position and pivot offset to center the label on the point
-		label.position = point_position
-		label.pivot_offset = label.get_size() / 2.0
-
-		add_child(label)
+			
+		# Center the label on the point. In Godot 4, use `size` property.
+		label.pivot_offset = label.size / 2.0

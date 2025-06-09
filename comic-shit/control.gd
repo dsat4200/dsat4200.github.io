@@ -6,8 +6,9 @@ var selected:PathPointMarker
 
 const PathPointMarker_Scene = preload("res://PathPointMarker.tscn")
 func _ready():
-	if OS.has_feature("web"):
+	if OS.has_feature("web") or OS.has_feature("wasm32"):
 		hide()
+		visible = false
 	# Connect to the selection_changed signal if in editor
 	if Engine.is_editor_hint():
 		# This ensures EditorInterface is available

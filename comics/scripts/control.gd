@@ -10,6 +10,8 @@ func _ready():
 	if Engine.is_editor_hint():
 		# This ensures EditorInterface is available
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
+	else:
+		hide()
 
 
 ## Assign the Path2D node you want to visualize.

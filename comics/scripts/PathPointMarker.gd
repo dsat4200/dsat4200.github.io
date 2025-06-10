@@ -7,6 +7,7 @@ class_name PathPointMarker
 @export var point_data: PathPointData
 @export var speaker: Sprite2D
 @export var container: Control
+@export var frame: ReferenceRect
 @export var base_size: Vector2 = Vector2(256,256)
 @export var spd_label: Label # Assuming this is a standard Godot Label node
 
@@ -48,7 +49,7 @@ func update_info():
 		# Update color based on speed using hue interpolation
 		update_color_from_speed_hue()
 		
-		spd_label.text = "Speed: %.2f" % [point_data.speed]
+		spd_label.text = "S: %.2f" % [point_data.speed]
 	
 func _ready():
 	size = base_size

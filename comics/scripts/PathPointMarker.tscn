@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="1_lvhqa"]
 [ext_resource type="Texture2D" uid="uid://7rppcmxe0egf" path="res://scripts/speaker.png" id="3_gef6h"]
 
-[node name="PathPointMarker" type="TextureRect" node_paths=PackedStringArray("speaker", "container", "spd_label")]
-self_modulate = Color(1, 1, 0, 1)
+[node name="PathPointMarker" type="TextureRect" node_paths=PackedStringArray("speaker", "container", "frame", "spd_label")]
+self_modulate = Color(0.5, 1, 0, 1)
 anchors_preset = -1
 anchor_left = 0.087
 anchor_top = 0.085
@@ -22,11 +22,13 @@ texture = ExtResource("1_gef6h")
 script = ExtResource("1_lvhqa")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
+frame = NodePath("")
 spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
 [node name="Container" type="Control" parent="."]
+visible = false
 z_index = 1
 anchors_preset = 0
 offset_left = 160.0
@@ -49,7 +51,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 34
 theme_override_font_sizes/font_size = 120
-text = "Speed: 2.00"
+text = "S: 1.00"
 
 [node name="Speaker" type="Sprite2D" parent="."]
 visible = false

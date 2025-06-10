@@ -214,6 +214,7 @@ func _on_editor_selection_changed():
 			preview_cam.position = selected.position
 			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
 			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
+			
 	elif (editor_selection.size() == 0 and is_instance_valid(selected)):
 		selected.disappear()
 		selected = null
@@ -222,6 +223,7 @@ func _on_editor_selection_changed():
 func _process(_delta):
 	if not is_instance_valid(selected):
 		return
+		
 	if selected is PathPointMarker:
 		selected.update_info()
 

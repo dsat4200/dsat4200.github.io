@@ -1,13 +1,13 @@
-[gd_scene load_steps=61 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=59 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://scripts/large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="2_j7hwt"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="2_u8b5t"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="3_46keh"]
+[ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="4_p310y"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="5_g2313"]
+[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="5_h6yys"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://cowboy_comic/arrow.png" id="12_1s4ev"]
-[ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="12_holxa"]
-[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="13_holxa"]
 
 [sub_resource type="Resource" id="Resource_p310y"]
 script = ExtResource("5_g2313")
@@ -67,7 +67,7 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_gkrpo"]
 script = ExtResource("5_g2313")
-speed = 1.0
+speed = -0.91
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
@@ -352,26 +352,12 @@ zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
-[sub_resource type="Resource" id="Resource_0uodh"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_4p61t"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, -73, -7, 0, 0, 0, 0, 223, 1430, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, 0, 0, 0, 0, 2745.53, 2626.33, -493.103, 448.473, 493.103, -448.473, 3426, 2018, -322, -38, 322, 38, 4172, 898, 0, 0, 0, 0, 4434, 1934, 0, 0, 0, 0, 4132.67, 2584.78, -440.39, -103.705, 440.39, 103.705, 4363, 2999, -626.787, 53.9233, 626.787, -53.9233, 5583, 2859, 0, 0, 0, 0, 7055, 2809, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 9994.6, 2977.87, 0, 0, 0, 0, 10271.6, 2968.44, -208.862, -15.19, 208.862, 15.19, 11463, 3004, 911.852, -74.2146, -911.852, 74.2146, 12426, 3059, 0, 0, 0, 0, 12828.9, 3089.87, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 0, 0, 0, 0, 12013.3, 5869.08, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 0, 0, 0, 0, 10832, 5883.98, 0, 0, 0, 0, 5509.42, 5821.33, 0, 0, 0, 0, 5169.19, 5821.33, 0, 0, 0, 0, 4762, 5805, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3209, 5988, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, 0, 0, 0, 0, 8714, 5864, -112.786, -321.648, 112.786, 321.648, 9629, 6715, 0, 0, 0, 0, 9867, 9994, 0, 0, 0, 0, 10714, 10180, 0, 0, 0, 0, 12553, 10430)
+"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, -73, -7, 0, 0, 0, 0, 834, 1457, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, 0, 0, 0, 0, 2613, 2366, -493.103, 448.473, 493.103, -448.473, 3302, 2037, -322, -38, 322, 38, 4172, 898, 0, 0, 0, 0, 3910, 2279, 0, 0, 0, 0, 3996, 2915, -440.39, -103.705, 440.39, 103.705, 4270, 2898, 0, 0, 0, 0, 5505, 2516, 0, 0, 0, 0, 7055, 2809, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 9994.6, 2977.87, 0, 0, 0, 0, 10271.6, 2968.44, -208.862, -15.19, 208.862, 15.19, 11463, 3004, 911.852, -74.2146, -911.852, 74.2146, 12426, 3059, 0, 0, 0, 0, 12828.9, 3089.87, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 0, 0, 0, 0, 12013.3, 5869.08, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 0, 0, 0, 0, 10832, 5883.98, 0, 0, 0, 0, 6064, 6080, 0, 0, 0, 0, 5169.19, 5821.33, 0, 0, 0, 0, 4762, 5805, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3209, 5988, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, -112.786, -321.648, 112.786, 321.648, 9435, 6656, 0, 0, 0, 0, 9732, 9645, 0, 0, 0, 0, 10714, 10180)
 }
-point_count = 51
+point_count = 49
 
 [node name="Node2D" type="Node2D"]
 
@@ -389,7 +375,7 @@ preview_cam = NodePath("../PreviewCam")
 path_follow = NodePath("../Path2D/PathFollow2D")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_7733882537" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425045496" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -403,8 +389,8 @@ offset_bottom = 242.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_p310y")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -412,22 +398,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733883325" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425047128" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 219.52
-offset_top = 1426.6
-offset_right = 472.04
-offset_bottom = 1679.24
+offset_left = 830.52
+offset_top = 1453.6
+offset_right = 1083.04
+offset_bottom = 1706.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_h6yys")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -435,7 +421,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733883902" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425047504" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -449,8 +435,8 @@ offset_bottom = 3194.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_qpp6r")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -458,7 +444,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733884360" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425047800" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -472,8 +458,8 @@ offset_bottom = 3075.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_h58fg")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -481,7 +467,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733884694" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425048096" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -495,8 +481,8 @@ offset_bottom = 3084.37
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_lbvj6")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -504,7 +490,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733885000" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425048387" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -518,8 +504,8 @@ offset_bottom = 3054.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_wdoud")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -527,7 +513,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733885306" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425048704" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -541,8 +527,8 @@ offset_bottom = 3239.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_umsnu")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -550,22 +536,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733885591" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425049003" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 2742.05
-offset_top = 2622.93
-offset_right = 2994.57
-offset_bottom = 2875.57
+offset_left = 2609.52
+offset_top = 2362.6
+offset_right = 2862.04
+offset_bottom = 2615.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_holxa")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -573,22 +559,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733885876" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
+[node name="PathPointMarker_2425049330" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+self_modulate = Color(0, 1, 1, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 3422.52
-offset_top = 2014.6
-offset_right = 3675.04
-offset_bottom = 2267.24
+offset_left = 3298.52
+offset_top = 2033.6
+offset_right = 3551.04
+offset_bottom = 2286.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_gkrpo")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -596,7 +582,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733886131" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425049662" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -610,8 +596,8 @@ offset_bottom = 1147.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_nr04i")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -619,22 +605,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733886373" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425049967" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 4430.52
-offset_top = 1930.6
-offset_right = 4683.04
-offset_bottom = 2183.24
+offset_left = 3906.52
+offset_top = 2275.6
+offset_right = 4159.04
+offset_bottom = 2528.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_yghyy")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -642,22 +628,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733886630" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425050258" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 4129.19
-offset_top = 2581.38
-offset_right = 4381.71
-offset_bottom = 2834.02
+offset_left = 3992.52
+offset_top = 2911.6
+offset_right = 4245.04
+offset_bottom = 3164.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_p0t5v")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -665,22 +651,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733886877" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425050558" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 4359.52
-offset_top = 2995.6
-offset_right = 4612.04
-offset_bottom = 3248.24
+offset_left = 4266.52
+offset_top = 2894.6
+offset_right = 4519.04
+offset_bottom = 3147.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_tafms")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -688,22 +674,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733887133" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425050861" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5579.52
-offset_top = 2855.6
-offset_right = 5832.04
-offset_bottom = 3108.24
+offset_left = 5501.52
+offset_top = 2512.6
+offset_right = 5754.04
+offset_bottom = 2765.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_pky03")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -711,7 +697,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733887380" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425051158" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -725,8 +711,8 @@ offset_bottom = 3058.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_5ms72")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -734,7 +720,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733887635" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425051407" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -748,8 +734,8 @@ offset_bottom = 3193.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_w66go")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -757,7 +743,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733887885" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425051656" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -771,8 +757,8 @@ offset_bottom = 3227.11
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_y72j4")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -780,7 +766,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733888157" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425051920" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -794,8 +780,8 @@ offset_bottom = 3217.68
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_c2k70")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -803,7 +789,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733888437" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425052174" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -817,8 +803,8 @@ offset_bottom = 3253.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_5cgw3")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -826,7 +812,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733888700" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425052421" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -840,8 +826,8 @@ offset_bottom = 3308.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_ra6a1")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -849,7 +835,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733888973" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425052671" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -863,8 +849,8 @@ offset_bottom = 3339.11
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_cb7tx")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -872,7 +858,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733889235" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425052937" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -886,8 +872,8 @@ offset_bottom = 3558.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_57eg2")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -895,7 +881,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733889499" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425053209" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -909,8 +895,8 @@ offset_bottom = 4848.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_xkenf")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -918,7 +904,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733889752" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425053515" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -932,8 +918,8 @@ offset_bottom = 5844.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_gcewu")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -941,7 +927,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733889995" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425053846" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -955,8 +941,8 @@ offset_bottom = 5990.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_5yg58")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -964,7 +950,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733890237" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425054138" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -978,8 +964,8 @@ offset_bottom = 6118.32
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_hahpy")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -987,7 +973,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733890497" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425054434" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1001,8 +987,8 @@ offset_bottom = 6118.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_2uuth")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1010,7 +996,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733890745" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425054706" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1024,8 +1010,8 @@ offset_bottom = 6133.22
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_gd5e5")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1033,22 +1019,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733891005" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425055005" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5505.94
-offset_top = 5817.93
-offset_right = 5758.46
-offset_bottom = 6070.57
+offset_left = 6060.52
+offset_top = 6076.6
+offset_right = 6313.04
+offset_bottom = 6329.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_13g5h")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1056,7 +1042,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733891266" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425055312" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1070,8 +1056,8 @@ offset_bottom = 6070.57
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_bk54p")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1079,7 +1065,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733891533" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425055597" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1093,8 +1079,8 @@ offset_bottom = 6054.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_o8wrd")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1102,7 +1088,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733891769" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425055909" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1116,8 +1102,8 @@ offset_bottom = 6129.31
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_2djas")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1125,7 +1111,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733891996" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425056195" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1139,8 +1125,8 @@ offset_bottom = 6237.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_oxrrm")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1148,7 +1134,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733892228" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425056488" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1162,8 +1148,8 @@ offset_bottom = 6334.38
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_t5a3p")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1171,7 +1157,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733892450" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425056819" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1185,8 +1171,8 @@ offset_bottom = 6334.38
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_sn1g1")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1194,7 +1180,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733892667" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425057125" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1208,8 +1194,8 @@ offset_bottom = 6383.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_3ny24")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1217,7 +1203,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733892901" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425057388" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1231,8 +1217,8 @@ offset_bottom = 6213.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_08xve")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1240,7 +1226,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733893121" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425057640" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1254,8 +1240,8 @@ offset_bottom = 7389.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_51fwi")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1263,7 +1249,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733893341" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425057898" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1277,8 +1263,8 @@ offset_bottom = 12512.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_hkjem")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1286,7 +1272,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733893558" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425058129" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1300,8 +1286,8 @@ offset_bottom = 12810.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_n23e6")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1309,7 +1295,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733893781" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425058370" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1323,8 +1309,8 @@ offset_bottom = 12354.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_jcx4o")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1332,7 +1318,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733894017" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425058622" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1346,8 +1332,8 @@ offset_bottom = 13419.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_avyxm")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1355,7 +1341,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733894243" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425058873" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1369,8 +1355,8 @@ offset_bottom = 13496.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_cxnfl")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1378,7 +1364,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733894460" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425059149" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1392,8 +1378,8 @@ offset_bottom = 10679.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_0mugq")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1401,7 +1387,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733894669" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425059440" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1415,8 +1401,8 @@ offset_bottom = 7025.75
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_u54mw")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1424,7 +1410,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733894889" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425059693" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1438,8 +1424,8 @@ offset_bottom = 6561.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_6xc1p")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1447,22 +1433,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733895118" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425059984" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 8710.52
-offset_top = 5860.6
-offset_right = 8963.04
-offset_bottom = 6113.24
+offset_left = 9431.52
+offset_top = 6652.6
+offset_right = 9684.04
+offset_bottom = 6905.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_reyq0")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1470,22 +1456,22 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733895344" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425060277" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 9625.52
-offset_top = 6711.6
-offset_right = 9878.04
-offset_bottom = 6964.24
+offset_left = 9728.52
+offset_top = 9641.6
+offset_right = 9981.04
+offset_bottom = 9894.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_enrt2")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
@@ -1493,30 +1479,7 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_7733895565" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 9863.52
-offset_top = 9990.6
-offset_right = 10116.0
-offset_bottom = 10243.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
-point_data = SubResource("Resource_usjnm")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
-
-[node name="PathPointMarker_7733895793" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_2425060528" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1530,32 +1493,9 @@ offset_bottom = 10429.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
-point_data = SubResource("Resource_0uodh")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
-
-[node name="PathPointMarker_7733896010" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12549.5
-offset_top = 10426.6
-offset_right = 12802.0
-offset_bottom = 10679.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("12_holxa")
-script = ExtResource("13_holxa")
-point_data = SubResource("Resource_4p61t")
+texture = ExtResource("4_p310y")
+script = ExtResource("5_h6yys")
+point_data = SubResource("Resource_usjnm")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1610,7 +1550,7 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(223, 1430)
+position = Vector2(3426, 1992)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
 zoom = Vector2(0.535, 0.535)

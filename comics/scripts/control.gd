@@ -82,6 +82,7 @@ func _update_labels():
 	var size = get_children().size()
 	var current_point_count = curve.get_point_count()
 	var state = ""
+	
 	if size+1 == current_point_count:
 		state = "add"
 	elif size-1 == current_point_count:
@@ -90,11 +91,45 @@ func _update_labels():
 		state = "move"
 	else:
 		state = "other"
-	print(state)
+	#print(state)
 	
-	if state=="other":
-		initialize_points()
-	
+	match state:
+		"add":
+			initialize_points()
+		"remove":
+			initialize_points()
+		"move":
+			move_point()
+		"other":
+			initialize_points()
+			
+func move_point():
+	var curve = _path_node.curve
+
+	var current_point_count = curve.get_point_count()
+	var existing_labels_on_node: Array[PathPointMarker_Class] = []
+
+	# Populate the array of existing labels.
+	for child in get_children():
+		if child is PathPointMarker_Class:
+			existing_labels_on_node.append(child)
+
+
+	# Iterate through the curve points and corresponding labels.
+	for i in range(current_point_count):
+		var point_pos_global = curve.get_point_position(i) # Get point position directly
+
+		# Check if there's a label at the current index to compare.
+		if i < existing_labels_on_node.size():
+			var label_at_index = existing_labels_on_node[i]
+
+			# If the label's global position doesn't match the point's position, correct it.
+			if not label_at_index.global_position.is_equal_approx(point_pos_global):
+				label_at_index.global_position = point_pos_global
+				break # Stop after correcting the first mismatch.
+		else:
+			pass
+			
 func initialize_points():
 	var curve = _path_node.curve
 	var current_point_count = curve.get_point_count()
@@ -141,12 +176,13 @@ func initialize_points():
 			if not selected or found_label != selected:
 				found_label.disappear()
 		else:
+			#print("creating")
 			# This is a new point, so create a new label for it.
 			var new_marker = PathPointMarker_Scene.instantiate()
 			new_marker.name = "PathPointMarker_%s" % Time.get_ticks_usec()
 			add_child(new_marker)
 			new_marker.owner = get_tree().edited_scene_root
-			print(point_pos_global)
+			#print(point_pos_global)
 			# FIX: Set position correctly using the global position
 			new_marker.position = point_pos_global
 			new_marker.pivot_offset = new_marker.size / 2.0

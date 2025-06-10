@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpvuvixxy43y2"]
+
+[ext_resource type="Script" uid="uid://cpa4e0h5mhyj4" path="res://scripts/PathPointMarker3D.gd" id="1_5t0h0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4lc6p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t0h0"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="PathPointMarker3d" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_5t0h0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_4lc6p")
+surface_material_override/0 = SubResource("StandardMaterial3D_5t0h0")

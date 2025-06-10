@@ -1,32 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=12 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://scripts/large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="2_j7hwt"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="2_u8b5t"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="3_46keh"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="5_g2313"]
+[ext_resource type="AudioStream" uid="uid://d3701f40vnul8" path="res://cowboy_comic/sfx/S_3hhs_space.wav" id="5_p310y"]
+[ext_resource type="PackedScene" uid="uid://w4n40uv4wexq" path="res://3DTest/3d_test.tscn" id="7_w6hce"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://cowboy_comic/arrow.png" id="12_1s4ev"]
 
 [sub_resource type="Resource" id="Resource_1t0yx"]
 script = ExtResource("5_g2313")
 speed = 1.0
-zoom = 0.63
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_wkg44"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
+zoom = 0.445
+sound_effect = ExtResource("5_p310y")
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, 21, 134, 0, -490.223, 0, 490.223, 123, 1035, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3721, 916, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, -208.862, -15.19, 208.862, 15.19, 11972, 3012, 911.852, -74.2146, -911.852, 74.2146, 12521, 3060, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3342, 5940, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 0, 0, 0, 0, 453.291, 6769.18, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, 0, 0, 0, 0, 8714, 5864, -112.786, -321.648, 112.786, 321.648, 9629, 6715, 0, 0, 0, 0, 9867, 9994, 0, 0, 0, 0, 10714, 10180, 0, 0, 0, 0, 12613, 10169)
+"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, 21, 134, 0, -490.223, 0, 490.223, 123, 1035, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, -493.103, 448.473, 493.103, -448.473, 3065, 2059, -306.602, 45.585, 306.602, -45.585, 3721, 916, -440.39, -103.705, 440.39, 103.705, 4339, 3077, -626.787, 53.9233, 626.787, -53.9233, 5624, 2647, 0, 0, 0, 0, 6636, 2765, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, -208.862, -15.19, 208.862, 15.19, 11972, 3012, 911.852, -74.2146, -911.852, 74.2146, 12521, 3060, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 333.238, 1.3517, -333.238, -1.3517, 10826, 5896, 0, 0, 0, 0, 4700, 5818, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3342, 5940, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, 0, 0, 0, 0, 8714, 5864, -112.786, -321.648, 112.786, 321.648, 9629, 6715, 0, 0, 0, 0, 9867, 9994, 0, 0, 0, 0, 10714, 10180, 0, 0, 0, 0, 12553, 10430)
 }
-point_count = 43
+point_count = 42
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w6hce"]
+viewport_path = NodePath("Control/SubViewport")
 
 [node name="Node2D" type="Node2D"]
 
@@ -35,7 +34,6 @@ position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow")]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -503,22 +501,6 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 453.291
-offset_top = 6769.18
-offset_right = 606.291
-offset_bottom = 6915.18
-grow_horizontal = 1
-grow_vertical = 1
-pivot_offset = Vector2(76.5, 73)
-point_data = SubResource("Resource_1t0yx")
-
-[node name="PathPointMarker_78756911" parent="PointData" instance=ExtResource("3_46keh")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_left = 431.0
 offset_top = 7140.0
 offset_right = 584.0
@@ -528,7 +510,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757064" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78756911" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -544,7 +526,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757209" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757064" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -560,7 +542,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757357" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757209" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -576,7 +558,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757500" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757357" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -592,7 +574,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757635" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757500" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -608,7 +590,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757773" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757635" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -624,7 +606,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78757917" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757773" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -640,7 +622,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78758071" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78757917" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -656,7 +638,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78758221" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758071" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -672,7 +654,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78758354" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758221" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -688,7 +670,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78758493" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758354" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -704,7 +686,7 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_78758629" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758493" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -720,21 +702,21 @@ grow_vertical = 1
 pivot_offset = Vector2(76.5, 73)
 point_data = SubResource("Resource_1t0yx")
 
-[node name="PathPointMarker_1176536443" parent="PointData" instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_78758629" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 12613.0
-offset_top = 10169.0
-offset_right = 12679.3
-offset_bottom = 10233.8
+offset_left = 12553.0
+offset_top = 10430.0
+offset_right = 12706.0
+offset_bottom = 10576.0
 grow_horizontal = 1
 grow_vertical = 1
-pivot_offset = Vector2(33.1499, 32.3999)
-point_data = SubResource("Resource_wkg44")
+pivot_offset = Vector2(76.5, 73)
+point_data = SubResource("Resource_1t0yx")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(0, -106)
@@ -746,11 +728,11 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("2_j7hwt")
-speed_multiplier = -0.95
-scroll_speed = 120.0
+speed_multiplier = -1.25
+scroll_speed = 40.0
 TOUCHPAD_VELOCITY = 14.0
 data_source_control_path = NodePath("../../PointData")
-base_zoom = 0.9
+base_zoom = 1.285
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
@@ -784,9 +766,32 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(0, 2026)
+position = Vector2(8279, 2944)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
-zoom = Vector2(0.9315, 0.9315)
+zoom = Vector2(0.571825, 0.571825)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -233.0
+offset_top = -25.0
+offset_right = 98.0
+offset_bottom = 285.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 12535.0
+offset_top = 10264.0
+offset_right = 13047.0
+offset_bottom = 10776.0
+texture = SubResource("ViewportTexture_w6hce")
+
+[node name="SubViewport" type="SubViewport" parent="Control"]
+transparent_bg = true
+size_2d_override = Vector2i(512, 512)
+size_2d_override_stretch = true
+
+[node name="3dTest" parent="Control/SubViewport" instance=ExtResource("7_w6hce")]
 
 [editable path="PointData/PathPointMarker_78753181"]

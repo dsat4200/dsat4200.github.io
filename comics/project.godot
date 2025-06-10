@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="comics"
-run/main_scene="uid://pm3e4okacfn2"
+run/main_scene="uid://di20tjxdrmq4n"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [display]
@@ -30,5 +30,7 @@ pointing/emulate_mouse_from_touch=false
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

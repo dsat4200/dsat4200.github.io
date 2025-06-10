@@ -1,20 +1,19 @@
 @tool
-extends PathFollow2D
-class_name PathReader
+extends PathFollow3D
+class_name PathReader3D
 
 # --- MOVEMENT & INPUT ---
 @export var speed_multiplier: float = 100.0
 @export var deceleration_rate: float = 0.95
 @export var min_swipe_velocity_threshold: float = 5.0
 @export var scroll_speed: float = 50.0
-@export var scroll_decay_rate = 0.05   
-@export var TOUCHPAD_VELOCITY:float = 1.0
-var _scroll_target_progress = 0.0
+@export var touchpad_velocity_multiplier: float = 1.0
 
 # --- CAMERA & DATA ---
-## Assign the Control node that manages the PathPointLabel nodes.
+## Assign the Control node that manages the PathPointMarker nodes.
 @export var data_source_control_path: NodePath
-@export var base_zoom: float = 1.0
+## The camera's default field of view (FOV).
+@export var base_fov: float = 1.0
 
 # --- INTERNAL STATE ---
 var is_swiping: bool = false
@@ -31,50 +30,42 @@ var last_passed_point_index: int = -1
 var last_curve_point_count: int = 0
 
 # --- NODE REFERENCES ---
-var camera_2d_node: Camera2D
-var parent_path_2d: Path2D
-var data_source_control: Control
+var camera_3d_node: Camera3D
+var parent_path_3d: Path3D
+var data_source_control: Node3D
 var audio_stream_player: AudioStreamPlayer
 var managed_node_paths: Array[NodePath] = []
-
-
-var progress_change = 0.0
-var scroll_smoothing_factor = 0.1
-		 # creating a "momentum" effect. Adjust as needed.
 
 
 func _ready():
 	# This function now handles all initial setup.
 	_initialize_node_references()
-	_apply_current_zoom()
+	_apply_current_fov()
 
 	# Create an AudioStreamPlayer for sound effects
 	audio_stream_player = AudioStreamPlayer.new()
 	add_child(audio_stream_player)
 	
 	# Ensures the correct nodes are visible/hidden at the starting position.
-	if parent_path_2d and parent_path_2d.curve:
-		var start_point_index = _get_closest_point_index(parent_path_2d.curve, 0)
+	if parent_path_3d and parent_path_3d.curve:
+		var start_point_index = _get_closest_point_index(parent_path_3d.curve, 0)
 		_update_node_visibility(start_point_index)
 
 func _process(delta):
-	
 	# In the editor, check if the path's point count has changed.
 	if Engine.is_editor_hint():
-		if parent_path_2d and parent_path_2d.curve:
-			if parent_path_2d.curve.get_point_count() != last_curve_point_count:
+		if parent_path_3d and parent_path_3d.curve:
+			if parent_path_3d.curve.get_point_count() != last_curve_point_count:
 				# If it has, re-sync path distances and managed nodes.
 				_on_path_changed()
-		_apply_current_zoom()
-		return
-	else:
-		smooth_scroll(delta)
 		
+		_apply_current_fov()
+		return
 
 	# --- RUNTIME LOGIC ---
 	var current_point_index = -1
-	if parent_path_2d and parent_path_2d.curve:
-		current_point_index = _get_closest_point_index(parent_path_2d.curve, self.progress / path_length)
+	if parent_path_3d and parent_path_3d.curve:
+		current_point_index = _get_closest_point_index(parent_path_3d.curve, self.progress / path_length)
 	
 	if current_point_index != -1:
 		# --- SOUND EFFECT LOGIC ---
@@ -103,37 +94,34 @@ func _process(delta):
 		if abs(current_velocity) < min_swipe_velocity_threshold:
 			current_velocity = 0.0
 		
-		_apply_current_zoom()
+		_apply_current_fov()
 
 
 func _input(event):
 	if Engine.is_editor_hint(): return
 
-	var path_node_runtime = get_parent() as Path2D
+	var path_node_runtime = get_parent() as Path3D
 	if not path_node_runtime or not path_node_runtime.curve: return
 
 	var handled = false
-
+	var progress_change = 0.0
+	
 	if event is InputEventPanGesture:
 		# Invert delta.y for "natural" trackpad scrolling
-		progress_change = -event.delta.y * speed_multiplier * TOUCHPAD_VELOCITY
+		progress_change = -event.delta.y * speed_multiplier * touchpad_velocity_multiplier
 		current_velocity = progress_change # Store raw velocity for coasting
 		is_swiping = false # Ensure touch swipe flags are reset
 		handled = true
 		
 	# --- MOUSE SCROLL INPUT ---
-	
 	elif event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			_scroll_target_progress += scroll_speed
+			progress_change = scroll_speed
+			handled = true
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			_scroll_target_progress -= scroll_speed
-		# If the scroll wheel is moved up
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			# Subtract from the target value for upward scrolling.
-			_scroll_target_progress -= scroll_speed
+			progress_change = -scroll_speed
+			handled = true
 
-		
 	# --- TOUCHSCREEN DRAG/SWIPE ---
 	elif event is InputEventScreenTouch:
 		if event.pressed:
@@ -146,6 +134,7 @@ func _input(event):
 			
 	elif event is InputEventScreenDrag and is_swiping:
 		var delta_pos = event.position - last_touch_pos
+		# Using vertical drag to control progress along the path
 		progress_change = delta_pos.y * speed_multiplier
 		current_velocity = progress_change
 		last_touch_pos = event.position
@@ -153,25 +142,17 @@ func _input(event):
 
 	if handled and progress_change != 0.0:
 		self.progress = clamp(self.progress + (progress_change * smooth_current_speed), 0, path_length)
-		_apply_current_zoom()
+		_apply_current_fov()
 		get_viewport().set_input_as_handled()
 
 ### CORE LOGIC & HELPER FUNCTIONS ###
-func smooth_scroll(delta: float) -> void:
-	progress_change = lerp(progress_change, _scroll_target_progress, scroll_smoothing_factor)
 
-	if abs(_scroll_target_progress) > 0.01:
-		_scroll_target_progress = lerp(_scroll_target_progress, 0.0, scroll_decay_rate)
-	else:
-		_scroll_target_progress = 0.0
-	self.progress = clamp(self.progress + (progress_change * smooth_current_speed), 0, path_length)
-		
 func _initialize_node_references():
 	"""Get references to all required nodes and initialize path data."""
-	# Get the Path2D parent
-	parent_path_2d = get_parent() as Path2D
-	if not parent_path_2d:
-		push_warning("This node is not a child of a Path2D.")
+	# Get the Path3D parent
+	parent_path_3d = get_parent() as Path3D
+	if not parent_path_3d:
+		push_warning("This node is not a child of a Path3D.")
 		return
 
 	# Get the Control node that holds the data
@@ -179,11 +160,11 @@ func _initialize_node_references():
 	if not data_source_control:
 		push_warning("Data Source Control node not assigned or found.")
 
-	# Get the Camera2D
+	# Get the Camera3D
 	if get_viewport():
-		camera_2d_node = get_viewport().get_camera_2d()
-	if not camera_2d_node and not Engine.is_editor_hint():
-		push_warning("No Camera2D found in the viewport.")
+		camera_3d_node = get_viewport().get_camera_3d()
+	if not camera_3d_node and not Engine.is_editor_hint():
+		push_warning("No Camera3D found in the viewport.")
 	
 	# Initial setup of path-dependent data
 	_on_path_changed()
@@ -193,19 +174,19 @@ func _on_path_changed():
 	Called when the script starts or when the path's point count changes.
 	Recalculates distances and rebuilds the list of managed nodes.
 	"""
-	if not parent_path_2d or not parent_path_2d.curve: return
+	if not parent_path_3d or not parent_path_3d.curve: return
 	
-	path_length = parent_path_2d.curve.get_baked_length()
-	last_curve_point_count = parent_path_2d.curve.get_point_count()
+	path_length = parent_path_3d.curve.get_baked_length()
+	last_curve_point_count = parent_path_3d.curve.get_point_count()
 	
 	_update_path_distances()
 	_update_managed_nodes_list()
 
 func _update_path_distances():
 	"""Caches the distance from the start of the path to each point."""
-	if not parent_path_2d or not parent_path_2d.curve: return
+	if not parent_path_3d or not parent_path_3d.curve: return
 	
-	var curve = parent_path_2d.curve
+	var curve = parent_path_3d.curve
 	var point_count = curve.get_point_count()
 	_point_distances.resize(point_count)
 	
@@ -221,49 +202,50 @@ func _get_point_data_for_index(index: int) -> PathPointData:
 	if not is_instance_valid(data_source_control):
 		return null
 
-	# Get all children that are markers from the control node.
 	var markers = []
 	for child in data_source_control.get_children():
-		# --- THIS IS THE IMPORTANT CHANGE ---
-		# Look for the new marker script instead of the old label script.
-		if child.get_script() and "PathPointMarker.gd" in child.get_script().resource_path:
+		if child.get_script() and "PathPointMarker3D.gd" in child.get_script().resource_path:
 			markers.append(child)
 
-	# Check if the index is valid and return the data from the marker's property.
 	if index >= 0 and index < markers.size():
 		if "point_data" in markers[index]:
 			return markers[index].point_data
 			
 	return null
 	
-func _apply_current_zoom():
-	"""Calculates and applies the camera zoom by interpolating between points."""
-	if not camera_2d_node or not parent_path_2d or not parent_path_2d.curve: return
+func _apply_current_fov():
+	"""Calculates and applies the camera FOV by interpolating between points."""
+	if not camera_3d_node or not parent_path_3d or not parent_path_3d.curve: return
 
-	var curve = parent_path_2d.curve
+	var curve = parent_path_3d.curve
 	if curve.get_point_count() < 1:
-		camera_2d_node.zoom = Vector2(base_zoom, base_zoom)
+		camera_3d_node.size = base_fov
 		return
 
 	var segment_info = _get_segment_info_at_progress(self.progress)
 	var prev_data = _get_point_data_for_index(segment_info.prev_point_index)
 	var next_data = _get_point_data_for_index(segment_info.next_point_index)
 
-	var zoom_a = prev_data.zoom if prev_data else 1.0
-	var zoom_b = next_data.zoom if next_data else 1.0
+	# 'zoom' in the data file is now interpreted as a FOV multiplier.
+	# A value of 1.0 is normal FOV, < 1.0 is "zoomed in" (narrower FOV), > 1.0 is "zoomed out".
+	var fov_multiplier_a = prev_data.zoom if prev_data else 1.0
+	var fov_multiplier_b = next_data.zoom if next_data else 1.0
 
 	var t = segment_info.segment_progress
 	var smoothed_t = t * t * (3.0 - 2.0 * t) # Smoothstep interpolation
-	var calculated_zoom = lerp(zoom_a, zoom_b, smoothed_t)
-	
-	camera_2d_node.zoom = Vector2(calculated_zoom * base_zoom, calculated_zoom * base_zoom)
+	#print("multiplier_a: "+str(fov_multiplier_a)+", mult_b: "+str(fov_multiplier_b)+", s_t: "+str(smoothed_t))
+	var calculated_fov_multiplier = lerp(fov_multiplier_a, fov_multiplier_b, smoothed_t)
+	#print("base: "+str(base_fov)+", calc: "+str(calculated_fov_multiplier))
+	# Apply the multiplier to the base FOV.
+	camera_3d_node.size = base_fov * calculated_fov_multiplier
+
 
 func _update_managed_nodes_list():
 	"""Scans all data points to build a unique list of nodes to show/hide."""
 	managed_node_paths.clear()
-	if not parent_path_2d or not parent_path_2d.curve: return
+	if not parent_path_3d or not parent_path_3d.curve: return
 
-	var point_count = parent_path_2d.curve.get_point_count()
+	var point_count = parent_path_3d.curve.get_point_count()
 	for i in range(point_count):
 		var data = _get_point_data_for_index(i)
 		if data and data.target_node and not data.target_node.is_empty():
@@ -280,13 +262,12 @@ func _update_node_visibility(current_point_index: int):
 
 	for path in managed_node_paths:
 		var node = get_node_or_null(path)
-		if node is CanvasItem:
+		# Check if the node is a 3D node before trying to change its visibility
+		if node is Node3D:
 			node.visible = (path == active_node_path and should_show)
 			
-# (The rest of your utility functions like _get_segment_info_at_progress and 
-# _get_closest_point_index remain the same and are correct)
-
 func _get_segment_info_at_progress(current_dist: float) -> Dictionary:
+	"""Finds the two path points the current progress is between."""
 	if _point_distances.size() < 2:
 		return {"prev_point_index": 0, "next_point_index": 0, "segment_progress": 0.0}
 
@@ -309,7 +290,8 @@ func _get_segment_info_at_progress(current_dist: float) -> Dictionary:
 		var last_index = _point_distances.size() - 1
 		return {"prev_point_index": last_index, "next_point_index": last_index, "segment_progress": 1.0}
 
-func _get_closest_point_index(curve: Curve2D, progress_ratio: float) -> int:
+func _get_closest_point_index(curve: Curve3D, progress_ratio: float) -> int:
+	"""Gets the index of the last curve point passed at the current progress."""
 	if not curve or curve.get_point_count() == 0 or _point_distances.is_empty():
 		return -1
 

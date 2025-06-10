@@ -61,7 +61,7 @@ show_target_node = false
 [sub_resource type="Resource" id="Resource_nr04i"]
 script = ExtResource("5_g2313")
 speed = 1.0
-zoom = 1.0
+zoom = 0.812
 target_node = NodePath("")
 show_target_node = false
 
@@ -1137,13 +1137,11 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(3298.52, 2033.6)
-zoom = Vector2(0.412, 0.412)
+position = Vector2(5501.52, 2512.6)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
-scale = Vector2(2.42718, 2.42718)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 16.48
+width = 40.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

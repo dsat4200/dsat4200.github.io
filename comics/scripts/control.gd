@@ -3,6 +3,7 @@ extends Control
 var selected:PathPointMarker
 @export var preview_cam:Camera2D
 @export var path_follow:PathFollow2D
+@export var frame:Line2D
 
 const PathPointMarker_Scene = preload("res://scripts/PathPointMarker.tscn")
 func _ready():
@@ -214,7 +215,6 @@ func _on_editor_selection_changed():
 			preview_cam.position = selected.position
 			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
 			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
-			
 	elif (editor_selection.size() == 0 and is_instance_valid(selected)):
 		selected.disappear()
 		selected = null
@@ -228,4 +228,8 @@ func _process(_delta):
 		selected.update_info()
 
 	if is_instance_valid(preview_cam) and is_instance_valid(path_follow) and preview_cam.zoom.x != selected.point_data.zoom:
-		preview_cam.zoom = Vector2(selected.point_data.zoom * path_follow.base_zoom, selected.point_data.zoom * path_follow.base_zoom)
+		var zoom_value = selected.point_data.zoom * path_follow.base_zoom
+		preview_cam.zoom = Vector2(zoom_value, zoom_value)
+
+		frame.scale = Vector2(1 / zoom_value, 1 / zoom_value)
+		frame.width = 40 * zoom_value

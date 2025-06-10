@@ -54,7 +54,7 @@ show_target_node = false
 [sub_resource type="Resource" id="Resource_gkrpo"]
 script = ExtResource("5_g2313")
 speed = 0.34
-zoom = 0.671
+zoom = 0.412
 target_node = NodePath("")
 show_target_node = false
 
@@ -345,7 +345,7 @@ point_count = 46
 position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
-[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow")]
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -353,6 +353,7 @@ offset_bottom = 40.0
 script = ExtResource("2_u8b5t")
 preview_cam = NodePath("../PreviewCam")
 path_follow = NodePath("../Path2D/PathFollow2D")
+frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_2425045496" parent="PointData" instance=ExtResource("3_46keh")]
@@ -1137,11 +1138,12 @@ texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
 position = Vector2(3298.52, 2033.6)
-zoom = Vector2(0.671, 0.671)
+zoom = Vector2(0.412, 0.412)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
+scale = Vector2(2.42718, 2.42718)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 40.0
+width = 16.48
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

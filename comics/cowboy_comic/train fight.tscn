@@ -342,6 +342,7 @@ position = Vector2(1602, 1444)
 script = ExtResource("1_dpjjm")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow")]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

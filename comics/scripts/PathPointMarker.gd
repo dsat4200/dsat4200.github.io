@@ -40,7 +40,7 @@ func disappear():
 func update_info():
 	update_info_text(position)
 	if point_data:
-		size = base_size / point_data.zoom
+		#size = base_size / point_data.zoom
 		if point_data.sound_effect:
 			speaker.show()
 		else:

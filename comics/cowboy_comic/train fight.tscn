@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=57 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://scripts/large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="2_j7hwt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="4_p310y"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="5_g2313"]
 [ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="5_h6yys"]
+[ext_resource type="AudioStream" uid="uid://dcvpdpg3s1f6d" path="res://cowboy_comic/sfx/S_fireHit.wav" id="7_h6yys"]
 [ext_resource type="Texture2D" uid="uid://bxl2rlc5qtj4g" path="res://cowboy_comic/arrow.png" id="12_1s4ev"]
 
 [sub_resource type="Resource" id="Resource_p310y"]
@@ -30,20 +31,6 @@ zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
-[sub_resource type="Resource" id="Resource_h58fg"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_lbvj6"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
 [sub_resource type="Resource" id="Resource_wdoud"]
 script = ExtResource("5_g2313")
 speed = 1.0
@@ -60,14 +47,14 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_holxa"]
 script = ExtResource("5_g2313")
-speed = 1.0
+speed = 4.0
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_gkrpo"]
 script = ExtResource("5_g2313")
-speed = -0.91
+speed = 0.34
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
@@ -80,13 +67,6 @@ target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_yghyy"]
-script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_p0t5v"]
 script = ExtResource("5_g2313")
 speed = 1.0
 zoom = 1.0
@@ -200,8 +180,9 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_gd5e5"]
 script = ExtResource("5_g2313")
-speed = 1.0
+speed = 1.72
 zoom = 1.0
+sound_effect = ExtResource("7_h6yys")
 target_node = NodePath("")
 show_target_node = false
 
@@ -355,9 +336,9 @@ show_target_node = false
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, -73, -7, 0, 0, 0, 0, 834, 1457, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -162.984, 54.9184, 162.984, -54.9184, 619, 2826, 0, 0, 0, 0, 980.823, 2835.13, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, 0, 0, 0, 0, 2613, 2366, -493.103, 448.473, 493.103, -448.473, 3302, 2037, -322, -38, 322, 38, 4172, 898, 0, 0, 0, 0, 3910, 2279, 0, 0, 0, 0, 3996, 2915, -440.39, -103.705, 440.39, 103.705, 4270, 2898, 0, 0, 0, 0, 5505, 2516, 0, 0, 0, 0, 7055, 2809, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 9994.6, 2977.87, 0, 0, 0, 0, 10271.6, 2968.44, -208.862, -15.19, 208.862, 15.19, 11463, 3004, 911.852, -74.2146, -911.852, 74.2146, 12426, 3059, 0, 0, 0, 0, 12828.9, 3089.87, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 0, 0, 0, 0, 12013.3, 5869.08, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 0, 0, 0, 0, 10832, 5883.98, 0, 0, 0, 0, 6064, 6080, 0, 0, 0, 0, 5169.19, 5821.33, 0, 0, 0, 0, 4762, 5805, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3209, 5988, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, -112.786, -321.648, 112.786, 321.648, 9435, 6656, 0, 0, 0, 0, 9732, 9645, 0, 0, 0, 0, 10714, 10180)
+"points": PackedVector2Array(-41.2564, -341.158, 41.2564, 341.158, -73, -7, 0, 0, 0, 0, 834, 1457, -0.528854, -48.7316, 0.528854, 48.7316, 293, 2945, -168.334, 39.9436, 168.334, -39.9436, 1371, 2805, -370.905, 179.746, 370.905, -179.746, 2172, 2990, 0, 0, 0, 0, 2613, 2366, -493.103, 448.473, 493.103, -448.473, 3302, 2037, -322, -38, 322, 38, 4172, 898, 0, 0, 0, 0, 3910, 2279, -440.39, -103.705, 440.39, 103.705, 4270, 2898, 0, 0, 0, 0, 5505, 2516, 0, 0, 0, 0, 7055, 2809, -1121.99, 34.5227, 1121.99, -34.5227, 8279, 2944, 0, 0, 0, 0, 9994.6, 2977.87, 0, 0, 0, 0, 10271.6, 2968.44, -208.862, -15.19, 208.862, 15.19, 11463, 3004, 911.852, -74.2146, -911.852, 74.2146, 12426, 3059, 0, 0, 0, 0, 12828.9, 3089.87, -106.144, -353.813, 106.144, 353.813, 14521, 3309, -41.5712, -327.356, 41.5712, 327.356, 14549, 4599, 182.128, -141.609, -182.128, 141.609, 14892, 5595, 0, 0, 0, 0, 14014, 5741, 0, 0, 0, 0, 12013.3, 5869.08, 288.385, -9.70158, -288.385, 9.70158, 11406, 5869, 0, 0, 0, 0, 10832, 5883.98, 0, 0, 0, 0, 6064, 6080, 0, 0, 0, 0, 5169.19, 5821.33, 0, 0, 0, 0, 4762, 5805, 0, 0, 0, 0, 4145.49, 5880.07, 0, 0, 0, 0, 3209, 5988, 0, 0, 0, 0, 2101.42, 6085.14, 0, 0, 0, 0, 1873.2, 6085.14, 178.703, -19.8205, -178.703, 19.8205, 1203, 6134, -12.5537, 251.712, 12.5537, -251.712, 465, 5964, 44.234, -833.019, -44.234, 833.019, 431, 7140, 8.58289, -83.0702, -8.58289, 83.0702, 366, 12263, 0, 0, 0, 0, 376, 12561, -343.954, -78.5665, 343.954, 78.5665, 2126, 12105, -43.0072, -315.84, 43.0072, 315.84, 1831, 13170, -189.037, 138.998, 189.037, -138.998, 2452, 13247, -153.973, 664.703, 153.973, -664.703, 3428, 10430, 0, 0, 0, 0, 3937.28, 6776.51, -680.339, 21.8791, 680.339, -21.8791, 4483, 6312, -112.786, -321.648, 112.786, 321.648, 9435, 6656, 0, 0, 0, 0, 9732, 9645, 0, 0, 0, 0, 10714, 10180)
 }
-point_count = 49
+point_count = 46
 
 [node name="Node2D" type="Node2D"]
 
@@ -444,52 +425,6 @@ spd_label = NodePath("Container/Speed")
 max_speed = 2.0
 mid_hue = 0.25
 
-[node name="PathPointMarker_2425047800" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 615.52
-offset_top = 2822.6
-offset_right = 868.04
-offset_bottom = 3075.24
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("4_p310y")
-script = ExtResource("5_h6yys")
-point_data = SubResource("Resource_h58fg")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
-
-[node name="PathPointMarker_2425048096" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 977.343
-offset_top = 2831.73
-offset_right = 1229.86
-offset_bottom = 3084.37
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("4_p310y")
-script = ExtResource("5_h6yys")
-point_data = SubResource("Resource_lbvj6")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
-
 [node name="PathPointMarker_2425048387" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
@@ -537,7 +472,7 @@ max_speed = 2.0
 mid_hue = 0.25
 
 [node name="PathPointMarker_2425049003" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
@@ -560,7 +495,7 @@ max_speed = 2.0
 mid_hue = 0.25
 
 [node name="PathPointMarker_2425049330" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0, 1, 1, 1)
+self_modulate = Color(0, 1, 0.49, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
@@ -622,29 +557,6 @@ pivot_offset = Vector2(128, 128)
 texture = ExtResource("4_p310y")
 script = ExtResource("5_h6yys")
 point_data = SubResource("Resource_yghyy")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
-
-[node name="PathPointMarker_2425050258" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3992.52
-offset_top = 2911.6
-offset_right = 4245.04
-offset_bottom = 3164.24
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("4_p310y")
-script = ExtResource("5_h6yys")
-point_data = SubResource("Resource_p0t5v")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -997,7 +909,7 @@ max_speed = 2.0
 mid_hue = 0.25
 
 [node name="PathPointMarker_2425054706" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_46keh")]
-self_modulate = Color(0.5, 1, 0, 1)
+self_modulate = Color(1, 0.42, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
@@ -1550,7 +1462,7 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(3426, 1992)
+position = Vector2(2613, 2366)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
 zoom = Vector2(0.535, 0.535)

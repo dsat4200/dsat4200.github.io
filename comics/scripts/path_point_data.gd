@@ -2,8 +2,8 @@
 
 class_name PathPointData extends Resource
 
-@export var speed: float = 1.0
-@export var zoom: float = 1.0
+@export_range (.1,4) var speed: float = 1.0
+@export_range (.1, 4) var zoom: float = 1.0
 @export var sound_effect: AudioStream = null
 
 # --- NEW EXPORTS ---

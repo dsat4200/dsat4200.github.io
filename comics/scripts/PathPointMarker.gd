@@ -31,4 +31,4 @@ func _ready():
 # This function is called by the main control script to keep the label text updated.
 func update_info_text(pos: Vector2):
 	pos_label.text = "Pos: (%d, %d)" % [int(pos.x), int(pos.y)]
-	spd_label.text = "Speed: %.2f" % [point_data.speed]
+	#spd_label.text = "Speed: %.2f" % [point_data.speed]

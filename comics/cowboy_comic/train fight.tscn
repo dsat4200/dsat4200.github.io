@@ -1,10 +1,9 @@
-[gd_scene load_steps=62 format=3 uid="uid://di20tjxdrmq4n"]
+[gd_scene load_steps=61 format=3 uid="uid://di20tjxdrmq4n"]
 
 [ext_resource type="Script" uid="uid://c05orul1w26rn" path="res://scripts/large_image_container.gd" id="1_dpjjm"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="2_j7hwt"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="2_u8b5t"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="3_46keh"]
-[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="4_h6yys"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="5_g2313"]
 [ext_resource type="AudioStream" uid="uid://d3701f40vnul8" path="res://cowboy_comic/sfx/S_3hhs_space.wav" id="5_p310y"]
 [ext_resource type="AudioStream" uid="uid://xxj1mttxu25b" path="res://cowboy_comic/sfx/S_5mst_gun1.wav" id="7_h58fg"]
@@ -352,903 +351,705 @@ preview_cam = NodePath("../PreviewCam")
 path_follow = NodePath("../Path2D/PathFollow2D")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_4716524270" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716524270" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 17.52
-offset_top = 130.6
-offset_right = 178.56
-offset_bottom = 286.88
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 21.0
+offset_top = 134.0
+offset_right = 185.52
+offset_bottom = 293.64
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
 point_data = SubResource("Resource_wdoud")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716524690" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716524690" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 119.52
-offset_top = 1031.6
-offset_right = 280.56
-offset_bottom = 1187.88
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 123.0
+offset_top = 1035.0
+offset_right = 287.52
+offset_bottom = 1194.64
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
 point_data = SubResource("Resource_umsnu")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716524924" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716524924" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 289.52
-offset_top = 2941.6
-offset_right = 450.56
-offset_bottom = 3097.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 293.0
+offset_top = 2945.0
+offset_right = 457.52
+offset_bottom = 3104.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_holxa")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716525117" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716525117" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 615.52
-offset_top = 2822.6
-offset_right = 776.56
-offset_bottom = 2978.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 619.0
+offset_top = 2826.0
+offset_right = 783.52
+offset_bottom = 2985.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_gkrpo")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716525309" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716525309" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 977.343
-offset_top = 2831.73
-offset_right = 1138.38
-offset_bottom = 2988.01
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 980.823
+offset_top = 2835.13
+offset_right = 1145.34
+offset_bottom = 2994.77
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2585, 79.8201)
 point_data = SubResource("Resource_nr04i")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716525495" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716525495" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 1367.52
-offset_top = 2801.6
-offset_right = 1528.56
-offset_bottom = 2957.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1371.0
+offset_top = 2805.0
+offset_right = 1535.52
+offset_bottom = 2964.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_yghyy")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716525723" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716525723" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 2168.52
-offset_top = 2986.6
-offset_right = 2329.56
-offset_bottom = 3142.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2172.0
+offset_top = 2990.0
+offset_right = 2336.52
+offset_bottom = 3149.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_p0t5v")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716525931" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716525931" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3061.52
-offset_top = 2055.6
-offset_right = 3222.56
-offset_bottom = 2211.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3065.0
+offset_top = 2059.0
+offset_right = 3229.52
+offset_bottom = 2218.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_tafms")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716526122" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716526122" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3716.52
-offset_top = 792.6
-offset_right = 3877.56
-offset_bottom = 948.88
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3720.0
+offset_top = 796.0
+offset_right = 3884.52
+offset_bottom = 955.64
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
 point_data = SubResource("Resource_pky03")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716526316" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716526316" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 4335.52
-offset_top = 3073.6
-offset_right = 4496.56
-offset_bottom = 3229.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4339.0
+offset_top = 3077.0
+offset_right = 4503.52
+offset_bottom = 3236.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_5ms72")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716526500" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716526500" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 5620.52
-offset_top = 2643.6
-offset_right = 5781.56
-offset_bottom = 2799.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 5624.0
+offset_top = 2647.0
+offset_right = 5788.52
+offset_bottom = 2806.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_w66go")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716526685" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716526685" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 6632.52
-offset_top = 2761.6
-offset_right = 6793.56
-offset_bottom = 2917.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 6636.0
+offset_top = 2765.0
+offset_right = 6800.52
+offset_bottom = 2924.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8199)
 point_data = SubResource("Resource_y72j4")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716526895" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716526895" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 8275.52
-offset_top = 2940.6
-offset_right = 8436.56
-offset_bottom = 3096.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 8279.0
+offset_top = 2944.0
+offset_right = 8443.52
+offset_bottom = 3103.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2598, 79.8199)
 point_data = SubResource("Resource_c2k70")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527087" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527087" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 11459.5
-offset_top = 3000.6
-offset_right = 11620.6
-offset_bottom = 3156.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 11463.0
+offset_top = 3004.0
+offset_right = 11627.6
+offset_bottom = 3163.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8199)
 point_data = SubResource("Resource_5cgw3")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527267" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527267" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12422.5
-offset_top = 3055.6
-offset_right = 12583.6
-offset_bottom = 3211.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12426.0
+offset_top = 3059.0
+offset_right = 12590.6
+offset_bottom = 3218.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8199)
 point_data = SubResource("Resource_ra6a1")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527446" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527446" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12825.4
-offset_top = 3086.47
-offset_right = 12986.4
-offset_bottom = 3242.75
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12828.9
+offset_top = 3089.87
+offset_right = 12993.4
+offset_bottom = 3249.51
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2397, 79.8201)
 point_data = SubResource("Resource_cb7tx")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527631" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527631" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 14517.5
-offset_top = 3305.6
-offset_right = 14678.6
-offset_bottom = 3461.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 14521.0
+offset_top = 3309.0
+offset_right = 14685.6
+offset_bottom = 3468.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8199)
 point_data = SubResource("Resource_57eg2")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527809" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527809" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 14545.5
-offset_top = 4595.6
-offset_right = 14706.6
-offset_bottom = 4751.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 14549.0
+offset_top = 4599.0
+offset_right = 14713.6
+offset_bottom = 4758.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8198)
 point_data = SubResource("Resource_xkenf")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716527980" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716527980" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 14888.5
-offset_top = 5591.6
-offset_right = 15049.6
-offset_bottom = 5747.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 14892.0
+offset_top = 5595.0
+offset_right = 15056.6
+offset_bottom = 5754.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8198)
 point_data = SubResource("Resource_gcewu")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716528155" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716528155" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 14010.5
-offset_top = 5737.6
-offset_right = 14171.6
-offset_bottom = 5893.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 14014.0
+offset_top = 5741.0
+offset_right = 14178.6
+offset_bottom = 5900.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8198)
 color = Color(1, 0, 1, 1)
-script = ExtResource("4_h6yys")
 point_data = SubResource("Resource_5yg58")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
 [node name="Container" parent="PointData/PathPointMarker_4716528155" index="0"]
 visible = false
-z_index = 1
-layout_mode = 0
-offset_left = 160.0
-offset_top = 2.0
-offset_right = 682.0
-offset_bottom = 710.0
 color = Color(1, 0, 0.160784, 0)
-metadata/_edit_use_anchors_ = true
 
 [node name="Position" parent="PointData/PathPointMarker_4716528155/Container" index="0"]
-visible = false
-layout_mode = 1
-offset_left = 29.0
-offset_top = 15.0
-offset_right = 261.0
-offset_bottom = 85.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 51
-text = "Pos: (-59, -57)"
+text = "Pos: (14014, 5741)"
 
 [node name="Speed" parent="PointData/PathPointMarker_4716528155/Container" index="1"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -673.0
-offset_top = 149.0
-offset_right = -16.0
-offset_bottom = 314.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 34
-theme_override_font_sizes/font_size = 120
-text = "Speed: 1.00"
+text = "Speed: 0.72"
 
-[node name="PathPointMarker_4716528331" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716528331" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 11402.5
-offset_top = 5865.6
-offset_right = 11563.6
-offset_bottom = 6021.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 11406.0
+offset_top = 5869.0
+offset_right = 11570.6
+offset_bottom = 6028.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8198)
 point_data = SubResource("Resource_hahpy")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716528507" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716528507" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10822.5
-offset_top = 5892.6
-offset_right = 10983.6
-offset_bottom = 6048.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10826.0
+offset_top = 5896.0
+offset_right = 10990.6
+offset_bottom = 6055.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8198)
 point_data = SubResource("Resource_2uuth")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716528682" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716528682" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 4696.52
-offset_top = 5814.6
-offset_right = 4857.56
-offset_bottom = 5970.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4700.0
+offset_top = 5818.0
+offset_right = 4864.52
+offset_bottom = 5977.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_gd5e5")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716528858" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716528858" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 4142.01
-offset_top = 5876.67
-offset_right = 4303.05
-offset_bottom = 6032.95
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4145.49
+offset_top = 5880.07
+offset_right = 4310.01
+offset_bottom = 6039.71
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8201)
 point_data = SubResource("Resource_13g5h")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529026" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529026" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3205.52
-offset_top = 5984.6
-offset_right = 3366.56
-offset_bottom = 6140.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3209.0
+offset_top = 5988.0
+offset_right = 3373.52
+offset_bottom = 6147.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_bk54p")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529196" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529196" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 2097.94
-offset_top = 6081.74
-offset_right = 2258.98
-offset_bottom = 6238.02
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2101.42
+offset_top = 6085.14
+offset_right = 2265.94
+offset_bottom = 6244.78
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_o8wrd")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529369" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529369" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 1869.72
-offset_top = 6081.74
-offset_right = 2030.76
-offset_bottom = 6238.02
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1873.2
+offset_top = 6085.14
+offset_right = 2037.72
+offset_bottom = 6244.78
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_2djas")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529542" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529542" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 1199.52
-offset_top = 6130.6
-offset_right = 1360.56
-offset_bottom = 6286.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1203.0
+offset_top = 6134.0
+offset_right = 1367.52
+offset_bottom = 6293.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_oxrrm")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529733" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529733" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 461.52
-offset_top = 5960.6
-offset_right = 622.56
-offset_bottom = 6116.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 465.0
+offset_top = 5964.0
+offset_right = 629.52
+offset_bottom = 6123.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_t5a3p")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716529914" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716529914" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 427.52
-offset_top = 7136.6
-offset_right = 588.56
-offset_bottom = 7292.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 431.0
+offset_top = 7140.0
+offset_right = 595.52
+offset_bottom = 7299.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_sn1g1")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530086" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530086" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 362.52
-offset_top = 12259.6
-offset_right = 523.56
-offset_bottom = 12415.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 366.0
+offset_top = 12263.0
+offset_right = 530.52
+offset_bottom = 12422.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_3ny24")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530265" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530265" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 372.52
-offset_top = 12557.6
-offset_right = 533.56
-offset_bottom = 12713.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 376.0
+offset_top = 12561.0
+offset_right = 540.52
+offset_bottom = 12720.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_08xve")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530434" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530434" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 2122.52
-offset_top = 12101.6
-offset_right = 2283.56
-offset_bottom = 12257.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2126.0
+offset_top = 12105.0
+offset_right = 2290.52
+offset_bottom = 12264.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_51fwi")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530608" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530608" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 1827.52
-offset_top = 13166.6
-offset_right = 1988.56
-offset_bottom = 13322.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1831.0
+offset_top = 13170.0
+offset_right = 1995.52
+offset_bottom = 13329.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_hkjem")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530777" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530777" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 2448.52
-offset_top = 13243.6
-offset_right = 2609.56
-offset_bottom = 13399.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2452.0
+offset_top = 13247.0
+offset_right = 2616.52
+offset_bottom = 13406.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_n23e6")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716530945" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716530945" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3424.52
-offset_top = 10426.6
-offset_right = 3585.56
-offset_bottom = 10582.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3428.0
+offset_top = 10430.0
+offset_right = 3592.52
+offset_bottom = 10589.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8301)
 point_data = SubResource("Resource_jcx4o")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531113" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531113" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 3933.8
-offset_top = 6773.11
-offset_right = 4094.84
-offset_bottom = 6929.39
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3937.28
+offset_top = 6776.51
+offset_right = 4101.8
+offset_bottom = 6936.15
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2601, 79.8201)
 point_data = SubResource("Resource_avyxm")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531280" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531280" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 4479.52
-offset_top = 6308.6
-offset_right = 4640.56
-offset_bottom = 6464.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4483.0
+offset_top = 6312.0
+offset_right = 4647.52
+offset_bottom = 6471.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.26, 79.8198)
 point_data = SubResource("Resource_cxnfl")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531452" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531452" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 8710.52
-offset_top = 5860.6
-offset_right = 8871.56
-offset_bottom = 6016.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 8714.0
+offset_top = 5864.0
+offset_right = 8878.52
+offset_bottom = 6023.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2598, 79.8198)
 point_data = SubResource("Resource_0mugq")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531630" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531630" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 9625.52
-offset_top = 6711.6
-offset_right = 9786.56
-offset_bottom = 6867.88
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 9629.0
+offset_top = 6715.0
+offset_right = 9793.52
+offset_bottom = 6874.64
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2598, 79.8198)
 point_data = SubResource("Resource_u54mw")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531811" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531811" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 9863.52
-offset_top = 9990.6
-offset_right = 10024.6
-offset_bottom = 10146.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 9867.0
+offset_top = 9994.0
+offset_right = 10031.6
+offset_bottom = 10153.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2798, 79.8301)
 point_data = SubResource("Resource_6xc1p")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_4716531983" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_4716531983" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10710.5
-offset_top = 10176.6
-offset_right = 10871.6
-offset_bottom = 10332.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
-color = Color(0, 0, 0, 0.180392)
-script = ExtResource("4_h6yys")
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10714.0
+offset_top = 10180.0
+offset_right = 10878.6
+offset_bottom = 10339.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8301)
 point_data = SubResource("Resource_reyq0")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
-[node name="PathPointMarker_5461118077" type="ColorRect" parent="PointData" node_paths=PackedStringArray("container", "pos_label", "spd_label") instance=ExtResource("3_46keh")]
+[node name="PathPointMarker_5461118077" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12549.5
-offset_top = 10426.6
-offset_right = 12710.6
-offset_bottom = 10582.9
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(82.26, 79.82)
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12553.0
+offset_top = 10430.0
+offset_right = 12717.6
+offset_bottom = 10589.7
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(82.2896, 79.8301)
 color = Color(1, 0, 0, 1)
-script = ExtResource("4_h6yys")
 point_data = SubResource("Resource_enrt2")
-container = NodePath("Container")
-pos_label = NodePath("Container/Position")
-spd_label = NodePath("Container/Speed")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_aw5q7")
@@ -1291,13 +1092,14 @@ to read!"
 horizontal_alignment = 2
 
 [node name="pointer" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(8649, 5614)
 rotation = 0.292206
 scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(12553, 10430)
+position = Vector2(10826, 5896)
 rotation = -1.55735
 scale = Vector2(0.493949, 0.405715)
 zoom = Vector2(0.535, 0.535)

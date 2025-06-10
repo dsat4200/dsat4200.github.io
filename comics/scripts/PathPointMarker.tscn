@@ -8,10 +8,10 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = -62.64
-offset_top = -61.2
-offset_right = 0.159996
-offset_bottom = 0.159988
+offset_left = -62.96
+offset_top = -60.8
+offset_right = 98.08
+offset_bottom = 95.48
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(80, 80)
@@ -22,7 +22,6 @@ pos_label = NodePath("Container/Position")
 spd_label = NodePath("Container/Speed")
 
 [node name="Container" type="ColorRect" parent="."]
-visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 160.0

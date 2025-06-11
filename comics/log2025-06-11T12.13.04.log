@@ -1,5 +1,5 @@
 Godot Engine v4.4.stable.official.4c311cbee - https://godotengine.org
-OpenGL API 3.3.0 Core Profile Context 24.10.34.240723 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics
+OpenGL API 4.1 Metal - 88.1 - Compatibility - Using Device: Apple - Apple M3
 
 WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().

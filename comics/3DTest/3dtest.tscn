@@ -79,38 +79,38 @@ length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:color")
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 2.54448, 5.17, 7.51448, 10),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0.984269, 0.875881, 1), Color(0.719062, 0.763876, 0, 1), Color(0.955575, 0.317996, 0, 1), Color(1, 0, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-6.28319, 6.28319]
-}
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/2/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [-6.28319, 6.28319]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nal1h"]
@@ -121,27 +121,29 @@ _data = {
 
 [node name="Node2D" type="Node2D"]
 
-[node name="1" type="Sprite2D" parent="."]
+[node name="comic" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 4480)
 texture = ExtResource("7_df7qx")
 
-[node name="Row-1-column-1" type="Sprite2D" parent="."]
+[node name="Row-1-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 11520)
 texture = ExtResource("8_pclc1")
 
-[node name="Row-2-column-1" type="Sprite2D" parent="."]
+[node name="Row-2-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 15616)
 texture = ExtResource("9_nal1h")
 
-[node name="Row-3-column-1" type="Sprite2D" parent="."]
+[node name="Row-3-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 19712)
 texture = ExtResource("10_75gwy")
 
-[node name="Row-4-column-1" type="Sprite2D" parent="."]
+[node name="Row-4-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 23808)
 texture = ExtResource("11_df7qx")
 
-[node name="Row-5-column-1" type="Sprite2D" parent="."]
+[node name="Row-5-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 26656)
 texture = ExtResource("12_0u6l2")
 
@@ -207,7 +209,6 @@ data_source_control_path = NodePath("../../PointData")
 
 [node name="Frame2" type="Line2D" parent="Path2D/PathFollow2D/Camera2D"]
 z_index = 1
-position = Vector2(-1314.23, -304.568)
 rotation = -1.34307
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
@@ -223,7 +224,7 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(-3.48, -3.4)
+position = Vector2(-3.48, 4092.6)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 z_index = 1
@@ -242,5 +243,3 @@ script = ExtResource("12_nal1h")
 path_follow = NodePath("../Path2D/PathFollow2D")
 start_anim = "test_anim"
 edit_mode = true
-
-[node name="comic" type="Node2D" parent="."]

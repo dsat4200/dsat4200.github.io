@@ -1,40 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6878mkbup4ys"]
+[gd_scene load_steps=19 format=3 uid="uid://c6878mkbup4ys"]
 
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_ykl4k"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_380tl"]
-[ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="3_duck6"]
-[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="4_pclc1"]
+[ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="3_pclc1"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="5_nal1h"]
 [ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="6_75gwy"]
 [ext_resource type="Texture2D" uid="uid://d0nwpn6w8qfrh" path="res://3DTest/img/1.png" id="7_df7qx"]
-[ext_resource type="Texture2D" uid="uid://df6w1q4fcoxgh" path="res://3DTest/img/2_1.png" id="8_0u6l2"]
-[ext_resource type="Texture2D" uid="uid://wvtc1cbqtav1" path="res://3DTest/img/2_2.png" id="9_ohieh"]
+[ext_resource type="Texture2D" uid="uid://cksaqxn8dpdrq" path="res://3DTest/img/row-1-column-1.png" id="8_pclc1"]
+[ext_resource type="Texture2D" uid="uid://bcmncnyprd8i4" path="res://3DTest/img/row-2-column-1.png" id="9_nal1h"]
+[ext_resource type="Texture2D" uid="uid://bpcwnw2n8xxod" path="res://3DTest/img/row-3-column-1.png" id="10_75gwy"]
+[ext_resource type="Texture2D" uid="uid://b3nl2seyf00jt" path="res://3DTest/img/row-4-column-1.png" id="11_df7qx"]
+[ext_resource type="Texture2D" uid="uid://bgxt7qseu4aul" path="res://3DTest/img/row-5-column-1.png" id="12_0u6l2"]
+[ext_resource type="Script" uid="uid://ckhugk21ptv6t" path="res://3DTest/progress.gd" id="12_nal1h"]
 
-[sub_resource type="GDScript" id="GDScript_rg48u"]
-script/source = "@tool # This is crucial for editor visibility
-
-class_name PathPointData extends Resource
-
-@export_range (.1,4) var speed: float = 1.0
-@export_range (.1, 4) var zoom: float = 1.0
-@export var sound_effect: AudioStream = null
-
-# --- NEW EXPORTS ---
-# A path to the node in the scene you want to control.
-@export var target_node: NodePath
-# A toggle to determine if the target_node should be visible at this point.
-@export var show_target_node: bool = false
-"
-
-[sub_resource type="Resource" id="Resource_d4c3h"]
-script = SubResource("GDScript_rg48u")
+[sub_resource type="Resource" id="Resource_75gwy"]
+script = ExtResource("3_pclc1")
 speed = 1.0
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
-[sub_resource type="Resource" id="Resource_cbmdh"]
-script = SubResource("GDScript_rg48u")
+[sub_resource type="Resource" id="Resource_df7qx"]
+script = ExtResource("3_pclc1")
 speed = 1.0
 zoom = 1.0
 target_node = NodePath("")
@@ -46,6 +33,67 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4096)
 }
 point_count = 2
+
+[sub_resource type="Animation" id="Animation_nal1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_pclc1"]
+resource_name = "test_anim"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.54448, 5.17, 7.51448, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.984269, 0.875881, 1), Color(0.719062, 0.763876, 0, 1), Color(0.955575, 0.317996, 0, 1), Color(1, 0, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Camera2D/ColorRect:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-6.28319, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nal1h"]
+_data = {
+&"RESET": SubResource("Animation_nal1h"),
+&"test_anim": SubResource("Animation_pclc1")
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -60,51 +108,37 @@ path_follow = NodePath("../Path2D/PathFollow2D")
 frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_522357501" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("2_380tl")]
-self_modulate = Color(0.5, 1, 0, 1)
+[node name="PathPointMarker_522357501" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -3.48
 offset_top = -3.4
-offset_right = 249.04
-offset_bottom = 249.24
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 252.52
+offset_bottom = 252.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("3_duck6")
-script = ExtResource("4_pclc1")
-point_data = SubResource("Resource_d4c3h")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
+point_data = SubResource("Resource_75gwy")
 
-[node name="PathPointMarker_522357796" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("2_380tl")]
-self_modulate = Color(0.5, 1, 0, 1)
+[node name="PathPointMarker_522357796" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -3.48
 offset_top = 4092.6
-offset_right = 249.04
-offset_bottom = 4345.24
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 252.52
+offset_bottom = 4348.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("3_duck6")
-script = ExtResource("4_pclc1")
-point_data = SubResource("Resource_cbmdh")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Container/Speed")
-max_speed = 2.0
-mid_hue = 0.25
+point_data = SubResource("Resource_df7qx")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_aw5q7")
@@ -122,6 +156,14 @@ data_source_control_path = NodePath("../../PointData")
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
+[node name="ColorRect" type="ColorRect" parent="Path2D/PathFollow2D/Camera2D"]
+z_index = 1
+offset_left = 279.08
+offset_top = -920.766
+offset_right = 1175.08
+offset_bottom = 103.234
+pivot_offset = Vector2(500, 500)
+
 [node name="PreviewCam" type="Camera2D" parent="."]
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
@@ -132,13 +174,34 @@ default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 
 [node name="1" type="Sprite2D" parent="."]
-position = Vector2(0, 4472)
+position = Vector2(0, 4480)
 texture = ExtResource("7_df7qx")
 
-[node name="21" type="Sprite2D" parent="."]
-position = Vector2(0, 17664)
-texture = ExtResource("8_0u6l2")
+[node name="Row-1-column-1" type="Sprite2D" parent="."]
+position = Vector2(0, 11520)
+texture = ExtResource("8_pclc1")
 
-[node name="22" type="Sprite2D" parent="."]
-position = Vector2(-28, 21407)
-texture = ExtResource("9_ohieh")
+[node name="Row-2-column-1" type="Sprite2D" parent="."]
+position = Vector2(0, 15616)
+texture = ExtResource("9_nal1h")
+
+[node name="Row-3-column-1" type="Sprite2D" parent="."]
+position = Vector2(0, 19712)
+texture = ExtResource("10_75gwy")
+
+[node name="Row-4-column-1" type="Sprite2D" parent="."]
+position = Vector2(0, 23808)
+texture = ExtResource("11_df7qx")
+
+[node name="Row-5-column-1" type="Sprite2D" parent="."]
+position = Vector2(0, 26656)
+texture = ExtResource("12_0u6l2")
+
+[node name="progress" type="AnimationPlayer" parent="." node_paths=PackedStringArray("path_follow")]
+libraries = {
+&"": SubResource("AnimationLibrary_nal1h")
+}
+speed_scale = 0.0
+script = ExtResource("12_nal1h")
+path_follow = NodePath("../Path2D/PathFollow2D")
+start_anim = "test_anim"

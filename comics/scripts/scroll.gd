@@ -11,6 +11,7 @@ class_name PathReader
 @export var TOUCHPAD_VELOCITY:float = 1.0
 var _scroll_target_progress = 0.0
 
+
 # --- CAMERA & DATA ---
 ## Assign the Control node that manages the PathPointLabel nodes.
 @export var data_source_control_path: NodePath

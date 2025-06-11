@@ -158,8 +158,8 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_5yg58"]
 script = ExtResource("5_g2313")
-speed = 1.0
-zoom = 1.0
+speed = 0.1
+zoom = 0.583
 target_node = NodePath("")
 show_target_node = false
 
@@ -690,6 +690,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gcewu")
 
 [node name="PathPointMarker_2425053846" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0, 1, 0.85, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1137,11 +1138,13 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5501.52, 2512.6)
+position = Vector2(14010.5, 5737.6)
+zoom = Vector2(0.583, 0.583)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
+scale = Vector2(1.71527, 1.71527)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 40.0
+width = 23.32
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

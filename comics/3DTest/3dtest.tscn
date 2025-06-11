@@ -145,7 +145,20 @@ texture = ExtResource("11_df7qx")
 position = Vector2(0, 26656)
 texture = ExtResource("12_0u6l2")
 
+[node name="11" type="Sprite2D" parent="comic"]
+position = Vector2(0, 1536)
+texture = ExtResource("12_75gwy")
+
+[node name="12" type="Sprite2D" parent="comic"]
+position = Vector2(0, 5632)
+texture = ExtResource("13_df7qx")
+
+[node name="13" type="Sprite2D" parent="comic"]
+position = Vector2(0, 8576)
+texture = ExtResource("14_0u6l2")
+
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
+visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
@@ -244,15 +257,3 @@ script = ExtResource("12_nal1h")
 path_follow = NodePath("../Path2D/PathFollow2D")
 start_anim = "test_anim"
 edit_mode = true
-
-[node name="11" type="Sprite2D" parent="."]
-position = Vector2(0, 1536)
-texture = ExtResource("12_75gwy")
-
-[node name="12" type="Sprite2D" parent="."]
-position = Vector2(0, 5632)
-texture = ExtResource("13_df7qx")
-
-[node name="13" type="Sprite2D" parent="."]
-position = Vector2(0, 8576)
-texture = ExtResource("14_0u6l2")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx6jtvtxhyv75"
-path="res://.godot/imported/beastars.png-e2f3516863355cb1e76ca2145ccd87de.ctex"
+uid="uid://cds15ci2gwyqf"
+path="res://.godot/imported/ch1.apple-touch-icon.png-d4d23fed9f3464befbd882c85cdd52ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/beastars/beastars.png"
-dest_files=["res://.godot/imported/beastars.png-e2f3516863355cb1e76ca2145ccd87de.ctex"]
+source_file="res://exports/Otaku Witch Roommate/ch1.apple-touch-icon.png"
+dest_files=["res://.godot/imported/ch1.apple-touch-icon.png-d4d23fed9f3464befbd882c85cdd52ab.ctex"]
 
 [params]
 

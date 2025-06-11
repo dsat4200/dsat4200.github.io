@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0nwpn6w8qfrh"
-path.s3tc="res://.godot/imported/1.png-603f119e9cfefd724744a6b55d7029ba.s3tc.ctex"
+uid="uid://bpjqjo1om2qsq"
+path="res://.godot/imported/ch1.icon.png-58da70f84d1c1b38b53aa1e785425c0c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://3DTest/img/1.png"
-dest_files=["res://.godot/imported/1.png-603f119e9cfefd724744a6b55d7029ba.s3tc.ctex"]
+source_file="res://exports/Otaku Witch Roommate/ch1.icon.png"
+dest_files=["res://.godot/imported/ch1.icon.png-58da70f84d1c1b38b53aa1e785425c0c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

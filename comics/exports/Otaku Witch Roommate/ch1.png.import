@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n01xxqe6bxug"
-path="res://.godot/imported/beastars.icon.png-53c078fc7b8fe92beada0c375753ca99.ctex"
+uid="uid://cbntwrk3mllyt"
+path="res://.godot/imported/ch1.png-f418f63ad88002ba01e34bffe45046e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/beastars/beastars.icon.png"
-dest_files=["res://.godot/imported/beastars.icon.png-53c078fc7b8fe92beada0c375753ca99.ctex"]
+source_file="res://exports/Otaku Witch Roommate/ch1.png"
+dest_files=["res://.godot/imported/ch1.png-f418f63ad88002ba01e34bffe45046e7.ctex"]
 
 [params]
 

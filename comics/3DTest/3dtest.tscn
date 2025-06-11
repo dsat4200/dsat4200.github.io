@@ -1,36 +1,38 @@
-[gd_scene load_steps=19 format=3 uid="uid://c6878mkbup4ys"]
+[gd_scene load_steps=21 format=3 uid="uid://c6878mkbup4ys"]
 
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_ykl4k"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_380tl"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="3_pclc1"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="5_nal1h"]
 [ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="6_75gwy"]
-[ext_resource type="Texture2D" uid="uid://d0nwpn6w8qfrh" path="res://3DTest/img/1.png" id="7_df7qx"]
 [ext_resource type="Texture2D" uid="uid://cksaqxn8dpdrq" path="res://3DTest/img/row-1-column-1.png" id="8_pclc1"]
 [ext_resource type="Texture2D" uid="uid://bcmncnyprd8i4" path="res://3DTest/img/row-2-column-1.png" id="9_nal1h"]
 [ext_resource type="Texture2D" uid="uid://bpcwnw2n8xxod" path="res://3DTest/img/row-3-column-1.png" id="10_75gwy"]
 [ext_resource type="Texture2D" uid="uid://b3nl2seyf00jt" path="res://3DTest/img/row-4-column-1.png" id="11_df7qx"]
 [ext_resource type="Texture2D" uid="uid://bgxt7qseu4aul" path="res://3DTest/img/row-5-column-1.png" id="12_0u6l2"]
+[ext_resource type="Texture2D" uid="uid://bmeivkgvymnjd" path="res://3DTest/img/1_1.png" id="12_75gwy"]
 [ext_resource type="Script" uid="uid://ckhugk21ptv6t" path="res://3DTest/progress.gd" id="12_nal1h"]
+[ext_resource type="Texture2D" uid="uid://dnwqt2us5bd5b" path="res://3DTest/img/1_2.png" id="13_df7qx"]
+[ext_resource type="Texture2D" uid="uid://cd32s71ipywqj" path="res://3DTest/img/1_3.png" id="14_0u6l2"]
 
 [sub_resource type="Resource" id="Resource_75gwy"]
 script = ExtResource("3_pclc1")
 speed = 1.0
-zoom = 0.715
+zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_df7qx"]
 script = ExtResource("3_pclc1")
 speed = 1.0
-zoom = 1.367
+zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4096)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26912)
 }
 point_count = 2
 
@@ -123,10 +125,6 @@ _data = {
 
 [node name="comic" type="Node2D" parent="."]
 
-[node name="1" type="Sprite2D" parent="comic"]
-position = Vector2(0, 4480)
-texture = ExtResource("7_df7qx")
-
 [node name="Row-1-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 11520)
 texture = ExtResource("8_pclc1")
@@ -166,10 +164,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -3.48
-offset_top = -3.4
-offset_right = 252.52
-offset_bottom = 252.6
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 256.0
+offset_bottom = 256.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -182,10 +180,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -3.48
-offset_top = 4092.6
-offset_right = 252.52
-offset_bottom = 4348.6
+offset_left = 0.0
+offset_top = 26912.0
+offset_right = 256.0
+offset_bottom = 27168.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -208,6 +206,7 @@ data_source_control_path = NodePath("../../PointData")
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
 
 [node name="Frame2" type="Line2D" parent="Path2D/PathFollow2D/Camera2D"]
+visible = false
 z_index = 1
 rotation = -1.34307
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
@@ -216,6 +215,7 @@ width = 20.0
 default_color = Color(1, 1, 1, 0.8)
 
 [node name="ColorRect" type="ColorRect" parent="Path2D/PathFollow2D/Camera2D"]
+visible = false
 z_index = 1
 offset_left = 279.08
 offset_top = -920.766
@@ -224,15 +224,14 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(-3.48, 4092.6)
-zoom = Vector2(1.367, 1.367)
+position = Vector2(0, 26912)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
+visible = false
 z_index = 1
-scale = Vector2(0.731529, 0.731529)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 54.68
+width = 40.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 
@@ -245,3 +244,15 @@ script = ExtResource("12_nal1h")
 path_follow = NodePath("../Path2D/PathFollow2D")
 start_anim = "test_anim"
 edit_mode = true
+
+[node name="11" type="Sprite2D" parent="."]
+position = Vector2(0, 1536)
+texture = ExtResource("12_75gwy")
+
+[node name="12" type="Sprite2D" parent="."]
+position = Vector2(0, 5632)
+texture = ExtResource("13_df7qx")
+
+[node name="13" type="Sprite2D" parent="."]
+position = Vector2(0, 8576)
+texture = ExtResource("14_0u6l2")

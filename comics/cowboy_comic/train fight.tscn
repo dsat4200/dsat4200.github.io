@@ -1094,7 +1094,7 @@ point_data = SubResource("Resource_usjnm")
 curve = SubResource("Curve2D_aw5q7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(735.229, 1720.53)
+position = Vector2(735.227, 1720.53)
 rotation = 1.34307
 progress = 2012.51
 rotates = false
@@ -1141,9 +1141,8 @@ texture = ExtResource("12_1s4ev")
 position = Vector2(12.4131, 2447.01)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
-scale = Vector2(0.731529, 0.731529)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 54.68
+width = 40.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://utfesh8hf6os"]
+
+[ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="2_d4c3h"]
+[ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="3_cbmdh"]
+[ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="3_ua2uk"]
+[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="4_0fy1l"]
+[ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="5_dnkbf"]
+[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="7_750n8"]
+
+[sub_resource type="GDScript" id="GDScript_rg48u"]
+script/source = "@tool # This is crucial for editor visibility
+
+class_name PathPointData extends Resource
+
+@export_range (.1,4) var speed: float = 1.0
+@export_range (.1, 4) var zoom: float = 1.0
+@export var sound_effect: AudioStream = null
+
+# --- NEW EXPORTS ---
+# A path to the node in the scene you want to control.
+@export var target_node: NodePath
+# A toggle to determine if the target_node should be visible at this point.
+@export var show_target_node: bool = false
+"
+
+[sub_resource type="Resource" id="Resource_d4c3h"]
+script = SubResource("GDScript_rg48u")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_cbmdh"]
+script = SubResource("GDScript_rg48u")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Curve2D" id="Curve2D_aw5q7"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4096)
+}
+point_count = 2
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_d4c3h")
+preview_cam = NodePath("../PreviewCam")
+path_follow = NodePath("../Path2D/PathFollow2D")
+frame = NodePath("../PreviewCam/Frame")
+path_node_path = NodePath("../Path2D")
+
+[node name="PathPointMarker_522357501" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_cbmdh")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = -3.48
+offset_top = -3.4
+offset_right = 249.04
+offset_bottom = 249.24
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("3_ua2uk")
+script = ExtResource("4_0fy1l")
+point_data = SubResource("Resource_d4c3h")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Container/Speed")
+max_speed = 2.0
+mid_hue = 0.25
+
+[node name="PathPointMarker_522357796" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("3_cbmdh")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = -3.48
+offset_top = 4092.6
+offset_right = 249.04
+offset_bottom = 4345.24
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("3_ua2uk")
+script = ExtResource("4_0fy1l")
+point_data = SubResource("Resource_cbmdh")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Container/Speed")
+max_speed = 2.0
+mid_hue = 0.25
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_aw5q7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotation = 1.34307
+rotates = false
+loop = false
+script = ExtResource("5_dnkbf")
+speed_multiplier = -0.75
+scroll_speed = 25.0
+scroll_decay_rate = 0.075
+TOUCHPAD_VELOCITY = 14.0
+data_source_control_path = NodePath("../../PointData")
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+
+[node name="PreviewCam" type="Camera2D" parent="."]
+
+[node name="Frame" type="Line2D" parent="PreviewCam"]
+points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
+closed = true
+width = 40.0
+default_color = Color(1, 0, 0, 1)
+script = ExtResource("7_750n8")

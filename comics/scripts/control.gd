@@ -214,18 +214,19 @@ func _on_editor_selection_changed():
 		update_frame()
 		if is_instance_valid(preview_cam) and is_instance_valid(path_follow):
 			preview_cam.position = selected.position
-			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
-			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
 	elif (editor_selection.size() == 0 and is_instance_valid(selected)):
 		selected.disappear()
 		selected = null
 	
 
 func update_frame():
-	var zoom_value = selected.point_data.zoom * path_follow.base_zoom
-	preview_cam.zoom = Vector2(zoom_value, zoom_value)
-	frame.scale = Vector2(1 / zoom_value, 1 / zoom_value)
-	frame.width = 40 * zoom_value
+	if is_instance_valid(selected.point_data):
+		var zoom_value = selected.point_data.zoom * path_follow.base_zoom
+		frame.scale = Vector2(1 / zoom_value, 1 / zoom_value)
+		frame.width = 40 * zoom_value
+		if is_instance_valid(preview_cam):
+			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
+			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
 		
 func _process(_delta):
 	if not is_instance_valid(selected):

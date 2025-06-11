@@ -16,14 +16,14 @@
 [sub_resource type="Resource" id="Resource_75gwy"]
 script = ExtResource("3_pclc1")
 speed = 1.0
-zoom = 1.0
+zoom = 0.715
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_df7qx"]
 script = ExtResource("3_pclc1")
 speed = 1.0
-zoom = 1.0
+zoom = 1.367
 target_node = NodePath("")
 show_target_node = false
 
@@ -225,12 +225,14 @@ pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
 position = Vector2(-3.48, 4092.6)
+zoom = Vector2(1.367, 1.367)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 z_index = 1
+scale = Vector2(0.731529, 0.731529)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 40.0
+width = 54.68
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

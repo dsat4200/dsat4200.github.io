@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c6878mkbup4ys"]
+[gd_scene load_steps=23 format=3 uid="uid://c6878mkbup4ys"]
 
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_ykl4k"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_380tl"]
@@ -27,12 +27,40 @@ zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
+[sub_resource type="Resource" id="Resource_ciyf2"]
+script = ExtResource("3_pclc1")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_ohieh"]
+script = ExtResource("3_pclc1")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_0u6l2"]
+script = ExtResource("3_pclc1")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_jcffq"]
+script = ExtResource("3_pclc1")
+speed = 0.1
+zoom = 1.53
+target_node = NodePath("")
+show_target_node = false
+
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4096)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4.37085, 1078.43, 0, 0, 0, 0, 1440, 1984, 0, 0, 0, 0, 12.4131, 2447.01, 0, 0, 0, 0, 0, 17500, 0, 0, 0, 0, 0, 6206.69)
 }
-point_count = 2
+point_count = 6
 
 [sub_resource type="Animation" id="Animation_nal1h"]
 length = 0.001
@@ -102,7 +130,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Path2D/PathFollow2D:progress_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -119,75 +147,106 @@ _data = {
 &"test_anim": SubResource("Animation_pclc1")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="3DTest" type="Node2D"]
 
-[node name="1" type="Sprite2D" parent="."]
+[node name="comic" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 4480)
 texture = ExtResource("7_df7qx")
 
-[node name="Row-1-column-1" type="Sprite2D" parent="."]
+[node name="Row-1-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 11520)
 texture = ExtResource("8_pclc1")
 
-[node name="Row-2-column-1" type="Sprite2D" parent="."]
+[node name="Row-2-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 15616)
 texture = ExtResource("9_nal1h")
 
-[node name="Row-3-column-1" type="Sprite2D" parent="."]
+[node name="Row-3-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 19712)
 texture = ExtResource("10_75gwy")
 
-[node name="Row-4-column-1" type="Sprite2D" parent="."]
+[node name="Row-4-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 23808)
 texture = ExtResource("11_df7qx")
 
-[node name="Row-5-column-1" type="Sprite2D" parent="."]
+[node name="Row-5-column-1" type="Sprite2D" parent="comic"]
 position = Vector2(0, 26656)
 texture = ExtResource("12_0u6l2")
 
-[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("path_follow", "frame", "cam")]
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ykl4k")
-preview_cam = NodePath("../PreviewCam")
 path_follow = NodePath("../Path2D/PathFollow2D")
-frame = NodePath("../PreviewCam/Frame")
+frame = NodePath("../Path2D/PathFollow2D/Camera2D/Frame")
+cam = NodePath("../Path2D/PathFollow2D/Camera2D")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_522357501" parent="PointData" instance=ExtResource("2_380tl")]
+[node name="PathPointMarker_1585319370" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
 anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_left = -3.48
 offset_top = -3.4
-offset_right = 252.52
-offset_bottom = 252.6
-grow_horizontal = 1
-grow_vertical = 1
+offset_right = 249.04
+offset_bottom = 249.24
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_75gwy")
 
-[node name="PathPointMarker_522357796" parent="PointData" instance=ExtResource("2_380tl")]
+[node name="PathPointMarker_1585320334" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
 anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -3.48
-offset_top = 4092.6
-offset_right = 252.52
-offset_bottom = 4348.6
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = -7.85092
+offset_top = 1075.03
+offset_right = 244.669
+offset_bottom = 1327.67
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_df7qx")
+
+[node name="PathPointMarker_1585322391" parent="PointData" instance=ExtResource("2_380tl")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 8.93304
+offset_top = 2443.61
+offset_right = 261.453
+offset_bottom = 2696.25
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ciyf2")
+
+[node name="PathPointMarker_1686862934" parent="PointData" instance=ExtResource("2_380tl")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = -3.48
+offset_top = 17496.6
+offset_right = 249.04
+offset_bottom = 17749.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ohieh")
+
+[node name="PathPointMarker_3458850235" parent="PointData" instance=ExtResource("2_380tl")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = -3.48
+offset_top = 6203.29
+offset_right = 249.04
+offset_bottom = 6455.93
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_0u6l2")
+
+[node name="PathPointMarker_3464761569" parent="PointData" instance=ExtResource("2_380tl")]
+self_modulate = Color(0, 1, 0.85, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 1436.52
+offset_top = 1980.6
+offset_right = 1689.04
+offset_bottom = 2233.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_jcffq")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_aw5q7")
@@ -204,15 +263,17 @@ TOUCHPAD_VELOCITY = 14.0
 data_source_control_path = NodePath("../../PointData")
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+zoom = Vector2(0.653595, 0.653595)
 
-[node name="Frame2" type="Line2D" parent="Path2D/PathFollow2D/Camera2D"]
+[node name="Frame" type="Line2D" parent="Path2D/PathFollow2D/Camera2D"]
 z_index = 1
-position = Vector2(-1314.23, -304.568)
 rotation = -1.34307
+scale = Vector2(1.53, 1.53)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 20.0
-default_color = Color(1, 1, 1, 0.8)
+width = 26.1438
+default_color = Color(1, 0, 0, 1)
+script = ExtResource("6_75gwy")
 
 [node name="ColorRect" type="ColorRect" parent="Path2D/PathFollow2D/Camera2D"]
 z_index = 1
@@ -221,17 +282,6 @@ offset_top = -920.766
 offset_right = 1175.08
 offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
-
-[node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(-3.48, -3.4)
-
-[node name="Frame" type="Line2D" parent="PreviewCam"]
-z_index = 1
-points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
-closed = true
-width = 40.0
-default_color = Color(1, 0, 0, 1)
-script = ExtResource("6_75gwy")
 
 [node name="progress" type="AnimationPlayer" parent="." node_paths=PackedStringArray("path_follow")]
 libraries = {
@@ -242,5 +292,3 @@ script = ExtResource("12_nal1h")
 path_follow = NodePath("../Path2D/PathFollow2D")
 start_anim = "test_anim"
 edit_mode = true
-
-[node name="comic" type="Node2D" parent="."]

@@ -1,9 +1,9 @@
 @tool
 extends Control
 var selected:PathPointMarker
-@export var preview_cam:Camera2D
 @export var path_follow:PathFollow2D
 @export var frame:Line2D
+@export var cam:Camera2D
 
 const PathPointMarker_Scene = preload("res://scripts/PathPointMarker.tscn")
 func _ready():
@@ -212,27 +212,31 @@ func _on_editor_selection_changed():
 		selected = editor_selection[0]
 		selected.appear()
 		update_frame()
-		if is_instance_valid(preview_cam) and is_instance_valid(path_follow):
-			preview_cam.position = selected.position
-			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
-			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
+		update_progress(selected)
+
 	elif (editor_selection.size() == 0 and is_instance_valid(selected)):
 		selected.disappear()
 		selected = null
 	
 
-func update_frame():
-	var zoom_value = selected.point_data.zoom * path_follow.base_zoom
-	preview_cam.zoom = Vector2(zoom_value, zoom_value)
-	frame.scale = Vector2(1 / zoom_value, 1 / zoom_value)
-	frame.width = 40 * zoom_value
-		
+
 func _process(_delta):
 	if not is_instance_valid(selected):
 		return
-		
 	if selected is PathPointMarker:
 		selected.update_info()
-
-	if is_instance_valid(preview_cam) and is_instance_valid(path_follow) and preview_cam.zoom.x != selected.point_data.zoom:
 		update_frame()
+
+func update_frame():
+	var zoom_value = selected.point_data.zoom * path_follow.base_zoom
+	if !is_equal_approx(frame.scale.x, zoom_value):
+		#print("setting zoom to " + str(zoom_value) + " from "+str(frame.scale.x))
+		frame.scale = Vector2(zoom_value, zoom_value)
+		frame.width = 40 * 1/zoom_value
+		if (cam):
+			cam.zoom.x = 1/zoom_value
+			cam.zoom.y = 1/zoom_value
+		
+func update_progress(point:PathPointMarker):
+	path_follow.progress = (_path_node.curve.get_closest_offset(point.position))
+	#print("moving to "+str(_path_node.curve.get_closest_offset(point.position)))

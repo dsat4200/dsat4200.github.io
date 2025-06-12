@@ -52,6 +52,8 @@ func update_info():
 		zoom_label.text = "Z: %.2f" % [point_data.zoom]
 	
 func _ready():
+	if !Engine.is_editor_hint():
+		hide()
 	size = base_size
 	# In the editor, it's crucial to ensure the data resource exists.
 	if not is_instance_valid(point_data):

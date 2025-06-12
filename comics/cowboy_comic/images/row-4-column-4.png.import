@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/row-4-column-4.png-a196ae80e1628f34e112287e05
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.72
 compress/hdr_compression=1
@@ -23,7 +23,7 @@ compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=1
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false

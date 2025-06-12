@@ -17,6 +17,7 @@ func _ready():
 		ingame=true
 		hide()
 		#queue_free()
+	
 func hide_all_markers():
 	for i in get_children():
 		i.disappear()

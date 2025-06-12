@@ -370,48 +370,48 @@ show_target_node = false
 [sub_resource type="Resource" id="Resource_y30cy"]
 script = ExtResource("3_ctd7i")
 zoom = 2.2
-speed = 8.0
+speed = 7.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_3qt7h"]
 script = ExtResource("3_ctd7i")
-zoom = 1.2
+zoom = 1.4
 speed = 3.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_ar27j"]
 script = ExtResource("3_ctd7i")
-zoom = 1.2
+zoom = 1.4
 speed = 0.8
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_7mvoa"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.4
 speed = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_o6us5"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.4
 speed = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_je0dp"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.2
 speed = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_c2wuf"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.2
 speed = 1.0
 target_node = NodePath("")
 show_target_node = false
@@ -627,17 +627,17 @@ position = Vector2(10400, 14496)
 texture = ExtResource("31_ybiwk")
 
 [node name="Ch1093" type="Sprite2D" parent="comic"]
-position = Vector2(11648, 13088)
+position = Vector2(11648, 13056)
 scale = Vector2(0.858376, 0.858376)
 texture = ExtResource("32_5r5yj")
 
 [node name="Ch1094" type="Sprite2D" parent="comic"]
-position = Vector2(11648, 13792)
-scale = Vector2(1.00568, 1.00568)
+position = Vector2(11648, 13856)
+scale = Vector2(0.818181, 0.818181)
 texture = ExtResource("33_b73dg")
 
 [node name="Ch1095" type="Sprite2D" parent="comic"]
-position = Vector2(11648, 14400)
+position = Vector2(11648, 14304)
 texture = ExtResource("34_1nsqg")
 
 [node name="Ch1096" type="Sprite2D" parent="comic"]
@@ -1675,7 +1675,7 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -0.25
+speed_multiplier = -0.4
 deceleration_rate = 0.8
 scroll_speed = 20.0
 scroll_decay_rate = 0.075
@@ -1696,7 +1696,7 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11648, 14080)
+position = Vector2(11648, 18048)
 zoom = Vector2(0.792, 0.792)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]

@@ -209,30 +209,48 @@ max_speed = 4.0
 [node name="PathPointMarker_13739684538" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 8.56218
 offset_top = 5703.51
-offset_right = 261.082
-offset_bottom = 5956.15
+offset_right = 264.562
+offset_bottom = 5959.51
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0u6l2")
 
 [node name="PathPointMarker_13740230393" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -0.289784
 offset_top = 5946.94
-offset_right = 252.23
-offset_bottom = 6199.58
+offset_right = 255.71
+offset_bottom = 6202.94
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_ohieh")
 
 [node name="PathPointMarker_13741252415" parent="PointData" instance=ExtResource("2_380tl")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -15.7804
 offset_top = 6292.16
-offset_right = 236.74
-offset_bottom = 6544.8
+offset_right = 240.22
+offset_bottom = 6548.16
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_ciyf2")
 
@@ -290,16 +308,16 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(3.19043, 5950.33)
-zoom = Vector2(0.65, 0.65)
+position = Vector2(12896, 14080)
+zoom = Vector2(0.91, 0.91)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(1.53846, 1.53846)
+scale = Vector2(1.0989, 1.0989)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 6.5
+width = 9.1
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

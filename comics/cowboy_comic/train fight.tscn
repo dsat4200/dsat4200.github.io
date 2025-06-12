@@ -1068,12 +1068,13 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-zoom = Vector2(0.505, 0.505)
+position = Vector2(12896, 14080)
+zoom = Vector2(0.707, 0.707)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
-scale = Vector2(1.9802, 1.9802)
+scale = Vector2(1.41443, 1.41443)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 5.05
+width = 7.07
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

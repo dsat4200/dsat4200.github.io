@@ -118,21 +118,21 @@
 [sub_resource type="Resource" id="Resource_c6l8h"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.0
+speed = 1.5
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_l2luw"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.0
+speed = 1.5
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_avjol"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.0
+speed = 1.5
 target_node = NodePath("")
 show_target_node = false
 
@@ -356,7 +356,7 @@ show_target_node = false
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 4512, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4128, 0, 0, 0, 0, 5024, 4608, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5024, 4896, 0, 0, 0, 0, 5024, 5312, 0, 0, 0, 0, 5025.92, 5369.72, 0, 0, 0, 0, 5028.31, 5711.35, 0, 0, 0, 0, 5024, 7008, 0, 0, 0, 0, 5024, 7296, 0, 0, 0, 0, 5024, 8480, 0, 0, 0, 0, 5024, 8928, 0, 0, 0, 0, 5024, 10112, 0, 0, 0, 0, 5504, 10112, 0, 0, 0, 0, 6304, 10112, 0, 0, 0, 0, 6752, 10112, 0, 0, 0, 0, 7328, 10112, 0, 0, 0, 0, 7656.55, 10112.6, 0, 0, 0, 0, 8192, 10112, 0, 0, 0, 0, 8192, 10304, 0, 0, 0, 0, 8192, 10816, 0, 0, 0, 0, 8704, 10816, 0, 0, 0, 0, 9120, 10816, 0, 0, 0, 0, 10080, 10816, 0, 0, 0, 0, 10417.7, 10817.4, 0, 0, 0, 0, 11008, 10816, 0, 0, 0, 0, 11904, 10816, 0, 0, 0, 0, 11904, 11008, 0, 0, 0, 0, 11904, 11712)
+"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 4512, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4128, 0, 0, 0, 0, 5024, 4608, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5024, 4896, 0, 0, 0, 0, 5024, 5312, 0, 0, 0, 0, 5025.92, 5369.72, 0, 0, 0, 0, 5028.31, 5711.35, 0, 0, 0, 0, 5024, 7008, 0, 0, 0, 0, 5024, 7296, 0, 0, 0, 0, 5024, 8480, 0, 0, 0, 0, 5024, 8928, 0, 0, 0, 0, 5024, 10112, 0, 0, 0, 0, 5504, 10112, 0, 0, 0, 0, 6304, 10112, 0, 0, 0, 0, 6752, 10112, 0, 0, 0, 0, 7328, 10112, 0, 0, 0, 0, 7656.55, 10112.6, 0, 0, 0, 0, 8192, 10112, 0, 0, 0, 0, 8192, 10304, 0, 0, 0, 0, 8192, 10816, 0, 0, 0, 0, 8704, 10816, 0, 0, 0, 0, 9120, 10816, 0, 0, 0, 0, 10080, 10816, 0, 0, 0, 0, 10417.7, 10817.4, 0, 0, 0, 0, 11008, 10816, 0, 0, 0, 0, 11648, 10816, 0, 0, 0, 0, 11648, 11008, 0, 0, 0, 0, 11648, 11712)
 }
 point_count = 34
 
@@ -520,17 +520,17 @@ scale = Vector2(1.08986, 1.08986)
 texture = ExtResource("23_5ir0e")
 
 [node name="Ch1073" type="Sprite2D" parent="comic"]
-position = Vector2(9792, 10816)
-scale = Vector2(1.58416, 1.58416)
+position = Vector2(9632, 10816)
+scale = Vector2(1.37294, 1.37294)
 texture = ExtResource("24_vypd1")
 
 [node name="Ch1081" type="Sprite2D" parent="comic"]
-position = Vector2(11392, 10816)
+position = Vector2(11136, 10816)
 scale = Vector2(1.60659, 1.60659)
 texture = ExtResource("25_l5ut3")
 
 [node name="Ch1082" type="Sprite2D" parent="comic"]
-position = Vector2(11904, 11712)
+position = Vector2(11648, 11712)
 scale = Vector2(1.58641, 1.58641)
 texture = ExtResource("26_0p14d")
 
@@ -875,6 +875,7 @@ frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_6421860153" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.75, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -891,6 +892,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_c6l8h")
 
 [node name="PathPointMarker_6421860857" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.75, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -907,6 +909,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_l2luw")
 
 [node name="PathPointMarker_6421861052" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.75, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1393,9 +1396,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11904.0
+offset_left = 11648.0
 offset_top = 10816.0
-offset_right = 12160.0
+offset_right = 11904.0
 offset_bottom = 11072.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -1410,9 +1413,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11904.0
+offset_left = 11648.0
 offset_top = 11008.0
-offset_right = 12160.0
+offset_right = 11904.0
 offset_bottom = 11264.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -1427,9 +1430,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11904.0
+offset_left = 11648.0
 offset_top = 11712.0
-offset_right = 12160.0
+offset_right = 11904.0
 offset_bottom = 11968.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -1445,7 +1448,7 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -0.5
+speed_multiplier = -0.25
 deceleration_rate = 0.8
 scroll_speed = 20.0
 scroll_decay_rate = 0.075
@@ -1466,16 +1469,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5024, 7296)
-zoom = Vector2(1.32, 1.32)
+position = Vector2(11648, 10816)
+zoom = Vector2(1.452, 1.452)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.757576, 0.757576)
+scale = Vector2(0.688705, 0.688705)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 13.2
+width = 14.52
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

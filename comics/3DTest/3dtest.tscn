@@ -238,7 +238,7 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11904, 11712)
+position = Vector2(11648, 10816)
 zoom = Vector2(2.2, 2.2)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]

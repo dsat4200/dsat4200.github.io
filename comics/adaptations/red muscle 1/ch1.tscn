@@ -1783,16 +1783,15 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(12896, 14208)
-zoom = Vector2(0.924, 0.924)
+zoom = Vector2(0.66, 0.66)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(1.08225, 1.08225)
+scale = Vector2(1.51515, 1.51515)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 9.24
+width = 6.6
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

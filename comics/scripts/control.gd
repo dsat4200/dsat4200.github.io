@@ -104,7 +104,8 @@ func _update_labels():
 		"remove":
 			initialize_points()
 		"move":
-			move_point()
+			pass
+			#move_point()
 		"other":
 			initialize_points()
 	#print(state)
@@ -240,6 +241,7 @@ func _on_editor_selection_changed():
 		if (is_instance_valid(selected)):
 			selected.disappear()
 		selected = editor_selection[0]
+		print("selected point "+str(selected.get_index()))
 		selected.appear()
 		update_frame()
 		if is_instance_valid(preview_cam) and is_instance_valid(path_follow):
@@ -267,6 +269,10 @@ func _process(_delta):
 		
 	if selected is PathPointMarker:
 		selected.update_info()
+		update_position()
 
 	if is_instance_valid(preview_cam) and is_instance_valid(path_follow) and preview_cam.zoom.x != selected.point_data.zoom:
 		update_frame()
+
+func update_position():
+	_path_node.curve.set_point_position(selected.get_index(),selected.position)

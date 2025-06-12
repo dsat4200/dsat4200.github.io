@@ -216,7 +216,7 @@ show_target_node = false
 [sub_resource type="Resource" id="Resource_xidlb"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 4.0
+speed = 3.0
 target_node = NodePath("")
 show_target_node = false
 
@@ -1111,7 +1111,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_ybiwk")
 
 [node name="PathPointMarker_6421863307" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0.5, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1445,8 +1445,9 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -0.75
-scroll_speed = 25.0
+speed_multiplier = -0.5
+deceleration_rate = 0.8
+scroll_speed = 20.0
 scroll_decay_rate = 0.075
 TOUCHPAD_VELOCITY = 14.0
 data_source_control_path = NodePath("../../PointData")
@@ -1465,16 +1466,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11904, 11712)
-zoom = Vector2(1.452, 1.452)
+position = Vector2(5024, 7296)
+zoom = Vector2(1.32, 1.32)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.688705, 0.688705)
+scale = Vector2(0.757576, 0.757576)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 14.52
+width = 13.2
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

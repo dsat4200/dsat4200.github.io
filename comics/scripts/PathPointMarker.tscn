@@ -24,7 +24,6 @@ speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Speed")
 zoom_label = NodePath("Zoom")
-hue_midpoint_speed = 2.0
 mid_hue = 0.25
 
 [node name="Zoom" type="Label" parent="."]

@@ -325,7 +325,7 @@ _data = {
 }
 point_count = 42
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="LargeImageContainer" type="Node2D" parent="."]
 position = Vector2(1602, 1444)
@@ -1068,13 +1068,13 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11406, 5869)
-zoom = Vector2(0.505, 0.505)
+position = Vector2(5024, 5920)
+zoom = Vector2(1.01, 1.01)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
-scale = Vector2(1.9802, 1.9802)
+scale = Vector2(0.990099, 0.990099)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 20.2
+width = 40.4
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

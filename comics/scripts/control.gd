@@ -107,6 +107,7 @@ func _update_labels():
 			move_point()
 		"other":
 			initialize_points()
+	print(state)
 			
 func move_point():
 	var curve = _path_node.curve
@@ -227,7 +228,7 @@ func update_frame():
 	if is_instance_valid(selected.point_data):
 		var zoom_value = selected.point_data.zoom * path_follow.base_zoom
 		frame.scale = Vector2(1 / zoom_value, 1 / zoom_value)
-		frame.width = 40 * zoom_value
+		frame.width = 10 * zoom_value
 		if is_instance_valid(preview_cam):
 			preview_cam.zoom.x = selected.point_data.zoom * path_follow.base_zoom
 			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom

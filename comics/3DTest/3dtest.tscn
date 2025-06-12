@@ -120,7 +120,7 @@ _data = {
 &"test_anim": SubResource("Animation_pclc1")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="comic" type="Node2D" parent="."]
 
@@ -236,14 +236,16 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(12828.9, 3089.87)
+position = Vector2(5024, 5920)
+zoom = Vector2(2, 2)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
+scale = Vector2(0.5, 0.5)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 40.0
+width = 80.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

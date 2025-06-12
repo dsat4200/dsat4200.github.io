@@ -66,11 +66,11 @@ func _process(delta):
 			if parent_path_2d.curve.get_point_count() != last_curve_point_count:
 				# If it has, re-sync path distances and managed nodes.
 				_on_path_changed()
-		_apply_current_zoom()
+		
 		return
 	else:
 		smooth_scroll(delta)
-		
+	_apply_current_zoom()
 
 	# --- RUNTIME LOGIC ---
 	var current_point_index = -1
@@ -256,7 +256,7 @@ func _apply_current_zoom():
 	var t = segment_info.segment_progress
 	var smoothed_t = t * t * (3.0 - 2.0 * t) # Smoothstep interpolation
 	var calculated_zoom = lerp(zoom_a, zoom_b, smoothed_t)
-	
+	#print(calculated_zoom)
 	camera_2d_node.zoom = Vector2(calculated_zoom * base_zoom, calculated_zoom * base_zoom)
 
 func _update_managed_nodes_list():

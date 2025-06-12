@@ -7,7 +7,6 @@ class_name PathPointMarker
 @export var point_data: PathPointData
 @export var speaker: Sprite2D
 @export var container: Control
-@export var frame: ReferenceRect
 @export var base_size: Vector2 = Vector2(256,256)
 @export var spd_label: Label # Assuming this is a standard Godot Label node
 
@@ -39,7 +38,7 @@ func disappear():
 	container.hide()
 	
 func update_info():
-	update_info_text(position)
+	#print("updating!")
 	if point_data:
 		#size = base_size / point_data.zoom
 		if point_data.sound_effect:

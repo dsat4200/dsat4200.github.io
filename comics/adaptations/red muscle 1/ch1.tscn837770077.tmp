@@ -1,0 +1,923 @@
+[gd_scene load_steps=134 format=3 uid="uid://cr2c6mrcpo2qd"]
+
+[ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
+[ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
+[ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_hjpiw"]
+[ext_resource type="Texture2D" uid="uid://00ssychg1oyv" path="res://adaptations/red muscle 1/panels/ch1_02.png" id="2_mja7m"]
+[ext_resource type="Texture2D" uid="uid://cfe3nrnqsl5pt" path="res://adaptations/red muscle 1/panels/ch1_03_1.png" id="3_c6l8h"]
+[ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="3_ctd7i"]
+[ext_resource type="Texture2D" uid="uid://g3y4rjqfloxe" path="res://adaptations/red muscle 1/panels/ch1_03_2.png" id="4_l2luw"]
+[ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="4_s8hio"]
+[ext_resource type="Texture2D" uid="uid://difrxa4hpxe4d" path="res://adaptations/red muscle 1/panels/ch1_03_3.png" id="5_avjol"]
+[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="5_iaheh"]
+[ext_resource type="Texture2D" uid="uid://c4ae47odb3vlt" path="res://adaptations/red muscle 1/panels/ch1_03_4.png" id="6_lhcyx"]
+[ext_resource type="Script" uid="uid://ckhugk21ptv6t" path="res://3DTest/progress.gd" id="6_tl2i0"]
+[ext_resource type="Texture2D" uid="uid://c718jmhjwji4w" path="res://adaptations/red muscle 1/panels/ch1_04_1.png" id="7_cdlst"]
+[ext_resource type="Texture2D" uid="uid://beeybnwabm2fw" path="res://adaptations/red muscle 1/panels/ch1_04_2.png" id="8_48cwg"]
+[ext_resource type="Texture2D" uid="uid://dm3egbn21daja" path="res://adaptations/red muscle 1/panels/ch1_04_3.png" id="9_0mnfu"]
+[ext_resource type="Texture2D" uid="uid://d3g7e41vbhhev" path="res://adaptations/red muscle 1/panels/ch1_04_4.png" id="10_jgkax"]
+[ext_resource type="Texture2D" uid="uid://bxo5ng63ahc7f" path="res://adaptations/red muscle 1/panels/ch1_04_5.png" id="11_bby38"]
+[ext_resource type="Texture2D" uid="uid://qq6k7spjxebg" path="res://adaptations/red muscle 1/panels/ch1_04_6.png" id="12_hxyl0"]
+[ext_resource type="Texture2D" uid="uid://dlau23gsj3ysf" path="res://adaptations/red muscle 1/panels/ch1_04_7.png" id="13_bhye1"]
+[ext_resource type="Texture2D" uid="uid://dxgs4cdynooyo" path="res://adaptations/red muscle 1/panels/ch1_05_1.png" id="14_y30cy"]
+[ext_resource type="Texture2D" uid="uid://bx2nrxfuhkues" path="res://adaptations/red muscle 1/panels/ch1_05_2.png" id="15_3qt7h"]
+[ext_resource type="Texture2D" uid="uid://bapsvdyt0030m" path="res://adaptations/red muscle 1/panels/ch1_05_3.png" id="16_xidlb"]
+[ext_resource type="Texture2D" uid="uid://bamd1bvjshn20" path="res://adaptations/red muscle 1/panels/ch1_06_1.png" id="17_1aqqp"]
+[ext_resource type="Texture2D" uid="uid://cjstdeolyvae3" path="res://adaptations/red muscle 1/panels/ch1_06_2.png" id="18_mcecv"]
+[ext_resource type="Texture2D" uid="uid://cb3kupgg0kpgf" path="res://adaptations/red muscle 1/panels/ch1_06_3.png" id="19_2lxma"]
+[ext_resource type="Texture2D" uid="uid://b6l0vpfdrlgww" path="res://adaptations/red muscle 1/panels/ch1_06_4.png" id="20_avs4a"]
+[ext_resource type="Texture2D" uid="uid://dydhovy07fswh" path="res://adaptations/red muscle 1/panels/ch1_06_5.png" id="21_sd6jy"]
+[ext_resource type="Texture2D" uid="uid://b16ghuliea85n" path="res://adaptations/red muscle 1/panels/ch1_07_1.png" id="22_kysnb"]
+[ext_resource type="Texture2D" uid="uid://n1ckj18w5sap" path="res://adaptations/red muscle 1/panels/ch1_07_2.png" id="23_5ir0e"]
+[ext_resource type="Texture2D" uid="uid://dqgyxyukf5w6j" path="res://adaptations/red muscle 1/panels/ch1_07_3.png" id="24_vypd1"]
+[ext_resource type="Texture2D" uid="uid://cvbipnd1bkrvm" path="res://adaptations/red muscle 1/panels/ch1_08_1.png" id="25_l5ut3"]
+[ext_resource type="Texture2D" uid="uid://b26ktef12ldci" path="res://adaptations/red muscle 1/panels/ch1_08_2.png" id="26_0p14d"]
+[ext_resource type="Texture2D" uid="uid://btmhqarbgwye0" path="res://adaptations/red muscle 1/panels/ch1_08_3.png" id="27_asccm"]
+[ext_resource type="Texture2D" uid="uid://bb84qxq4fdr3u" path="res://adaptations/red muscle 1/panels/ch1_08_4.png" id="28_gh8tc"]
+[ext_resource type="Texture2D" uid="uid://djt43gspkpwhq" path="res://adaptations/red muscle 1/panels/ch1_08_5.png" id="29_8m6rk"]
+[ext_resource type="Texture2D" uid="uid://qemd7yrsss3u" path="res://adaptations/red muscle 1/panels/ch1_09_1.png" id="30_hka76"]
+[ext_resource type="Texture2D" uid="uid://dry2cql4c4p4u" path="res://adaptations/red muscle 1/panels/ch1_09_2.png" id="31_ybiwk"]
+[ext_resource type="Texture2D" uid="uid://lkv0n28ug1om" path="res://adaptations/red muscle 1/panels/ch1_09_3.png" id="32_5r5yj"]
+[ext_resource type="Texture2D" uid="uid://c56ivgewqakt2" path="res://adaptations/red muscle 1/panels/ch1_09_4.png" id="33_b73dg"]
+[ext_resource type="Texture2D" uid="uid://bnhrrc0wxmsls" path="res://adaptations/red muscle 1/panels/ch1_09_5.png" id="34_1nsqg"]
+[ext_resource type="Texture2D" uid="uid://fdc4lj4u1f15" path="res://adaptations/red muscle 1/panels/ch1_09_6.png" id="35_7h13l"]
+[ext_resource type="Texture2D" uid="uid://cvi31y2r7wuop" path="res://adaptations/red muscle 1/panels/ch1_10_1.png" id="36_vndom"]
+[ext_resource type="Texture2D" uid="uid://dd4egva6bb215" path="res://adaptations/red muscle 1/panels/ch1_10_2.png" id="37_oo84g"]
+[ext_resource type="Texture2D" uid="uid://b76t3hhdyaioo" path="res://adaptations/red muscle 1/panels/ch1_10_3.png" id="38_w6hwp"]
+[ext_resource type="Texture2D" uid="uid://1410p7vmabni" path="res://adaptations/red muscle 1/panels/ch1_10_4.png" id="39_eonl1"]
+[ext_resource type="Texture2D" uid="uid://d1012r5j8njoq" path="res://adaptations/red muscle 1/panels/ch1_10_5.png" id="40_cor2w"]
+[ext_resource type="Texture2D" uid="uid://x0137t27c4ya" path="res://adaptations/red muscle 1/panels/ch1_10_6.png" id="41_fs3gs"]
+[ext_resource type="Texture2D" uid="uid://c05gbma5hq7ri" path="res://adaptations/red muscle 1/panels/ch1_11_1.png" id="42_ar27j"]
+[ext_resource type="Texture2D" uid="uid://bwfiqfb0pdqhg" path="res://adaptations/red muscle 1/panels/ch1_11_2.png" id="43_7mvoa"]
+[ext_resource type="Texture2D" uid="uid://ch5c3tf5t77yk" path="res://adaptations/red muscle 1/panels/ch1_11_3.png" id="44_o6us5"]
+[ext_resource type="Texture2D" uid="uid://bpcj8m7g3spyb" path="res://adaptations/red muscle 1/panels/ch1_11_4.png" id="45_je0dp"]
+[ext_resource type="Texture2D" uid="uid://dmnshl3pdh6ca" path="res://adaptations/red muscle 1/panels/ch1_11_5.png" id="46_c2wuf"]
+[ext_resource type="Texture2D" uid="uid://w7nyhxhm6ga3" path="res://adaptations/red muscle 1/panels/ch1_12_1.png" id="47_bgoo3"]
+[ext_resource type="Texture2D" uid="uid://bqlbw5har4qml" path="res://adaptations/red muscle 1/panels/ch1_12_2.png" id="48_re3vn"]
+[ext_resource type="Texture2D" uid="uid://gs1e2hk8ed5g" path="res://adaptations/red muscle 1/panels/ch1_12_3.png" id="49_nklca"]
+[ext_resource type="Texture2D" uid="uid://s4pnrmdwmx7l" path="res://adaptations/red muscle 1/panels/ch1_12_4.png" id="50_noguo"]
+[ext_resource type="Texture2D" uid="uid://kar3t718n06t" path="res://adaptations/red muscle 1/panels/ch1_12_5.png" id="51_vt4k6"]
+[ext_resource type="Texture2D" uid="uid://dxoynk3rlv7a6" path="res://adaptations/red muscle 1/panels/ch1_12_6.png" id="52_3i8rj"]
+[ext_resource type="Texture2D" uid="uid://dheambukejil1" path="res://adaptations/red muscle 1/panels/ch1_13_1.png" id="53_yctem"]
+[ext_resource type="Texture2D" uid="uid://bcbpcrhcv2o3p" path="res://adaptations/red muscle 1/panels/ch1_13_2.png" id="54_nu22r"]
+[ext_resource type="Texture2D" uid="uid://w0rrfawgao8f" path="res://adaptations/red muscle 1/panels/ch1_13_3.png" id="55_5dp7p"]
+[ext_resource type="Texture2D" uid="uid://bd4m0smawynps" path="res://adaptations/red muscle 1/panels/ch1_13_4.png" id="56_5gaio"]
+[ext_resource type="Texture2D" uid="uid://da3ugkda65p3w" path="res://adaptations/red muscle 1/panels/ch1_13_5.png" id="57_ko4nk"]
+[ext_resource type="Texture2D" uid="uid://cp373mbxty5du" path="res://adaptations/red muscle 1/panels/ch1_13_6.png" id="58_1ji30"]
+[ext_resource type="Texture2D" uid="uid://dfk4vliy5x2rg" path="res://adaptations/red muscle 1/panels/ch1_14_1.png" id="59_buqpo"]
+[ext_resource type="Texture2D" uid="uid://d0u71snbmqnw7" path="res://adaptations/red muscle 1/panels/ch1_14_2.png" id="60_xtcco"]
+[ext_resource type="Texture2D" uid="uid://d1mmuk56w7qfp" path="res://adaptations/red muscle 1/panels/ch1_14_3.png" id="61_l61nr"]
+[ext_resource type="Texture2D" uid="uid://comr5u7k1lh3a" path="res://adaptations/red muscle 1/panels/ch1_15_1.png" id="62_dfo32"]
+[ext_resource type="Texture2D" uid="uid://cv63rvmqcowj2" path="res://adaptations/red muscle 1/panels/ch1_15_2.png" id="63_ngrld"]
+[ext_resource type="Texture2D" uid="uid://g7gw2xqmjm0f" path="res://adaptations/red muscle 1/panels/ch1_15_3.png" id="64_fshaq"]
+[ext_resource type="Texture2D" uid="uid://b72qw0u64jbet" path="res://adaptations/red muscle 1/panels/ch1_15_4.png" id="65_nu3gq"]
+[ext_resource type="Texture2D" uid="uid://dyo5m2wm4luud" path="res://adaptations/red muscle 1/panels/ch1_15_5.png" id="66_3up2n"]
+[ext_resource type="Texture2D" uid="uid://blqcpx0ggduc6" path="res://adaptations/red muscle 1/panels/ch1_15_6.png" id="67_yxgud"]
+[ext_resource type="Texture2D" uid="uid://bdeu7xhwa867o" path="res://adaptations/red muscle 1/panels/ch1_16_1.png" id="68_ootxt"]
+[ext_resource type="Texture2D" uid="uid://cd3pkia07ir7b" path="res://adaptations/red muscle 1/panels/ch1_16_2.png" id="69_lvh6x"]
+[ext_resource type="Texture2D" uid="uid://dwend2ndrsvyn" path="res://adaptations/red muscle 1/panels/ch1_16_3.png" id="70_l5xg2"]
+[ext_resource type="Texture2D" uid="uid://btasioejj5w4l" path="res://adaptations/red muscle 1/panels/ch1_16_4.png" id="71_e8b35"]
+[ext_resource type="Texture2D" uid="uid://x1qfrqcsoq43" path="res://adaptations/red muscle 1/panels/ch1_17_1.png" id="72_l32ji"]
+[ext_resource type="Texture2D" uid="uid://c4tnb4ofpyyks" path="res://adaptations/red muscle 1/panels/ch1_17_2.png" id="73_fnehy"]
+[ext_resource type="Texture2D" uid="uid://c1iqysxr7wwms" path="res://adaptations/red muscle 1/panels/ch1_17_3.png" id="74_uved0"]
+[ext_resource type="Texture2D" uid="uid://by8d3aefx1b04" path="res://adaptations/red muscle 1/panels/ch1_17_4.png" id="75_n4ax4"]
+[ext_resource type="Texture2D" uid="uid://c6nrg32xy6nl2" path="res://adaptations/red muscle 1/panels/ch1_17_5.png" id="76_c55f2"]
+[ext_resource type="Texture2D" uid="uid://dx15x1vlvjnlc" path="res://adaptations/red muscle 1/panels/ch1_17_6.png" id="77_m0k0f"]
+[ext_resource type="Texture2D" uid="uid://dnwrqi4dnhhfl" path="res://adaptations/red muscle 1/panels/ch1_18_1.png" id="78_bnrbh"]
+[ext_resource type="Texture2D" uid="uid://dhcnij0hqicqb" path="res://adaptations/red muscle 1/panels/ch1_18_2.png" id="79_hyem7"]
+[ext_resource type="Texture2D" uid="uid://dbr2vmy0lm1sx" path="res://adaptations/red muscle 1/panels/ch1_18_3.png" id="80_4saf6"]
+[ext_resource type="Texture2D" uid="uid://dvjcsq4ri33dc" path="res://adaptations/red muscle 1/panels/ch1_18_4.png" id="81_cx2b7"]
+[ext_resource type="Texture2D" uid="uid://cdxv4f557x5d2" path="res://adaptations/red muscle 1/panels/ch1_18_5.png" id="82_cfgeu"]
+[ext_resource type="Texture2D" uid="uid://cyw8xhe13efru" path="res://adaptations/red muscle 1/panels/ch1_18_6.png" id="83_t2wks"]
+[ext_resource type="Texture2D" uid="uid://3jhowjqsy2d5" path="res://adaptations/red muscle 1/panels/ch1_19_1.png" id="84_q8yhc"]
+[ext_resource type="Texture2D" uid="uid://ynjmeujwr5c5" path="res://adaptations/red muscle 1/panels/ch1_19_2.png" id="85_g0234"]
+[ext_resource type="Texture2D" uid="uid://da0llsvc3epny" path="res://adaptations/red muscle 1/panels/ch1_19_3.png" id="86_h1i26"]
+[ext_resource type="Texture2D" uid="uid://dn1abemvpnpyx" path="res://adaptations/red muscle 1/panels/ch1_19_4.png" id="87_t5c6i"]
+[ext_resource type="Texture2D" uid="uid://d4ehhcpncruar" path="res://adaptations/red muscle 1/panels/ch1_19_5.png" id="88_agugh"]
+[ext_resource type="Texture2D" uid="uid://dghc2u700luek" path="res://adaptations/red muscle 1/panels/ch1_20_1.png" id="89_j88ke"]
+[ext_resource type="Texture2D" uid="uid://b00ac3o5ix8op" path="res://adaptations/red muscle 1/panels/ch1_20_2.png" id="90_kmtfa"]
+[ext_resource type="Texture2D" uid="uid://b5f2e5n4euedl" path="res://adaptations/red muscle 1/panels/ch1_20_3.png" id="91_ovg7j"]
+[ext_resource type="Texture2D" uid="uid://bvcqy7kj8va5p" path="res://adaptations/red muscle 1/panels/ch1_20_4.png" id="92_r1t6o"]
+[ext_resource type="Texture2D" uid="uid://cflhk6h7vn202" path="res://adaptations/red muscle 1/panels/ch1_20_5.png" id="93_6hkcr"]
+[ext_resource type="Texture2D" uid="uid://hmooi2gfhx03" path="res://adaptations/red muscle 1/panels/ch1_20_6.png" id="94_07yvy"]
+[ext_resource type="Texture2D" uid="uid://cdx1wjjaw2eij" path="res://adaptations/red muscle 1/panels/ch1_21_1.png" id="95_lp6pk"]
+[ext_resource type="Texture2D" uid="uid://gik23fdhv0fl" path="res://adaptations/red muscle 1/panels/ch1_21_2.png" id="96_6ght0"]
+[ext_resource type="Texture2D" uid="uid://dcj2y4mmvdpka" path="res://adaptations/red muscle 1/panels/ch1_21_3.png" id="97_x53li"]
+[ext_resource type="Texture2D" uid="uid://cydir8t3qckn2" path="res://adaptations/red muscle 1/panels/ch1_22_1.png" id="98_mqfe0"]
+[ext_resource type="Texture2D" uid="uid://7buomsylhprn" path="res://adaptations/red muscle 1/panels/ch1_22_2.png" id="99_flru0"]
+[ext_resource type="Texture2D" uid="uid://bp843tdaa0aug" path="res://adaptations/red muscle 1/panels/ch1_22_3.png" id="100_qd3qv"]
+[ext_resource type="Texture2D" uid="uid://dkex1fljql1jj" path="res://adaptations/red muscle 1/panels/ch1_22_4.png" id="101_r0lce"]
+[ext_resource type="Texture2D" uid="uid://crjfvtjvti010" path="res://adaptations/red muscle 1/panels/ch1_22_5.png" id="102_58208"]
+[ext_resource type="Texture2D" uid="uid://dqxriknpjlelm" path="res://adaptations/red muscle 1/panels/ch1_23_1.png" id="103_80el1"]
+[ext_resource type="Texture2D" uid="uid://btmm4lq1b5l8" path="res://adaptations/red muscle 1/panels/ch1_23_2.png" id="104_g31yj"]
+[ext_resource type="Texture2D" uid="uid://bsgt28vefwxsk" path="res://adaptations/red muscle 1/panels/ch1_23_3.png" id="105_itrf5"]
+[ext_resource type="Texture2D" uid="uid://dfvh6q77xtpyn" path="res://adaptations/red muscle 1/panels/ch1_24.png" id="106_urpfs"]
+[ext_resource type="Texture2D" uid="uid://m1bgxxeq4r18" path="res://adaptations/red muscle 1/panels/ch1_25.png" id="107_uirtd"]
+[ext_resource type="Texture2D" uid="uid://dx2hhp3xp5on3" path="res://adaptations/red muscle 1/panels/ch1_26.png" id="108_4eqdj"]
+[ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="112_c6l8h"]
+[ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="113_l2luw"]
+
+[sub_resource type="Resource" id="Resource_75gwy"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_lhcyx"]
+script = ExtResource("3_ctd7i")
+speed = 0.771
+zoom = 1.8
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_c6l8h"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.8
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_l2luw"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 2.337
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_cdlst"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 2.337
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_48cwg"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_0mnfu"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_jgkax"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_bby38"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_hxyl0"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_avjol"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.14
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_bhye1"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.14
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Curve2D" id="Curve2D_aw5q7"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -1628, 0, 0, 0, 0, 0, 1024, 0, 0, 0, 0, 0, 2784, -62.8099, -48.3153, 62.8099, 48.3153, 32, 3808, 0, 0, 0, 0, 1504, 3808, 0, 0, 0, 0, 2144, 3808, 0, 0, 0, 0, 4000, 3808, 0, 0, 0, 0, 4000, 5024, 0, 0, 0, 0, 4000, 6016, 0, 0, 0, 0, 4000, 7200, 0, 0, 0, 0, 4000, 8640, 0, 0, 0, 0, 6928, 13577)
+}
+point_count = 12
+
+[sub_resource type="Animation" id="Animation_nal1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_pclc1"]
+resource_name = "test_anim"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nal1h"]
+_data = {
+&"RESET": SubResource("Animation_nal1h"),
+&"test_anim": SubResource("Animation_pclc1")
+}
+
+[sub_resource type="Environment" id="Environment_cihnq"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bg" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11894.0
+offset_top = -7002.0
+offset_right = -1894.0
+offset_bottom = 2998.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(327.187, 924.429)
+
+[node name="comic" type="Node2D" parent="."]
+
+[node name="Ch101" type="Sprite2D" parent="comic"]
+position = Vector2(0, -1327)
+texture = ExtResource("1_cihnq")
+
+[node name="Ch102" type="Sprite2D" parent="comic"]
+position = Vector2(0, 891)
+texture = ExtResource("2_mja7m")
+
+[node name="Ch1031" type="Sprite2D" parent="comic"]
+position = Vector2(0, 2769)
+texture = ExtResource("3_c6l8h")
+
+[node name="Ch1032" type="Sprite2D" parent="comic"]
+position = Vector2(576, 3808)
+texture = ExtResource("4_l2luw")
+
+[node name="Ch1033" type="Sprite2D" parent="comic"]
+position = Vector2(1328.5, 3816)
+texture = ExtResource("5_avjol")
+
+[node name="Ch1034" type="Sprite2D" parent="comic"]
+position = Vector2(1879.5, 3818.5)
+scale = Vector2(1.00575, 1.00575)
+texture = ExtResource("6_lhcyx")
+
+[node name="Ch1041" type="Sprite2D" parent="comic"]
+position = Vector2(2536, 3689.5)
+texture = ExtResource("7_cdlst")
+
+[node name="Ch1042" type="Sprite2D" parent="comic"]
+position = Vector2(3102, 3824.5)
+texture = ExtResource("8_48cwg")
+
+[node name="Ch1043" type="Sprite2D" parent="comic"]
+position = Vector2(2534, 4042.5)
+texture = ExtResource("9_0mnfu")
+
+[node name="Ch1044" type="Sprite2D" parent="comic"]
+position = Vector2(3672.5, 3799.5)
+texture = ExtResource("10_jgkax")
+
+[node name="Ch1045" type="Sprite2D" parent="comic"]
+position = Vector2(4388.5, 3825)
+texture = ExtResource("11_bby38")
+
+[node name="Ch1046" type="Sprite2D" parent="comic"]
+position = Vector2(4389, 4372)
+texture = ExtResource("12_hxyl0")
+
+[node name="Ch1047" type="Sprite2D" parent="comic"]
+position = Vector2(4385, 5184)
+texture = ExtResource("13_bhye1")
+
+[node name="Ch1051" type="Sprite2D" parent="comic"]
+position = Vector2(4049.5, 6131.5)
+texture = ExtResource("14_y30cy")
+
+[node name="Ch1052" type="Sprite2D" parent="comic"]
+position = Vector2(4547, 6131)
+texture = ExtResource("15_3qt7h")
+
+[node name="Ch1053" type="Sprite2D" parent="comic"]
+position = Vector2(4368, 7366)
+scale = Vector2(1.05883, 1.05883)
+texture = ExtResource("16_xidlb")
+
+[node name="Ch1061" type="Sprite2D" parent="comic"]
+position = Vector2(4389, 8778)
+texture = ExtResource("17_1aqqp")
+
+[node name="Ch1062" type="Sprite2D" parent="comic"]
+position = Vector2(3813, 8778)
+texture = ExtResource("18_mcecv")
+
+[node name="Ch1063" type="Sprite2D" parent="comic"]
+position = Vector2(3813, 9418)
+scale = Vector2(1.0565, 1.0565)
+texture = ExtResource("19_2lxma")
+
+[node name="Ch1064" type="Sprite2D" parent="comic"]
+position = Vector2(4581, 9546)
+texture = ExtResource("20_avs4a")
+
+[node name="Ch1065" type="Sprite2D" parent="comic"]
+position = Vector2(5637, 9546)
+texture = ExtResource("21_sd6jy")
+
+[node name="Ch1071" type="Sprite2D" parent="comic"]
+position = Vector2(6789, 9546)
+texture = ExtResource("22_kysnb")
+
+[node name="Ch1072" type="Sprite2D" parent="comic"]
+position = Vector2(7190, 10378)
+texture = ExtResource("23_5ir0e")
+
+[node name="Ch1073" type="Sprite2D" parent="comic"]
+position = Vector2(7473.96, 11528)
+scale = Vector2(1.60561, 1.60561)
+texture = ExtResource("24_vypd1")
+
+[node name="Ch1081" type="Sprite2D" parent="comic"]
+position = Vector2(7473, 12395)
+scale = Vector2(1.60659, 1.60659)
+texture = ExtResource("25_l5ut3")
+
+[node name="Ch1082" type="Sprite2D" parent="comic"]
+position = Vector2(7429, 13834)
+texture = ExtResource("26_0p14d")
+
+[node name="Ch1083" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("27_asccm")
+
+[node name="Ch1084" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("28_gh8tc")
+
+[node name="Ch1085" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("29_8m6rk")
+
+[node name="Ch1091" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("30_hka76")
+
+[node name="Ch1092" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("31_ybiwk")
+
+[node name="Ch1093" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("32_5r5yj")
+
+[node name="Ch1094" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("33_b73dg")
+
+[node name="Ch1095" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("34_1nsqg")
+
+[node name="Ch1096" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("35_7h13l")
+
+[node name="Ch1101" type="Sprite2D" parent="comic"]
+position = Vector2(4514, 11427)
+texture = ExtResource("36_vndom")
+
+[node name="Ch1102" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("37_oo84g")
+
+[node name="Ch1103" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("38_w6hwp")
+
+[node name="Ch1104" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("39_eonl1")
+
+[node name="Ch1105" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("40_cor2w")
+
+[node name="Ch1106" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("41_fs3gs")
+
+[node name="Ch1111" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("42_ar27j")
+
+[node name="Ch1112" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("43_7mvoa")
+
+[node name="Ch1113" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("44_o6us5")
+
+[node name="Ch1114" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("45_je0dp")
+
+[node name="Ch1115" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("46_c2wuf")
+
+[node name="Ch1121" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("47_bgoo3")
+
+[node name="Ch1122" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("48_re3vn")
+
+[node name="Ch1123" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("49_nklca")
+
+[node name="Ch1124" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("50_noguo")
+
+[node name="Ch1125" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("51_vt4k6")
+
+[node name="Ch1126" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("52_3i8rj")
+
+[node name="Ch1131" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("53_yctem")
+
+[node name="Ch1132" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("54_nu22r")
+
+[node name="Ch1133" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("55_5dp7p")
+
+[node name="Ch1134" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("56_5gaio")
+
+[node name="Ch1135" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("57_ko4nk")
+
+[node name="Ch1136" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("58_1ji30")
+
+[node name="Ch1141" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("59_buqpo")
+
+[node name="Ch1142" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("60_xtcco")
+
+[node name="Ch1143" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("61_l61nr")
+
+[node name="Ch1151" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("62_dfo32")
+
+[node name="Ch1152" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("63_ngrld")
+
+[node name="Ch1153" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("64_fshaq")
+
+[node name="Ch1154" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("65_nu3gq")
+
+[node name="Ch1155" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("66_3up2n")
+
+[node name="Ch1156" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("67_yxgud")
+
+[node name="Ch1161" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("68_ootxt")
+
+[node name="Ch1162" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("69_lvh6x")
+
+[node name="Ch1163" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("70_l5xg2")
+
+[node name="Ch1164" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("71_e8b35")
+
+[node name="Ch1171" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("72_l32ji")
+
+[node name="Ch1172" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("73_fnehy")
+
+[node name="Ch1173" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("74_uved0")
+
+[node name="Ch1174" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("75_n4ax4")
+
+[node name="Ch1175" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("76_c55f2")
+
+[node name="Ch1176" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("77_m0k0f")
+
+[node name="Ch1181" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("78_bnrbh")
+
+[node name="Ch1182" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("79_hyem7")
+
+[node name="Ch1183" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("80_4saf6")
+
+[node name="Ch1184" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("81_cx2b7")
+
+[node name="Ch1185" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("82_cfgeu")
+
+[node name="Ch1186" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("83_t2wks")
+
+[node name="Ch1191" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("84_q8yhc")
+
+[node name="Ch1192" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("85_g0234")
+
+[node name="Ch1193" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("86_h1i26")
+
+[node name="Ch1194" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("87_t5c6i")
+
+[node name="Ch1195" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("88_agugh")
+
+[node name="Ch1201" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("89_j88ke")
+
+[node name="Ch1202" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("90_kmtfa")
+
+[node name="Ch1203" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("91_ovg7j")
+
+[node name="Ch1204" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("92_r1t6o")
+
+[node name="Ch1205" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("93_6hkcr")
+
+[node name="Ch1206" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("94_07yvy")
+
+[node name="Ch1211" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("95_lp6pk")
+
+[node name="Ch1212" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("96_6ght0")
+
+[node name="Ch1213" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("97_x53li")
+
+[node name="Ch1221" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("98_mqfe0")
+
+[node name="Ch1222" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("99_flru0")
+
+[node name="Ch1223" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("100_qd3qv")
+
+[node name="Ch1224" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("101_r0lce")
+
+[node name="Ch1225" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("102_58208")
+
+[node name="Ch1231" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("103_80el1")
+
+[node name="Ch1232" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("104_g31yj")
+
+[node name="Ch1233" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("105_itrf5")
+
+[node name="Ch124" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("106_urpfs")
+
+[node name="Ch125" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("107_uirtd")
+
+[node name="Ch126" type="Sprite2D" parent="comic"]
+position = Vector2(3961, 2024)
+texture = ExtResource("108_4eqdj")
+
+[node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oiqj0")
+preview_cam = NodePath("../PreviewCam")
+path_follow = NodePath("../Path2D/PathFollow2D")
+frame = NodePath("../PreviewCam/Frame")
+path_node_path = NodePath("../Path2D")
+
+[node name="PathPointMarker_522357501" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = -1628.0
+offset_right = 256.0
+offset_bottom = -1372.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_75gwy")
+
+[node name="PathPointMarker_5591363580" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.1565, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = -3.48
+offset_top = 1020.6
+offset_right = 249.04
+offset_bottom = 1273.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_lhcyx")
+
+[node name="PathPointMarker_5948206655" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = -3.48
+offset_top = 2780.6
+offset_right = 249.04
+offset_bottom = 3033.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_c6l8h")
+
+[node name="PathPointMarker_5955209394" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 28.52
+offset_top = 3804.6
+offset_right = 281.04
+offset_bottom = 4057.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_l2luw")
+
+[node name="PathPointMarker_6060892768" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 3996.52
+offset_top = 3804.6
+offset_right = 4249.04
+offset_bottom = 4057.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_cdlst")
+
+[node name="PathPointMarker_6140574440" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 3996.52
+offset_top = 5020.6
+offset_right = 4249.04
+offset_bottom = 5273.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_48cwg")
+
+[node name="PathPointMarker_6276157114" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 3996.52
+offset_top = 6012.6
+offset_right = 4249.04
+offset_bottom = 6265.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_0mnfu")
+
+[node name="PathPointMarker_6370211168" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 3996.52
+offset_top = 7196.6
+offset_right = 4249.04
+offset_bottom = 7449.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_jgkax")
+
+[node name="PathPointMarker_6376879841" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 3996.52
+offset_top = 8636.6
+offset_right = 4249.04
+offset_bottom = 8889.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_bby38")
+
+[node name="PathPointMarker_6389764802" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 6924.52
+offset_top = 13573.6
+offset_right = 7177.04
+offset_bottom = 13826.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_hxyl0")
+
+[node name="PathPointMarker_551566895" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = -3.48
+offset_top = 2780.6
+offset_right = 249.04
+offset_bottom = 3033.24
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("113_l2luw")
+point_data = SubResource("Resource_avjol")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Container/Speed")
+max_speed = 2.0
+mid_hue = 0.25
+
+[node name="PathPointMarker_558302664" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = -6.48
+offset_top = 1019.6
+offset_right = 246.04
+offset_bottom = 1272.24
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("113_l2luw")
+point_data = SubResource("Resource_bhye1")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Container/Speed")
+max_speed = 2.0
+mid_hue = 0.25
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_aw5q7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(0, -1628)
+rotation = 1.34307
+rotates = false
+loop = false
+script = ExtResource("4_s8hio")
+speed_multiplier = -0.75
+scroll_speed = 25.0
+scroll_decay_rate = 0.075
+TOUCHPAD_VELOCITY = 14.0
+data_source_control_path = NodePath("../../PointData")
+base_zoom = 0.66
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+
+[node name="Frame2" type="Line2D" parent="Path2D/PathFollow2D/Camera2D"]
+z_index = 2
+rotation = -1.34307
+points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
+closed = true
+width = 20.0
+default_color = Color(1, 1, 1, 0.8)
+
+[node name="PreviewCam" type="Camera2D" parent="."]
+position = Vector2(-3, 1023)
+zoom = Vector2(0.7524, 0.7524)
+
+[node name="Frame" type="Line2D" parent="PreviewCam"]
+z_index = 1
+scale = Vector2(1.32908, 1.32908)
+points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540, 0, 0)
+closed = true
+width = 30.096
+default_color = Color(1, 0, 0, 0.109804)
+script = ExtResource("5_iaheh")
+
+[node name="progress" type="AnimationPlayer" parent="." node_paths=PackedStringArray("path_follow")]
+libraries = {
+&"": SubResource("AnimationLibrary_nal1h")
+}
+speed_scale = 0.0
+script = ExtResource("6_tl2i0")
+path_follow = NodePath("../Path2D/PathFollow2D")
+start_anim = "test_anim"
+edit_mode = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cihnq")

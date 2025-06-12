@@ -9,7 +9,7 @@ class_name PathPointMarker
 @export var container: Control
 @export var base_size: Vector2 = Vector2(256,256)
 @export var spd_label: Label # Assuming this is a standard Godot Label node
-
+@export var zoom_label: Label
 # Define the speed range for mapping to the gradient.
 # You'll need to adjust these values based on your expected speed range.
 @export var min_speed: float = 0.0
@@ -49,6 +49,7 @@ func update_info():
 		update_color_from_speed_hue()
 		
 		spd_label.text = "S: %.2f" % [point_data.speed]
+		zoom_label.text = "Z: %.2f" % [point_data.zoom]
 	
 func _ready():
 	size = base_size

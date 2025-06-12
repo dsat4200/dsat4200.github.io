@@ -45,6 +45,7 @@ var scroll_smoothing_factor = 0.1
 
 
 func _ready():
+	print(progress)
 	# This function now handles all initial setup.
 	_initialize_node_references()
 	_apply_current_zoom()
@@ -54,12 +55,13 @@ func _ready():
 	add_child(audio_stream_player)
 	
 	# Ensures the correct nodes are visible/hidden at the starting position.
+
+	
 	if parent_path_2d and parent_path_2d.curve:
 		var start_point_index = _get_closest_point_index(parent_path_2d.curve, 0)
 		_update_node_visibility(start_point_index)
 
 func _process(delta):
-	
 	# In the editor, check if the path's point count has changed.
 	if Engine.is_editor_hint():
 		if parent_path_2d and parent_path_2d.curve:
@@ -69,6 +71,7 @@ func _process(delta):
 		
 		return
 	else:
+		#print(progress)
 		smooth_scroll(delta)
 	_apply_current_zoom()
 
@@ -250,13 +253,14 @@ func _apply_current_zoom():
 	var prev_data = _get_point_data_for_index(segment_info.prev_point_index)
 	var next_data = _get_point_data_for_index(segment_info.next_point_index)
 
+		
 	var zoom_a = prev_data.zoom if prev_data else 1.0
 	var zoom_b = next_data.zoom if next_data else 1.0
 
 	var t = segment_info.segment_progress
 	var smoothed_t = t * t * (3.0 - 2.0 * t) # Smoothstep interpolation
 	var calculated_zoom = lerp(zoom_a, zoom_b, smoothed_t)
-	#print(calculated_zoom)
+	print(calculated_zoom)
 	camera_2d_node.zoom = Vector2(calculated_zoom * base_zoom, calculated_zoom * base_zoom)
 
 func _update_managed_nodes_list():

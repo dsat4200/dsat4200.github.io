@@ -1,33 +1,112 @@
 Godot Engine v4.4.stable.official.4c311cbee - https://godotengine.org
 OpenGL API 3.3.0 Core Profile Context 24.10.34.240723 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics
 
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1443)
+0.0
+1.0
+1.0
+1.0
+1.00000154528549
+1.00001231819072
+1.00004366764641
+1.00010757368228
+1.00025250575965
+1.00052047420593
+1.00095100307409
+1.0015762461683
+1.00241875602923
+1.00349100755824
+1.00479601051652
+1.00651947699291
+1.00868868661191
+1.0113149810787
+1.01439379050961
+1.01790631456759
+1.02182204059317
+1.02646904983698
+1.03182057272757
+1.03826502847337
+1.04576023269489
+1.05423892124618
+1.0636111500037
+1.07433868961003
+1.08629269191194
+1.09932090044898
+1.11325412334195
+1.12791376677875
+1.14311912962615
+1.15869374979849
+1.17447056671591
+1.19029575543853
+1.20603123926929
+1.2215560808243
+1.2367670561959
+1.25157833082963
+1.2659207013164
+1.27974032100761
+1.29299745094496
+1.30566473195792
+1.31772568382897
+1.32917319426615
+1.34000793917423
+1.35023709729277
+1.35987306947511
+1.36893230311707
+1.37743446392485
+1.38540148970246
+1.39285691627781
+1.40059029316628
+1.40847059489697
+1.41713383534813
+1.4263267400127
+1.4365508335633
+1.4474491030088
+1.45939231117537
+1.4719288417122
+1.48466450611044
+1.49726160201179
+1.5094373444167
+1.52148081920097
+1.53299830035634
+1.5436642687768
+1.55321949330118
+1.56146754297581
+1.56827038774164
+1.5735429444663
+1.57724704054768
+1.57938508612637
+1.57998559652966
+1.57811206059002
+1.57344137645734
+1.56644904370555
+1.55757415450664
+1.54721426482188
+1.53572318456655
+1.523410914226
+1.51054532298528
+1.49735445845814
+1.48403005003354
+1.47073080543915
+1.45758603562108
+1.44469933259884
+1.43215176735024
+1.42000522674827
+1.40830524313441
+1.39708358680733
+1.38636039308765
+1.37614662381535
+1.36644528404365
+1.35725334169923
+1.34856276912036
+1.34036188064258
+1.33263604921046
+1.32536852511232
+1.31854102162829
+1.31213444235712
+1.30612904409788
+1.30050476707492
+1.29524186749308
+1.2903206555159
+1.28572203501473
+1.28142728466685
+1.27741853420796
+1.27367861354764

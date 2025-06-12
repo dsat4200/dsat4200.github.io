@@ -4,6 +4,7 @@ var selected:PathPointMarker
 @export var preview_cam:Camera2D
 @export var path_follow:PathFollow2D
 @export var frame:Line2D
+var ingame = false
 
 const PathPointMarker_Scene = preload("res://scripts/PathPointMarker.tscn")
 func _ready():
@@ -13,7 +14,9 @@ func _ready():
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
 		hide_all_markers()
 	else:
-		queue_free()
+		ingame=true
+		hide()
+		#queue_free()
 func hide_all_markers():
 	for i in get_children():
 		i.disappear()
@@ -229,6 +232,9 @@ func update_frame():
 			preview_cam.zoom.y = selected.point_data.zoom * path_follow.base_zoom
 		
 func _process(_delta):
+	if ingame:
+		return
+		
 	if not is_instance_valid(selected):
 		return
 		

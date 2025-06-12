@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6878mkbup4ys"]
+[gd_scene load_steps=20 format=3 uid="uid://c6878mkbup4ys"]
 
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_ykl4k"]
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_380tl"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b3nl2seyf00jt" path="res://3DTest/img/row-4-column-1.png" id="11_df7qx"]
 [ext_resource type="Texture2D" uid="uid://bgxt7qseu4aul" path="res://3DTest/img/row-5-column-1.png" id="12_0u6l2"]
 [ext_resource type="Texture2D" uid="uid://bmeivkgvymnjd" path="res://3DTest/img/1_1.png" id="12_75gwy"]
-[ext_resource type="Script" uid="uid://ckhugk21ptv6t" path="res://3DTest/progress.gd" id="12_nal1h"]
 [ext_resource type="Texture2D" uid="uid://dnwqt2us5bd5b" path="res://3DTest/img/1_2.png" id="13_df7qx"]
 [ext_resource type="Texture2D" uid="uid://cd32s71ipywqj" path="res://3DTest/img/1_3.png" id="14_0u6l2"]
 
@@ -237,7 +236,7 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(0, 26912)
+position = Vector2(0, 2784)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
@@ -248,12 +247,8 @@ width = 40.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 
-[node name="progress" type="AnimationPlayer" parent="." node_paths=PackedStringArray("path_follow")]
+[node name="progress" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_nal1h")
 }
 speed_scale = 0.0
-script = ExtResource("12_nal1h")
-path_follow = NodePath("../Path2D/PathFollow2D")
-start_anim = "test_anim"
-edit_mode = true

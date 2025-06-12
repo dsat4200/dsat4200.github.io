@@ -111,33 +111,6 @@ func _update_labels():
 			
 func move_point():
 	var curve = _path_node.curve
-
-	var current_point_count = curve.get_point_count()
-	var existing_labels_on_node: Array[PathPointMarker_Class] = []
-
-	# Populate the array of existing labels.
-	for child in get_children():
-		if child is PathPointMarker_Class:
-			existing_labels_on_node.append(child)
-
-
-	# Iterate through the curve points and corresponding labels.
-	for i in range(current_point_count):
-		var point_pos_global = curve.get_point_position(i) # Get point position directly
-
-		# Check if there's a label at the current index to compare.
-		if i < existing_labels_on_node.size():
-			var label_at_index = existing_labels_on_node[i]
-
-			# If the label's global position doesn't match the point's position, correct it.
-			if not label_at_index.global_position.is_equal_approx(point_pos_global):
-				label_at_index.global_position = point_pos_global
-				break # Stop after correcting the first mismatch.
-		else:
-			pass
-			
-func initialize_points():
-	var curve = _path_node.curve
 	var current_point_count = curve.get_point_count()
 	var existing_labels_on_node: Array[PathPointMarker_Class] = []
 	for child in get_children():
@@ -150,65 +123,117 @@ func initialize_points():
 		_previous_curve_points.clear()
 		_label_map.clear()
 		return
-	
 
 	var current_curve_points: Array[Vector2] = []
 	for i in range(current_point_count):
 		current_curve_points.append(curve.get_point_position(i))
 
-	var labels_to_keep: Array[PathPointMarker_Class] = []
-	var labels_to_remove_after_processing: Array[PathPointMarker_Class] = existing_labels_on_node.duplicate()
+	# Sort labels by their original index or some other reliable order if they aren't already.
+	# Assuming existing_labels_on_node is already ordered correctly (e.g., by creation order,
+	# or you have an identifier on PathPointMarker_Class that tells you its corresponding point index).
+	# If not, you might need to add a property to PathPointMarker_Class to store its associated
+	# curve point index, and then sort existing_labels_on_node based on that property.
+	# For simplicity, I'm assuming existing_labels_on_node is in the correct order
+	# corresponding to the curve points.
 
 	for i in range(current_point_count):
-		# FIX: Convert point position to global space for a reliable comparison
 		var point_pos_global = current_curve_points[i]
-		var found_label: PathPointMarker_Class = null
 
-		# Find an existing label by comparing global positions
-		for label in existing_labels_on_node:
-			if label.global_position.is_equal_approx(point_pos_global):
-				found_label = label
-				break
-		
-		if found_label:
-			labels_to_keep.append(found_label)
-			if labels_to_remove_after_processing.has(found_label):
-				labels_to_remove_after_processing.erase(found_label)
-			
-			# FIX: Set position by converting global position back to our local space
-			found_label.position = point_pos_global
-			found_label.pivot_offset = found_label.size / 2.0
-			found_label.update_info() # Refresh data on the marker
-			if not selected or found_label != selected:
-				found_label.disappear()
+		# Check if there is a corresponding label at this index
+		if i < existing_labels_on_node.size():
+			var label_at_index = existing_labels_on_node[i]
+			# If the label's global position does NOT match the corresponding point's global position,
+			# then this is the mismatch we're looking for.
+			if not label_at_index.global_position.is_equal_approx(point_pos_global):
+				# This is the label that needs to be moved.
+				# You would then update its position here:
+				label_at_index.global_position = point_pos_global
+				print("Mismatch found and corrected for label at index %d: %s" % [i, label_at_index])
+				break # Found the first mismatch and corrected it, then exit.
 		else:
-			#print("creating")
-			# This is a new point, so create a new label for it.
-			var new_marker = PathPointMarker_Scene.instantiate()
-			new_marker.name = "PathPointMarker_%s" % Time.get_ticks_usec()
-			add_child(new_marker)
-			new_marker.owner = get_tree().edited_scene_root
-			#print(point_pos_global)
-			# FIX: Set position correctly using the global position
-			new_marker.position = point_pos_global
-			new_marker.pivot_offset = new_marker.size / 2.0
-			new_marker.disappear()
+
+			pass
+
+func initialize_points(): 
+	var curve = _path_node.curve 
+	var current_point_count = curve.get_point_count() 
+	var existing_labels_on_node: Array[PathPointMarker_Class] = [] 
+	for child in get_children(): 
+		if child is PathPointMarker_Class: 
+			existing_labels_on_node.append(child) 
+
+	if not is_instance_valid(curve): 
+		for label in existing_labels_on_node: 
+			label.queue_free() 
+		_previous_curve_points.clear() 
+		_label_map.clear() 
+		return 
+	
+	var current_curve_points: Array[Vector2] = [] 
+	for i in range(current_point_count): 
+		current_curve_points.append(curve.get_point_position(i)) 
+
+	var labels_to_keep: Array[PathPointMarker_Class] = [] 
+	var labels_to_remove_after_processing: Array[PathPointMarker_Class] = existing_labels_on_node.duplicate() 
+
+	for i in range(current_point_count): 
+		# FIX: Convert point position to global space for a reliable comparison 
+		var point_pos_global = current_curve_points[i] 
+		var found_label: PathPointMarker_Class = null 
+
+		# Find an existing label by comparing global positions 
+		for label in existing_labels_on_node: 
+			if label.global_position.is_equal_approx(point_pos_global): 
+				found_label = label 
+				break 
+		
+		if found_label: 
+			labels_to_keep.append(found_label) 
+			if labels_to_remove_after_processing.has(found_label): 
+				labels_to_remove_after_processing.erase(found_label) 
 			
-			labels_to_keep.append(new_marker)
+			# FIX: Set position by converting global position back to our local space 
+			found_label.position = point_pos_global 
+			found_label.pivot_offset = found_label.size / 2.0 
+			found_label.update_info() # Refresh data on the marker 
+			if not selected or found_label != selected: 
+				found_label.disappear() 
+		else: 
+			# This is a new point, so create a new label for it. 
+			var new_marker = PathPointMarker_Scene.instantiate() 
+			new_marker.name = "PathPointMarker_%s" % Time.get_ticks_usec() 
+			add_child(new_marker) 
+			
+			# ----- MODIFICATION START -----
+			# Set the child index to match the point's index in the curve.
+			# This ensures the label nodes are ordered the same way as the Path2D points.
+			move_child(new_marker, i)
+			# ----- MODIFICATION END -----
 
-	# Remove surplus labels
-	for label_to_remove in labels_to_remove_after_processing:
-		if is_instance_valid(label_to_remove):
-			label_to_remove.queue_free()
+			new_marker.owner = get_tree().edited_scene_root 
+			#print(point_pos_global) 
+			# FIX: Set position correctly using the global position 
+			new_marker.position = point_pos_global 
+			new_marker.pivot_offset = new_marker.size / 2.0 
+			new_marker.disappear() 
+			
+			labels_to_keep.append(new_marker) 
 
-	# Finalize state for the next update
-	_previous_curve_points = current_curve_points.duplicate()
-	_label_map.clear()
-	if labels_to_keep.size() == current_curve_points.size():
-		for i in range(current_point_count):
-			_label_map[current_curve_points[i]] = labels_to_keep[i]
-	#print("removed labels: "+str(labels_to_remove_after_processing))
+	# Remove surplus labels 
+	for label_to_remove in labels_to_remove_after_processing: 
+		if is_instance_valid(label_to_remove): 
+			label_to_remove.queue_free() 
+
+	# Finalize state for the next update 
+	_previous_curve_points = current_curve_points.duplicate() 
+	_label_map.clear() 
+	if labels_to_keep.size() == current_curve_points.size(): 
+		for i in range(current_point_count): 
+			_label_map[current_curve_points[i]] = labels_to_keep[i] 
+	#print("removed labels: "+str(labels_to_remove_after_processing)) 
 	#print("kept labels: "+str(labels_to_keep))
+
+
 func _on_editor_selection_changed():
 	var editor_selection := EditorInterface.get_selection().get_selected_nodes()
 	if (editor_selection.size() == 1 and (editor_selection[0] is PathPointMarker)):

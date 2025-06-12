@@ -210,12 +210,40 @@ show_target_node = false
 
 [sub_resource type="Resource" id="Resource_xidlb"]
 script = ExtResource("3_ctd7i")
-speed = 1.0
+speed = 2.476
 zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
 [sub_resource type="Resource" id="Resource_1aqqp"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_mcecv"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_2lxma"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_avs4a"]
+script = ExtResource("3_ctd7i")
+speed = 1.0
+zoom = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_sd6jy"]
 script = ExtResource("3_ctd7i")
 speed = 1.0
 zoom = 1.0
@@ -264,38 +292,10 @@ zoom = 1.0
 target_node = NodePath("")
 show_target_node = false
 
-[sub_resource type="Resource" id="Resource_mcecv"]
-script = ExtResource("3_ctd7i")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_2lxma"]
-script = ExtResource("3_ctd7i")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_avs4a"]
-script = ExtResource("3_ctd7i")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
-[sub_resource type="Resource" id="Resource_sd6jy"]
-script = ExtResource("3_ctd7i")
-speed = 1.0
-zoom = 1.0
-target_node = NodePath("")
-show_target_node = false
-
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, -1628, 0, 0, 0, 0, 0, 1024, 0, 0, 0, 0, 0, 3168, 0, 0, 0, 0, 0, 3840, 0, 0, 0, 0, 1504, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4224, 0, 300, 0, -300, 5024, 4928, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5028.23, 5371.76, 0, 0, 0, 0, 5024, 5920, 0, 0, 0, 0, 5024, 7392, 0, 0, 0, 0, 5057, 8235, 0, 0, 0, 0, 5024, 8800, 0, 0, 0, 0, 5180, 9461, 0, 0, 0, 0, 5034, 9884, 0, 0, 0, 0, 6816, 9920, 0, 0, 0, 0, 8064, 9920, 0, 0, 0, 0, 8064, 10112, 0, 0, 0, 0, 8064, 10656, 0, 0, 0, 0, 8544, 10656, 0, 0, 0, 0, 8544, 11264, 0, 0, 0, 0, 8544, 12768, 0, 0, 0, 0, 8544, 13760)
+"points": PackedVector2Array(0, 0, 0, 0, 0, -1628, 0, 0, 0, 0, 0, 1024, 0, 0, 0, 0, 0, 3168, 0, 0, 0, 0, 0, 3840, 0, 0, 0, 0, 1504, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4224, 0, 300, 0, -300, 5024, 4928, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5028.23, 5371.76, 0, 0, 0, 0, 5024, 5920, 0, 0, 0, 0, 5024, 7392, 0, 0, 0, 0, 5207, 8539, 0, 0, 0, 0, 5133, 8962, 0, 0, 0, 0, 5098, 9924, 0, 0, 0, 0, 5505, 9933, 0, 0, 0, 0, 6678, 9935, 0, 0, 0, 0, 8064, 9920, 0, 0, 0, 0, 8064, 10112, 0, 0, 0, 0, 8064, 10656, 0, 0, 0, 0, 8544, 10656, 0, 0, 0, 0, 8544, 11264, 0, 0, 0, 0, 8544, 12768, 0, 0, 0, 0, 8544, 13760)
 }
 point_count = 25
 
@@ -808,7 +808,7 @@ path_follow = NodePath("../Path2D/PathFollow2D")
 frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
-[node name="PathPointMarker_1638396944" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878371316" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -832,7 +832,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638397212" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878371592" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -856,7 +856,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638397396" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878371769" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -880,7 +880,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638397582" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878371923" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -904,7 +904,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638397760" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372089" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -928,7 +928,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638397910" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372229" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -952,7 +952,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398059" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372381" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -976,7 +976,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398221" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372523" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1000,7 +1000,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398374" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372679" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1024,7 +1024,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398526" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372822" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1048,7 +1048,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398680" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878372969" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1072,7 +1072,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398839" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878373151" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1096,7 +1096,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638398987" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878373315" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1120,17 +1120,17 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638399134" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
+[node name="PathPointMarker_3878373755" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5053.52
-offset_top = 8231.6
-offset_right = 5306.04
-offset_bottom = 8484.24
+offset_left = 5203.52
+offset_top = 8535.6
+offset_right = 5456.04
+offset_bottom = 8788.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
@@ -1144,17 +1144,17 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638399313" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878374491" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5020.52
-offset_top = 8796.6
-offset_right = 5273.04
-offset_bottom = 9049.24
+offset_left = 5129.52
+offset_top = 8958.6
+offset_right = 5382.04
+offset_bottom = 9211.24
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
@@ -1168,23 +1168,23 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638400621" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878374629" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5176.52
-offset_top = 9457.6
-offset_right = 5429.04
-offset_bottom = 9710.24
+offset_left = 5094.52
+offset_top = 9920.6
+offset_right = 5347.04
+offset_bottom = 10173.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_kysnb")
+point_data = SubResource("Resource_mcecv")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1192,23 +1192,23 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1638400757" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878374765" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 5030.52
-offset_top = 9880.6
-offset_right = 5283.04
-offset_bottom = 10133.2
+offset_left = 5501.52
+offset_top = 9929.6
+offset_right = 5754.04
+offset_bottom = 10182.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_5ir0e")
+point_data = SubResource("Resource_2lxma")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1216,23 +1216,23 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1654198148" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878374908" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 6812.52
-offset_top = 9916.6
-offset_right = 7065.04
-offset_bottom = 10169.2
+offset_left = 6674.52
+offset_top = 9931.6
+offset_right = 6927.04
+offset_bottom = 10184.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_vypd1")
+point_data = SubResource("Resource_avs4a")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1240,7 +1240,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1668560507" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3878375051" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1256,7 +1256,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_l5ut3")
+point_data = SubResource("Resource_sd6jy")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1264,7 +1264,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1717045698" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3890641382" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1280,7 +1280,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_0p14d")
+point_data = SubResource("Resource_kysnb")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1288,7 +1288,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1717045985" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3946024548" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1304,7 +1304,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_asccm")
+point_data = SubResource("Resource_5ir0e")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1312,7 +1312,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1792847341" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3962791876" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1328,7 +1328,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_mcecv")
+point_data = SubResource("Resource_vypd1")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1336,7 +1336,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1792847686" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_3974685424" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1352,7 +1352,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_2lxma")
+point_data = SubResource("Resource_l5ut3")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1360,7 +1360,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1812130976" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_4038565095" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1376,7 +1376,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_avs4a")
+point_data = SubResource("Resource_0p14d")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1384,7 +1384,7 @@ zoom_label = NodePath("Container/Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
-[node name="PathPointMarker_1812944944" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_4069490970" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
@@ -1400,7 +1400,7 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("113_l2luw")
-point_data = SubResource("Resource_sd6jy")
+point_data = SubResource("Resource_asccm")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
@@ -1435,7 +1435,7 @@ width = 20.0
 default_color = Color(1, 1, 1, 0.8)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5034, 9884)
+position = Vector2(5133, 8962)
 zoom = Vector2(0.66, 0.66)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]

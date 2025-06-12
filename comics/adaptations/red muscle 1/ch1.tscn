@@ -912,7 +912,7 @@ width = 20.0
 default_color = Color(1, 1, 1, 0.8)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(0, 2784)
+position = Vector2(12828.9, 3089.87)
 zoom = Vector2(0.66, 0.66)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]

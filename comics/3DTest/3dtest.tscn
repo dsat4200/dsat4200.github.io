@@ -236,7 +236,7 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(0, 2784)
+position = Vector2(12828.9, 3089.87)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false

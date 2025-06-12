@@ -260,7 +260,7 @@ func _apply_current_zoom():
 	var t = segment_info.segment_progress
 	var smoothed_t = t * t * (3.0 - 2.0 * t) # Smoothstep interpolation
 	var calculated_zoom = lerp(zoom_a, zoom_b, smoothed_t)
-	print(calculated_zoom)
+	#print(calculated_zoom)
 	camera_2d_node.zoom = Vector2(calculated_zoom * base_zoom, calculated_zoom * base_zoom)
 
 func _update_managed_nodes_list():

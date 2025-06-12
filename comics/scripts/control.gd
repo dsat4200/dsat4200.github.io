@@ -1,10 +1,25 @@
 @tool
 extends Control
+@export_tool_button("Override Positions (UNSTABLE)", "Callable") var hello_action = hello
+var hold_my_beer = false
+func hello():
+	hold_my_beer = true
+	for i in get_children():
+		print("")
+		print("Setting point "+str(_path_node.curve.get_point_position(i.get_index()))+ " to "+str(i.position))
+		_path_node.curve.set_point_position(i.get_index(),i.position)
+		print("Set point "+str(_path_node.curve.get_point_position(i.get_index()))+ " to "+str(i.position))
+		print("")
+	hold_my_beer = false
+		
+		
 var selected:PathPointMarker
 @export var preview_cam:Camera2D
 @export var path_follow:PathFollow2D
 @export var frame:Line2D
 var ingame = false
+
+
 
 const PathPointMarker_Scene = preload("res://scripts/PathPointMarker.tscn")
 func _ready():
@@ -75,6 +90,9 @@ func _exit_tree():
 var _previous_curve_points: Array[Vector2] = []
 var _label_map: Dictionary = {} # Stores a mapping of point_position (as string) to label node
 func _update_labels():
+	if hold_my_beer:
+		return
+	#print("update")
 	if not is_instance_valid(_path_node):
 		for child in get_children():
 			if child is PathPointMarker_Class:
@@ -268,6 +286,7 @@ func _process(_delta):
 		return
 		
 	if selected is PathPointMarker:
+		#print("selected")
 		selected.update_info()
 		#update_position()
 

@@ -48,7 +48,7 @@ func update_info():
 		# Update color based on speed using hue interpolation
 		update_color_from_speed_hue()
 		
-		spd_label.text = "S: %.2f" % [point_data.speed]
+		spd_label.text = "%.2f" % [point_data.speed]
 		zoom_label.text = "%.1f" % [point_data.zoom]
 	
 func _ready():

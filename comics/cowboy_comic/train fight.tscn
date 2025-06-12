@@ -1104,7 +1104,7 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5020.52, 7452.6)
+position = Vector2(5024, 5504)
 zoom = Vector2(0.505, 0.505)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]

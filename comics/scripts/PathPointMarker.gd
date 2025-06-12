@@ -49,7 +49,7 @@ func update_info():
 		update_color_from_speed_hue()
 		
 		spd_label.text = "S: %.2f" % [point_data.speed]
-		zoom_label.text = "Z: %.2f" % [point_data.zoom]
+		zoom_label.text = "%.1f" % [point_data.zoom]
 	
 func _ready():
 	if !Engine.is_editor_hint():

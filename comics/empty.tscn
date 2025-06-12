@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="10_i2fki"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="11_ckekq"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="12_ea8f6"]
-[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="13_j3aic"]
+[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://scripts/frame.gd" id="13_j3aic"]
 [ext_resource type="Script" uid="uid://ckhugk21ptv6t" path="res://3DTest/progress.gd" id="14_siqrk"]
 
 [sub_resource type="Resource" id="Resource_75gwy"]

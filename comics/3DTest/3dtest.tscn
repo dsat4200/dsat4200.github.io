@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://pwosec0d7ipc" path="res://scripts/PathPointMarker.tscn" id="2_380tl"]
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="3_pclc1"]
 [ext_resource type="Script" uid="uid://c8xylosrxsuqj" path="res://scripts/scroll.gd" id="5_nal1h"]
-[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="6_75gwy"]
+[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://scripts/frame.gd" id="6_75gwy"]
 [ext_resource type="Texture2D" uid="uid://cksaqxn8dpdrq" path="res://3DTest/img/row-1-column-1.png" id="8_pclc1"]
 [ext_resource type="Texture2D" uid="uid://bcmncnyprd8i4" path="res://3DTest/img/row-2-column-1.png" id="9_nal1h"]
 [ext_resource type="Texture2D" uid="uid://bpcwnw2n8xxod" path="res://3DTest/img/row-3-column-1.png" id="10_75gwy"]
@@ -170,6 +170,7 @@ frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_522357501" parent="PointData" instance=ExtResource("2_380tl")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -186,6 +187,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_75gwy")
 
 [node name="PathPointMarker_522357796" parent="PointData" instance=ExtResource("2_380tl")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -236,16 +238,13 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5024, 5920)
-zoom = Vector2(2, 2)
+position = Vector2(5020.52, 7452.6)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.5, 0.5)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 80.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

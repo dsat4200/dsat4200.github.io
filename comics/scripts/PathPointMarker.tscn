@@ -23,11 +23,29 @@ script = ExtResource("1_lvhqa")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Container/Speed")
-zoom_label = NodePath("Container/Zoom")
+zoom_label = NodePath("Zoom")
 max_speed = 2.035
 mid_hue = 0.25
 
+[node name="Zoom" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.02
+offset_top = 38.0
+offset_right = 80.98
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 34
+theme_override_font_sizes/font_size = 120
+text = "1.5"
+horizontal_alignment = 1
+
 [node name="Container" type="Control" parent="."]
+visible = false
 z_index = 1
 anchors_preset = 0
 offset_left = 160.0
@@ -41,32 +59,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -151.0
-offset_top = -27.0
-offset_right = 506.0
-offset_bottom = 138.0
+offset_left = -508.02
+offset_top = 269.0
+offset_right = -86.02
+offset_bottom = 434.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 34
 theme_override_font_sizes/font_size = 120
 text = "S: 4.00"
-
-[node name="Zoom" type="Label" parent="Container"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -151.0
-offset_top = 106.0
-offset_right = 506.0
-offset_bottom = 271.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 34
-theme_override_font_sizes/font_size = 120
-text = "Z: 1.57"
+horizontal_alignment = 1
 
 [node name="Speaker" type="Sprite2D" parent="."]
 visible = false

@@ -48,7 +48,7 @@ func hide_all_markers():
 @export var refresh_button: bool:
 	set(value):
 		if value:
-			print("Refreshing labels...")
+			#print("Refreshing labels...")
 			_update_labels()
 
 var _path_node: Path2D
@@ -107,7 +107,7 @@ func _update_labels():
 			move_point()
 		"other":
 			initialize_points()
-	print(state)
+	#print(state)
 			
 func move_point():
 	var curve = _path_node.curve
@@ -148,7 +148,7 @@ func move_point():
 				# This is the label that needs to be moved.
 				# You would then update its position here:
 				label_at_index.global_position = point_pos_global
-				print("Mismatch found and corrected for label at index %d: %s" % [i, label_at_index])
+				#print("Mismatch found and corrected for label at index %d: %s" % [i, label_at_index])
 				break # Found the first mismatch and corrected it, then exit.
 		else:
 

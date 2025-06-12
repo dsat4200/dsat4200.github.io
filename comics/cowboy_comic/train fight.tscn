@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dkyejyfvs7yp3" path="res://scripts/path_point_data.gd" id="5_g2313"]
 [ext_resource type="AudioStream" uid="uid://d3701f40vnul8" path="res://cowboy_comic/sfx/S_3hhs_space.wav" id="7_gkrpo"]
 [ext_resource type="AudioStream" uid="uid://xxj1mttxu25b" path="res://cowboy_comic/sfx/S_5mst_gun1.wav" id="8_nr04i"]
-[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://cowboy_comic/frame.gd" id="8_p310y"]
+[ext_resource type="Script" uid="uid://8uvu2s06t3dx" path="res://scripts/frame.gd" id="8_p310y"]
 [ext_resource type="AudioStream" uid="uid://dxur54toe7iks" path="res://cowboy_comic/sfx/S_hit_wav_L.wav" id="9_nr04i"]
 [ext_resource type="AudioStream" uid="uid://dcvpdpg3s1f6d" path="res://cowboy_comic/sfx/S_fireHit.wav" id="10_p0t5v"]
 [ext_resource type="AudioStream" uid="uid://b881j0yyiktkk" path="res://cowboy_comic/sfx/S_foot_bootsH_wood.wav" id="11_tafms"]
@@ -343,6 +343,7 @@ frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_319635316" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -359,6 +360,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_w66go")
 
 [node name="PathPointMarker_319635878" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -375,6 +377,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_y72j4")
 
 [node name="PathPointMarker_319636270" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -391,6 +394,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_c2k70")
 
 [node name="PathPointMarker_319636633" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -407,6 +411,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_5cgw3")
 
 [node name="PathPointMarker_319636994" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -457,6 +462,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_57eg2")
 
 [node name="PathPointMarker_319637915" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -473,6 +479,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_xkenf")
 
 [node name="PathPointMarker_319638154" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -489,6 +496,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gcewu")
 
 [node name="PathPointMarker_319638366" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -505,6 +513,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_5yg58")
 
 [node name="PathPointMarker_319638576" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -538,6 +547,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2uuth")
 
 [node name="PathPointMarker_319639001" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -554,6 +564,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gd5e5")
 
 [node name="PathPointMarker_319639215" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -570,6 +581,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_13g5h")
 
 [node name="PathPointMarker_319639432" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -586,6 +598,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_bk54p")
 
 [node name="PathPointMarker_319639682" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -619,6 +632,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2djas")
 
 [node name="PathPointMarker_319640246" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -635,6 +649,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oxrrm")
 
 [node name="PathPointMarker_319640566" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -651,6 +666,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t5a3p")
 
 [node name="PathPointMarker_319640839" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -667,6 +683,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_sn1g1")
 
 [node name="PathPointMarker_319641114" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -683,6 +700,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_3ny24")
 
 [node name="PathPointMarker_319641377" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -699,6 +717,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_08xve")
 
 [node name="PathPointMarker_319641657" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -715,7 +734,6 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_51fwi")
 
 [node name="PathPointMarker_319641919" parent="PointData" instance=ExtResource("3_46keh")]
-self_modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -732,6 +750,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_hkjem")
 
 [node name="PathPointMarker_319642178" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -748,6 +767,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_n23e6")
 
 [node name="PathPointMarker_319642992" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -764,6 +784,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_cxnfl")
 
 [node name="PathPointMarker_319643256" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -780,6 +801,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0mugq")
 
 [node name="PathPointMarker_319644067" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -796,6 +818,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_u54mw")
 
 [node name="PathPointMarker_319644346" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -812,6 +835,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_6xc1p")
 
 [node name="PathPointMarker_319644628" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -828,6 +852,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_reyq0")
 
 [node name="PathPointMarker_319644920" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -844,6 +869,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_enrt2")
 
 [node name="PathPointMarker_319645241" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -860,6 +886,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_usjnm")
 
 [node name="PathPointMarker_319645639" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -876,6 +903,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0uodh")
 
 [node name="PathPointMarker_319645960" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -892,6 +920,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_4p61t")
 
 [node name="PathPointMarker_319646249" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -908,6 +937,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t3o1v")
 
 [node name="PathPointMarker_319646564" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -924,6 +954,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_4jsou")
 
 [node name="PathPointMarker_319646909" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -940,6 +971,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_8decc")
 
 [node name="PathPointMarker_319647187" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -956,6 +988,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t3rak")
 
 [node name="PathPointMarker_319647465" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -972,6 +1005,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oge6t")
 
 [node name="PathPointMarker_319647739" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -988,6 +1022,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_rs6b7")
 
 [node name="PathPointMarker_319647997" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1004,6 +1039,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oc5em")
 
 [node name="PathPointMarker_319648268" parent="PointData" instance=ExtResource("3_46keh")]
+self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1068,13 +1104,13 @@ scale = Vector2(0.58634, 0.552137)
 texture = ExtResource("12_1s4ev")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(5024, 5920)
-zoom = Vector2(1.01, 1.01)
+position = Vector2(5020.52, 7452.6)
+zoom = Vector2(0.505, 0.505)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
-scale = Vector2(0.990099, 0.990099)
+scale = Vector2(1.9802, 1.9802)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 40.4
+width = 5.05
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("8_p310y")

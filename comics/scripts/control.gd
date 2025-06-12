@@ -13,7 +13,7 @@ func _ready():
 		EditorInterface.get_selection().selection_changed.connect(_on_editor_selection_changed)
 		hide_all_markers()
 	else:
-		hide()
+		queue_free()
 func hide_all_markers():
 	for i in get_children():
 		i.disappear()

@@ -61,7 +61,6 @@ text = "1.00"
 horizontal_alignment = 1
 
 [node name="Container" type="Control" parent="."]
-visible = false
 z_index = 1
 anchors_preset = 0
 offset_left = 160.0

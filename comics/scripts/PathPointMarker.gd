@@ -13,7 +13,7 @@ class_name PathPointMarker
 # Define the speed range for mapping to the gradient.
 # You'll need to adjust these values based on your expected speed range.
 @export var min_speed: float = 0.0
-@export var max_speed: float = 4.0 # Adjust this to your maximum expected speed
+@export var max_speed: float = 8.0 # Adjust this to your maximum expected speed
 
 # Define the specific speed value that will map to the 'mid_hue'.
 # A change from 1.0 to 0.0 will be as drastic as 1.0 to 4.0 in terms of hue interpolation.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=154 format=3 uid="uid://cr2c6mrcpo2qd"]
+[gd_scene load_steps=164 format=3 uid="uid://cr2c6mrcpo2qd"]
 
 [ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
@@ -346,9 +346,79 @@ speed = 3.0
 target_node = NodePath("")
 show_target_node = false
 
-[sub_resource type="Resource" id="Resource_gh8tc"]
+[sub_resource type="Resource" id="Resource_lhcyx"]
 script = ExtResource("3_ctd7i")
 zoom = 2.2
+speed = 1.5
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_cdlst"]
+script = ExtResource("3_ctd7i")
+zoom = 2.2
+speed = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_48cwg"]
+script = ExtResource("3_ctd7i")
+zoom = 2.2
+speed = 0.6
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_y30cy"]
+script = ExtResource("3_ctd7i")
+zoom = 2.2
+speed = 8.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_3qt7h"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 3.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_ar27j"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 0.8
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_7mvoa"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_o6us5"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_je0dp"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_c2wuf"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+show_target_node = false
+
+[sub_resource type="Resource" id="Resource_gh8tc"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
 show_target_node = false
@@ -356,9 +426,9 @@ show_target_node = false
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 4512, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4128, 0, 0, 0, 0, 5024, 4608, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5024, 4896, 0, 0, 0, 0, 5024, 5312, 0, 0, 0, 0, 5025.92, 5369.72, 0, 0, 0, 0, 5028.31, 5711.35, 0, 0, 0, 0, 5024, 7008, 0, 0, 0, 0, 5024, 7296, 0, 0, 0, 0, 5024, 8480, 0, 0, 0, 0, 5024, 8928, 0, 0, 0, 0, 5024, 10112, 0, 0, 0, 0, 5504, 10112, 0, 0, 0, 0, 6304, 10112, 0, 0, 0, 0, 6752, 10112, 0, 0, 0, 0, 7328, 10112, 0, 0, 0, 0, 7656.55, 10112.6, 0, 0, 0, 0, 8192, 10112, 0, 0, 0, 0, 8192, 10304, 0, 0, 0, 0, 8192, 10816, 0, 0, 0, 0, 8704, 10816, 0, 0, 0, 0, 9120, 10816, 0, 0, 0, 0, 10080, 10816, 0, 0, 0, 0, 10417.7, 10817.4, 0, 0, 0, 0, 11008, 10816, 0, 0, 0, 0, 11648, 10816, 0, 0, 0, 0, 11648, 11008, 0, 0, 0, 0, 11648, 11712)
+"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4320, 3840, 0, 0, 0, 0, 4512, 3840, 0, 0, 0, 0, 5024, 3840, 0, 0, 0, 0, 5024, 4128, 0, 0, 0, 0, 5024, 4608, 0, 0, 0, 0, 5024, 5024, 0, 0, 0, 0, 5024, 4896, 0, 0, 0, 0, 5024, 5312, 0, 0, 0, 0, 5025.92, 5369.72, 0, 0, 0, 0, 5028.31, 5711.35, 0, 0, 0, 0, 5024, 7008, 0, 0, 0, 0, 5024, 7296, 0, 0, 0, 0, 5024, 8480, 0, 0, 0, 0, 5024, 8928, 0, 0, 0, 0, 5024, 10112, 0, 0, 0, 0, 5504, 10112, 0, 0, 0, 0, 6304, 10112, 0, 0, 0, 0, 6752, 10112, 0, 0, 0, 0, 7328, 10112, 0, 0, 0, 0, 7656.55, 10112.6, 0, 0, 0, 0, 8192, 10112, 0, 0, 0, 0, 8192, 10304, 0, 0, 0, 0, 8192, 10816, 0, 0, 0, 0, 8704, 10816, 0, 0, 0, 0, 9120, 10816, 0, 0, 0, 0, 10080, 10816, 0, 0, 0, 0, 10417.7, 10817.4, 0, 0, 0, 0, 11008, 10816, 0, 0, 0, 0, 11648, 10816, 0, 0, 0, 0, 11648, 11008, 0, 0, 0, 0, 11648, 12096, 0, 0, 0, 0, 11648, 12544, 0, 0, 0, 0, 11648, 13120, 0, 0, 0, 0, 11648, 13280, 0, 0, 0, 0, 11648, 14272, 0, 0, 0, 0, 11648, 14080, 0, 0, 0, 0, 11648, 15360, 0, 0, 0, 0, 11642.5, 15893.6, 0, 0, 0, 0, 11649.7, 16432.7, 0, 0, 0, 0, 11648, 18048, 0, 0, 0, 0, 9952, 18016)
 }
-point_count = 34
+point_count = 44
 
 [sub_resource type="Animation" id="Animation_nal1h"]
 length = 0.001
@@ -410,10 +480,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -11894.0
-offset_top = -7002.0
-offset_right = -1894.0
-offset_bottom = 2998.0
+offset_left = -11968.0
+offset_top = -7328.0
+offset_right = -1968.0
+offset_bottom = 2672.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(327.187, 924.429)
@@ -530,336 +600,341 @@ scale = Vector2(1.60659, 1.60659)
 texture = ExtResource("25_l5ut3")
 
 [node name="Ch1082" type="Sprite2D" parent="comic"]
-position = Vector2(11648, 11712)
-scale = Vector2(1.58641, 1.58641)
+position = Vector2(11648, 11648)
+scale = Vector2(1.06024, 1.06024)
 texture = ExtResource("26_0p14d")
 
 [node name="Ch1083" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 12288)
+scale = Vector2(0.764463, 0.764463)
 texture = ExtResource("27_asccm")
 
 [node name="Ch1084" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 12576)
+scale = Vector2(0.764, 0.764)
 texture = ExtResource("28_gh8tc")
 
 [node name="Ch1085" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(9824, 13952)
 texture = ExtResource("29_8m6rk")
 
 [node name="Ch1091" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(9536, 14560)
 texture = ExtResource("30_hka76")
 
 [node name="Ch1092" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(10400, 14496)
 texture = ExtResource("31_ybiwk")
 
 [node name="Ch1093" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 13088)
+scale = Vector2(0.858376, 0.858376)
 texture = ExtResource("32_5r5yj")
 
 [node name="Ch1094" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 13792)
+scale = Vector2(1.00568, 1.00568)
 texture = ExtResource("33_b73dg")
 
 [node name="Ch1095" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 14400)
 texture = ExtResource("34_1nsqg")
 
 [node name="Ch1096" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 14944)
 texture = ExtResource("35_7h13l")
 
 [node name="Ch1101" type="Sprite2D" parent="comic"]
-position = Vector2(4514, 11427)
+position = Vector2(11648, 15456)
 texture = ExtResource("36_vndom")
 
 [node name="Ch1102" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(11648, 15904)
 texture = ExtResource("37_oo84g")
 
 [node name="Ch1103" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(11023, 17248)
+scale = Vector2(2.28016, 2.28016)
 texture = ExtResource("38_w6hwp")
 
 [node name="Ch1104" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("39_eonl1")
 
 [node name="Ch1105" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("40_cor2w")
 
 [node name="Ch1106" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("41_fs3gs")
 
 [node name="Ch1111" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("42_ar27j")
 
 [node name="Ch1112" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("43_7mvoa")
 
 [node name="Ch1113" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("44_o6us5")
 
 [node name="Ch1114" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("45_je0dp")
 
 [node name="Ch1115" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("46_c2wuf")
 
 [node name="Ch1121" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("47_bgoo3")
 
 [node name="Ch1122" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("48_re3vn")
 
 [node name="Ch1123" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("49_nklca")
 
 [node name="Ch1124" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("50_noguo")
 
 [node name="Ch1125" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("51_vt4k6")
 
 [node name="Ch1126" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("52_3i8rj")
 
 [node name="Ch1131" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("53_yctem")
 
 [node name="Ch1132" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("54_nu22r")
 
 [node name="Ch1133" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("55_5dp7p")
 
 [node name="Ch1134" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("56_5gaio")
 
 [node name="Ch1135" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("57_ko4nk")
 
 [node name="Ch1136" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("58_1ji30")
 
 [node name="Ch1141" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("59_buqpo")
 
 [node name="Ch1142" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("60_xtcco")
 
 [node name="Ch1143" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("61_l61nr")
 
 [node name="Ch1151" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("62_dfo32")
 
 [node name="Ch1152" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("63_ngrld")
 
 [node name="Ch1153" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("64_fshaq")
 
 [node name="Ch1154" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("65_nu3gq")
 
 [node name="Ch1155" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("66_3up2n")
 
 [node name="Ch1156" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("67_yxgud")
 
 [node name="Ch1161" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("68_ootxt")
 
 [node name="Ch1162" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("69_lvh6x")
 
 [node name="Ch1163" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("70_l5xg2")
 
 [node name="Ch1164" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("71_e8b35")
 
 [node name="Ch1171" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("72_l32ji")
 
 [node name="Ch1172" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("73_fnehy")
 
 [node name="Ch1173" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("74_uved0")
 
 [node name="Ch1174" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("75_n4ax4")
 
 [node name="Ch1175" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("76_c55f2")
 
 [node name="Ch1176" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("77_m0k0f")
 
 [node name="Ch1181" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("78_bnrbh")
 
 [node name="Ch1182" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("79_hyem7")
 
 [node name="Ch1183" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("80_4saf6")
 
 [node name="Ch1184" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("81_cx2b7")
 
 [node name="Ch1185" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("82_cfgeu")
 
 [node name="Ch1186" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("83_t2wks")
 
 [node name="Ch1191" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("84_q8yhc")
 
 [node name="Ch1192" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("85_g0234")
 
 [node name="Ch1193" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("86_h1i26")
 
 [node name="Ch1194" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("87_t5c6i")
 
 [node name="Ch1195" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("88_agugh")
 
 [node name="Ch1201" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("89_j88ke")
 
 [node name="Ch1202" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("90_kmtfa")
 
 [node name="Ch1203" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("91_ovg7j")
 
 [node name="Ch1204" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("92_r1t6o")
 
 [node name="Ch1205" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("93_6hkcr")
 
 [node name="Ch1206" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("94_07yvy")
 
 [node name="Ch1211" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("95_lp6pk")
 
 [node name="Ch1212" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("96_6ght0")
 
 [node name="Ch1213" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("97_x53li")
 
 [node name="Ch1221" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("98_mqfe0")
 
 [node name="Ch1222" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("99_flru0")
 
 [node name="Ch1223" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("100_qd3qv")
 
 [node name="Ch1224" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("101_r0lce")
 
 [node name="Ch1225" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("102_58208")
 
 [node name="Ch1231" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("103_80el1")
 
 [node name="Ch1232" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("104_g31yj")
 
 [node name="Ch1233" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("105_itrf5")
 
 [node name="Ch124" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("106_urpfs")
 
 [node name="Ch125" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("107_uirtd")
 
 [node name="Ch126" type="Sprite2D" parent="comic"]
-position = Vector2(3961, 2024)
+position = Vector2(10182, 2531)
 texture = ExtResource("108_4eqdj")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
@@ -890,6 +965,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_c6l8h")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421860857" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -907,6 +983,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_l2luw")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421861052" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -924,6 +1001,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_avjol")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421861782" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -940,6 +1018,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0mnfu")
+max_speed = 4.0
 
 [node name="PathPointMarker_537615012" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.0507246, 0, 1)
@@ -975,6 +1054,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_8m6rk")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421862161" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0, 0, 1)
@@ -992,6 +1072,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_bby38")
+max_speed = 4.0
 
 [node name="PathPointMarker_312723289" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.0507246, 0, 1)
@@ -1027,6 +1108,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_bhye1")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421862339" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1043,6 +1125,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_hxyl0")
+max_speed = 4.0
 
 [node name="PathPointMarker_1756678664" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0, 1, 0.25, 1)
@@ -1060,6 +1143,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_1nsqg")
+max_speed = 4.0
 hue_midpoint_speed = 2.0
 
 [node name="PathPointMarker_1751647993" parent="PointData" instance=ExtResource("2_hjpiw")]
@@ -1078,6 +1162,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_7h13l")
+max_speed = 4.0
 hue_midpoint_speed = 2.0
 
 [node name="PathPointMarker_8214857633" parent="PointData" instance=ExtResource("2_hjpiw")]
@@ -1096,6 +1181,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_hka76")
+max_speed = 4.0
 
 [node name="PathPointMarker_7531619744" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1112,6 +1198,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_ybiwk")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421863307" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.5, 0, 1)
@@ -1129,6 +1216,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_xidlb")
+max_speed = 4.0
 
 [node name="PathPointMarker_7889304144" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 1, 0, 1)
@@ -1146,6 +1234,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_mcecv")
+max_speed = 4.0
 
 [node name="PathPointMarker_6898023334" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -1163,6 +1252,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_1aqqp")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421863900" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.8, 1, 0, 1)
@@ -1180,6 +1270,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2lxma")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421864074" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -1197,6 +1288,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_avs4a")
+max_speed = 4.0
 
 [node name="PathPointMarker_2420782145" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -1214,6 +1306,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_vndom")
+max_speed = 4.0
 
 [node name="PathPointMarker_2481050832" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1230,6 +1323,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oo84g")
+max_speed = 4.0
 
 [node name="PathPointMarker_2492654770" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1246,6 +1340,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_w6hwp")
+max_speed = 4.0
 
 [node name="PathPointMarker_3770329624" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0, 1, 0.0999999, 1)
@@ -1263,6 +1358,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_l5ut3")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421864426" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.7, 1, 0, 1)
@@ -1280,6 +1376,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_kysnb")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421864591" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.5, 0, 1)
@@ -1297,6 +1394,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_5ir0e")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421864761" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.0500001, 1, 0, 1)
@@ -1314,6 +1412,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_vypd1")
+max_speed = 4.0
 
 [node name="PathPointMarker_2712591090" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1330,6 +1429,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_sd6jy")
+max_speed = 4.0
 
 [node name="PathPointMarker_2866343122" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 1
@@ -1339,6 +1439,7 @@ offset_right = 9369.04
 offset_bottom = 11065.2
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_cor2w")
+max_speed = 4.0
 
 [node name="PathPointMarker_2818952793" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1355,6 +1456,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_eonl1")
+max_speed = 4.0
 
 [node name="PathPointMarker_3975736978" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 1, 0, 1)
@@ -1372,6 +1474,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0p14d")
+max_speed = 4.0
 
 [node name="PathPointMarker_3984929374" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1388,6 +1491,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_fs3gs")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421865284" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1404,6 +1508,7 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_asccm")
+max_speed = 4.0
 
 [node name="PathPointMarker_1684354026" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.75, 0, 1)
@@ -1421,7 +1526,128 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_b73dg")
+max_speed = 4.0
 hue_midpoint_speed = 2.0
+
+[node name="PathPointMarker_7734903511" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.75, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 11648.0
+offset_top = 12096.0
+offset_right = 11904.0
+offset_bottom = 12352.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_lhcyx")
+max_speed = 4.0
+
+[node name="PathPointMarker_7840439351" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 11644.5
+offset_top = 12540.6
+offset_right = 11897.0
+offset_bottom = 12793.2
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_cdlst")
+max_speed = 4.0
+
+[node name="PathPointMarker_8121557104" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.0999999, 1)
+layout_mode = 1
+offset_left = 11644.5
+offset_top = 13116.6
+offset_right = 11897.0
+offset_bottom = 13369.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_48cwg")
+max_speed = 4.0
+
+[node name="PathPointMarker_8827758442" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+offset_left = 11644.5
+offset_top = 13276.6
+offset_right = 11897.0
+offset_bottom = 13529.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_y30cy")
+max_speed = 6.0
+
+[node name="PathPointMarker_8797969661" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.5, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11644.5
+offset_top = 14268.6
+offset_right = 11897.0
+offset_bottom = 14521.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_3qt7h")
+max_speed = 4.0
+
+[node name="PathPointMarker_8819060289" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.2, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11644.5
+offset_top = 14076.6
+offset_right = 11897.0
+offset_bottom = 14329.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ar27j")
+max_speed = 4.0
+
+[node name="PathPointMarker_9075779933" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11644.5
+offset_top = 15356.6
+offset_right = 11897.0
+offset_bottom = 15609.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_7mvoa")
+max_speed = 4.0
+
+[node name="PathPointMarker_9177837408" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11639.0
+offset_top = 15890.2
+offset_right = 11891.5
+offset_bottom = 16142.8
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_o6us5")
+max_speed = 4.0
+
+[node name="PathPointMarker_9179010857" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11646.2
+offset_top = 16429.3
+offset_right = 11898.7
+offset_bottom = 16682.0
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_je0dp")
+max_speed = 4.0
+
+[node name="PathPointMarker_9258968466" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 11644.5
+offset_top = 18044.6
+offset_right = 11897.0
+offset_bottom = 18297.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_c2wuf")
+max_speed = 4.0
 
 [node name="PathPointMarker_6421865450" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
@@ -1430,14 +1656,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11648.0
-offset_top = 11712.0
-offset_right = 11904.0
-offset_bottom = 11968.0
+offset_left = 9952.0
+offset_top = 18016.0
+offset_right = 10208.0
+offset_bottom = 18272.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gh8tc")
+max_speed = 4.0
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_aw5q7")
@@ -1469,16 +1696,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11648, 10816)
-zoom = Vector2(1.452, 1.452)
+position = Vector2(11648, 14080)
+zoom = Vector2(0.792, 0.792)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.688705, 0.688705)
+scale = Vector2(1.26263, 1.26263)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 14.52
+width = 7.92
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

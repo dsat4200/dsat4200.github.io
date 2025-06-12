@@ -238,16 +238,16 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11648, 14080)
-zoom = Vector2(1.4, 1.4)
+position = Vector2(12896, 13376)
+zoom = Vector2(2.2, 2.2)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.714286, 0.714286)
+scale = Vector2(0.454545, 0.454545)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 14.0
+width = 22.0
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

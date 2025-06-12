@@ -63,8 +63,8 @@ horizontal_alignment = 1
 [node name="Container" type="Control" parent="."]
 z_index = 1
 layout_mode = 1
-anchor_left = -0.378984
-anchor_top = 0.21875
+anchor_left = -2.05867
+anchor_top = -2.16406
 anchor_right = -2.05867
 anchor_bottom = -2.16406
 offset_left = 160.0

@@ -345,50 +345,80 @@ path_node_path = NodePath("../Path2D")
 [node name="PathPointMarker_319635316" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -76.48
 offset_top = -10.4
-offset_right = 176.04
-offset_bottom = 242.24
+offset_right = 179.52
+offset_bottom = 245.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_w66go")
 
 [node name="PathPointMarker_319635878" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 140.52
 offset_top = 1852.6
-offset_right = 393.04
-offset_bottom = 2105.24
+offset_right = 396.52
+offset_bottom = 2108.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_y72j4")
 
 [node name="PathPointMarker_319636270" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 289.52
 offset_top = 2941.6
-offset_right = 542.04
-offset_bottom = 3194.24
+offset_right = 545.52
+offset_bottom = 3197.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_c2k70")
 
 [node name="PathPointMarker_319636633" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1367.52
 offset_top = 2801.6
-offset_right = 1620.04
-offset_bottom = 3054.24
+offset_right = 1623.52
+offset_bottom = 3057.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_5cgw3")
 
 [node name="PathPointMarker_319636994" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2168.52
 offset_top = 2986.6
-offset_right = 2421.04
-offset_bottom = 3239.24
+offset_right = 2424.52
+offset_bottom = 3242.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_ra6a1")
 
@@ -396,10 +426,16 @@ point_data = SubResource("Resource_ra6a1")
 self_modulate = Color(0, 1, 0.4495, 1)
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2961.52
 offset_top = 1887.6
-offset_right = 3214.04
-offset_bottom = 2140.24
+offset_right = 3217.52
+offset_bottom = 2143.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_cb7tx")
 
@@ -407,50 +443,80 @@ point_data = SubResource("Resource_cb7tx")
 self_modulate = Color(0, 1, 0.271, 1)
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3571.52
 offset_top = 541.6
-offset_right = 3824.04
-offset_bottom = 794.24
+offset_right = 3827.52
+offset_bottom = 797.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_57eg2")
 
 [node name="PathPointMarker_319637915" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3906.52
 offset_top = 2275.6
-offset_right = 4159.04
-offset_bottom = 2528.24
+offset_right = 4162.52
+offset_bottom = 2531.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_xkenf")
 
 [node name="PathPointMarker_319638154" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4266.52
 offset_top = 2894.6
-offset_right = 4519.04
-offset_bottom = 3147.24
+offset_right = 4522.52
+offset_bottom = 3150.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gcewu")
 
 [node name="PathPointMarker_319638366" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 5501.52
 offset_top = 2512.6
-offset_right = 5754.04
-offset_bottom = 2765.24
+offset_right = 5757.52
+offset_bottom = 2768.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_5yg58")
 
 [node name="PathPointMarker_319638576" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 7051.52
 offset_top = 2805.6
-offset_right = 7304.04
-offset_bottom = 3058.24
+offset_right = 7307.52
+offset_bottom = 3061.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_hahpy")
 
@@ -458,50 +524,80 @@ point_data = SubResource("Resource_hahpy")
 self_modulate = Color(1, 0.546377, 0, 1)
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 8275.52
 offset_top = 2940.6
-offset_right = 8528.04
-offset_bottom = 3193.24
+offset_right = 8531.52
+offset_bottom = 3196.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2uuth")
 
 [node name="PathPointMarker_319639001" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 9991.1
 offset_top = 2974.47
-offset_right = 10243.6
-offset_bottom = 3227.11
+offset_right = 10247.1
+offset_bottom = 3230.47
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gd5e5")
 
 [node name="PathPointMarker_319639215" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 10268.1
 offset_top = 2965.04
-offset_right = 10520.6
-offset_bottom = 3217.68
+offset_right = 10524.1
+offset_bottom = 3221.04
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_13g5h")
 
 [node name="PathPointMarker_319639432" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 11459.5
 offset_top = 3000.6
-offset_right = 11712.0
-offset_bottom = 3253.24
+offset_right = 11715.5
+offset_bottom = 3256.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_bk54p")
 
 [node name="PathPointMarker_319639682" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12422.5
 offset_top = 3055.6
-offset_right = 12675.0
-offset_bottom = 3308.24
+offset_right = 12678.5
+offset_bottom = 3311.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_o8wrd")
 
@@ -509,70 +605,112 @@ point_data = SubResource("Resource_o8wrd")
 self_modulate = Color(1, 0.162319, 0, 1)
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12825.4
 offset_top = 3086.47
-offset_right = 13077.9
-offset_bottom = 3339.11
+offset_right = 13081.4
+offset_bottom = 3342.47
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2djas")
 
 [node name="PathPointMarker_319640246" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14517.5
 offset_top = 3305.6
-offset_right = 14770.0
-offset_bottom = 3558.24
+offset_right = 14773.5
+offset_bottom = 3561.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oxrrm")
 
 [node name="PathPointMarker_319640566" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14545.5
 offset_top = 4595.6
-offset_right = 14798.0
-offset_bottom = 4848.24
+offset_right = 14801.5
+offset_bottom = 4851.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t5a3p")
 
 [node name="PathPointMarker_319640839" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14888.5
 offset_top = 5591.6
-offset_right = 15141.0
-offset_bottom = 5844.24
+offset_right = 15144.5
+offset_bottom = 5847.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_sn1g1")
 
 [node name="PathPointMarker_319641114" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 14010.5
 offset_top = 5737.6
-offset_right = 14263.0
-offset_bottom = 5990.24
+offset_right = 14266.5
+offset_bottom = 5993.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_3ny24")
 
 [node name="PathPointMarker_319641377" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12009.8
 offset_top = 5865.68
-offset_right = 12262.3
-offset_bottom = 6118.32
+offset_right = 12265.8
+offset_bottom = 6121.68
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_08xve")
 
 [node name="PathPointMarker_319641657" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 11402.5
 offset_top = 5865.6
-offset_right = 11655.0
-offset_bottom = 6118.24
+offset_right = 11658.5
+offset_bottom = 6121.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_51fwi")
 
@@ -580,190 +718,304 @@ point_data = SubResource("Resource_51fwi")
 self_modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 10828.5
 offset_top = 5880.58
-offset_right = 11081.0
-offset_bottom = 6133.22
+offset_right = 11084.5
+offset_bottom = 6136.58
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_hkjem")
 
 [node name="PathPointMarker_319642178" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 6652.52
 offset_top = 5993.6
-offset_right = 6905.04
-offset_bottom = 6246.24
+offset_right = 6908.52
+offset_bottom = 6249.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_n23e6")
 
 [node name="PathPointMarker_319642992" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4142.01
 offset_top = 5876.67
-offset_right = 4394.53
-offset_bottom = 6129.31
+offset_right = 4398.01
+offset_bottom = 6132.67
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_cxnfl")
 
 [node name="PathPointMarker_319643256" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3205.52
 offset_top = 5984.6
-offset_right = 3458.04
-offset_bottom = 6237.24
+offset_right = 3461.52
+offset_bottom = 6240.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0mugq")
 
 [node name="PathPointMarker_319644067" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1199.52
 offset_top = 6130.6
-offset_right = 1452.04
-offset_bottom = 6383.24
+offset_right = 1455.52
+offset_bottom = 6386.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_u54mw")
 
 [node name="PathPointMarker_319644346" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 461.52
 offset_top = 5960.6
-offset_right = 714.04
-offset_bottom = 6213.24
+offset_right = 717.52
+offset_bottom = 6216.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_6xc1p")
 
 [node name="PathPointMarker_319644628" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 427.52
 offset_top = 7136.6
-offset_right = 680.04
-offset_bottom = 7389.24
+offset_right = 683.52
+offset_bottom = 7392.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_reyq0")
 
 [node name="PathPointMarker_319644920" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 362.52
 offset_top = 12259.6
-offset_right = 615.04
-offset_bottom = 12512.2
+offset_right = 618.52
+offset_bottom = 12515.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_enrt2")
 
 [node name="PathPointMarker_319645241" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 372.52
 offset_top = 12557.6
-offset_right = 625.04
-offset_bottom = 12810.2
+offset_right = 628.52
+offset_bottom = 12813.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_usjnm")
 
 [node name="PathPointMarker_319645639" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2122.52
 offset_top = 12101.6
-offset_right = 2375.04
-offset_bottom = 12354.2
+offset_right = 2378.52
+offset_bottom = 12357.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_0uodh")
 
 [node name="PathPointMarker_319645960" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 1827.52
 offset_top = 13166.6
-offset_right = 2080.04
-offset_bottom = 13419.2
+offset_right = 2083.52
+offset_bottom = 13422.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_4p61t")
 
 [node name="PathPointMarker_319646249" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 2448.52
 offset_top = 13243.6
-offset_right = 2701.04
-offset_bottom = 13496.2
+offset_right = 2704.52
+offset_bottom = 13499.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t3o1v")
 
 [node name="PathPointMarker_319646564" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3424.52
 offset_top = 10426.6
-offset_right = 3677.04
-offset_bottom = 10679.2
+offset_right = 3680.52
+offset_bottom = 10682.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_4jsou")
 
 [node name="PathPointMarker_319646909" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 3933.8
 offset_top = 6773.11
-offset_right = 4186.32
-offset_bottom = 7025.75
+offset_right = 4189.8
+offset_bottom = 7029.11
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_8decc")
 
 [node name="PathPointMarker_319647187" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 4479.52
 offset_top = 6308.6
-offset_right = 4732.04
-offset_bottom = 6561.24
+offset_right = 4735.52
+offset_bottom = 6564.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_t3rak")
 
 [node name="PathPointMarker_319647465" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 8924.52
 offset_top = 5766.6
-offset_right = 9177.04
-offset_bottom = 6019.24
+offset_right = 9180.52
+offset_bottom = 6022.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oge6t")
 
 [node name="PathPointMarker_319647739" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 9728.52
 offset_top = 9641.6
-offset_right = 9981.04
-offset_bottom = 9894.24
+offset_right = 9984.52
+offset_bottom = 9897.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_rs6b7")
 
 [node name="PathPointMarker_319647997" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 10768.5
 offset_top = 10170.6
-offset_right = 11021.0
-offset_bottom = 10423.2
+offset_right = 11024.5
+offset_bottom = 10426.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_oc5em")
 
 [node name="PathPointMarker_319648268" parent="PointData" instance=ExtResource("3_46keh")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 12709.5
 offset_top = 10097.6
-offset_right = 12962.0
-offset_bottom = 10350.2
+offset_right = 12965.5
+offset_bottom = 10353.6
+grow_horizontal = 1
+grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_226o7")
 

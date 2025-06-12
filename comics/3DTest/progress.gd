@@ -8,9 +8,7 @@ var selected = false;
 
 func _ready() -> void:
 	current_animation = start_anim
-	if Engine.is_editor_hint():
-		edit_mode = true
-	else:
+	if !Engine.is_editor_hint():
 		edit_mode = false
 		set_path_preview(false)
 

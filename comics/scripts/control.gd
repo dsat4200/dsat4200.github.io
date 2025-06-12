@@ -104,8 +104,8 @@ func _update_labels():
 		"remove":
 			initialize_points()
 		"move":
-			pass
-			#move_point()
+			#pass
+			move_point()
 		"other":
 			initialize_points()
 	#print(state)
@@ -269,7 +269,7 @@ func _process(_delta):
 		
 	if selected is PathPointMarker:
 		selected.update_info()
-		update_position()
+		#update_position()
 
 	if is_instance_valid(preview_cam) and is_instance_valid(path_follow) and preview_cam.zoom.x != selected.point_data.zoom:
 		update_frame()

@@ -10,5 +10,3 @@ class_name PathPointData extends Resource
 # --- NEW EXPORTS ---
 # A path to the node in the scene you want to control.
 @export var target_node: NodePath
-# A toggle to determine if the target_node should be visible at this point.
-@export var show_target_node: bool = false

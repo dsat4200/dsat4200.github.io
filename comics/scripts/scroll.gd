@@ -275,21 +275,42 @@ func _update_managed_nodes_list():
 			if not managed_node_paths.has(data.target_node):
 				managed_node_paths.append(data.target_node)
 
+# Add this variable at the top of your script.
+var _last_processed_index: int = -1
+
 func _update_node_visibility(current_point_index: int):
-	"""Shows the node for the current point and hides all others."""
-	var current_point_data = _get_point_data_for_index(current_point_index)
-	if not current_point_data: return
+	"""Toggles the visibility of the target node, but only on the first frame
+	the current_point_index changes."""
 
-	var active_node_path = current_point_data.target_node
-	var should_show = current_point_data.show_target_node
+	if current_point_index == _last_processed_index:
+		return
 
-	for path in managed_node_paths:
-		var node = get_node_or_null(path)
-		if node is CanvasItem:
-			node.visible = (path == active_node_path and should_show)
-			
-# (The rest of your utility functions like _get_segment_info_at_progress and 
-# _get_closest_point_index remain the same and are correct)
+	# --- Start of new logic ---
+	# Determine which index to process.
+	# Moving forward: Process the point you arrive at (current_point_index).
+	# Moving backward: Process the point you just left (_last_processed_index).
+	var index_to_process = current_point_index if current_point_index > _last_processed_index else _last_processed_index
+
+	# Update the tracker for the next frame.
+	_last_processed_index = current_point_index
+	# --- End of new logic ---
+
+	# Use the correctly determined index to get data.
+	var current_point_data = _get_point_data_for_index(index_to_process)
+	# Exit if there's no data for the current point.
+	if not current_point_data:
+		return
+
+	var target_node_path = current_point_data.target_node
+	# Exit if this point isn't meant to control a node.
+	if not target_node_path:
+		return
+
+	var node_to_toggle = get_node_or_null(target_node_path)
+
+	if node_to_toggle is CanvasItem:
+		# This toggle logic will now only run ONCE per index change.
+		node_to_toggle.visible = not node_to_toggle.visible
 
 func _get_segment_info_at_progress(current_dist: float) -> Dictionary:
 	if _point_distances.size() < 2:

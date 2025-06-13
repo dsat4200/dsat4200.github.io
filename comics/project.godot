@@ -25,11 +25,12 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/initial_screen=1
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="keep_height"
 window/handheld/orientation=1
 window/quality/screen_space_aa=0
 window/quality/msaa_2d=1
 window/canvas_textures/default_texture_filter=0
+window/defaults/default_clear_color=Color(0, 0, 0, 1)
 
 [input]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=3 uid="uid://cr2c6mrcpo2qd"]
+[gd_scene load_steps=173 format=3 uid="uid://cr2c6mrcpo2qd"]
 
 [ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
@@ -353,13 +353,19 @@ target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_1aqqp"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.4
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_3i8rj"]
+script = ExtResource("3_ctd7i")
+zoom = 1.4
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_oo84g"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.4
 speed = 1.0
 target_node = NodePath("")
 
@@ -378,28 +384,34 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_yctem"]
 script = ExtResource("3_ctd7i")
 zoom = 1.8
-speed = 1.0
+speed = 1.5
 target_node = NodePath("../../comic/Ch1115")
 
 [sub_resource type="Resource" id="Resource_1nsqg"]
 script = ExtResource("3_ctd7i")
 zoom = 1.8
-speed = 1.0
+speed = 1.5
 target_node = NodePath("../../comic/Ch1122")
 
 [sub_resource type="Resource" id="Resource_fs3gs"]
 script = ExtResource("3_ctd7i")
 zoom = 1.8
-speed = 1.0
+speed = 1.5
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_nu22r"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.8
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_noguo"]
+script = ExtResource("3_ctd7i")
+zoom = 0.878
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_vt4k6"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
 speed = 1.0
@@ -420,9 +432,9 @@ target_node = NodePath("")
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4192, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4666, 5024, 0, 0, 0, 0, 4666, 4896, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4666, 6592, 0, 0, 0, 0, 4666, 7136, 0, 0, 0, 0, 4666, 8448, 0, 0, 0, 0, 5946, 8448, 0, 0, 0, 0, 6970, 8448, 0, 0, 0, 0, 7290, 8448, 0, 0, 0, 0, 7770, 8448, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11936, 12224, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 11002, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10020, 19106.6, 0, 0, 0, 0, 10016, 19680, 0, 0, 0, 0, 10016, 20512, 0, 0, 0, 0, 10656, 20512, 0, 0, 0, 0, 10017, 20525, 0, 0, 0, 0, 10656, 20526, 0, 0, 0, 0, 10653.2, 22044.3, 0, 0, 0, 0, 10656, 22208, 0, 0, 0, 0, 10080, 25408, 0, 0, 0, 0, 9944, 29664)
+"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4192, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4666, 5024, 0, 0, 0, 0, 4666, 4896, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4666, 6592, 0, 0, 0, 0, 4666, 7136, 0, 0, 0, 0, 4666, 8448, 0, 0, 0, 0, 5946, 8448, 0, 0, 0, 0, 6970, 8448, 0, 0, 0, 0, 7290, 8448, 0, 0, 0, 0, 7770, 8448, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11936, 12224, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 11002, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10048, 17792, 0, 0, 0, 0, 10048, 19104, 0, 0, 0, 0, 10048, 19680, 0, 0, 0, 0, 10048, 20512, 0, 0, 0, 0, 10656, 20512, 0, 0, 0, 0, 10048, 20525, 0, 0, 0, 0, 10656, 20526, 0, 0, 0, 0, 11072, 20512, 0, 0, 0, 0, 12000, 20512, 0, 0, 0, 0, 11968, 21664, 0, 0, 0, 0, 10080, 25408, 0, 0, 0, 0, 9944, 29664)
 }
-point_count = 50
+point_count = 52
 
 [sub_resource type="Animation" id="Animation_nal1h"]
 length = 0.001
@@ -650,11 +662,13 @@ scale = Vector2(1.16097, 1.16097)
 texture = ExtResource("41_fs3gs")
 
 [node name="Ch1111" type="Sprite2D" parent="comic"]
-position = Vector2(10022.5, 18383.5)
+position = Vector2(10048, 18304)
+scale = Vector2(0.780488, 0.780488)
 texture = ExtResource("42_ar27j")
 
 [node name="Ch1112" type="Sprite2D" parent="comic"]
-position = Vector2(10022.5, 18799.5)
+position = Vector2(10048, 18624)
+scale = Vector2(0.789, 0.789)
 texture = ExtResource("43_7mvoa")
 
 [node name="Ch1113" type="Sprite2D" parent="comic"]
@@ -686,15 +700,18 @@ scale = Vector2(1.46789, 1.42674)
 texture = ExtResource("48_re3vn")
 
 [node name="Ch1124" type="Sprite2D" parent="comic"]
-position = Vector2(11296, 21184)
+position = Vector2(11808, 20512)
+scale = Vector2(1.66944, 1.66944)
 texture = ExtResource("50_noguo")
 
 [node name="Ch1125" type="Sprite2D" parent="comic"]
-position = Vector2(12064, 21408)
+position = Vector2(11648, 21184)
+scale = Vector2(1.17359, 1.17359)
 texture = ExtResource("51_vt4k6")
 
 [node name="Ch1126" type="Sprite2D" parent="comic"]
-position = Vector2(12672, 21440)
+position = Vector2(12256, 21184)
+scale = Vector2(1.19573, 1.19573)
 texture = ExtResource("52_3i8rj")
 
 [node name="Ch1131" type="Sprite2D" parent="comic"]
@@ -1615,6 +1632,29 @@ spd_label = NodePath("Speed")
 zoom_label = NodePath("Zoom")
 mid_hue = 0.25
 
+[node name="PathPointMarker_11570909434" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = 10044.5
+offset_top = 17788.6
+offset_right = 10297.0
+offset_bottom = 18041.2
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("115_avjol")
+point_data = SubResource("Resource_3i8rj")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Speed")
+zoom_label = NodePath("Zoom")
+mid_hue = 0.25
+
 [node name="PathPointMarker_7273908927" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.5, 1, 0, 1)
 layout_mode = 0
@@ -1622,10 +1662,10 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10016.5
-offset_top = 19103.2
-offset_right = 10269.0
-offset_bottom = 19355.9
+offset_left = 10044.5
+offset_top = 19100.6
+offset_right = 10297.0
+offset_bottom = 19353.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
@@ -1645,9 +1685,9 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10012.5
+offset_left = 10044.5
 offset_top = 19676.6
-offset_right = 10265.0
+offset_right = 10297.0
 offset_bottom = 19929.2
 grow_horizontal = 2
 grow_vertical = 2
@@ -1668,9 +1708,9 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10012.5
+offset_left = 10044.5
 offset_top = 20508.6
-offset_right = 10265.0
+offset_right = 10297.0
 offset_bottom = 20761.2
 grow_horizontal = 2
 grow_vertical = 2
@@ -1685,7 +1725,7 @@ zoom_label = NodePath("Zoom")
 mid_hue = 0.25
 
 [node name="PathPointMarker_8317879851" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
+self_modulate = Color(0.607143, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
@@ -1708,15 +1748,15 @@ zoom_label = NodePath("Zoom")
 mid_hue = 0.25
 
 [node name="PathPointMarker_10217039235" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
+self_modulate = Color(0.607143, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10013.5
+offset_left = 10044.5
 offset_top = 20521.6
-offset_right = 10266.0
+offset_right = 10297.0
 offset_bottom = 20774.2
 grow_horizontal = 2
 grow_vertical = 2
@@ -1731,7 +1771,7 @@ zoom_label = NodePath("Zoom")
 mid_hue = 0.25
 
 [node name="PathPointMarker_10369768360" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
+self_modulate = Color(0.607143, 1, 0, 1)
 layout_mode = 0
 anchor_left = 0.087
 anchor_top = 0.085
@@ -1760,10 +1800,10 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10649.7
-offset_top = 22040.9
-offset_right = 10902.2
-offset_bottom = 22293.5
+offset_left = 11068.5
+offset_top = 20508.6
+offset_right = 11321.0
+offset_bottom = 20761.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
@@ -1783,16 +1823,39 @@ anchor_left = 0.087
 anchor_top = 0.085
 anchor_right = 0.174
 anchor_bottom = 0.169
-offset_left = 10652.5
-offset_top = 22204.6
-offset_right = 10905.0
-offset_bottom = 22457.2
+offset_left = 11996.5
+offset_top = 20508.6
+offset_right = 12249.0
+offset_bottom = 20761.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("112_c6l8h")
 script = ExtResource("115_avjol")
 point_data = SubResource("Resource_noguo")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Speed")
+zoom_label = NodePath("Zoom")
+mid_hue = 0.25
+
+[node name="PathPointMarker_11475749788" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = 11964.5
+offset_top = 21660.6
+offset_right = 12217.0
+offset_bottom = 21913.2
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("115_avjol")
+point_data = SubResource("Resource_vt4k6")
 speaker = NodePath("Speaker")
 container = NodePath("Container")
 spd_label = NodePath("Speed")
@@ -1869,16 +1932,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(10656, 20544)
-zoom = Vector2(1.188, 1.188)
+position = Vector2(10020, 19106.6)
+zoom = Vector2(0.924, 0.924)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.841751, 0.841751)
+scale = Vector2(1.08225, 1.08225)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 11.88
+width = 9.24
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

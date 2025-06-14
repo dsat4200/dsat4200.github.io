@@ -570,31 +570,31 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_fshaq"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
-speed = 0.8
+speed = 1.2
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_6hkcr"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
-speed = 1.0
+speed = 1.2
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_lvh6x"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
-speed = 1.0
+speed = 1.2
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_07yvy"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
-speed = 1.0
+speed = 1.2
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_l5xg2"]
 script = ExtResource("3_ctd7i")
 zoom = 1.0
-speed = 1.0
+speed = 1.2
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_lp6pk"]
@@ -648,13 +648,13 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_r0lce"]
 script = ExtResource("3_ctd7i")
 zoom = 1.5
-speed = 0.7
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_uved0"]
 script = ExtResource("3_ctd7i")
 zoom = 1.5
-speed = 0.7
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_c55f2"]
@@ -666,7 +666,7 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_m0k0f"]
 script = ExtResource("3_ctd7i")
 zoom = 1.5
-speed = 0.7
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_4saf6"]
@@ -1551,7 +1551,7 @@ texture = ExtResource("107_uirtd")
 
 [node name="Ch126" type="Sprite2D" parent="comic"]
 position = Vector2(21056, 63328)
-scale = Vector2(1.09363, 1.09363)
+scale = Vector2(1.195, 1.195)
 texture = ExtResource("108_4eqdj")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
@@ -2681,7 +2681,7 @@ zoom_label = NodePath("Zoom")
 mid_hue = 0.25
 
 [node name="PathPointMarker_14432641391" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.2, 1, 0, 1)
+self_modulate = Color(0.542857, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 offset_left = 13756.5
@@ -2692,6 +2692,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_fshaq")
 
 [node name="PathPointMarker_12569772938" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 offset_left = 13756.5
@@ -2702,6 +2703,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_6hkcr")
 
 [node name="PathPointMarker_4678457926" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -2718,6 +2720,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_lvh6x")
 
 [node name="PathPointMarker_12546591337" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
 layout_mode = 1
 offset_left = 15315.5
 offset_top = 36700.6
@@ -2727,6 +2730,7 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_07yvy")
 
 [node name="PathPointMarker_4694485148" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -2842,7 +2846,6 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_qd3qv")
 
 [node name="PathPointMarker_13334978137" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.0500001, 1, 0, 1)
 layout_mode = 1
 offset_left = 20636.5
 offset_top = 35948.0
@@ -2852,7 +2855,6 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_r0lce")
 
 [node name="PathPointMarker_4729470646" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.0500001, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -2886,7 +2888,6 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_c55f2")
 
 [node name="PathPointMarker_4777185991" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.0500001, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -3144,16 +3145,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(10586, 10144)
-zoom = Vector2(1.452, 1.452)
+position = Vector2(20640, 37632)
+zoom = Vector2(0.99, 0.99)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.688705, 0.688705)
+scale = Vector2(1.0101, 1.0101)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 14.52
+width = 9.9
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

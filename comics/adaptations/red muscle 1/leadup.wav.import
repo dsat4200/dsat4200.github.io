@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rqatscrvq6nh"
+path="res://.godot/imported/leadup.wav-7b3d92899e806ba8dcc90ba65ace1b41.sample"
+
+[deps]
+
+source_file="res://adaptations/red muscle 1/leadup.wav"
+dest_files=["res://.godot/imported/leadup.wav-7b3d92899e806ba8dcc90ba65ace1b41.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

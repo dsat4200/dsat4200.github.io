@@ -7,7 +7,30 @@
 @tool
 class_name EasedGradientRect
 extends Control
+@export_tool_button("Swap Colors", "Callable") var hello_action = hello
+func hello():
+	var from = color_from
+	color_from = color_to
+	color_to = from
+	_update_gradient()
+# The solid-colored extended area also needs to be redrawn.
+	queue_redraw()
 
+@export_tool_button("First Color Only", "Callable") var first_action = first
+func first():
+	var from = color_from
+	color_to = from
+	_update_gradient()
+# The solid-colored extended area also needs to be redrawn.
+	queue_redraw()
+	
+@export_tool_button("Second Color Only", "Callable") var second_action = second
+func second():
+	var to = color_to
+	color_from = to
+	_update_gradient()
+# The solid-colored extended area also needs to be redrawn.
+	queue_redraw()
 
 ## Defines the gradient's orientation.
 enum Direction { VERTICAL, HORIZONTAL }

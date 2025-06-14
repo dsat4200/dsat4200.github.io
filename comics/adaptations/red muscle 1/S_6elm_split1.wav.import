@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1dogqv0i7oft"
+path="res://.godot/imported/S_6elm_split1.wav-e00b61e409183af7dab9b7f0bdc2be55.sample"
+
+[deps]
+
+source_file="res://adaptations/red muscle 1/S_6elm_split1.wav"
+dest_files=["res://.godot/imported/S_6elm_split1.wav-e00b61e409183af7dab9b7f0bdc2be55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

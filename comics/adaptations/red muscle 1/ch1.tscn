@@ -1,4 +1,4 @@
-[gd_scene load_steps=238 format=3 uid="uid://cr2c6mrcpo2qd"]
+[gd_scene load_steps=237 format=3 uid="uid://cr2c6mrcpo2qd"]
 
 [ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
@@ -121,7 +121,6 @@
 [ext_resource type="AudioStream" uid="uid://blwcapnf8r31y" path="res://adaptations/red muscle 1/s1000_the_world.wav" id="116_48cwg"]
 [ext_resource type="Script" uid="uid://c6cy0lwv6m3q7" path="res://scripts/EasedGradientRect.gd" id="116_c6l8h"]
 [ext_resource type="AudioStream" uid="uid://bwf00pdfn5neq" path="res://adaptations/red muscle 1/fall.wav" id="117_jgkax"]
-[ext_resource type="AudioStream" uid="uid://cliiu87wiijxi" path="res://adaptations/red muscle 1/st2_02_fade.wav" id="118_48cwg"]
 [ext_resource type="AudioStream" uid="uid://3uv7ad3hj320" path="res://adaptations/red muscle 1/buzzer.wav" id="118_bhye1"]
 [ext_resource type="AudioStream" uid="uid://b0kvsgnbuh5q7" path="res://adaptations/red muscle 1/slap.mp3" id="118_hxyl0"]
 [ext_resource type="AudioStream" uid="uid://yqa8psbx2s75" path="res://adaptations/red muscle 1/papaya.wav" id="118_y30cy"]
@@ -199,13 +198,13 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.0
 speed = 2.0
-sound_effect = ExtResource("117_jgkax")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_bhye1"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
 speed = 0.5
+sound_effect = ExtResource("117_jgkax")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_hxyl0"]
@@ -358,13 +357,13 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.2
 speed = 7.0
-sound_effect = ExtResource("118_hxyl0")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_3qt7h"]
 script = ExtResource("3_ctd7i")
 zoom = 1.4
 speed = 5.0
+sound_effect = ExtResource("118_hxyl0")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_ar27j"]
@@ -716,7 +715,6 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 0.7
 speed = 4.0
-sound_effect = ExtResource("118_48cwg")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_hyem7"]
@@ -777,7 +775,7 @@ target_node = NodePath("")
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -2400, 3840, 0, 0, 0, 0, -1632, 3840, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 992, 3840, 0, 0, 0, 0, 1280, 3840, 0, 0, 0, 0, 1568, 3840, 0, 0, 0, 0, 3584, 3840, 0, 0, 0, 0, 4128, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4666, 5024, 0, 0, 0, 0, 4666, 4896, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4666, 6592, 0, 0, 0, 0, 4666, 7136, 0, -259.292, 0, 259.292, 4672, 8192, -185.209, 0, 185.209, 0, 4960, 8512, 0, 0, 0, 0, 5952, 8512, 0, 0, 0, 0, 6976, 8512, 0, 0, 0, 0, 7296, 8512, 0, 0, 0, 0, 7776, 8512, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11936, 12224, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 11002, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10048, 17792, 0, 0, 0, 0, 10048, 18656, 0, 0, 0, 0, 10048, 19168, 0, 0, 0, 0, 10048, 20187, 0, 0, 0, 0, 10656, 20187, 0, 0, 0, 0, 10048, 20200, 0, 0, 0, 0, 10656, 20201, 0, 0, 0, 0, 11072, 20192, 0, 0, 0, 0, 12320, 20192, 0, 0, 0, 0, 12320, 21728, 0, 0, 0, 0, 12320, 22752, 0, 0, 0, 0, 12320, 23520, 0, 0, 0, 0, 12320, 24544, 0, 0, 0, 0, 12320, 25056, 0, 0, 0, 0, 12608, 25056, 0, 0, 0, 0, 12832, 25056, -1.03659, -338.768, 1.03659, 338.768, 13760, 25376, 0, 0, 0, 0, 13760, 24768, 0, 0, 0, 0, 13764, 25136, 0, 0, 0, 0, 13760, 25888, 0, 0, 0, 0, 13760, 27360, 0, 0, 0, 0, 13760, 27744, 0, 0, 0, 0, 13760, 29376, 0, 0, 0, 0, 13760, 31946, 0, 0, 0, 0, 13760, 32426, 0, 0, 0, 0, 13760, 33024, 0, 0, 0, 0, 13760, 33696, 0, 0, 0, 0, 13760, 35232, 0, 0, 0, 0, 13760, 36704, 0, 0, 0, 0, 15319, 36704, 0, 0, 0, 0, 16151, 36704, 0, 0, 0, 0, 16151, 36576, 0, 0, 0, 0, 16151, 35776, 0, 0, 0, 0, 16151, 34816, 0, 0, 0, 0, 16608, 34816, 0, 0, 0, 0, 17024, 34816, 0, 0, 0, 0, 18551, 34816, 0, 0, 0, 0, 20640, 34816, 0, 0, 0, 0, 20640, 35200, 0, 0, 0, 0, 20640, 35951.4, 0, 0, 0, 0, 20640, 36527.4, 0, 0, 0, 0, 20640, 37056, 0, 0, 0, 0, 20640, 37632, 0, 0, 0, 0, 20640, 38272, 0, 0, 0, 0, 20640, 38464, 0, -252.944, 0, 400, 20640, 38976, -192.193, -99.9823, 192.193, 99.9823, 20864, 39616, 0, 0, 0, 0, 21056, 40000, 0, 0, 0, 0, 21056, 41600, 0, 0, 0, 0, 21056, 43232, 0, 0, 0, 0, 21056, 43360, 0, 0, 0, 0, 21056, 44960, 0, 0, 0, 0, 21056, 44672, 0, 0, 0, 0, 21056, 45312, 0, 0, 0, 0, 21056, 46560, 0, 0, 0, 0, 21056, 46848, 0, 0, 0, 0, 21056, 48288, 0, 0, 0, 0, 21056, 48672, 0, 0, 0, 0, 21056, 49760, 0, 0, 0, 0, 21056, 55392, 0, 0, 0, 0, 21056, 62944)
+"points": PackedVector2Array(0, 0, 0, 0, -2400, 3840, 0, 0, 0, 0, -1632, 3840, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 992, 3840, 0, 0, 0, 0, 1280, 3840, 0, 0, 0, 0, 1568, 3840, 0, 0, 0, 0, 3584, 3840, 0, 0, 0, 0, 4128, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4672, 5056, 0, 0, 0, 0, 4667, 4908, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4672, 6720, 0, 0, 0, 0, 4666, 7136, 0, -259.292, 0, 259.292, 4672, 8192, -185.209, 0, 185.209, 0, 4960, 8512, 0, 0, 0, 0, 5952, 8512, 0, 0, 0, 0, 6976, 8512, 0, 0, 0, 0, 7296, 8512, 0, 0, 0, 0, 7776, 8512, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11935, 12225, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 11002, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10048, 17792, 0, 0, 0, 0, 10048, 18656, 0, 0, 0, 0, 10048, 19168, 0, 0, 0, 0, 10048, 20187, 0, 0, 0, 0, 10656, 20187, 0, 0, 0, 0, 10048, 20200, 0, 0, 0, 0, 10656, 20201, 0, 0, 0, 0, 11072, 20192, 0, 0, 0, 0, 12320, 20192, 0, 0, 0, 0, 12320, 21728, 0, 0, 0, 0, 12320, 22752, 0, 0, 0, 0, 12320, 23520, 0, 0, 0, 0, 12320, 24544, 0, 0, 0, 0, 12320, 25056, 0, 0, 0, 0, 12608, 25056, 0, 0, 0, 0, 12860, 25053, -1.03659, -338.768, 1.03659, 338.768, 13760, 25376, 0, 0, 0, 0, 13760, 24768, 0, 0, 0, 0, 13764, 25136, 0, 0, 0, 0, 13760, 25888, 0, 0, 0, 0, 13760, 27360, 0, 0, 0, 0, 13760, 27744, 0, 0, 0, 0, 13760, 29376, 0, 0, 0, 0, 13760, 31946, 0, 0, 0, 0, 13760, 32426, 0, 0, 0, 0, 13760, 33024, 0, 0, 0, 0, 13760, 33696, 0, 0, 0, 0, 13760, 35232, 0, 0, 0, 0, 13760, 36704, 0, 0, 0, 0, 15319, 36704, 0, 0, 0, 0, 16151, 36704, 0, 0, 0, 0, 16151, 36576, 0, 0, 0, 0, 16151, 35776, 0, 0, 0, 0, 16151, 34816, 0, 0, 0, 0, 16608, 34816, 0, 0, 0, 0, 17024, 34816, 0, 0, 0, 0, 18551, 34816, 0, 0, 0, 0, 20640, 34816, 0, 0, 0, 0, 20640, 35200, 0, 0, 0, 0, 20640, 35951.4, 0, 0, 0, 0, 20640, 36527.4, 0, 0, 0, 0, 20640, 37056, 0, 0, 0, 0, 20640, 37632, 0, 0, 0, 0, 20640, 38272, 0, 0, 0, 0, 20640, 38464, 0, -252.944, 0, 400, 20640, 38976, -192.193, -99.9823, 192.193, 99.9823, 20864, 39616, 0, 0, 0, 0, 21056, 40000, 0, 0, 0, 0, 21056, 41600, 0, 0, 0, 0, 21056, 43232, 0, 0, 0, 0, 21056, 43360, 0, 0, 0, 0, 21056, 44960, 0, 0, 0, 0, 21056, 44672, 0, 0, 0, 0, 21056, 45312, 0, 0, 0, 0, 21056, 46560, 0, 0, 0, 0, 21056, 46848, 0, 0, 0, 0, 21056, 48288, 0, 0, 0, 0, 21056, 48672, 0, 0, 0, 0, 21056, 49760, 0, 0, 0, 0, 21056, 55392, 0, 0, 0, 0, 21056, 62944)
 }
 point_count = 106
 
@@ -1490,7 +1488,7 @@ scale = Vector2(1.51407, 1.51407)
 texture = ExtResource("100_qd3qv")
 
 [node name="Ch1224" type="Sprite2D" parent="comic"]
-position = Vector2(21014, 49373.1)
+position = Vector2(21061, 49396)
 scale = Vector2(1.04576, 1.10209)
 texture = ExtResource("101_r0lce")
 
@@ -1745,10 +1743,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 5024.0
-offset_right = 4922.0
-offset_bottom = 5280.0
+offset_left = 4672.0
+offset_top = 5056.0
+offset_right = 4928.0
+offset_bottom = 5312.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1762,10 +1760,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 4896.0
-offset_right = 4922.0
-offset_bottom = 5152.0
+offset_left = 4667.0
+offset_top = 4908.0
+offset_right = 4923.0
+offset_bottom = 5164.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1817,10 +1815,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 6592.0
-offset_right = 4922.0
-offset_bottom = 6848.0
+offset_left = 4672.0
+offset_top = 6720.0
+offset_right = 4928.0
+offset_bottom = 6976.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -2183,10 +2181,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11936.0
-offset_top = 12224.0
-offset_right = 12192.0
-offset_bottom = 12480.0
+offset_left = 11935.0
+offset_top = 12225.0
+offset_right = 12191.0
+offset_bottom = 12481.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -2461,10 +2459,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 12832.0
-offset_top = 25056.0
-offset_right = 13088.0
-offset_bottom = 25312.0
+offset_left = 12860.0
+offset_top = 25053.0
+offset_right = 13116.0
+offset_bottom = 25309.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -3073,8 +3071,8 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -0.4
-deceleration_rate = 0.92
+speed_multiplier = -0.65
+deceleration_rate = 0.96
 scroll_speed = 10.0
 scroll_decay_rate = 0.1
 TOUCHPAD_VELOCITY = 14.0
@@ -3094,16 +3092,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(21056, 62944)
-zoom = Vector2(0.66, 0.66)
+position = Vector2(21056, 44672)
+zoom = Vector2(0.462, 0.462)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(1.51515, 1.51515)
+scale = Vector2(2.1645, 2.1645)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 6.6
+width = 4.62
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

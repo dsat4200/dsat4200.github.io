@@ -1,4 +1,4 @@
-[gd_scene load_steps=236 format=3 uid="uid://cr2c6mrcpo2qd"]
+[gd_scene load_steps=238 format=3 uid="uid://cr2c6mrcpo2qd"]
 
 [ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
@@ -120,11 +120,13 @@
 [ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="115_avjol"]
 [ext_resource type="AudioStream" uid="uid://blwcapnf8r31y" path="res://adaptations/red muscle 1/s1000_the_world.wav" id="116_48cwg"]
 [ext_resource type="Script" uid="uid://c6cy0lwv6m3q7" path="res://scripts/EasedGradientRect.gd" id="116_c6l8h"]
-[ext_resource type="AudioStream" uid="uid://bs7035umqdckq" path="res://adaptations/red muscle 1/gen_2A.wav" id="116_cdlst"]
 [ext_resource type="AudioStream" uid="uid://bwf00pdfn5neq" path="res://adaptations/red muscle 1/fall.wav" id="117_jgkax"]
 [ext_resource type="AudioStream" uid="uid://cliiu87wiijxi" path="res://adaptations/red muscle 1/st2_02_fade.wav" id="118_48cwg"]
+[ext_resource type="AudioStream" uid="uid://3uv7ad3hj320" path="res://adaptations/red muscle 1/buzzer.wav" id="118_bhye1"]
 [ext_resource type="AudioStream" uid="uid://b0kvsgnbuh5q7" path="res://adaptations/red muscle 1/slap.mp3" id="118_hxyl0"]
+[ext_resource type="AudioStream" uid="uid://yqa8psbx2s75" path="res://adaptations/red muscle 1/papaya.wav" id="118_y30cy"]
 [ext_resource type="AudioStream" uid="uid://hbggoeryhrhy" path="res://adaptations/red muscle 1/bubble.mp3" id="121_bby38"]
+[ext_resource type="AudioStream" uid="uid://cqd2vv6pw27cb" path="res://adaptations/red muscle 1/S_letter02.wav" id="122_y30cy"]
 
 [sub_resource type="Resource" id="Resource_c6l8h"]
 script = ExtResource("3_ctd7i")
@@ -228,6 +230,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.0
 speed = 1.5
+sound_effect = ExtResource("118_y30cy")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_mcecv"]
@@ -276,6 +279,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.2
 speed = 3.0
+sound_effect = ExtResource("118_bhye1")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_vypd1"]
@@ -494,7 +498,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.2
 speed = 7.0
-sound_effect = ExtResource("116_cdlst")
+sound_effect = ExtResource("122_y30cy")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_xtcco"]
@@ -525,7 +529,6 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 1.0
 speed = 0.715
-sound_effect = ExtResource("118_48cwg")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_r1t6o"]
@@ -720,7 +723,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 0.7
 speed = 3.836
-sound_effect = ExtResource("116_cdlst")
+sound_effect = ExtResource("122_y30cy")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_t5c6i"]
@@ -987,6 +990,31 @@ position = Vector2(11936, 11264)
 scale = Vector2(0.739637, 0.739637)
 texture = ExtResource("32_5r5yj")
 
+[node name="EasedGradientRect15" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11520.0
+offset_top = 11712.0
+offset_right = 12320.0
+offset_bottom = 12448.0
+script = ExtResource("116_c6l8h")
+color_to = Color(0.768627, 0.305882, 0.345098, 1)
+extend_to = 0.253
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect16" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11520.0
+offset_top = 12448.0
+offset_right = 12320.0
+offset_bottom = 13440.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.768627, 0.305882, 0.345098, 1)
+color_to = Color(1, 1, 1, 0)
+extend_from = 0.396
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch1094" type="Sprite2D" parent="comic"]
 position = Vector2(11930, 12184)
 scale = Vector2(0.777, 0.8)
@@ -1052,8 +1080,8 @@ scale = Vector2(1.48384, 1.43911)
 texture = ExtResource("47_bgoo3")
 
 [node name="Ch1115" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 20192)
-scale = Vector2(1.21158, 1.18639)
+position = Vector2(10048, 20183.6)
+scale = Vector2(1.21158, 1.20942)
 texture = ExtResource("46_c2wuf")
 
 [node name="Ch1123" type="Sprite2D" parent="comic"]
@@ -1487,15 +1515,17 @@ texture = ExtResource("105_itrf5")
 
 [node name="Ch124" type="Sprite2D" parent="comic"]
 position = Vector2(21056, 59584)
+scale = Vector2(1.11091, 1.11091)
 texture = ExtResource("106_urpfs")
 
 [node name="Ch125" type="Sprite2D" parent="comic"]
-position = Vector2(21056, 61216)
-scale = Vector2(0.831819, 0.831819)
+position = Vector2(21056, 61376)
+scale = Vector2(1.02682, 1.02682)
 texture = ExtResource("107_uirtd")
 
 [node name="Ch126" type="Sprite2D" parent="comic"]
-position = Vector2(21056, 62944)
+position = Vector2(21056, 63328)
+scale = Vector2(1.09363, 1.09363)
 texture = ExtResource("108_4eqdj")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
@@ -3043,8 +3073,8 @@ rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -40.0
-deceleration_rate = 0.9
+speed_multiplier = -0.4
+deceleration_rate = 0.92
 scroll_speed = 10.0
 scroll_decay_rate = 0.1
 TOUCHPAD_VELOCITY = 14.0
@@ -3064,16 +3094,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11936, 11552)
-zoom = Vector2(1.452, 1.452)
+position = Vector2(21056, 62944)
+zoom = Vector2(0.66, 0.66)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(0.688705, 0.688705)
+scale = Vector2(1.51515, 1.51515)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 14.52
+width = 6.6
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

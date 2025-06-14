@@ -320,7 +320,7 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_b73dg"]
 script = ExtResource("3_ctd7i")
 zoom = 2.2
-speed = 3.0
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_lhcyx"]
@@ -967,25 +967,25 @@ texture = ExtResource("26_0p14d")
 
 [node name="Ch1083" type="Sprite2D" parent="comic"]
 position = Vector2(10586, 10560)
-scale = Vector2(0.646697, 0.646697)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("27_asccm")
 
 [node name="Ch1084" type="Sprite2D" parent="comic"]
 position = Vector2(10586, 10848)
-scale = Vector2(0.645013, 0.645013)
+scale = Vector2(0.760862, 0.760862)
 texture = ExtResource("28_gh8tc")
 
 [node name="Ch1085" type="Sprite2D" parent="comic"]
-position = Vector2(10874, 11264)
+position = Vector2(10827, 11264)
 texture = ExtResource("29_8m6rk")
 
 [node name="Ch1091" type="Sprite2D" parent="comic"]
-position = Vector2(11542.5, 11099.8)
+position = Vector2(11514.5, 11099.8)
 scale = Vector2(0.735815, 0.735815)
 texture = ExtResource("30_hka76")
 
 [node name="Ch1092" type="Sprite2D" parent="comic"]
-position = Vector2(11545.2, 11372.2)
+position = Vector2(11517.2, 11372.2)
 scale = Vector2(0.737006, 0.737007)
 texture = ExtResource("31_ybiwk")
 
@@ -2087,7 +2087,7 @@ point_data = SubResource("Resource_asccm")
 max_speed = 4.0
 
 [node name="PathPointMarker_1684354026" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(1, 0.75, 0, 1)
+self_modulate = Color(0, 1, 0.25, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -3144,16 +3144,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(11936.9, 14178.4)
-zoom = Vector2(0.858, 0.858)
+position = Vector2(10586, 10144)
+zoom = Vector2(1.452, 1.452)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(1.1655, 1.1655)
+scale = Vector2(0.688705, 0.688705)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 8.58
+width = 14.52
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

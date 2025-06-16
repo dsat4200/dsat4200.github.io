@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3uv7ad3hj320"
+path="res://.godot/imported/buzzer.wav-51d96ca935c33a796f2faddffaf60d20.sample"
+
+[deps]
+
+source_file="res://adaptations/red muscle 1/buzzer.wav"
+dest_files=["res://.godot/imported/buzzer.wav-51d96ca935c33a796f2faddffaf60d20.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

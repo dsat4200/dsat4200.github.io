@@ -19,35 +19,30 @@ script = ExtResource("3_pclc1")
 zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
-show_target_node = false
 
 [sub_resource type="Resource" id="Resource_0u6l2"]
 script = ExtResource("3_pclc1")
 zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
-show_target_node = false
 
 [sub_resource type="Resource" id="Resource_ohieh"]
 script = ExtResource("3_pclc1")
 zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
-show_target_node = false
 
 [sub_resource type="Resource" id="Resource_ciyf2"]
 script = ExtResource("3_pclc1")
 zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
-show_target_node = false
 
 [sub_resource type="Resource" id="Resource_df7qx"]
 script = ExtResource("3_pclc1")
 zoom = 2.868
 speed = 8.0
 target_node = NodePath("")
-show_target_node = false
 
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
@@ -308,16 +303,16 @@ offset_bottom = 103.234
 pivot_offset = Vector2(500, 500)
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(12896, 14080)
-zoom = Vector2(0.91, 0.91)
+position = Vector2(11002, 16224)
+zoom = Vector2(0.65, 0.65)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(1.0989, 1.0989)
+scale = Vector2(1.53846, 1.53846)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 9.1
+width = 6.5
 default_color = Color(1, 0, 0, 1)
 script = ExtResource("6_75gwy")
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yqa8psbx2s75"
+path="res://.godot/imported/papaya.wav-68093718943d14466c25cd41cc116f2e.sample"
+
+[deps]
+
+source_file="res://adaptations/red muscle 1/papaya.wav"
+dest_files=["res://.godot/imported/papaya.wav-68093718943d14466c25cd41cc116f2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

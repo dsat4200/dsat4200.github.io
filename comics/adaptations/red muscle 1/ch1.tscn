@@ -1,4 +1,4 @@
-[gd_scene load_steps=183 format=3 uid="uid://cr2c6mrcpo2qd"]
+[gd_scene load_steps=238 format=3 uid="uid://cr2c6mrcpo2qd"]
 
 [ext_resource type="Texture2D" uid="uid://bfj3ae7ucbxy0" path="res://adaptations/red muscle 1/panels/ch1_01.png" id="1_cihnq"]
 [ext_resource type="Script" uid="uid://bna3kbraa63ci" path="res://scripts/control.gd" id="1_oiqj0"]
@@ -103,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://cdx1wjjaw2eij" path="res://adaptations/red muscle 1/panels/ch1_21_1.png" id="95_lp6pk"]
 [ext_resource type="Texture2D" uid="uid://gik23fdhv0fl" path="res://adaptations/red muscle 1/panels/ch1_21_2.png" id="96_6ght0"]
 [ext_resource type="Texture2D" uid="uid://dcj2y4mmvdpka" path="res://adaptations/red muscle 1/panels/ch1_21_3.png" id="97_x53li"]
+[ext_resource type="Script" uid="uid://dknqjnln33oqg" path="res://scripts/fade.gd" id="98_l2luw"]
 [ext_resource type="Texture2D" uid="uid://cydir8t3qckn2" path="res://adaptations/red muscle 1/panels/ch1_22_1.png" id="98_mqfe0"]
 [ext_resource type="Texture2D" uid="uid://7buomsylhprn" path="res://adaptations/red muscle 1/panels/ch1_22_2.png" id="99_flru0"]
 [ext_resource type="Texture2D" uid="uid://bp843tdaa0aug" path="res://adaptations/red muscle 1/panels/ch1_22_3.png" id="100_qd3qv"]
@@ -115,24 +116,58 @@
 [ext_resource type="Texture2D" uid="uid://m1bgxxeq4r18" path="res://adaptations/red muscle 1/panels/ch1_25.png" id="107_uirtd"]
 [ext_resource type="Texture2D" uid="uid://dx2hhp3xp5on3" path="res://adaptations/red muscle 1/panels/ch1_26.png" id="108_4eqdj"]
 [ext_resource type="Texture2D" uid="uid://dufvaj2svi4lm" path="res://scripts/pointer.png" id="112_c6l8h"]
+[ext_resource type="AudioStream" uid="uid://bjr6g3brjw0is" path="res://adaptations/red muscle 1/bg.wav" id="114_cdlst"]
 [ext_resource type="Script" uid="uid://dm45hfbsc161m" path="res://scripts/PathPointMarker.gd" id="115_avjol"]
+[ext_resource type="AudioStream" uid="uid://blwcapnf8r31y" path="res://adaptations/red muscle 1/s1000_the_world.wav" id="116_48cwg"]
+[ext_resource type="Script" uid="uid://c6cy0lwv6m3q7" path="res://scripts/EasedGradientRect.gd" id="116_c6l8h"]
+[ext_resource type="AudioStream" uid="uid://bwf00pdfn5neq" path="res://adaptations/red muscle 1/fall.wav" id="117_jgkax"]
+[ext_resource type="AudioStream" uid="uid://3uv7ad3hj320" path="res://adaptations/red muscle 1/buzzer.wav" id="118_bhye1"]
+[ext_resource type="AudioStream" uid="uid://b0kvsgnbuh5q7" path="res://adaptations/red muscle 1/slap.mp3" id="118_hxyl0"]
+[ext_resource type="AudioStream" uid="uid://yqa8psbx2s75" path="res://adaptations/red muscle 1/papaya.wav" id="118_y30cy"]
+[ext_resource type="AudioStream" uid="uid://hbggoeryhrhy" path="res://adaptations/red muscle 1/bubble.mp3" id="121_bby38"]
+[ext_resource type="AudioStream" uid="uid://cqd2vv6pw27cb" path="res://adaptations/red muscle 1/S_letter02.wav" id="122_y30cy"]
 
 [sub_resource type="Resource" id="Resource_c6l8h"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.5
+speed = 1.4
+sound_effect = ExtResource("114_cdlst")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_l2luw"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.5
+speed = 1.4
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_avjol"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.5
+speed = 1.3
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_g31yj"]
+script = ExtResource("3_ctd7i")
+zoom = 2.0
+speed = 1.3
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_itrf5"]
+script = ExtResource("3_ctd7i")
+zoom = 2.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_urpfs"]
+script = ExtResource("3_ctd7i")
+zoom = 2.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_uirtd"]
+script = ExtResource("3_ctd7i")
+zoom = 2.0
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_0mnfu"]
@@ -169,6 +204,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.0
 speed = 0.5
+sound_effect = ExtResource("117_jgkax")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_hxyl0"]
@@ -193,6 +229,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.0
 speed = 1.5
+sound_effect = ExtResource("118_y30cy")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_mcecv"]
@@ -204,7 +241,13 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_2lxma"]
 script = ExtResource("3_ctd7i")
 zoom = 2.0
-speed = 1.6
+speed = 1.5
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_58208"]
+script = ExtResource("3_ctd7i")
+zoom = 2.0
+speed = 1.5
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_vndom"]
@@ -235,6 +278,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.2
 speed = 3.0
+sound_effect = ExtResource("118_bhye1")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_vypd1"]
@@ -276,7 +320,7 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_b73dg"]
 script = ExtResource("3_ctd7i")
 zoom = 2.2
-speed = 3.0
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_lhcyx"]
@@ -319,6 +363,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 1.4
 speed = 5.0
+sound_effect = ExtResource("118_hxyl0")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_ar27j"]
@@ -329,25 +374,31 @@ target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_7mvoa"]
 script = ExtResource("3_ctd7i")
-zoom = 1.4
+zoom = 1.3
 speed = 1.5
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_0r064"]
+script = ExtResource("3_ctd7i")
+zoom = 1.3
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_je0dp"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.1
 speed = 2.5
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_c2wuf"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.1
 speed = 2.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_o6us5"]
 script = ExtResource("3_ctd7i")
-zoom = 1.0
+zoom = 1.1
 speed = 2.0
 target_node = NodePath("")
 
@@ -419,26 +470,27 @@ target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_ybiwk"]
 script = ExtResource("3_ctd7i")
-zoom = 1.1
+zoom = 1.8
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_5dp7p"]
 script = ExtResource("3_ctd7i")
-zoom = 1.1
+zoom = 1.8
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_buqpo"]
 script = ExtResource("3_ctd7i")
-zoom = 1.1
+zoom = 1.8
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_5gaio"]
 script = ExtResource("3_ctd7i")
-zoom = 2.2
+zoom = 1.8
 speed = 1.0
+sound_effect = ExtResource("116_48cwg")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_ko4nk"]
@@ -451,6 +503,7 @@ target_node = NodePath("")
 script = ExtResource("3_ctd7i")
 zoom = 2.2
 speed = 7.0
+sound_effect = ExtResource("122_y30cy")
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_xtcco"]
@@ -462,19 +515,13 @@ target_node = NodePath("")
 [sub_resource type="Resource" id="Resource_l61nr"]
 script = ExtResource("3_ctd7i")
 zoom = 0.7
-speed = 0.1
+speed = 0.3
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_ngrld"]
 script = ExtResource("3_ctd7i")
 zoom = 0.7
-speed = 0.1
-target_node = NodePath("")
-
-[sub_resource type="Resource" id="Resource_fshaq"]
-script = ExtResource("3_ctd7i")
-zoom = 0.7
-speed = 0.6
+speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Resource" id="Resource_1ji30"]
@@ -483,18 +530,260 @@ zoom = 0.7
 speed = 3.0
 target_node = NodePath("")
 
+[sub_resource type="Resource" id="Resource_ovg7j"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 0.715
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_r1t6o"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 4.0
+target_node = NodePath("")
+
 [sub_resource type="Resource" id="Resource_gh8tc"]
 script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 0.9
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_yxgud"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_ootxt"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_4eqdj"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+sound_effect = ExtResource("121_bby38")
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_fshaq"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.2
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_6hkcr"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.2
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_lvh6x"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.2
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_07yvy"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.2
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_l5xg2"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.2
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_lp6pk"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 5.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_6ght0"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 0.7
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_e8b35"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 0.6
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_x53li"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_mqfe0"]
+script = ExtResource("3_ctd7i")
+zoom = 1.7
+speed = 0.7
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_l32ji"]
+script = ExtResource("3_ctd7i")
+zoom = 1.7
+speed = 0.7
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_fnehy"]
+script = ExtResource("3_ctd7i")
+zoom = 1.7
+speed = 0.8
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_qd3qv"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_r0lce"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_uved0"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_c55f2"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 0.7
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_m0k0f"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_4saf6"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 0.8
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_3up2n"]
+script = ExtResource("3_ctd7i")
+zoom = 1.5
+speed = 2.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_cx2b7"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 0.6
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_n4ax4"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 0.7
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_nu3gq"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_flru0"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_bnrbh"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_q8yhc"]
+script = ExtResource("3_ctd7i")
+zoom = 1.2
+speed = 8.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_agugh"]
+script = ExtResource("3_ctd7i")
 zoom = 0.7
+speed = 4.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_hyem7"]
+script = ExtResource("3_ctd7i")
+zoom = 0.7
+speed = 3.836
+sound_effect = ExtResource("122_y30cy")
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_t5c6i"]
+script = ExtResource("3_ctd7i")
+zoom = 0.7
+speed = 0.6
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_j88ke"]
+script = ExtResource("3_ctd7i")
+zoom = 0.7
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_kmtfa"]
+script = ExtResource("3_ctd7i")
+zoom = 0.7
+speed = 4.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_g0234"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 0.6
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_80el1"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_cfgeu"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_h1i26"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
+speed = 1.0
+target_node = NodePath("")
+
+[sub_resource type="Resource" id="Resource_t2wks"]
+script = ExtResource("3_ctd7i")
+zoom = 1.0
 speed = 1.0
 target_node = NodePath("")
 
 [sub_resource type="Curve2D" id="Curve2D_aw5q7"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -640, 2144, 0, 0, 0, 0, -640, 3264, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 4192, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4666, 5024, 0, 0, 0, 0, 4666, 4896, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4666, 6592, 0, 0, 0, 0, 4666, 7136, 0, 0, 0, 0, 4666, 8448, 0, 0, 0, 0, 5946, 8448, 0, 0, 0, 0, 6970, 8448, 0, 0, 0, 0, 7290, 8448, 0, 0, 0, 0, 7770, 8448, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11936, 12224, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 11002, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10048, 17792, 0, 0, 0, 0, 10048, 18656, 0, 0, 0, 0, 10048, 19168, 0, 0, 0, 0, 10048, 20187, 0, 0, 0, 0, 10656, 20187, 0, 0, 0, 0, 10048, 20200, 0, 0, 0, 0, 10656, 20201, 0, 0, 0, 0, 11072, 20192, 0, 0, 0, 0, 12320, 20192, 0, 0, 0, 0, 12320, 21728, 0, 0, 0, 0, 12320, 22752, 0, 0, 0, 0, 12320, 23584, 0, 0, 0, 0, 12320, 24544, 0, 0, 0, 0, 12320, 25056, 0, 0, 0, 0, 12640, 25056, 0, 0, 0, 0, 12992, 25056, -1.03659, -338.768, 1.03659, 338.768, 13760, 25376, 0, 0, 0, 0, 13760, 24768, 0, 0, 0, 0, 13758.4, 25132, 0, 0, 0, 0, 13765, 24905, 0, 0, 0, 0, 13760, 26304, 0, 0, 0, 0, 13754, 27361)
+"points": PackedVector2Array(0, 0, 0, 0, -2400, 3840, 0, 0, 0, 0, -1632, 3840, 0, 0, 0, 0, -640, 3840, 0, 0, 0, 0, 992, 3840, 0, 0, 0, 0, 1280, 3840, 0, 0, 0, 0, 1568, 3840, 0, 0, 0, 0, 3584, 3840, 0, 0, 0, 0, 4128, 3840, 0, 0, 0, 0, 4288, 3840, 0, 0, 0, 0, 4666, 3840, 0, 0, 0, 0, 4666, 4128, 0, 0, 0, 0, 4666, 4608, 0, 0, 0, 0, 4672, 5056, 0, 0, 0, 0, 4667, 4908, 0, 0, 0, 0, 4667.92, 5369.72, 0, 0, 0, 0, 4670.31, 5711.35, 0, 0, 0, 0, 4672, 6720, 0, 0, 0, 0, 4666, 7136, 0, -259.292, 0, 259.292, 4672, 8192, -185.209, 0, 185.209, 0, 4960, 8512, 0, 0, 0, 0, 5952, 8512, 0, 0, 0, 0, 6976, 8512, 0, 0, 0, 0, 7296, 8512, 0, 0, 0, 0, 7776, 8512, 0, 0, 0, 0, 7770, 8735, 0, 0, 0, 0, 7770, 9247, 0, 0, 0, 0, 8346, 9247, 0, 0, 0, 0, 8762, 9247, 0, 0, 0, 0, 9722, 9247, 0, 0, 0, 0, 10059.7, 9248.4, 0, 0, 0, 0, 10586, 9247, 0, 0, 0, 0, 10586, 9439, 0, 0, 0, 0, 10586, 10144, 0, 0, 0, 0, 10586, 10688, 0, 0, 0, 0, 10586, 11264, 0, 0, 0, 0, 11936, 11264, 0, 0, 0, 0, 11936, 11392, 0, 0, 0, 0, 11936, 11552, 0, 0, 0, 0, 11936, 12512, 0, 0, 0, 0, 11935, 12225, 0, 0, 0, 0, 11936, 13216, 0, 0, 0, 0, 11936.9, 14178.4, 0, 0, 0, 0, 11936, 14656, 0, 0, 0, 0, 11936, 16224, 0, 0, 0, 0, 10528, 16224, 0, 0, 0, 0, 10048, 16224, 0, 0, 0, 0, 10048, 17792, 0, 0, 0, 0, 10048, 18656, 0, 0, 0, 0, 10048, 19168, 0, 0, 0, 0, 10048, 20187, 0, 0, 0, 0, 10656, 20187, 0, 0, 0, 0, 10048, 20200, 0, 0, 0, 0, 10656, 20201, 0, 0, 0, 0, 11072, 20192, 0, 0, 0, 0, 12320, 20192, 0, 0, 0, 0, 12320, 21728, 0, 0, 0, 0, 12320, 22752, 0, 0, 0, 0, 12320, 23520, 0, 0, 0, 0, 12320, 24544, 0, 0, 0, 0, 12320, 25056, 0, 0, 0, 0, 12608, 25056, 0, 0, 0, 0, 12860, 25053, -1.03659, -338.768, 1.03659, 338.768, 13760, 25376, 0, 0, 0, 0, 13760, 24768, 0, 0, 0, 0, 13764, 25136, 0, 0, 0, 0, 13760, 25888, 0, 0, 0, 0, 13760, 27360, 0, 0, 0, 0, 13760, 27744, 0, 0, 0, 0, 13760, 29376, 0, 0, 0, 0, 13760, 31946, 0, 0, 0, 0, 13760, 32426, 0, 0, 0, 0, 13760, 33024, 0, 0, 0, 0, 13760, 33696, 0, 0, 0, 0, 13760, 35232, 0, 0, 0, 0, 13760, 36704, 0, 0, 0, 0, 15319, 36704, 0, 0, 0, 0, 16151, 36704, 0, 0, 0, 0, 16151, 36576, 0, 0, 0, 0, 16151, 35776, 0, 0, 0, 0, 16151, 34816, 0, 0, 0, 0, 16608, 34816, 0, 0, 0, 0, 17024, 34816, 0, 0, 0, 0, 18551, 34816, 0, 0, 0, 0, 20640, 34816, 0, 0, 0, 0, 20640, 35200, 0, 0, 0, 0, 20640, 35951.4, 0, 0, 0, 0, 20640, 36527.4, 0, 0, 0, 0, 20640, 37056, 0, 0, 0, 0, 20640, 37632, 0, 0, 0, 0, 20640, 38272, 0, 0, 0, 0, 20640, 38464, 0, -252.944, 0, 400, 20640, 38976, -192.193, -99.9823, 192.193, 99.9823, 20864, 39616, 0, 0, 0, 0, 21056, 40000, 0, 0, 0, 0, 21056, 41600, 0, 0, 0, 0, 21056, 43232, 0, 0, 0, 0, 21056, 43360, 0, 0, 0, 0, 21056, 44960, 0, 0, 0, 0, 21056, 44672, 0, 0, 0, 0, 21056, 45312, 0, 0, 0, 0, 21056, 46560, 0, 0, 0, 0, 21056, 46848, 0, 0, 0, 0, 21056, 48288, 0, 0, 0, 0, 21056, 48672, 0, 0, 0, 0, 21056, 49760, 0, 0, 0, 0, 21056, 55392, 0, 0, 0, 0, 21056, 63328)
 }
-point_count = 62
+point_count = 107
 
 [sub_resource type="Animation" id="Animation_nal1h"]
 length = 0.001
@@ -537,13 +826,38 @@ _data = {
 
 [node name="comic" type="Node2D" parent="."]
 
+[node name="EasedGradientRect13" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2720.0
+offset_top = 3328.0
+offset_right = -2131.0
+offset_bottom = 4343.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.498039, 0.392157, 0.423529, 1)
+color_to = Color(0.498039, 0.392157, 0.423529, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect14" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2144.0
+offset_top = 3328.0
+offset_right = -1824.0
+offset_bottom = 4343.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.498039, 0.392157, 0.423529, 1)
+color_to = Color(1, 1, 1, 1)
+direction = 1
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch101" type="Sprite2D" parent="comic"]
-position = Vector2(-640, 2256.67)
-scale = Vector2(0.491818, 0.491818)
+position = Vector2(-2400, 3840)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cihnq")
 
 [node name="Ch102" type="Sprite2D" parent="comic"]
-position = Vector2(-640, 3097)
+position = Vector2(-1472, 3840)
 scale = Vector2(0.498182, 0.498182)
 texture = ExtResource("2_mja7m")
 
@@ -620,15 +934,15 @@ scale = Vector2(1.0565, 1.0565)
 texture = ExtResource("19_2lxma")
 
 [node name="Ch1064" type="Sprite2D" parent="comic"]
-position = Vector2(5434, 8448)
+position = Vector2(5440, 8512)
 texture = ExtResource("20_avs4a")
 
 [node name="Ch1065" type="Sprite2D" parent="comic"]
-position = Vector2(6458, 8447)
+position = Vector2(6464, 8512)
 texture = ExtResource("21_sd6jy")
 
 [node name="Ch1071" type="Sprite2D" parent="comic"]
-position = Vector2(7482, 8447)
+position = Vector2(7520, 8512)
 texture = ExtResource("22_kysnb")
 
 [node name="Ch1072" type="Sprite2D" parent="comic"]
@@ -653,25 +967,25 @@ texture = ExtResource("26_0p14d")
 
 [node name="Ch1083" type="Sprite2D" parent="comic"]
 position = Vector2(10586, 10560)
-scale = Vector2(0.646697, 0.646697)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("27_asccm")
 
 [node name="Ch1084" type="Sprite2D" parent="comic"]
 position = Vector2(10586, 10848)
-scale = Vector2(0.645013, 0.645013)
+scale = Vector2(0.760862, 0.760862)
 texture = ExtResource("28_gh8tc")
 
 [node name="Ch1085" type="Sprite2D" parent="comic"]
-position = Vector2(10874, 11264)
+position = Vector2(10827, 11264)
 texture = ExtResource("29_8m6rk")
 
 [node name="Ch1091" type="Sprite2D" parent="comic"]
-position = Vector2(11542.5, 11099.8)
+position = Vector2(11514.5, 11099.8)
 scale = Vector2(0.735815, 0.735815)
 texture = ExtResource("30_hka76")
 
 [node name="Ch1092" type="Sprite2D" parent="comic"]
-position = Vector2(11545.2, 11372.2)
+position = Vector2(11517.2, 11372.2)
 scale = Vector2(0.737006, 0.737007)
 texture = ExtResource("31_ybiwk")
 
@@ -679,6 +993,31 @@ texture = ExtResource("31_ybiwk")
 position = Vector2(11936, 11264)
 scale = Vector2(0.739637, 0.739637)
 texture = ExtResource("32_5r5yj")
+
+[node name="EasedGradientRect15" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11520.0
+offset_top = 11712.0
+offset_right = 12320.0
+offset_bottom = 12448.0
+script = ExtResource("116_c6l8h")
+color_to = Color(0.768627, 0.305882, 0.345098, 1)
+extend_to = 0.253
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect16" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11520.0
+offset_top = 12448.0
+offset_right = 12320.0
+offset_bottom = 13440.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.768627, 0.305882, 0.345098, 1)
+color_to = Color(1, 1, 1, 0)
+extend_from = 0.396
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
 
 [node name="Ch1094" type="Sprite2D" parent="comic"]
 position = Vector2(11930, 12184)
@@ -702,22 +1041,44 @@ position = Vector2(11936, 14112)
 texture = ExtResource("37_oo84g")
 
 [node name="Ch1103" type="Sprite2D" parent="comic"]
-position = Vector2(11331.9, 15390.1)
+position = Vector2(11337, 15412)
 scale = Vector2(2.1953, 2.19529)
 texture = ExtResource("38_w6hwp")
 
+[node name="EasedGradientRect17" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9600.0
+offset_top = 18336.0
+offset_right = 10464.0
+offset_bottom = 18944.0
+script = ExtResource("116_c6l8h")
+color_to = Color(0.921569, 0.898039, 0.670588, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect18" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9632.0
+offset_top = 17824.0
+offset_right = 10464.0
+offset_bottom = 18432.0
+script = ExtResource("116_c6l8h")
+color_to = Color(0.827451, 0.937255, 0.819608, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch1104" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 16113)
+position = Vector2(10048, 16135.2)
 scale = Vector2(1.31529, 1.31529)
 texture = ExtResource("39_eonl1")
 
 [node name="Ch1105" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 16864)
+position = Vector2(10048, 16886.2)
 scale = Vector2(1.46321, 1.46321)
 texture = ExtResource("40_cor2w")
 
 [node name="Ch1106" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 17576)
+position = Vector2(10048, 17598.2)
 scale = Vector2(1.16097, 1.16097)
 texture = ExtResource("41_fs3gs")
 
@@ -727,8 +1088,8 @@ scale = Vector2(0.780488, 0.780488)
 texture = ExtResource("42_ar27j")
 
 [node name="Ch1112" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 18538)
-scale = Vector2(0.789, 0.789)
+position = Vector2(10048, 18656)
+scale = Vector2(0.876853, 0.876853)
 texture = ExtResource("43_7mvoa")
 
 [node name="Ch1113" type="Sprite2D" parent="comic"]
@@ -745,8 +1106,8 @@ scale = Vector2(1.48384, 1.43911)
 texture = ExtResource("47_bgoo3")
 
 [node name="Ch1115" type="Sprite2D" parent="comic"]
-position = Vector2(10048, 20192)
-scale = Vector2(1.21158, 1.18639)
+position = Vector2(10048, 20183.6)
+scale = Vector2(1.21158, 1.20942)
 texture = ExtResource("46_c2wuf")
 
 [node name="Ch1123" type="Sprite2D" parent="comic"]
@@ -770,30 +1131,81 @@ scale = Vector2(1.21271, 1.20515)
 texture = ExtResource("51_vt4k6")
 
 [node name="Ch1126" type="Sprite2D" parent="comic"]
-position = Vector2(12320, 21696)
-scale = Vector2(1.05338, 1.05338)
+position = Vector2(12320, 21664)
+scale = Vector2(0.868327, 0.868327)
 texture = ExtResource("52_3i8rj")
 
 [node name="Ch1131" type="Sprite2D" parent="comic"]
-position = Vector2(12320, 22336)
+position = Vector2(12320, 22240)
+scale = Vector2(0.621307, 0.621307)
 texture = ExtResource("53_yctem")
 
 [node name="Ch1132" type="Sprite2D" parent="comic"]
-position = Vector2(12320, 22816)
+position = Vector2(12320, 22656)
+scale = Vector2(0.649995, 0.649995)
 texture = ExtResource("54_nu22r")
 
 [node name="Ch1133" type="Sprite2D" parent="comic"]
-position = Vector2(12320, 23584)
+position = Vector2(12320, 23360)
 texture = ExtResource("55_5dp7p")
 
 [node name="Ch1134" type="Sprite2D" parent="comic"]
-position = Vector2(12320, 24192)
-scale = Vector2(1.12372, 1.12372)
+position = Vector2(12320, 24352)
+scale = Vector2(1.21715, 1.18121)
 texture = ExtResource("56_5gaio")
 
 [node name="Ch1135" type="Sprite2D" parent="comic"]
 position = Vector2(12320, 25056)
 texture = ExtResource("57_ko4nk")
+
+[node name="EasedGradientRect6" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12992.0
+offset_top = 25376.0
+offset_right = 14528.0
+offset_bottom = 26528.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.921569, 0.898039, 0.670588, 1)
+color_to = Color(0.866667, 0.964706, 0.870588, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect8" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12960.0
+offset_top = 26528.0
+offset_right = 14560.0
+offset_bottom = 27360.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.866667, 0.964706, 0.866667, 1)
+color_to = Color(0.298039, 0.733333, 0.768627, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect9" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12960.0
+offset_top = 27328.0
+offset_right = 14560.0
+offset_bottom = 28576.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.298039, 0.733333, 0.768627, 1)
+color_to = Color(1, 1, 1, 1)
+extend_from = 0.498
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect7" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12992.0
+offset_top = 23264.0
+offset_right = 14528.0
+offset_bottom = 24032.0
+script = ExtResource("116_c6l8h")
+color_from = Color(1, 1, 1, 1)
+color_to = Color(0.909804, 0.972549, 0.894118, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
 
 [node name="Ch1136" type="Sprite2D" parent="comic"]
 position = Vector2(12736, 25056)
@@ -805,199 +1217,341 @@ scale = Vector2(1.6, 1.6)
 texture = ExtResource("59_buqpo")
 
 [node name="Ch1142" type="Sprite2D" parent="comic"]
-position = Vector2(13760, 26048)
+position = Vector2(13760, 26080)
 texture = ExtResource("60_xtcco")
 
 [node name="Ch1143" type="Sprite2D" parent="comic"]
-position = Vector2(9367.5, 22917)
+position = Vector2(13760, 27328)
+scale = Vector2(1.13548, 1.13548)
 texture = ExtResource("61_l61nr")
 
 [node name="Ch1151" type="Sprite2D" parent="comic"]
-position = Vector2(9367.5, 22917)
+position = Vector2(13600, 29312)
+scale = Vector2(1.15942, 1.17647)
 texture = ExtResource("62_dfo32")
 
 [node name="Ch1152" type="Sprite2D" parent="comic"]
-position = Vector2(9367.5, 22917)
+position = Vector2(14016, 29792)
+scale = Vector2(1.08738, 1.09804)
 texture = ExtResource("63_ngrld")
 
 [node name="Ch1153" type="Sprite2D" parent="comic"]
-position = Vector2(9367.5, 22917)
+position = Vector2(13760, 30304)
+scale = Vector2(1.08754, 1.16505)
 texture = ExtResource("64_fshaq")
 
 [node name="Ch1154" type="Sprite2D" parent="comic"]
-position = Vector2(9367.5, 22917)
+position = Vector2(13760, 31040)
+scale = Vector2(1.20137, 1.18983)
 texture = ExtResource("65_nu3gq")
 
 [node name="Ch1155" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 31840)
+scale = Vector2(1.55072, 1.5625)
 texture = ExtResource("66_3up2n")
 
 [node name="Ch1156" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 32480)
+scale = Vector2(1.58023, 1.5627)
 texture = ExtResource("67_yxgud")
 
+[node name="EasedGradientRect10" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13184.0
+offset_top = 32576.0
+offset_right = 22816.0
+offset_bottom = 33984.0
+script = ExtResource("116_c6l8h")
+color_to = Color(0.235294, 0.694118, 0.764706, 1)
+extend_to = 0.403
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect11" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13184.0
+offset_top = 33984.0
+offset_right = 22816.0
+offset_bottom = 50784.0
+script = ExtResource("116_c6l8h")
+color_from = Color(0.235294, 0.694118, 0.764706, 1)
+color_to = Color(0.235294, 0.694118, 0.764706, 1)
+extend_to = 0.403
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch1161" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 33696)
 texture = ExtResource("68_ootxt")
 
 [node name="Ch1162" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 34592)
 texture = ExtResource("69_lvh6x")
 
 [node name="Ch1163" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 35104)
 texture = ExtResource("70_l5xg2")
 
 [node name="Ch1164" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 35616)
 texture = ExtResource("71_e8b35")
 
-[node name="Ch1171" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
-texture = ExtResource("72_l32ji")
-
 [node name="Ch1172" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(14432, 36704)
+scale = Vector2(1.33135, 1.33135)
 texture = ExtResource("73_fnehy")
 
+[node name="Ch1171" type="Sprite2D" parent="comic"]
+position = Vector2(13760, 36704)
+scale = Vector2(1.22736, 1.22736)
+texture = ExtResource("72_l32ji")
+
 [node name="Ch1173" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(13760, 36160)
 texture = ExtResource("74_uved0")
 
 [node name="Ch1174" type="Sprite2D" parent="comic"]
-position = Vector2(11785, 9721)
+position = Vector2(15200, 36704)
+scale = Vector2(1.64057, 1.74433)
 texture = ExtResource("75_n4ax4")
 
 [node name="Ch1175" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(16160, 36704)
+scale = Vector2(1.68687, 1.59601)
 texture = ExtResource("76_c55f2")
 
 [node name="Ch1176" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(16151, 34816)
+scale = Vector2(2.4213, 2.38631)
 texture = ExtResource("77_m0k0f")
+script = ExtResource("98_l2luw")
 
 [node name="Ch1181" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(17472, 34816)
 texture = ExtResource("78_bnrbh")
 
 [node name="Ch1182" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(18656, 34816)
+scale = Vector2(1.32414, 1.32414)
 texture = ExtResource("79_hyem7")
 
 [node name="Ch1183" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(19584, 34816)
+scale = Vector2(1.07962, 1.07962)
 texture = ExtResource("80_4saf6")
 
 [node name="Ch1184" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20064, 34816)
+scale = Vector2(1.21338, 1.21338)
 texture = ExtResource("81_cx2b7")
 
 [node name="Ch1185" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 34816)
+scale = Vector2(1.38814, 1.38814)
 texture = ExtResource("82_cfgeu")
 
 [node name="Ch1186" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 35529.4)
+scale = Vector2(0.74635, 0.736807)
 texture = ExtResource("83_t2wks")
 
 [node name="Ch1191" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 35887.4)
+scale = Vector2(0.744824, 0.743867)
 texture = ExtResource("84_q8yhc")
 
 [node name="Ch1192" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 36226.4)
+scale = Vector2(0.747423, 0.739945)
 texture = ExtResource("85_g0234")
 
 [node name="Ch1193" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 36608)
+scale = Vector2(0.740019, 0.761811)
 texture = ExtResource("86_h1i26")
 
 [node name="Ch1194" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 37056)
 texture = ExtResource("87_t5c6i")
 
 [node name="Ch1195" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 37632)
+scale = Vector2(1.09259, 1.09259)
 texture = ExtResource("88_agugh")
 
 [node name="Ch1201" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 38176)
+scale = Vector2(1.01441, 1.01441)
 texture = ExtResource("89_j88ke")
 
 [node name="Ch1202" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20640, 38720)
+scale = Vector2(1.53425, 1.47127)
 texture = ExtResource("90_kmtfa")
 
 [node name="Ch1203" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(20950, 39482.1)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("91_ovg7j")
 
 [node name="Ch1204" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 40603)
+scale = Vector2(1.76053, 1.90017)
 texture = ExtResource("92_r1t6o")
 
 [node name="Ch1205" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 41603)
+scale = Vector2(1.4817, 1.4817)
 texture = ExtResource("93_6hkcr")
 
 [node name="Ch1206" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 42180)
+scale = Vector2(1.49708, 1.49708)
 texture = ExtResource("94_07yvy")
 
+[node name="EasedGradientRect" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 43201.6
+offset_right = 21943.0
+offset_bottom = 44002.6
+script = ExtResource("116_c6l8h")
+color_to = Color(1, 1, 1, 1)
+extend_from = 0.092
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect2" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 43969.6
+offset_right = 21943.0
+offset_bottom = 46369.6
+script = ExtResource("116_c6l8h")
+color_from = Color(1, 1, 1, 1)
+color_to = Color(1, 1, 1, 1)
+extend_to = 0.404
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect4" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 46369.6
+offset_right = 21943.0
+offset_bottom = 47142.6
+script = ExtResource("116_c6l8h")
+color_from = Color(1, 1, 1, 1)
+color_to = Color(1, 1, 1, 0)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch1211" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 42718)
+scale = Vector2(0.894484, 0.894484)
 texture = ExtResource("95_lp6pk")
 
 [node name="Ch1212" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 43176)
+scale = Vector2(0.889397, 0.889397)
 texture = ExtResource("96_6ght0")
 
 [node name="Ch1213" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 44736)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("97_x53li")
 
 [node name="Ch1221" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 46112)
+scale = Vector2(1.35348, 1.35348)
 texture = ExtResource("98_mqfe0")
 
+[node name="EasedGradientRect3" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 48000.0
+offset_right = 21984.0
+offset_bottom = 49283.0
+script = ExtResource("116_c6l8h")
+color_to = Color(1, 0, 0, 1)
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect5" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 49248.0
+offset_right = 21984.0
+offset_bottom = 50816.0
+script = ExtResource("116_c6l8h")
+color_from = Color(1, 0, 0, 1)
+color_to = Color(1, 0, 0, 1)
+extend_from = 0.687
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
+[node name="EasedGradientRect12" type="Control" parent="comic"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20128.0
+offset_top = 50400.0
+offset_right = 21984.0
+offset_bottom = 51264.0
+script = ExtResource("116_c6l8h")
+color_from = Color(1, 0, 0, 1)
+color_to = Color(1, 1, 1, 1)
+extend_from = 0.299
+metadata/_custom_type_script = "uid://c6cy0lwv6m3q7"
+
 [node name="Ch1222" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 48256)
+scale = Vector2(1.62715, 1.65162)
 texture = ExtResource("99_flru0")
+script = ExtResource("98_l2luw")
+fade_duration_frames = 10
 
 [node name="Ch1223" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 48832)
+scale = Vector2(1.51407, 1.51407)
 texture = ExtResource("100_qd3qv")
 
 [node name="Ch1224" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21061, 49396)
+scale = Vector2(1.04576, 1.10209)
 texture = ExtResource("101_r0lce")
 
 [node name="Ch1225" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 50016)
+scale = Vector2(1.12165, 1.12165)
 texture = ExtResource("102_58208")
 
 [node name="Ch1231" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 51776)
 texture = ExtResource("103_80el1")
 
 [node name="Ch1232" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 53888)
+scale = Vector2(2.06949, 2.06949)
 texture = ExtResource("104_g31yj")
 
 [node name="Ch1233" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 57024)
+scale = Vector2(2.05741, 2.05741)
 texture = ExtResource("105_itrf5")
 
 [node name="Ch124" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 59584)
+scale = Vector2(1.11091, 1.11091)
 texture = ExtResource("106_urpfs")
 
 [node name="Ch125" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 61376)
+scale = Vector2(1.02682, 1.02682)
 texture = ExtResource("107_uirtd")
 
 [node name="Ch126" type="Sprite2D" parent="comic"]
-position = Vector2(10182, 2531)
+position = Vector2(21056, 63328)
+scale = Vector2(1.195, 1.195)
 texture = ExtResource("108_4eqdj")
 
 [node name="PointData" type="Control" parent="." node_paths=PackedStringArray("preview_cam", "path_follow", "frame")]
@@ -1013,17 +1567,17 @@ frame = NodePath("../PreviewCam/Frame")
 path_node_path = NodePath("../Path2D")
 
 [node name="PathPointMarker_6421860153" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.75, 1, 0, 1)
+self_modulate = Color(0.7, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -640.0
-offset_top = 2144.0
-offset_right = -384.0
-offset_bottom = 2400.0
+offset_left = -2400.0
+offset_top = 3840.0
+offset_right = -2144.0
+offset_bottom = 4096.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1031,17 +1585,17 @@ point_data = SubResource("Resource_c6l8h")
 max_speed = 4.0
 
 [node name="PathPointMarker_6421860857" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.75, 1, 0, 1)
+self_modulate = Color(0.7, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -640.0
-offset_top = 3264.0
-offset_right = -384.0
-offset_bottom = 3520.0
+offset_left = -1632.0
+offset_top = 3840.0
+offset_right = -1376.0
+offset_bottom = 4096.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1049,7 +1603,7 @@ point_data = SubResource("Resource_l2luw")
 max_speed = 4.0
 
 [node name="PathPointMarker_6421861052" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.75, 1, 0, 1)
+self_modulate = Color(0.65, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1066,6 +1620,60 @@ pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_avjol")
 max_speed = 4.0
 
+[node name="PathPointMarker_22735461982" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.564286, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 988.52
+offset_top = 3836.6
+offset_right = 1241.04
+offset_bottom = 4089.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_g31yj")
+
+[node name="PathPointMarker_22721040847" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 1276.52
+offset_top = 3836.6
+offset_right = 1529.04
+offset_bottom = 4089.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_itrf5")
+
+[node name="PathPointMarker_22759947619" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 1564.52
+offset_top = 3836.6
+offset_right = 1817.04
+offset_bottom = 4089.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_urpfs")
+
+[node name="PathPointMarker_23150386243" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = 3580.52
+offset_top = 3836.6
+offset_right = 3833.04
+offset_bottom = 4089.24
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("115_avjol")
+point_data = SubResource("Resource_uirtd")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Speed")
+zoom_label = NodePath("Zoom")
+mid_hue = 0.25
+
 [node name="PathPointMarker_6421861782" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
 anchors_preset = 0
@@ -1073,9 +1681,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4192.0
+offset_left = 4128.0
 offset_top = 3840.0
-offset_right = 4448.0
+offset_right = 4384.0
 offset_bottom = 4096.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -1163,10 +1771,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 5024.0
-offset_right = 4922.0
-offset_bottom = 5280.0
+offset_left = 4672.0
+offset_top = 5056.0
+offset_right = 4928.0
+offset_bottom = 5312.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1180,10 +1788,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 4896.0
-offset_right = 4922.0
-offset_bottom = 5152.0
+offset_left = 4667.0
+offset_top = 4908.0
+offset_right = 4923.0
+offset_bottom = 5164.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1235,10 +1843,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 6592.0
-offset_right = 4922.0
-offset_bottom = 6848.0
+offset_left = 4672.0
+offset_top = 6720.0
+offset_right = 4928.0
+offset_bottom = 6976.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1264,22 +1872,33 @@ point_data = SubResource("Resource_mcecv")
 max_speed = 4.0
 
 [node name="PathPointMarker_6421863900" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.8, 1, 0, 1)
+self_modulate = Color(0.75, 1, 0, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4666.0
-offset_top = 8448.0
-offset_right = 4922.0
-offset_bottom = 8704.0
+offset_left = 4672.0
+offset_top = 8192.0
+offset_right = 4928.0
+offset_bottom = 8448.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_2lxma")
 max_speed = 4.0
+
+[node name="PathPointMarker_19642008250" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.607143, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 4956.52
+offset_top = 8508.6
+offset_right = 5209.04
+offset_bottom = 8761.24
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_58208")
 
 [node name="PathPointMarker_2420782145" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(0.75, 1, 0, 1)
@@ -1289,10 +1908,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 5946.0
-offset_top = 8448.0
-offset_right = 6202.0
-offset_bottom = 8704.0
+offset_left = 5952.0
+offset_top = 8512.0
+offset_right = 6208.0
+offset_bottom = 8768.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1306,10 +1925,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 6970.0
-offset_top = 8448.0
-offset_right = 7226.0
-offset_bottom = 8704.0
+offset_left = 6976.0
+offset_top = 8512.0
+offset_right = 7232.0
+offset_bottom = 8768.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1324,10 +1943,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 7290.0
-offset_top = 8448.0
-offset_right = 7546.0
-offset_bottom = 8704.0
+offset_left = 7296.0
+offset_top = 8512.0
+offset_right = 7552.0
+offset_bottom = 8768.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1342,10 +1961,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 7770.0
-offset_top = 8448.0
-offset_right = 8026.0
-offset_bottom = 8704.0
+offset_left = 7776.0
+offset_top = 8512.0
+offset_right = 8032.0
+offset_bottom = 8768.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1468,7 +2087,7 @@ point_data = SubResource("Resource_asccm")
 max_speed = 4.0
 
 [node name="PathPointMarker_1684354026" parent="PointData" instance=ExtResource("2_hjpiw")]
-self_modulate = Color(1, 0.75, 0, 1)
+self_modulate = Color(0, 1, 0.25, 1)
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
@@ -1590,10 +2209,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11936.0
-offset_top = 12224.0
-offset_right = 12192.0
-offset_bottom = 12480.0
+offset_left = 11935.0
+offset_top = 12225.0
+offset_right = 12191.0
+offset_bottom = 12481.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
@@ -1616,6 +2235,29 @@ grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_7mvoa")
+
+[node name="PathPointMarker_28451211414" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = 11933.4
+offset_top = 14175.0
+offset_right = 12185.9
+offset_bottom = 14427.7
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("115_avjol")
+point_data = SubResource("Resource_0r064")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Speed")
+zoom_label = NodePath("Zoom")
+mid_hue = 0.25
 
 [node name="PathPointMarker_9179010857" parent="PointData" instance=ExtResource("2_hjpiw")]
 self_modulate = Color(1, 0.75, 0, 1)
@@ -1661,539 +2303,829 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 11002.0
+offset_left = 10528.0
 offset_top = 16224.0
-offset_right = 11258.0
+offset_right = 10784.0
 offset_bottom = 16480.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_o6us5")
 
-[node name="PathPointMarker_6371226261" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 16220.6
-offset_right = 10297.0
-offset_bottom = 16473.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_1aqqp")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_11570909434" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 17788.6
-offset_right = 10297.0
-offset_bottom = 18041.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_3i8rj")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_7273908927" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 18652.6
-offset_right = 10297.0
-offset_bottom = 18905.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_oo84g")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_7274780747" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 19164.6
-offset_right = 10297.0
-offset_bottom = 19417.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_nklca")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_6391976378" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 20183.6
-offset_right = 10297.0
-offset_bottom = 20436.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_avs4a")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_8317879851" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.607143, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10652.5
-offset_top = 20183.6
-offset_right = 10905.0
-offset_bottom = 20436.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_yctem")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_10217039235" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.607143, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10044.5
-offset_top = 20196.6
-offset_right = 10297.0
-offset_bottom = 20449.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_1nsqg")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_10369768360" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.607143, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 10652.5
-offset_top = 20197.6
-offset_right = 10905.0
-offset_bottom = 20450.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_fs3gs")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_8434329335" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 11068.5
-offset_top = 20188.6
-offset_right = 11321.0
-offset_bottom = 20441.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_nu22r")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_6742626242" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 20188.6
-offset_right = 12569.0
-offset_bottom = 20441.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_noguo")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_11475749788" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 21724.6
-offset_right = 12569.0
-offset_bottom = 21977.2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_vt4k6")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_13232243644" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 22748.6
-offset_right = 12569.0
-offset_bottom = 23001.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_ybiwk")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_13286774729" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 23580.6
-offset_right = 12569.0
-offset_bottom = 23833.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_5dp7p")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_13933577573" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 24540.6
-offset_right = 12569.0
-offset_bottom = 24793.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_buqpo")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_13331646211" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.5, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12316.5
-offset_top = 25052.6
-offset_right = 12569.0
-offset_bottom = 25305.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_5gaio")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_14176580056" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0, 1, 0.55, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12636.5
-offset_top = 25052.6
-offset_right = 12889.0
-offset_bottom = 25305.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_ko4nk")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_14239701070" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(1, 0.214286, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 12988.5
-offset_top = 25052.6
-offset_right = 13241.0
-offset_bottom = 25305.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_dfo32")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_15773892476" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(1, 0.428571, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 13756.5
-offset_top = 25372.6
-offset_right = 14009.0
-offset_bottom = 25625.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_xtcco")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_16037402555" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0, 1, 0.85, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 13756.5
-offset_top = 24764.6
-offset_right = 14009.0
-offset_bottom = 25017.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_l61nr")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_16293043791" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0, 1, 0.85, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 13754.9
-offset_top = 25128.6
-offset_right = 14007.4
-offset_bottom = 25381.3
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_ngrld")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_16469485955" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0, 1, 0.0999999, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 13761.5
-offset_top = 24901.6
-offset_right = 14014.0
-offset_bottom = 25154.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_fshaq")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_15544606319" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
-self_modulate = Color(0.928571, 1, 0, 1)
-layout_mode = 0
-anchor_left = 0.087
-anchor_top = 0.085
-anchor_right = 0.174
-anchor_bottom = 0.169
-offset_left = 13756.5
-offset_top = 26300.6
-offset_right = 14009.0
-offset_bottom = 26553.2
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("112_c6l8h")
-script = ExtResource("115_avjol")
-point_data = SubResource("Resource_1ji30")
-speaker = NodePath("Speaker")
-container = NodePath("Container")
-spd_label = NodePath("Speed")
-zoom_label = NodePath("Zoom")
-mid_hue = 0.25
-
-[node name="PathPointMarker_6421865450" parent="PointData" instance=ExtResource("2_hjpiw")]
+[node name="PathPointMarker_6371226261" parent="PointData" instance=ExtResource("2_hjpiw")]
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 13754.0
-offset_top = 27361.0
-offset_right = 14010.0
-offset_bottom = 27617.0
+offset_left = 10048.0
+offset_top = 16224.0
+offset_right = 10304.0
+offset_bottom = 16480.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_1aqqp")
+
+[node name="PathPointMarker_11570909434" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 10044.5
+offset_top = 17788.6
+offset_right = 10297.0
+offset_bottom = 18041.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_3i8rj")
+
+[node name="PathPointMarker_7273908927" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 10044.5
+offset_top = 18652.6
+offset_right = 10297.0
+offset_bottom = 18905.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_oo84g")
+
+[node name="PathPointMarker_7274780747" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 10044.5
+offset_top = 19164.6
+offset_right = 10297.0
+offset_bottom = 19417.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_nklca")
+
+[node name="PathPointMarker_6391976378" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 10044.5
+offset_top = 20183.6
+offset_right = 10297.0
+offset_bottom = 20436.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_avs4a")
+
+[node name="PathPointMarker_8317879851" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.607143, 1, 0, 1)
+layout_mode = 1
+offset_left = 10652.5
+offset_top = 20183.6
+offset_right = 10905.0
+offset_bottom = 20436.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_yctem")
+
+[node name="PathPointMarker_10217039235" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.607143, 1, 0, 1)
+layout_mode = 1
+offset_left = 10044.5
+offset_top = 20196.6
+offset_right = 10297.0
+offset_bottom = 20449.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_1nsqg")
+
+[node name="PathPointMarker_10369768360" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.607143, 1, 0, 1)
+layout_mode = 1
+offset_left = 10652.5
+offset_top = 20197.6
+offset_right = 10905.0
+offset_bottom = 20450.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_fs3gs")
+
+[node name="PathPointMarker_8434329335" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 11068.5
+offset_top = 20188.6
+offset_right = 11321.0
+offset_bottom = 20441.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_nu22r")
+
+[node name="PathPointMarker_6742626242" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 12316.5
+offset_top = 20188.6
+offset_right = 12569.0
+offset_bottom = 20441.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_noguo")
+
+[node name="PathPointMarker_11475749788" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 12316.5
+offset_top = 21724.6
+offset_right = 12569.0
+offset_bottom = 21977.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_vt4k6")
+
+[node name="PathPointMarker_13232243644" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12320.0
+offset_top = 22752.0
+offset_right = 12576.0
+offset_bottom = 23008.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ybiwk")
+
+[node name="PathPointMarker_13286774729" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12320.0
+offset_top = 23520.0
+offset_right = 12576.0
+offset_bottom = 23776.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_5dp7p")
+
+[node name="PathPointMarker_13933577573" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12320.0
+offset_top = 24544.0
+offset_right = 12576.0
+offset_bottom = 24800.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_buqpo")
+
+[node name="PathPointMarker_13331646211" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12320.0
+offset_top = 25056.0
+offset_right = 12576.0
+offset_bottom = 25312.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_5gaio")
+
+[node name="PathPointMarker_14176580056" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.55, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12608.0
+offset_top = 25056.0
+offset_right = 12864.0
+offset_bottom = 25312.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ko4nk")
+
+[node name="PathPointMarker_14239701070" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.214286, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12860.0
+offset_top = 25053.0
+offset_right = 13116.0
+offset_bottom = 25309.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_dfo32")
+
+[node name="PathPointMarker_15773892476" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.428571, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 25376.0
+offset_right = 14016.0
+offset_bottom = 25632.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_xtcco")
+
+[node name="PathPointMarker_16037402555" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.55, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 24768.0
+offset_right = 14016.0
+offset_bottom = 25024.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_l61nr")
+
+[node name="PathPointMarker_16293043791" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13764.0
+offset_top = 25136.0
+offset_right = 14020.0
+offset_bottom = 25392.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ngrld")
+
+[node name="PathPointMarker_15544606319" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.928571, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 25888.0
+offset_right = 14016.0
+offset_bottom = 26144.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_1ji30")
+
+[node name="PathPointMarker_12425244671" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0725, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 13756.5
+offset_top = 27356.6
+offset_right = 14009.0
+offset_bottom = 27609.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ovg7j")
+
+[node name="PathPointMarker_12452234668" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.857143, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 13756.5
+offset_top = 27740.6
+offset_right = 14009.0
+offset_bottom = 27993.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_r1t6o")
+
+[node name="PathPointMarker_4129824239" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.35, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 29376.0
+offset_right = 14016.0
+offset_bottom = 29632.0
 grow_horizontal = 1
 grow_vertical = 1
 pivot_offset = Vector2(128, 128)
 point_data = SubResource("Resource_gh8tc")
-max_speed = 4.0
+
+[node name="PathPointMarker_4621539015" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 31946.0
+offset_right = 14016.0
+offset_bottom = 32202.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_yxgud")
+
+[node name="PathPointMarker_4616706967" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 32426.0
+offset_right = 14016.0
+offset_bottom = 32682.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_ootxt")
+
+[node name="PathPointMarker_23629878263" type="TextureRect" parent="PointData" node_paths=PackedStringArray("speaker", "container", "spd_label", "zoom_label") instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.5, 1, 0, 1)
+layout_mode = 0
+anchor_left = 0.087
+anchor_top = 0.085
+anchor_right = 0.174
+anchor_bottom = 0.169
+offset_left = 13756.5
+offset_top = 33020.6
+offset_right = 14009.0
+offset_bottom = 33273.2
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("112_c6l8h")
+script = ExtResource("115_avjol")
+point_data = SubResource("Resource_4eqdj")
+speaker = NodePath("Speaker")
+container = NodePath("Container")
+spd_label = NodePath("Speed")
+zoom_label = NodePath("Zoom")
+mid_hue = 0.25
+
+[node name="PathPointMarker_14432641391" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 13756.5
+offset_top = 33692.6
+offset_right = 14009.0
+offset_bottom = 33945.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_fshaq")
+
+[node name="PathPointMarker_12569772938" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+offset_left = 13756.5
+offset_top = 35228.6
+offset_right = 14009.0
+offset_bottom = 35481.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_6hkcr")
+
+[node name="PathPointMarker_4678457926" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13760.0
+offset_top = 36704.0
+offset_right = 14016.0
+offset_bottom = 36960.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_lvh6x")
+
+[node name="PathPointMarker_12546591337" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
+layout_mode = 1
+offset_left = 15315.5
+offset_top = 36700.6
+offset_right = 15568.0
+offset_bottom = 36953.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_07yvy")
+
+[node name="PathPointMarker_4694485148" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.542857, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 16151.0
+offset_top = 36704.0
+offset_right = 16407.0
+offset_bottom = 36960.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_l5xg2")
+
+[node name="PathPointMarker_13088202523" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.642857, 0, 1)
+layout_mode = 1
+offset_left = 16147.5
+offset_top = 36572.6
+offset_right = 16400.0
+offset_bottom = 36825.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_lp6pk")
+
+[node name="PathPointMarker_13188963135" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0500001, 1, 0, 1)
+layout_mode = 1
+offset_left = 16147.5
+offset_top = 35772.6
+offset_right = 16400.0
+offset_bottom = 36025.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_6ght0")
+
+[node name="PathPointMarker_4699184433" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.0999999, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 16151.0
+offset_top = 34816.0
+offset_right = 16407.0
+offset_bottom = 35072.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_e8b35")
+
+[node name="PathPointMarker_13244981112" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 16604.5
+offset_top = 34812.6
+offset_right = 16857.0
+offset_bottom = 35065.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_x53li")
+
+[node name="PathPointMarker_13256681358" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0500001, 1, 0, 1)
+layout_mode = 1
+offset_left = 17020.5
+offset_top = 34812.6
+offset_right = 17273.0
+offset_bottom = 35065.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_mqfe0")
+
+[node name="PathPointMarker_4708327610" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0500001, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 18551.0
+offset_top = 34816.0
+offset_right = 18807.0
+offset_bottom = 35072.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_l32ji")
+
+[node name="PathPointMarker_4719926925" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.2, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 34816.0
+offset_right = 20896.0
+offset_bottom = 35072.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_fnehy")
+
+[node name="PathPointMarker_13296403821" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 20636.5
+offset_top = 35196.6
+offset_right = 20889.0
+offset_bottom = 35449.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_qd3qv")
+
+[node name="PathPointMarker_13334978137" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 20636.5
+offset_top = 35948.0
+offset_right = 20889.0
+offset_bottom = 36200.6
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_r0lce")
+
+[node name="PathPointMarker_4729470646" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 36527.4
+offset_right = 20896.0
+offset_bottom = 36783.4
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_uved0")
+
+[node name="PathPointMarker_4766287083" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0500001, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 37056.0
+offset_right = 20896.0
+offset_bottom = 37312.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_c55f2")
+
+[node name="PathPointMarker_4777185991" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 37632.0
+offset_right = 20896.0
+offset_bottom = 37888.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_m0k0f")
+
+[node name="PathPointMarker_4963037272" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.2, 1, 0, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 38272.0
+offset_right = 20896.0
+offset_bottom = 38528.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_4saf6")
+
+[node name="PathPointMarker_15393080969" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.714286, 1, 0, 1)
+layout_mode = 1
+offset_left = 20636.5
+offset_top = 38460.6
+offset_right = 20889.0
+offset_bottom = 38713.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_3up2n")
+
+[node name="PathPointMarker_4966130941" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.0999999, 1)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20640.0
+offset_top = 38976.0
+offset_right = 20896.0
+offset_bottom = 39232.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_cx2b7")
+
+[node name="PathPointMarker_15424250718" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0.0500001, 1, 0, 1)
+layout_mode = 1
+offset_left = 20860.5
+offset_top = 39612.6
+offset_right = 21113.0
+offset_bottom = 39865.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_n4ax4")
+
+[node name="PathPointMarker_5400540349" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 21056.0
+offset_top = 40000.0
+offset_right = 21312.0
+offset_bottom = 40256.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_nu3gq")
+
+[node name="PathPointMarker_17391140667" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 21052.5
+offset_top = 41596.6
+offset_right = 21305.0
+offset_bottom = 41849.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_flru0")
+
+[node name="PathPointMarker_5408628144" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 21056.0
+offset_top = 43232.0
+offset_right = 21312.0
+offset_bottom = 43488.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_bnrbh")
+
+[node name="PathPointMarker_5427478377" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 43356.6
+offset_right = 21305.0
+offset_bottom = 43609.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_q8yhc")
+
+[node name="PathPointMarker_10680725953" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.857143, 0, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 44956.6
+offset_right = 21305.0
+offset_bottom = 45209.2
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_agugh")
+
+[node name="PathPointMarker_5400540753" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.892286, 0, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 44668.6
+offset_right = 21305.0
+offset_bottom = 44921.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_hyem7")
+
+[node name="PathPointMarker_10643728157" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.0999999, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 45308.6
+offset_right = 21305.0
+offset_bottom = 45561.2
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_t5c6i")
+
+[node name="PathPointMarker_10810300750" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 46556.6
+offset_right = 21305.0
+offset_bottom = 46809.2
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_j88ke")
+
+[node name="PathPointMarker_10820472630" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(1, 0.857143, 0, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 46844.6
+offset_right = 21305.0
+offset_bottom = 47097.2
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_kmtfa")
+
+[node name="PathPointMarker_5545835874" parent="PointData" instance=ExtResource("2_hjpiw")]
+self_modulate = Color(0, 1, 0.0999999, 1)
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 48284.6
+offset_right = 21305.0
+offset_bottom = 48537.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_g0234")
+
+[node name="PathPointMarker_19989568762" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 21052.5
+offset_top = 48668.6
+offset_right = 21305.0
+offset_bottom = 48921.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_80el1")
+
+[node name="PathPointMarker_5400540991" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 49756.6
+offset_right = 21305.0
+offset_bottom = 50009.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_cfgeu")
+
+[node name="PathPointMarker_5581433036" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 55388.6
+offset_right = 21305.0
+offset_bottom = 55641.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_h1i26")
+
+[node name="PathPointMarker_5400541214" parent="PointData" instance=ExtResource("2_hjpiw")]
+layout_mode = 1
+offset_left = 21052.5
+offset_top = 63324.6
+offset_right = 21305.0
+offset_bottom = 63577.2
+pivot_offset = Vector2(128, 128)
+point_data = SubResource("Resource_t2wks")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_aw5q7")
+metadata/_edit_group_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-640, 2144)
+position = Vector2(-2400, 3840)
 rotation = 1.34307
 rotates = false
 loop = false
 script = ExtResource("4_s8hio")
-speed_multiplier = -0.4
-deceleration_rate = 0.9
+speed_multiplier = -0.52
+deceleration_rate = 0.955
+min_swipe_velocity_threshold = 0.02
 scroll_speed = 10.0
 scroll_decay_rate = 0.1
 TOUCHPAD_VELOCITY = 14.0
@@ -2213,16 +3145,16 @@ default_color = Color(1, 1, 1, 0.8)
 script = ExtResource("5_iaheh")
 
 [node name="PreviewCam" type="Camera2D" parent="."]
-position = Vector2(13765, 24905)
-zoom = Vector2(0.462, 0.462)
+position = Vector2(20640, 37632)
+zoom = Vector2(0.99, 0.99)
 
 [node name="Frame" type="Line2D" parent="PreviewCam"]
 visible = false
 z_index = 1
-scale = Vector2(2.1645, 2.1645)
+scale = Vector2(1.0101, 1.0101)
 points = PackedVector2Array(540, 540, 540, -540, -540, -540, -540, 540)
 closed = true
-width = 4.62
+width = 9.9
 default_color = Color(1, 0, 0, 0.109804)
 script = ExtResource("5_iaheh")
 

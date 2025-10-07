@@ -38,7 +38,7 @@
         <h1>Contact</h1>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/jessie-torres-acosta/" target="_blank"><img src="../../icons/linkedin.png" alt="LinkedIn"></a></li>
+                
                 <li><a href="https://bsky.app/profile/moccocheese.bsky.social" target="_blank"><img src="../../icons/bluesky.png" alt="Bluesky"></a></li>
                 <li><a href="https://anilist.co/user/moccocheese" target="_blank"><img src="../../icons/anilist.png" alt="AniList"></a></li>
                 <li><a href="mailto:jessietorresacosta@gmail.com"><img src="../../icons/mail.png" alt="Email"></a></li>

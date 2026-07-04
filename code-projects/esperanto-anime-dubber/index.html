@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Moccocheese | Esperanto Anime Dubber</title>
+
+</head>
+<body>
+    <header>
+        <h1>Moccocheese Dot Com</h1>
+        <h2>Artist and Game Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">3D Work</a></li>
+                <li><a href="../../concepts.html">2D Work</a></li>
+                <li><a href="../../codes.html">Code</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="#" onclick="scrollToContact()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="readme-content">
+        <h1>Esperanto Anime Dubber</h1>
+        <h2>2026</h2>
+        <p style="margin-top:16px;">
+            <a href="https://github.com/dsat4200/esperanto-anime-dubber" target="_blank" style="
+                display: inline-block;
+                background: rgb(148, 95, 255);
+                color: #fff;
+                padding: 10px 24px;
+                border-radius: 8pt;
+                text-decoration: none;
+                font-size: 16pt;
+                font-weight: 500;
+            ">View on GitHub</a>
+        </p>
+
+        <hr style="border-color: #6734c459; margin: 20px 0;">
+
+        <h2 style="margin-top:20px;">Videos</h2>
+        <div id="additional-image">
+            <video height="460" autoplay muted controls loop><source src="gabchan.mp4" type="video/mp4"></video>
+            <video height="460" autoplay muted controls loop><source src="goofs.mp4" type="video/mp4"></video>
+            <video height="460" autoplay muted controls loop><source src="hisoka.mp4" type="video/mp4"></video>
+            <video height="460" autoplay muted controls loop><source src="kurapika.mp4" type="video/mp4"></video>
+            <video height="460" autoplay muted controls loop><source src="satania.mp4" type="video/mp4"></video>
+        </div>
+
+        <hr style="border-color: #6734c459; margin: 20px 0;">
+
+        <div class="readme-body">
+            <p>Anime dubbing pipeline: separate audio into background + vocals, translate Japanese subtitles to Esperanto, then generate Esperanto voice tracks using the OmniVoice (k2-fsa) TTS model. All dubbing work happens in a browser-based editor — no CLI workflow commands required.</p>
+
+            <h2>Disclaimer / Why?</h2>
+            <p><strong>This is a personal project developed and tested on a specific machine.</strong></p>
+            <table>
+                <tr><th>Component</th><th>Detail</th></tr>
+                <tr><td><strong>GPU</strong></td><td>NVIDIA GeForce RTX 5060 (Blackwell architecture)</td></tr>
+                <tr><td><strong>VRAM</strong></td><td>8 GB</td></tr>
+                <tr><td><strong>CUDA</strong></td><td>12.8</td></tr>
+                <tr><td><strong>OS</strong></td><td>Windows 11</td></tr>
+                <tr><td><strong>Python</strong></td><td>3.10+</td></tr>
+            </table>
+            <p>It may not work on other GPUs, CUDA versions, or operating systems. Uses ~6 GB of VRAM during inference. First run downloads ~2.5 GB of model weights. <strong>YMMV.</strong></p>
+            <p>Theoretically this could be modified to translate any anime into any language, but there's not much of a need for that.</p>
+            <p>Even though machine translation is imperfect, I hope to provide the tools for anyone to make their own translation, to the best of their ability, without investing immense time and resources into making a fan dub. Hopefully, this will make it much easier to get quality comprehensible input for Esperanto.</p>
+
+            <h2>Requirements</h2>
+            <ul>
+                <li><strong>Windows</strong> (tested on 11; PowerShell required for <code>install.ps1</code>)</li>
+                <li><strong>Python 3.10+</strong></li>
+                <li><strong>NVIDIA GPU</strong> with CUDA 12.8+ support (Blackwell optimized; may work on older architectures)</li>
+                <li><strong>ffmpeg</strong> (auto-downloaded by <code>install.ps1</code>)</li>
+                <li><strong>Model downloads</strong> (automatic on first run):
+                    <ul>
+                        <li><code>k2-fsa/OmniVoice</code> — ~2.5 GB</li>
+                        <li><code>openai/whisper-tiny</code> — ~150 MB</li>
+                        <li><code>htdemucs</code> (Demucs) — ~160 MB</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Quick Install</h2>
+            <pre><code># 1. Clone the repo
+git clone https://github.com/dsat4200/esperanto-anime-dubber "omnivoice"
+cd "omnivoice"
+
+# 2. Run the installer (creates .venv, installs PyTorch CUDA, deps, ffmpeg)
+.\install.ps1
+
+# 3. Register CLI commands
+.\.venv\Scripts\Activate.ps1
+pip install -e .</code></pre>
+            <p>If you skip <code>install.ps1</code> and use your own venv, install manually:</p>
+            <pre><code>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+pip install demucs omnivoice deep-translator rich soundfile
+pip install -e .</code></pre>
+
+            <h2>Input File Structure</h2>
+            <p>Place your anime in <code>anime/{name}/</code>. Each folder contains one or more MKVs and optional ASS subtitle files.</p>
+            <pre><code>anime/
+├── gabriel_dropout/
+│   ├── Gabriel.DropOut.S00E02.mkv
+│   ├── Gabriel.DropOut.S00E02_eo.ass
+│   └── ...
+├── hxh/
+│   └── ...
+├── call_of_the_night/
+│   └── ...</code></pre>
+
+            <h2>Starting the Editor</h2>
+            <pre><code>anidub-edit</code></pre>
+            <p>Opens <code>http://127.0.0.1:5000</code> in your browser. Optional flags: <code>--port N</code>, <code>--host ADDR</code>, <code>--project PATH</code>.</p>
+
+            <h2>Recommended Workflow (new episode)</h2>
+            <ol>
+                <li>Run a "translate all".</li>
+                <li>Run a "Clone all" once that's complete.</li>
+                <li>Run "generate previews".</li>
+                <li>Go through episodes and fix clips with issues.</li>
+            </ol>
+
+            <h2>How It Works</h2>
+            <p>Each subtitle line goes through this pipeline:</p>
+            <pre><code>PARSE → TRANSLATE → SEPARATE → EXTRACT REF → TRANSCRIBE → GENERATE → TRIM+FIT → MIX → MUX</code></pre>
+
+            <h2>GPU Memory Panel</h2>
+            <p>Click the GPU indicator in the editor header to view live tensors, reserved memory, and active TTS backends. Buttons let you clear memory or force-unload models.</p>
+
+            <h2>Language Selector</h2>
+            <p>Switch the editor UI between English and Esperanto. The choice persists across browser sessions.</p>
+
+            <h2>Known Issues</h2>
+            <h3>Google Translate 500 errors</h3>
+            <p>Occasionally returns HTTP 500. The translate step automatically retries once after 30 seconds. If it still fails, the line keeps its original text.</p>
+            <h3>Timeout cascades</h3>
+            <p>If a line times out, subsequent lines may also run slowly. The TTS backend is destroyed and recreated after a 30-second cooldown.</p>
+            <h3>First-run model downloads</h3>
+            <p>k2-fsa/OmniVoice (~2.5 GB), openai/whisper-tiny (~150 MB), and htdemucs weights (~160 MB) are downloaded on first inference.</p>
+
+            <h2>Troubleshooting</h2>
+            <table>
+                <tr><th>Problem</th><th>Fix</th></tr>
+                <tr><td>ffmpeg not found</td><td>Run install.ps1 or ensure ffmpeg\bin\ffmpeg.exe exists</td></tr>
+                <tr><td>CUDA out of memory</td><td>Close other GPU applications</td></tr>
+                <tr><td>All lines skipped</td><td>Check ASS styles — dialogue must be Style: main</td></tr>
+                <tr><td>Original Japanese voices not removed</td><td>Delete full_no_vocals.wav to force re-separation</td></tr>
+                <tr><td>Episode uses wrong subtitles</td><td>Delete the stale _eo.ass file and re-open</td></tr>
+            </table>
+        </div>
+
+    </main>
+    <footer id="contact-section">
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+
+                <li><a href="https://bsky.app/profile/moccocheese.bsky.social" target="_blank"><img src="../../icons/bluesky.png" alt="Bluesky"></a></li>
+                <li><a href="https://anilist.co/user/moccocheese" target="_blank"><img src="../../icons/anilist.png" alt="AniList"></a></li>
+                <li><a href="mailto:jessietorresacosta@gmail.com"><img src="../../icons/mail.png" alt="Email"></a></li>
+                <li><a href="your_resume.pdf" target="_blank"><img src="../../icons/resume.png" alt="Resume"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact-section');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+</body>
+</html>
+<style>
+  .readme-content {
+    text-align: left;
+    padding: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .readme-content h1 {
+    text-align: center;
+  }
+
+  .readme-content h2 {
+    color: rgb(200, 170, 255);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18pt;
+  }
+
+  .readme-content h3 {
+    color: rgb(148, 95, 255);
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .readme-body p {
+    font-size: 14pt;
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+
+  .readme-body ul, .readme-body ol {
+    font-size: 14pt;
+    line-height: 1.6;
+    padding-left: 24px;
+  }
+
+  .readme-body li {
+    margin: 4px 0;
+  }
+
+  .readme-body ul ul {
+    font-size: 13pt;
+  }
+
+  .readme-body pre {
+    background: #1a1a1a;
+    border: 1px solid #6734c459;
+    border-radius: 8pt;
+    padding: 14px 18px;
+    overflow-x: auto;
+    font-size: 11pt;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+
+  .readme-body code {
+    background: #2a2a2a;
+    padding: 2px 6px;
+    border-radius: 4pt;
+    font-size: 12pt;
+  }
+
+  .readme-body pre code {
+    background: none;
+    padding: 0;
+  }
+
+  .readme-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 13pt;
+  }
+
+  .readme-body th {
+    background: #6734c459;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .readme-body td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  .readme-body strong {
+    color: rgb(200, 170, 255);
+  }
+
+  .readme-body hr {
+    border-color: #6734c459;
+    margin: 16px 0;
+  }
+
+  #additional-image {
+    text-align: center;
+  }
+</style>

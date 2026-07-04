@@ -251,6 +251,10 @@ video::-webkit-media-controls {
     display: none;
   }
 
+.play-video::-webkit-media-controls {
+    display: flex !important;
+  }
+
 .project-info {
     color: #fff;
     position: absolute;

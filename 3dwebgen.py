@@ -50,7 +50,10 @@ def generate_project_pages(html_file, template_file, output_dir):
                             if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp')):
                                 additional_image += f'<img src="{image_filename}" alt="{title} image">\n'
                             elif image_filename.lower().endswith(('.mp4', '.webm')):
-                                additional_image+= f'<video height="460" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
+                                if image_filename.lower().startswith('play_'):
+                                    additional_image+= f'<video controls class="play-video"><source src="{image_filename}" type="video/mp4"></video>\n'
+                                else:
+                                    additional_image+= f'<video height="460" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
                             elif "youtube" in image_filename.lower():
                                 pass  # YouTube links hidden; files kept on disk
 

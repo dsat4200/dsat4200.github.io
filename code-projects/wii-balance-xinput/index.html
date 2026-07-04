@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.0/marked.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown-dark.min.css">
 
     <title>Moccocheese | Wii Balance XInput</title>
 
@@ -48,7 +48,7 @@
         <hr style="border-color: #6734c459; margin: 20px 0;">
 
         <div class="readme-box">
-            <div id="readme-body" style="min-height:200px; text-align:center; padding:40px; color:#888;">
+            <div id="readme-body" style="min-height:200px; padding:40px; color:#888;">
                 Loading README from GitHub...
             </div>
         </div>
@@ -98,16 +98,13 @@
   }
 
   .readme-box {
-    background: #ffffff;
+    background: #0d1117;
     border-radius: 14pt;
     padding: 32px;
     max-width: 900px;
     margin: 20px auto 0;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  }
-
-  .readme-box .markdown-body {
-    background: transparent;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: left;
   }
 </style>
 <script>
@@ -117,7 +114,8 @@
       const res = await fetch('https://api.github.com/repos/dsat4200/Wii-Balance-Board-XInput-Controller/readme');
       if (!res.ok) throw new Error('GitHub API error: ' + res.status);
       const data = await res.json();
-      let md = atob(data.content);
+      const bytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));
+      let md = new TextDecoder('utf-8').decode(bytes);
 
       const branch = 'main';
       const rawBase = `https://raw.githubusercontent.com/dsat4200/Wii-Balance-Board-XInput-Controller/${branch}/`;

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Moccocheese | Other</title>
+
+</head>
+<body>
+    <header>
+        <h1>Moccocheese Dot Com</h1>
+        <h2>Artist and Game Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">3D Work</a></li>
+                <li><a href="concepts.html">2D Work</a></li>
+                <li><a href="codes.html">Code</a></li>
+                <li><a href="other.html">Other</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" onclick="scrollToContact()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Other</h1>
+        Click any icon for the rest of the project's images!.
+        <section class="project-grid">
+            <div class="project-item">
+                <a href="other-stuff/backyard-creatures/project.html">
+                    <div class="thumbnail">
+                        <img src="thumbs/other/backyard-creatures.png" alt="Backyard Creatures by Moccocheese">
+                        <div class="overlay">
+                            <div class="project-info">
+                                <h3>Backyard Creatures</h3>
+                                <p>Animals that have appeared in my yard</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="other-stuff/pepper-plants/project.html">
+                    <div class="thumbnail">
+                        <img src="thumbs/other/pepper-plants.png" alt="Pepper Plants by Moccocheese">
+                        <div class="overlay">
+                            <div class="project-info">
+                                <h4>2026</h4>
+                                <h3>Pepper Plants</h3>
+                                <p>I started growing peppers for fun in 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="other-stuff/pictures-of-things-i-like/project.html">
+                    <div class="thumbnail">
+                        <img src="thumbs/other/pictures-of-things-i-like.png" alt="Pictures of Things I Like by Moccocheese">
+                        <div class="overlay">
+                            <div class="project-info">
+                                <h3>Pictures of Things I Like</h3>
+                                <p>Just pictures of things I like. I didn't make them</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="other-stuff/cooking/project.html">
+                    <div class="thumbnail">
+                        <img src="thumbs/other/cooking.png" alt="Cooking by Moccocheese">
+                        <div class="overlay">
+                            <div class="project-info">
+                                <h3>Cooking</h3>
+                                <p>Yes, I can cook sometimes</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+        </section>
+    </main>
+    <footer id="contact-section">
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+
+                <li><a href="https://bsky.app/profile/moccocheese.bsky.social" target="_blank"><img src="icons/bluesky.png" alt="Bluesky"></a></li>
+                <li><a href="https://anilist.co/user/moccocheese" target="_blank"><img src="icons/anilist.png" alt="AniList"></a></li>
+                <li><a href="mailto:jessietorresacosta@gmail.com"><img src="icons/mail.png" alt="Email"></a></li>
+                <li><a href="your_resume.pdf" target="_blank"><img src="icons/resume.png" alt="Resume"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact-section');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+</body>
+</html>
+<style>
+  .thumbnail {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .thumbnail:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+  }
+</style>

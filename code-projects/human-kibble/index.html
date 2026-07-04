@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Moccocheese | Human Kibble</title>
+
+</head>
+<body>
+    <header>
+        <h1>Moccocheese Dot Com</h1>
+        <h2>Artist and Game Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">3D Work</a></li>
+                <li><a href="../../concepts.html">2D Work</a></li>
+                <li><a href="../../codes.html">Code</a></li>
+                <li><a href="../../other.html">Other</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="#" onclick="scrollToContact()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="readme-content">
+        <h1>Human Kibble</h1>
+        <h2>2026</h2>
+
+        <div class="kibble-text">
+            <p>I made a program to minmax the nutritional efficiency of certain ingredients, in an attempt to make a nutritionally complete human kibble. It tasted... tolerable, but took too much effort to make (at that point, might as well just cook). Not posting the repo, because who in their right mind would want to approach cooking this way?</p>
+            <p>(Note: for cooking, check <a href="../../other.html" style="color: rgb(148, 95, 255);">Other</a>)</p>
+        </div>
+
+        <hr style="border-color: #6734c459; margin: 20px 0;">
+
+        <div id="additional-image">
+            <img src="graph.png" alt="Human Kibble nutritional graph">
+            <img src="oven.jpg" alt="Human Kibble in oven">
+            <img src="result.jpg" alt="Human Kibble result">
+        </div>
+
+    </main>
+    <footer id="contact-section">
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+
+                <li><a href="https://bsky.app/profile/moccocheese.bsky.social" target="_blank"><img src="../../icons/bluesky.png" alt="Bluesky"></a></li>
+                <li><a href="https://anilist.co/user/moccocheese" target="_blank"><img src="../../icons/anilist.png" alt="AniList"></a></li>
+                <li><a href="mailto:jessietorresacosta@gmail.com"><img src="../../icons/mail.png" alt="Email"></a></li>
+                <li><a href="your_resume.pdf" target="_blank"><img src="../../icons/resume.png" alt="Resume"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact-section');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+</body>
+</html>
+<style>
+  .readme-content {
+    padding: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .readme-content h1 {
+    text-align: center;
+  }
+
+  .readme-content h2 {
+    color: rgb(200, 170, 255);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18pt;
+  }
+
+  .kibble-text {
+    background: #0d1117;
+    border-radius: 14pt;
+    padding: 24px 32px;
+    max-width: 900px;
+    margin: 20px auto 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: left;
+    font-size: 15pt;
+    line-height: 1.7;
+  }
+
+  #additional-image {
+    text-align: center;
+  }
+
+  #additional-image img {
+    max-width: 95%;
+    max-height: 460px;
+    height: auto;
+    outline: 4px solid rgb(148, 95, 255);
+    border-radius: 14pt;
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
+    margin-bottom: 20px;
+    object-fit: contain;
+  }
+</style>

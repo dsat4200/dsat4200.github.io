@@ -47,14 +47,12 @@ def generate_project_pages(html_file, template_file, output_dir):
                     additional_image = ""
                     try:
                         for image_filename in os.listdir(project_dir):
-                            if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+                            if image_filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp')):
                                 additional_image += f'<img src="{image_filename}" alt="{title} image">\n'
-                            elif image_filename.lower().endswith(('.mp4')):
+                            elif image_filename.lower().endswith(('.mp4', '.webm')):
                                 additional_image+= f'<video height="460" autoplay muted controls loop><source src="{image_filename}" type="video/mp4"></video>\n'
                             elif "youtube" in image_filename.lower():
-                                youtube_link = generate_youtube_link(image_filename)
-                                if youtube_link:
-                                     additional_image += f'<iframe width="600" height="460" src="{youtube_link}" frameborder="0" allowfullscreen></iframe>\n'
+                                pass  # YouTube links hidden; files kept on disk
 
                         #Find the closing </main> tag and insert additional images before it.
                         with open(filename, 'r') as f:

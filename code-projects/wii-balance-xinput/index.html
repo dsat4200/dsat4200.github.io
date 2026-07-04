@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.0/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css">
 
-    <title>Moccocheese | Esperanto Anime Dubber</title>
+    <title>Moccocheese | Wii Balance XInput</title>
 
 </head>
 <body>
@@ -30,10 +30,10 @@
         </nav>
     </header>
     <main class="readme-content">
-        <h1>Esperanto Anime Dubber</h1>
-        <h2>2026</h2>
+        <h1>Wii Balance Board XInput</h1>
+        <h2>2025</h2>
         <p style="margin-top:16px;">
-            <a href="https://github.com/dsat4200/esperanto-anime-dubber" target="_blank" style="
+            <a href="https://github.com/dsat4200/Wii-Balance-Board-XInput-Controller" target="_blank" style="
                 display: inline-block;
                 background: rgb(148, 95, 255);
                 color: #fff;
@@ -44,17 +44,6 @@
                 font-weight: 500;
             ">View on GitHub</a>
         </p>
-
-        <hr style="border-color: #6734c459; margin: 20px 0;">
-
-        <h2 style="margin-top:20px;">Videos</h2>
-        <div class="video-grid">
-            <video controls loop><source src="gabchan.mp4" type="video/mp4"></video>
-            <video controls loop><source src="goofs.mp4" type="video/mp4"></video>
-            <video controls loop><source src="hisoka.mp4" type="video/mp4"></video>
-            <video controls loop><source src="kurapika.mp4" type="video/mp4"></video>
-            <video controls loop><source src="satania.mp4" type="video/mp4"></video>
-        </div>
 
         <hr style="border-color: #6734c459; margin: 20px 0;">
 
@@ -108,22 +97,6 @@
     font-size: 18pt;
   }
 
-  .video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .video-grid video {
-    width: 100%;
-    height: auto;
-    max-height: 460px;
-    border-radius: 8pt;
-    outline: 2px solid #6734c459;
-  }
-
   .readme-box {
     background: #ffffff;
     border-radius: 14pt;
@@ -141,21 +114,19 @@
   (async function() {
     const el = document.getElementById('readme-body');
     try {
-      const res = await fetch('https://api.github.com/repos/dsat4200/esperanto-anime-dubber/readme');
+      const res = await fetch('https://api.github.com/repos/dsat4200/Wii-Balance-Board-XInput-Controller/readme');
       if (!res.ok) throw new Error('GitHub API error: ' + res.status);
       const data = await res.json();
       let md = atob(data.content);
 
-      const branch = 'master';
-      const rawBase = `https://raw.githubusercontent.com/dsat4200/esperanto-anime-dubber/${branch}/`;
-      md = md.replace(/\]\(\.\/screenshots\//g, '](' + rawBase + 'screenshots/');
-      md = md.replace(/\]\(screenshots\//g, '](' + rawBase + 'screenshots/');
+      const branch = 'main';
+      const rawBase = `https://raw.githubusercontent.com/dsat4200/Wii-Balance-Board-XInput-Controller/${branch}/`;
       md = md.replace(/\]\(\.\/(?!http)/g, '](' + rawBase);
 
       const html = marked.parse(md);
       el.innerHTML = `<article class="markdown-body">${html}</article>`;
     } catch (e) {
-      el.innerHTML = '<p style="color:#f85149;text-align:center;">Failed to load README from GitHub. <a href="https://github.com/dsat4200/esperanto-anime-dubber" target="_blank" style="color:rgb(148,95,255);">View on GitHub</a></p>';
+      el.innerHTML = '<p style="color:#f85149;text-align:center;">Failed to load README from GitHub. <a href="https://github.com/dsat4200/Wii-Balance-Board-XInput-Controller" target="_blank" style="color:rgb(148,95,255);">View on GitHub</a></p>';
       console.error(e);
     }
   })();

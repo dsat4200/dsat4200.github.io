@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.0/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown-dark.min.css">
+
+    <title>Moccocheese | Drawing Timed Practice</title>
+
+</head>
+<body>
+    <header>
+        <h1>Moccocheese Dot Com</h1>
+        <h2>Artist and Game Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">3D Work</a></li>
+                <li><a href="../../concepts.html">2D Work</a></li>
+                <li><a href="../../codes.html">Code</a></li>
+                <li><a href="../../other.html">Other</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="#" onclick="scrollToContact()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="readme-content">
+        <h1>Drawing Timed Practice</h1>
+        <h2>2026</h2>
+        <p style="margin-top:16px;">
+            <a href="https://github.com/dsat4200/Drawing-Timed-Practice" target="_blank" style="
+                display: inline-block;
+                background: rgb(148, 95, 255);
+                color: #fff;
+                padding: 10px 24px;
+                border-radius: 8pt;
+                text-decoration: none;
+                font-size: 16pt;
+                font-weight: 500;
+            ">View on GitHub</a>
+        </p>
+
+        <hr style="border-color: #6734c459; margin: 20px 0;">
+
+        <div class="readme-box">
+            <div id="readme-body" style="min-height:200px; padding:40px; color:#888;">
+                Loading README from GitHub...
+            </div>
+        </div>
+
+    </main>
+    <footer id="contact-section">
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+
+                <li><a href="https://bsky.app/profile/moccocheese.bsky.social" target="_blank"><img src="../../icons/bluesky.png" alt="Bluesky"></a></li>
+                <li><a href="https://anilist.co/user/moccocheese" target="_blank"><img src="../../icons/anilist.png" alt="AniList"></a></li>
+                <li><a href="mailto:jessietorresacosta@gmail.com"><img src="../../icons/mail.png" alt="Email"></a></li>
+                <li><a href="your_resume.pdf" target="_blank"><img src="../../icons/resume.png" alt="Resume"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact-section');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+</body>
+</html>
+<style>
+  .readme-content {
+    text-align: left;
+    padding: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .readme-content h1 {
+    text-align: center;
+  }
+
+  .readme-content h2 {
+    color: rgb(200, 170, 255);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18pt;
+  }
+
+  .readme-box {
+    background: #0d1117;
+    border-radius: 14pt;
+    padding: 32px;
+    max-width: 900px;
+    margin: 20px auto 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: left;
+  }
+</style>
+<script>
+  (async function() {
+    const el = document.getElementById('readme-body');
+    try {
+      const res = await fetch('https://api.github.com/repos/dsat4200/Drawing-Timed-Practice/readme');
+      if (!res.ok) throw new Error('GitHub API error: ' + res.status);
+      const data = await res.json();
+      const bytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));
+      let md = new TextDecoder('utf-8').decode(bytes);
+
+      const branch = 'main';
+      const rawBase = `https://raw.githubusercontent.com/dsat4200/Drawing-Timed-Practice/${branch}/`;
+      md = md.replace(/\]\(\.\/(?!http)/g, '](' + rawBase);
+      md = md.replace(/\]\(readme\//g, '](' + rawBase + 'readme/');
+
+      const html = marked.parse(md);
+      el.innerHTML = `<article class="markdown-body">${html}</article>`;
+    } catch (e) {
+      el.innerHTML = '<p style="color:#f85149;text-align:center;">Failed to load README from GitHub. <a href="https://github.com/dsat4200/Drawing-Timed-Practice" target="_blank" style="color:rgb(148,95,255);">View on GitHub</a></p>';
+      console.error(e);
+    }
+  })();
+</script>
